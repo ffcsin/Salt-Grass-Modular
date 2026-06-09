@@ -1,0 +1,315 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+
+const projects = [
+  {
+    category: 'residential',
+    id: 'atlanta-ritz',
+    name: 'Atlanta, Georgia',
+    subtitle: 'Luxury 960 SF Container Home',
+    location: 'Atlanta, GA',
+    type: 'Residential - Owner-Occupied',
+    sqft: 960,
+    timeline: '9 months',
+    client: 'Young professional',
+    description: 'Custom-designed luxury container home inspired by high-end hotel aesthetics. Premium finishes throughout, master suite with spa bath, gourmet kitchen.',
+    testimonial: '"Dylan listened to every detail of my vision and delivered a home that exceeded my expectations. Beautiful, thoughtful, and on time."',
+    image: 'gradient-to-br from-blue-400 to-blue-600',
+    details: [
+      { label: 'Beds', value: '1' },
+      { label: 'Baths', value: '1' },
+      { label: 'Timeline', value: '9 months' },
+      { label: 'Finishes', value: 'Premium' },
+    ],
+  },
+  {
+    category: 'residential',
+    id: 'wagner-adu',
+    name: 'Wagner, Oklahoma',
+    subtitle: '640 SF ADU Addition',
+    location: 'Wagner, OK',
+    type: 'Residential - ADU/Expansion',
+    sqft: 640,
+    timeline: '8 months',
+    client: 'Homeowner expansion',
+    description: 'Accessory dwelling unit added to family property. Modern one-bedroom rental unit. Designed to blend with existing home architecture while maintaining independence.',
+    testimonial: '"The new ADU is beautiful and rents immediately. Saltgrass made the whole process stress-free."',
+    image: 'gradient-to-br from-green-400 to-green-600',
+    details: [
+      { label: 'Beds', value: '1' },
+      { label: 'Baths', value: '1' },
+      { label: 'Timeline', value: '8 months' },
+      { label: 'Purpose', value: 'Rental' },
+    ],
+  },
+  {
+    category: 'residential',
+    id: 'alamosa-studio',
+    name: 'Alamosa, Colorado',
+    subtitle: '320 SF Mountain Studio',
+    location: 'Alamosa, CO',
+    type: 'Residential - Vacation Rental',
+    sqft: 320,
+    timeline: '7 months',
+    client: 'Real estate investor',
+    description: 'Intimate studio rental in mountain setting. Perfect for weekend getaways and short-term rentals. Mountain views, modern design, private entrance.',
+    testimonial: '"Our rental is booked solid. Guests love the authentic container home experience combined with luxury finishes."',
+    image: 'gradient-to-br from-amber-400 to-amber-600',
+    details: [
+      { label: 'Beds', value: '1 (Studio)' },
+      { label: 'Baths', value: '1' },
+      { label: 'Timeline', value: '7 months' },
+      { label: 'Purpose', value: 'Vacation rental' },
+    ],
+  },
+  {
+    category: 'pools',
+    id: 'backyard-pool-20',
+    name: 'Oklahoma Backyard Pool',
+    subtitle: '20\' x 40\' Family Pool',
+    location: 'Central Oklahoma',
+    type: 'Residential - Recreation',
+    sqft: null,
+    timeline: '3 weeks install',
+    client: 'Family homeowner',
+    description: 'Tube steel + fiberglass family pool with heating system and automatic cover. Transforms backyard into entertainment space. Professional landscaping and deck surround.',
+    testimonial: '"Our whole neighborhood envies this pool. Installation was fast and professional. Already planning next summer parties!"',
+    image: 'gradient-to-br from-cyan-400 to-cyan-600',
+    details: [
+      { label: 'Size', value: '20\' x 40\'' },
+      { label: 'Capacity', value: '2,800 gal' },
+      { label: 'Install', value: '3 weeks' },
+      { label: 'Features', value: 'Heat + cover' },
+    ],
+  },
+  {
+    category: 'pools',
+    id: 'luxury-pool-30',
+    name: 'Premium In-Ground Pool',
+    subtitle: '30\' x 60\' Luxury Resort-Style',
+    location: 'Central Oklahoma',
+    type: 'Residential - Premium',
+    sqft: null,
+    timeline: '6 weeks total',
+    client: 'High-end homeowner',
+    description: 'Welded steel + epoxy liner premium pool designed for entertaining. Swim lanes, deep end, integrated lighting, automation system, professional deck and landscaping.',
+    testimonial: '"This pool looks like it belongs at a resort. The quality is incredible and maintenance is minimal. Worth every penny."',
+    image: 'gradient-to-br from-purple-400 to-purple-600',
+    details: [
+      { label: 'Size', value: '30\' x 60\'' },
+      { label: 'Capacity', value: '6,750+ gal' },
+      { label: 'Depth', value: '5\' deep' },
+      { label: 'Features', value: 'Smart automation' },
+    ],
+  },
+  {
+    category: 'commercial',
+    id: 'developer-project',
+    name: 'Multi-Unit Development',
+    subtitle: '12-Unit Residential Complex',
+    location: 'Oklahoma',
+    type: 'Commercial - Development',
+    sqft: 7680,
+    timeline: '14 months',
+    client: 'Residential developer',
+    description: 'Large-scale modular housing development. 12 identical units (640 SF each) with phased delivery and installation. All units rented within 30 days of completion.',
+    testimonial: '"Saltgrass delivered exactly what we needed: predictable timeline, transparent pricing, and zero quality issues. Perfect partner for modular development."',
+    image: 'gradient-to-br from-indigo-400 to-indigo-600',
+    details: [
+      { label: 'Units', value: '12' },
+      { label: 'Each Size', value: '640 SF' },
+      { label: 'Timeline', value: '14 months' },
+      { label: 'Occupancy', value: '100% at open' },
+    ],
+  },
+];
+
+const categories = [
+  { id: 'all', label: 'All Projects' },
+  { id: 'residential', label: 'Residential Homes' },
+  { id: 'pools', label: 'Pools' },
+  { id: 'commercial', label: 'Commercial' },
+];
+---
+
+<BaseLayout
+  title="Projects & Case Studies - Saltgrass Modular"
+  description="Browse completed Saltgrass Modular projects. Homes, pools, and developments built and delivered."
+>
+  <Hero
+    eyebrow="Our Work"
+    headline="Completed Projects"
+    subhead="Real homes. Real clients. Real results. From single residences to multi-unit developments and luxury pools."
+    image="/img/projects-hero.jpg"
+  />
+
+  <!-- Project Gallery -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Gallery</h2>
+
+      <!-- Category Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        {categories.map(cat => (
+          <button
+            class={`px-6 py-2 rounded-lg font-semibold transition ${
+              cat.id === 'all'
+                ? 'bg-brand-primary text-white'
+                : 'bg-ink-50 text-ink-900 hover:bg-ink-100'
+            }`}
+            onclick={`filterProjects('${cat.id}')`}
+            data-category={cat.id}
+          >
+            {cat.label}
+          </button>
+        ))}
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map(project => (
+          <div class={`project-card bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition`} data-category={project.category}>
+            {/* Image */}
+            <div class={`bg-gradient-to-br ${project.image} h-48`}></div>
+
+            {/* Content */}
+            <div class="p-6">
+              <p class="text-xs font-bold text-brand-primary uppercase tracking-wide mb-2">
+                {project.type}
+              </p>
+              <h3 class="text-2xl font-bold text-ink-900 mb-1">{project.name}</h3>
+              <p class="text-sm text-ink-600 mb-4">{project.subtitle}</p>
+
+              {/* Quick Details */}
+              <div class="grid grid-cols-2 gap-4 mb-6 pb-6 border-b border-ink-200">
+                {project.details.map(detail => (
+                  <div>
+                    <p class="text-xs text-ink-600">{detail.label}</p>
+                    <p class="font-bold text-ink-900">{detail.value}</p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Description */}
+              <p class="text-sm text-ink-700 mb-4">{project.description}</p>
+
+              {/* Testimonial */}
+              <div class="bg-ink-50 rounded-lg p-4 mb-6">
+                <p class="text-xs text-ink-700 italic">{project.testimonial}</p>
+              </div>
+
+              {/* CTA */}
+              <button class="w-full btn-secondary text-sm">See Details</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Highlights -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Project Statistics</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-xl p-6 text-center">
+          <p class="text-4xl font-bold text-brand-primary mb-2">50+</p>
+          <p class="font-semibold text-ink-900">Projects Delivered</p>
+          <p class="text-sm text-ink-600">And counting</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center">
+          <p class="text-4xl font-bold text-brand-primary mb-2">99%</p>
+          <p class="font-semibold text-ink-900">Client Satisfaction</p>
+          <p class="text-sm text-ink-600">On-time delivery</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center">
+          <p class="text-4xl font-bold text-brand-primary mb-2">8–9</p>
+          <p class="font-semibold text-ink-900">Month Average</p>
+          <p class="text-sm text-ink-600">Design to move-in</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 text-center">
+          <p class="text-4xl font-bold text-brand-primary mb-2">0</p>
+          <p class="font-semibold text-ink-900">Warranty Issues</p>
+          <p class="text-sm text-ink-600">Factory-built quality</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Recognition -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-8 text-center">Why Our Projects Stand Out</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="flex gap-4">
+          <div class="text-5xl flex-shrink-0">🏆</div>
+          <div>
+            <h3 class="text-lg font-bold text-ink-900 mb-2">Quality First</h3>
+            <p class="text-ink-700">
+              Every project is factory-inspected and tested before leaving our facility. On-site installation is handled by certified technicians.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-5xl flex-shrink-0">⏰</div>
+          <div>
+            <h3 class="text-lg font-bold text-ink-900 mb-2">On-Time, Every Time</h3>
+            <p class="text-ink-700">
+              Modular construction means predictable timelines. Weather delays and supply chain issues don't affect our schedule like they do traditional builds.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-5xl flex-shrink-0">💬</div>
+          <div>
+            <h3 class="text-lg font-bold text-ink-900 mb-2">Transparent Communication</h3>
+            <p class="text-ink-700">
+              Regular updates, clear timelines, honest pricing. No surprises. Our clients know exactly what to expect and when to expect it.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-5xl flex-shrink-0">🎯</div>
+          <div>
+            <h3 class="text-lg font-bold text-ink-900 mb-2">Custom to Your Needs</h3>
+            <p class="text-ink-700">
+              Every project is customized. We listen to your vision and deliver exactly what you asked for—no cookie-cutter solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaBanner
+    headline="Your Project Could Be Next"
+    subhead="Start your journey. Get a free consultation and see how modular can work for you."
+  />
+</BaseLayout>
+
+<script>
+  function filterProjects(category) {
+    // Update button styles
+    document.querySelectorAll('[data-category]').forEach(btn => {
+      btn.classList.remove('bg-brand-primary', 'text-white');
+      btn.classList.add('bg-ink-50', 'text-ink-900');
+    });
+    event.target.classList.add('bg-brand-primary', 'text-white');
+    event.target.classList.remove('bg-ink-50', 'text-ink-900');
+
+    // Filter projects
+    document.querySelectorAll('.project-card').forEach(card => {
+      if (category === 'all' || card.dataset.category === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>

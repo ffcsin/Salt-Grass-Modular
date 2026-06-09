@@ -1,0 +1,242 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import {
+  getBlogPosts,
+  getBlogPostBySlug,
+  getRelatedPosts,
+  getCtaForPost,
+  getBlogChrome,
+  getAuthorName,
+  getAuthorAvatar,
+  estimateReadTime,
+} from '../../lib/blog';
+
+export async function getStaticPaths() {
+  const posts = await getBlogPosts();
+  return posts.map(p => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const post = await getBlogPostBySlug(slug!);
+if (!post) return Astro.redirect('/blog');
+
+const [relatedPosts, cta, chrome] = await Promise.all([
+  getRelatedPosts(post.category, post.slug),
+  getCtaForPost(post.ctaType, post.slug),
+  getBlogChrome(),
+]);
+
+const readTime = estimateReadTime(post.content, post.excerpt);
+const author = getAuthorName(post.author);
+const authorAvatar = getAuthorAvatar(post.author);
+const siteUrl = 'https://www.saltgrassmodular.com';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": post.title,
+  "description": post.excerpt,
+  "image": post.coverImage,
+  "author": { "@type": "Person", "name": author },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Saltgrass Modular",
+    "url": siteUrl,
+  },
+  "datePublished": post.publishedAt,
+  "dateModified": post.updatedAt,
+  "url": `${siteUrl}/blog/${post.slug}`,
+  "wordCount": post.content?.replace(/<[^>]*>/g, '').split(/\s+/).length || 0,
+};
+
+const ctaIsTailwindGradient = !!cta?.gradient && /^from-/.test(cta.gradient);
+const ctaInlineBg = cta?.gradient && !ctaIsTailwindGradient ? cta.gradient : undefined;
+const ctaSectionClass = ctaIsTailwindGradient
+  ? `relative overflow-hidden py-section-y bg-gradient-to-r ${cta!.gradient}`
+  : 'relative overflow-hidden py-section-y';
+---
+
+<BaseLayout
+  title={post.seo?.metaTitle || post.title}
+  description={post.seo?.metaDescription || post.excerpt}
+  image={post.seo?.ogImage || post.coverImage}
+  keywords={Array.isArray(post.seo?.keywords) ? post.seo.keywords.join(', ') : post.seo?.keywords}
+  noindex={post.seo?.noIndex}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+
+  {chrome?.customCss && <style set:html={chrome.customCss} />}
+  {chrome?.headerHtml && <div set:html={chrome.headerHtml} />}
+
+  <div id="blog-progress" class="fixed top-0 left-0 right-0 h-1 z-50 pointer-events-none">
+    <div id="blog-progress-bar" class="h-full bg-brand-primary transition-all duration-100" style="width: 0%"></div>
+  </div>
+
+  <nav class="bg-ink-50 border-b border-ink-200">
+    <div class="container px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center text-sm text-ink-600">
+        <li><a href="/" class="hover:text-brand-primary transition">Home</a></li>
+        <li class="mx-2">/</li>
+        <li><a href="/blog" class="hover:text-brand-primary transition">Blog</a></li>
+        <li class="mx-2">/</li>
+        <li class="text-ink-900 font-semibold truncate">{post.title}</li>
+      </ol>
+    </div>
+  </nav>
+
+  <article class="py-section-y bg-white">
+    <div class="container max-w-3xl">
+      <header class="mb-8">
+        {post.category && (
+          <div class="inline-block mb-4 px-3 py-1 rounded-full bg-brand-primary text-white text-xs font-bold uppercase tracking-wide">
+            {post.category}
+          </div>
+        )}
+        <h1 class="text-4xl md:text-5xl text-ink-900 font-bold mb-4">{post.title}</h1>
+        <div class="flex items-center gap-4 text-sm text-ink-600">
+          <span>{author}</span>
+          <span>·</span>
+          <span>{new Date(post.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+          <span>·</span>
+          <span>{readTime} min read</span>
+        </div>
+      </header>
+
+      {post.coverImage && (
+        <img src={post.coverImage} alt={post.title}
+          width="1200" height="630" loading="eager"
+          class="w-full rounded-2xl mb-8 shadow-medium" />
+      )}
+
+      <div class="prose max-w-none text-ink-700" set:html={post.content} />
+
+      {post.tags && post.tags.length > 0 && (
+        <div class="mt-10 pt-6 border-t border-ink-200">
+          <div class="flex flex-wrap gap-2">
+            {post.tags.map(tag => (
+              <span class="inline-block px-3 py-1 rounded-full bg-ink-100 text-ink-800 text-xs font-semibold">{tag}</span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div class="mt-10 pt-6 border-t border-ink-200">
+        <div class="flex items-start gap-4">
+          {authorAvatar ? (
+            <img src={authorAvatar} alt={author} class="w-14 h-14 rounded-full flex-shrink-0 object-cover" />
+          ) : (
+            <div class="w-14 h-14 rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center flex-shrink-0 text-white font-bold text-lg">
+              {author.charAt(0)}
+            </div>
+          )}
+          <div>
+            <div class="font-semibold text-ink-900">{author}</div>
+            <div class="text-sm text-ink-600 mt-0.5">Saltgrass Team</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  {relatedPosts.length > 0 && (
+    <section class="bg-ink-50 py-section-y">
+      <div class="container">
+        <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Related Articles</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {relatedPosts.map(related => (
+            <a href={`/blog/${related.slug}`} class="card group block overflow-hidden hover:shadow-large transition">
+              {related.coverImage ? (
+                <img src={related.coverImage} alt={related.title}
+                  width="800" height="450" loading="lazy"
+                  class="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300" />
+              ) : (
+                <div class="w-full h-44 bg-gradient-to-br from-brand-primary to-brand-secondary flex items-center justify-center">
+                  <span class="text-4xl">📝</span>
+                </div>
+              )}
+              <div class="p-5">
+                {related.category && (
+                  <div class="inline-block mb-2 px-2 py-1 rounded-full bg-brand-primary-50 text-brand-primary text-xs font-bold uppercase tracking-wide">
+                    {related.category}
+                  </div>
+                )}
+                <h3 class="font-bold text-ink-900 mb-2 line-clamp-2 group-hover:text-brand-primary transition">{related.title}</h3>
+                <p class="text-ink-700 text-sm mb-3 line-clamp-2">{related.excerpt}</p>
+                <div class="text-xs text-ink-600">
+                  {new Date(related.publishedAt).toLocaleDateString()} · {estimateReadTime(related.content, related.excerpt)} min read
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {cta && (
+    <section class={ctaSectionClass} style={ctaInlineBg ? `background: ${ctaInlineBg}` : undefined}>
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-10 left-10 w-40 h-40 rounded-full bg-white/5 animate-pulse"></div>
+        <div class="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-white/5 animate-pulse" style="animation-delay: 1.5s"></div>
+      </div>
+      <div class="container text-center relative z-10">
+        <h2 class="text-3xl font-bold text-white mb-4">{cta.heading}</h2>
+        <p class="text-white/90 mb-8 max-w-2xl mx-auto text-lg">{cta.description}</p>
+        <a href={cta.href}
+          class="inline-flex items-center gap-2 px-8 py-4 bg-white text-brand-primary font-semibold rounded-lg hover:shadow-large transition">
+          {cta.buttonText}
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  )}
+
+  <div class="container max-w-3xl py-10 px-4">
+    <a href="/blog"
+      class="inline-flex items-center gap-2 px-5 py-2.5 border-2 border-ink-300 text-ink-900 rounded-lg hover:bg-ink-50 transition font-semibold text-sm">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+      </svg>
+      Back to Blog
+    </a>
+  </div>
+
+  <button id="blog-back-to-top" type="button" aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full bg-brand-primary text-white shadow-large hover:shadow-xl transition-all opacity-0 pointer-events-none translate-y-2">
+    <svg class="w-5 h-5 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg>
+  </button>
+
+  {chrome?.footerHtml && <div set:html={chrome.footerHtml} />}
+
+  <script>
+    function initBlogPostUI() {
+      const bar = document.getElementById('blog-progress-bar');
+      const top = document.getElementById('blog-back-to-top');
+      if (!bar && !top) return;
+
+      const onScroll = () => {
+        const docH = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = docH > 0 ? Math.min(100, Math.max(0, (window.scrollY / docH) * 100)) : 0;
+        if (bar) bar.style.width = `${pct}%`;
+        if (top) {
+          if (window.scrollY > 600) {
+            top.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+            top.classList.add('opacity-100', 'translate-y-0');
+          } else {
+            top.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+            top.classList.remove('opacity-100', 'translate-y-0');
+          }
+        }
+      };
+      top?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+    document.addEventListener('astro:page-load', initBlogPostUI);
+    initBlogPostUI();
+  </script>
+</BaseLayout>

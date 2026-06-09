@@ -1,0 +1,232 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="About Saltgrass Modular"
+  description="Learn about Dylan Walker's journey from oilfield to modular construction, our team, fabrication facility, and why Saltgrass is different."
+>
+  <Hero
+    eyebrow="Our Story"
+    headline="From Oilfield to Housing Revolution"
+    subhead="Dylan Walker's vision to solve America's housing crisis through innovative modular construction."
+    image="/img/about-hero.jpg"
+  />
+
+  <!-- Dylan's Founder Story Section -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-4xl font-bold text-ink-900 mb-6">Dylan's Journey</h2>
+          <p class="text-lg text-ink-700 mb-4 leading-relaxed">
+            Dylan Walker spent 15 years in the oilfield, watching boom-and-bust cycles devastate Oklahoma communities. When energy markets shifted, he pivoted to construction and immediately saw the problem: America's housing crisis wasn't a shortage of land or labor—it was a shortage of **smart, scalable solutions**.
+          </p>
+          <p class="text-lg text-ink-700 mb-4 leading-relaxed">
+            Frustrated by traditional home builders' inefficiencies and high costs, Dylan studied modular construction methods and realized **modular could be the answer**. Not cookie-cutter boxes, but genuinely custom, high-quality homes built faster and cheaper than traditional methods.
+          </p>
+          <p class="text-lg text-ink-700 mb-6 leading-relaxed">
+            In 2021, Dylan founded Saltgrass Modular with one mission: **prove that modular homes can be beautiful, affordable, and available to anyone**—from individual homeowners to government agencies needing rapid deployment.
+          </p>
+          <div class="flex gap-4">
+            <div>
+              <div class="text-4xl font-bold text-brand-primary">3+</div>
+              <p class="text-sm text-ink-600">Years in Business</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-brand-primary">50+</div>
+              <p class="text-sm text-ink-600">Projects Delivered</p>
+            </div>
+            <div>
+              <div class="text-4xl font-bold text-brand-primary">99%</div>
+              <p class="text-sm text-ink-600">Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-xl h-96 md:h-full">
+          <img
+            src="/img/dylan-portrait.jpg"
+            alt="Dylan Walker, Founder of Saltgrass Modular"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Why Saltgrass is Different</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition duration-200">
+          <div class="text-4xl mb-4">🎨</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-3">Fully Custom Design</h3>
+          <p class="text-ink-700">
+            Every project is unique. We listen to your vision and design homes that reflect your lifestyle—not generic templates.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition duration-200">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-3">Speed Without Sacrifice</h3>
+          <p class="text-ink-700">
+            Modular construction cuts timelines by 30-40% while maintaining the quality standards of traditional builds.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition duration-200">
+          <div class="text-4xl mb-4">💰</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-3">Transparent Pricing</h3>
+          <p class="text-ink-700">
+            No hidden costs. Our all-in pricing means you know exactly what you're paying for upfront.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition duration-200">
+          <div class="text-4xl mb-4">🏗️</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-3">American Made</h3>
+          <p class="text-ink-700">
+            Built in Oklahoma. We support local jobs and control quality from fabrication to final installation.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition duration-200">
+          <div class="text-4xl mb-4">🌍</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-3">Multi-Audience Expertise</h3>
+          <p class="text-ink-700">
+            Whether you're a homeowner, developer, or government agency, we have solutions scaled to your needs.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition duration-200">
+          <div class="text-4xl mb-4">✅</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-3">Battle-Tested Quality</h3>
+          <p class="text-ink-700">
+            F3 tornado-resistant homes, certifications for government use, and 99% client satisfaction rating.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fabrication Facility Section -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="rounded-2xl overflow-hidden shadow-xl h-96 md:h-full">
+          <img
+            src="/img/facility-tour.jpg"
+            alt="Saltgrass Modular Fabrication Facility in Oklahoma"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div>
+          <h2 class="text-4xl font-bold text-ink-900 mb-6">Our Fabrication Facility</h2>
+          <p class="text-lg text-ink-700 mb-4 leading-relaxed">
+            Located in Wagner, Oklahoma, our state-of-the-art fabrication facility spans over 15,000 square feet of manufacturing space. Here's where the magic happens:
+          </p>
+          <ul class="space-y-3 mb-8">
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-xl leading-tight">✓</span>
+              <span class="text-ink-700"><strong>CNC Fabrication:</strong> Precision cutting and assembly using advanced machinery</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-xl leading-tight">✓</span>
+              <span class="text-ink-700"><strong>Climate-Controlled Assembly:</strong> Perfect conditions for quality control</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-xl leading-tight">✓</span>
+              <span class="text-ink-700"><strong>Inspection Stations:</strong> Every module passes rigorous QA before leaving the facility</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-xl leading-tight">✓</span>
+              <span class="text-ink-700"><strong>In-House Design Team:</strong> Engineers and architects collaborate on every project</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-xl leading-tight">✓</span>
+              <span class="text-ink-700"><strong>Logistics & Delivery:</strong> Own fleet for safe, timely module delivery nationwide</span>
+            </li>
+          </ul>
+          <p class="text-ink-700 text-sm">
+            We invite clients to tour the facility. Seeing your home take shape is an unforgettable experience.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Meet the Team</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition duration-200">
+          <div class="h-64 bg-gradient-to-br from-brand-primary to-brand-secondary"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-1">Dylan Walker</h3>
+            <p class="text-brand-primary font-semibold text-sm mb-3">Founder & CEO</p>
+            <p class="text-ink-700 text-sm">
+              15+ years in construction and energy. Dylan's vision is to make quality, custom modular homes accessible to everyone.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition duration-200">
+          <div class="h-64 bg-gradient-to-br from-brand-secondary to-ink-700"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-1">Engineering Team</h3>
+            <p class="text-brand-primary font-semibold text-sm mb-3">Design & Fabrication</p>
+            <p class="text-ink-700 text-sm">
+              Licensed engineers and CAD specialists ensuring every design is optimized for quality, cost, and timeline.
+            </p>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition duration-200">
+          <div class="h-64 bg-gradient-to-br from-ink-700 to-brand-primary"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-1">Installation Specialists</h3>
+            <p class="text-brand-primary font-semibold text-sm mb-3">On-Site Excellence</p>
+            <p class="text-ink-700 text-sm">
+              Certified technicians handling delivery, site prep, and final installation with precision and care.
+            </p>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-ink-700 mt-12">
+        Every member of the Saltgrass team is committed to building not just homes, but lasting relationships with our clients.
+      </p>
+    </div>
+  </section>
+
+  <!-- Certifications & Recognition -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-8 text-center">Certifications & Recognition</h2>
+      <div class="bg-ink-50 rounded-2xl p-8 md:p-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-bold text-ink-900 mb-4">Quality Standards</h3>
+            <ul class="space-y-2 text-ink-700">
+              <li>✓ F3 Tornado-Resistant Design (Oklahoma, Texas, Kansas)</li>
+              <li>✓ IRC & IBC Compliance</li>
+              <li>✓ 1-Year Comprehensive Warranty</li>
+              <li>✓ Energy Efficiency Standards (IECC 2021)</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-ink-900 mb-4">Government & Military</h3>
+            <ul class="space-y-2 text-ink-700">
+              <li>✓ GSA-Ready (Pre-qualified for government contracts)</li>
+              <li>✓ Military Housing-Compliant Designs</li>
+              <li>✓ Rapid Deployment Certifications</li>
+              <li>✓ Disaster Relief Partner (FEMA-compatible)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <CtaBanner
+    headline="Ready to Start Your Modular Project?"
+    subhead="Get a free consultation and transparent quote from Dylan and the Saltgrass team."
+  />
+</BaseLayout>

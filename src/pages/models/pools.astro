@@ -1,0 +1,290 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+
+const tubeSteelModels = [
+  { size: '20\' x 40\'', gallons: 2800, dims: '20\' L × 40\' W × 3.5\' D', price: 12000 },
+  { size: '25\' x 50\'', gallons: 4700, dims: '25\' L × 50\' W × 3.5\' D', price: 18000 },
+  { size: '30\' x 60\'', gallons: 6750, dims: '30\' L × 60\' W × 4\' D', price: 24000 },
+];
+
+const weldedSteelModels = [
+  { size: '20\' x 40\'', gallons: 2800, dims: '20\' L × 40\' W × 3.5\' D', price: 18000 },
+  { size: '25\' x 50\'', gallons: 4700, dims: '25\' L × 50\' W × 4.5\' D', price: 26000 },
+  { size: '30\' x 60\'', gallons: 6750, dims: '30\' L × 60\' W × 5\' D', price: 36000 },
+];
+---
+
+<BaseLayout
+  title="Pool Models - Saltgrass Modular"
+  description="Browse modular pool options. Two designs, multiple sizes, transparent pricing. Tube steel or welded steel construction."
+>
+  <Hero
+    eyebrow="Browse Models"
+    headline="Modular Pool Models"
+    subhead="Two proven designs. Multiple sizes. Beautiful, durable pools built in our factory and delivered to your site."
+    image="/img/pools-models-hero.jpg"
+  />
+
+  <!-- Overview -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="max-w-3xl mx-auto mb-12">
+        <h2 class="text-3xl font-bold text-ink-900 mb-6 text-center">Two Pool Design Options</h2>
+        <p class="text-center text-ink-700 mb-6 leading-relaxed">
+          Choose the design that fits your lifestyle, budget, and property. Both are factory-built to precision standards and delivered fully assembled.
+        </p>
+      </div>
+
+      <!-- Comparison Buttons -->
+      <div class="flex gap-4 justify-center mb-12">
+        <button
+          onclick="scrollToSection('tube-steel')"
+          class="btn-primary"
+        >
+          Tube Steel + Fiberglass
+        </button>
+        <button
+          onclick="scrollToSection('welded-steel')"
+          class="btn-secondary"
+        >
+          Welded Steel + Epoxy
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tube Steel + Fiberglass Section -->
+  <section id="tube-steel" class="py-section-y bg-ink-50">
+    <div class="container">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="text-5xl">🏊</div>
+          <div>
+            <h2 class="text-4xl font-bold text-ink-900">Tube Steel + Fiberglass</h2>
+            <p class="text-ink-600">Above-ground, durable, easy maintenance</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 mb-8">
+          <h3 class="text-xl font-bold text-ink-900 mb-4">Why Choose This Design</h3>
+          <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink-700">
+            <li>
+              <p class="font-bold text-ink-900 mb-2">💰 Budget-Friendly</p>
+              <p>Most affordable option. Great for families and seasonal use.</p>
+            </li>
+            <li>
+              <p class="font-bold text-ink-900 mb-2">⚡ Easy Installation</p>
+              <p>Above-ground means no excavation. 2–4 week install time.</p>
+            </li>
+            <li>
+              <p class="font-bold text-ink-900 mb-2">🛡️ Durable</p>
+              <p>Galvanized steel frame + fiberglass interior. 8–12 year lifespan.</p>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="text-2xl font-bold text-ink-900 mb-6">Available Sizes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {tubeSteelModels.map(model => (
+            <div class="bg-white rounded-xl p-6 border-2 border-brand-primary">
+              <h4 class="text-lg font-bold text-ink-900 mb-2">{model.size}</h4>
+              <div class="space-y-3 mb-6">
+                <div>
+                  <p class="text-xs text-ink-600">Dimensions</p>
+                  <p class="font-semibold text-ink-900">{model.dims}</p>
+                </div>
+                <div>
+                  <p class="text-xs text-ink-600">Capacity</p>
+                  <p class="font-semibold text-ink-900">{model.gallons.toLocaleString()} gallons</p>
+                </div>
+              </div>
+              <p class="text-3xl font-bold text-brand-primary mb-6">${(model.price / 1000).toFixed(0)}K</p>
+              <button class="w-full btn-primary text-sm">Request Quote</button>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 rounded p-6">
+          <p class="text-sm text-blue-900">
+            <strong>Custom sizes available:</strong> Need a different size? We can build custom tube steel + fiberglass pools. Contact us for pricing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welded Steel + Epoxy Section -->
+  <section id="welded-steel" class="py-section-y">
+    <div class="container">
+      <div class="max-w-5xl mx-auto">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="text-5xl">🌊</div>
+          <div>
+            <h2 class="text-4xl font-bold text-ink-900">Welded Steel + Epoxy Liner</h2>
+            <p class="text-ink-600">In-ground, premium, long-lasting</p>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 mb-8">
+          <h3 class="text-xl font-bold text-ink-900 mb-4">Why Choose This Design</h3>
+          <ul class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-ink-700">
+            <li>
+              <p class="font-bold text-ink-900 mb-2">⏱️ Built to Last</p>
+              <p>20+ year lifespan. Premium epoxy liner resists algae and fading.</p>
+            </li>
+            <li>
+              <p class="font-bold text-ink-900 mb-2">🏊 In-Ground Feel</p>
+              <p>Looks and feels like a traditional in-ground pool. Better aesthetics.</p>
+            </li>
+            <li>
+              <p class="font-bold text-ink-900 mb-2">💎 Investment</p>
+              <p>Higher upfront cost, but superior durability and low maintenance.</p>
+            </li>
+          </ul>
+        </div>
+
+        <h3 class="text-2xl font-bold text-ink-900 mb-6">Available Sizes</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          {weldedSteelModels.map(model => (
+            <div class="bg-white rounded-xl p-6 border-2 border-brand-primary">
+              <h4 class="text-lg font-bold text-ink-900 mb-2">{model.size}</h4>
+              <div class="space-y-3 mb-6">
+                <div>
+                  <p class="text-xs text-ink-600">Dimensions</p>
+                  <p class="font-semibold text-ink-900">{model.dims}</p>
+                </div>
+                <div>
+                  <p class="text-xs text-ink-600">Capacity</p>
+                  <p class="font-semibold text-ink-900">{model.gallons.toLocaleString()} gallons</p>
+                </div>
+              </div>
+              <p class="text-3xl font-bold text-brand-primary mb-6">${(model.price / 1000).toFixed(0)}K</p>
+              <button class="w-full btn-primary text-sm">Request Quote</button>
+            </div>
+          ))}
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 rounded p-6">
+          <p class="text-sm text-blue-900">
+            <strong>Deep pools available:</strong> Welded steel pools can be up to 5' deep. Deeper installations require site-specific excavation quotes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optional Add-Ons -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Enhance Your Pool</h2>
+      <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        {[
+          { icon: '🌡️', name: 'Heating System', desc: 'Gas or electric heater. Extends season year-round.' },
+          { icon: '💡', name: 'Lighting', desc: 'LED pool lights. Night swimming + ambiance.' },
+          { icon: '🤖', name: 'Automation', desc: 'Smart controls. Monitor & adjust from your phone.' },
+          { icon: '🏗️', name: 'Deck/Surround', desc: 'Composite or natural wood deck. Professional installation.' },
+          { icon: '⛱️', name: 'Cover System', desc: 'Automatic or manual covers. Safety & maintenance.' },
+          { icon: '🌿', name: 'Landscaping', desc: 'Planting & hardscaping around your pool area.' },
+        ].map(addon => (
+          <div class="bg-white rounded-xl p-6">
+            <div class="text-4xl mb-3">{addon.icon}</div>
+            <h3 class="font-bold text-ink-900 mb-2">{addon.name}</h3>
+            <p class="text-sm text-ink-700">{addon.desc}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-center text-ink-700 mt-8">
+        Add-ons vary in price. Ask about these options during your quote consultation.
+      </p>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">What's Included in Every Pool</h2>
+      <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold text-ink-900 mb-4">✓ Standard Inclusions</h3>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>Pool frame & structure</li>
+            <li>Interior finish (fiberglass or epoxy)</li>
+            <li>Circulation pump & filter system</li>
+            <li>Skimmer & drain system</li>
+            <li>Professional delivery & install</li>
+            <li>Initial fill & startup</li>
+            <li>Owner's manual & maintenance guide</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-bold text-ink-900 mb-4">❌ Not Included (Optional)</h3>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>Deck or surrounding area</li>
+            <li>Heating system</li>
+            <li>Lighting fixtures</li>
+            <li>Smart automation</li>
+            <li>Pool cover</li>
+            <li>Landscaping</li>
+            <li>Ongoing maintenance service</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financing & Next Steps -->
+  <section class="py-section-y bg-brand-primary text-white">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-8 text-center">Next Steps</h2>
+      <div class="max-w-3xl mx-auto">
+        <ol class="space-y-6">
+          <li class="flex gap-4">
+            <span class="text-2xl font-bold flex-shrink-0">1</span>
+            <div>
+              <p class="font-bold mb-1">Pick Your Design</p>
+              <p class="opacity-90">Tube steel or welded steel? Choose a size or go custom.</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-2xl font-bold flex-shrink-0">2</span>
+            <div>
+              <p class="font-bold mb-1">Request a Quote</p>
+              <p class="opacity-90">Tell us about your site, budget, and timeline. We'll prepare a detailed quote.</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-2xl font-bold flex-shrink-0">3</span>
+            <div>
+              <p class="font-bold mb-1">Explore Add-Ons</p>
+              <p class="opacity-90">Interested in heating, lighting, or a deck? We'll customize options for you.</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="text-2xl font-bold flex-shrink-0">4</span>
+            <div>
+              <p class="font-bold mb-1">Finalize & Build</p>
+              <p class="opacity-90">We handle fabrication, delivery, and installation. Enjoy your new pool in 2–4 weeks.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaBanner
+    headline="Ready to Build Your Dream Pool?"
+    subhead="Choose your design and size. We'll handle the rest."
+  />
+</BaseLayout>
+
+<script>
+  function scrollToSection(sectionId) {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+</script>

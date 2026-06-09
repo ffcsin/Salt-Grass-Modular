@@ -1,0 +1,22 @@
+---
+import { redirect } from 'astro';
+
+const API_BASE = import.meta.env.PUBLIC_API_URL || 'https://lpai-monorepo-production.up.railway.app';
+const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID;
+const { code } = Astro.params;
+
+try {
+  const res = await fetch(`${API_BASE}/api/qr/${encodeURIComponent(code)}?locationId=${LOCATION_ID}`);
+  if (res.ok) {
+    const json = await res.json();
+    if (json.redirectUrl) {
+      return redirect(json.redirectUrl, 302);
+    }
+  }
+} catch {
+  // Fall through to 404
+}
+
+// If QR not found or backend error, return 404
+return new Response('QR code not found', { status: 404 });
+---

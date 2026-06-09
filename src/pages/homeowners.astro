@@ -1,0 +1,330 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import ServicesGrid from '../components/sections/ServicesGrid.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="Modular Homes for Homeowners - Saltgrass Modular"
+  description="Build your dream home faster and more affordably. Explore custom modular homes with transparent pricing and 8-9 month timelines."
+  keywords="modular homes, custom homes, prefab houses, fast home building"
+>
+  <Hero
+    eyebrow="For Homeowners"
+    headline="Build Your Dream Home Faster"
+    subhead="Custom modular homes built in 8-9 months, not 12-18. Transparent pricing. Zero surprises. Move in sooner."
+    image="/img/homeowners-hero.jpg"
+  />
+
+  <!-- Why Modular for Homeowners -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="max-w-3xl mx-auto mb-12 text-center">
+        <h2 class="text-4xl font-bold text-ink-900 mb-4">Why Homeowners Choose Modular</h2>
+        <p class="text-lg text-ink-700 leading-relaxed">
+          Whether you're building your first home, expanding your family, or creating a rental property, modular construction offers speed, quality, and affordability that traditional building can't match.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-3">30% Faster</h3>
+          <p class="text-ink-700">
+            Factory fabrication happens in parallel with site prep and permitting. Move in 30% faster than traditional construction.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition">
+          <div class="text-5xl mb-4">💰</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-3">20-30% Cheaper</h3>
+          <p class="text-ink-700">
+            Factory efficiency means lower labor costs and minimal waste. Transparent pricing—no hidden change orders.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-soft hover:shadow-large transition">
+          <div class="text-5xl mb-4">✓</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-3">Higher Quality</h3>
+          <p class="text-ink-700">
+            Factory-built precision. Every module inspected and tested. Zero weather damage during construction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Models Showcase -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto mb-12 text-center">
+        <h2 class="text-4xl font-bold text-ink-900 mb-4">Popular Models</h2>
+        <p class="text-lg text-ink-700 mb-8">
+          Start with one of our proven designs or go fully custom. Every model is customizable to your exact specifications.
+        </p>
+        <a href="/models/container-homes" class="btn-primary">Explore All Models</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-large transition">
+          <div class="bg-gradient-to-br from-brand-primary to-brand-secondary h-32 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-5xl">🏠</span>
+          </div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2">Studio Home</h3>
+          <p class="text-sm text-ink-600 mb-3">320 SF · Perfect for minimalists, interns, or guest housing</p>
+          <p class="text-2xl font-bold text-brand-primary mb-4">$75K</p>
+          <a href="/models/container-homes" class="text-brand-primary font-semibold text-sm hover:text-brand-primary-700 transition">View Details →</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-large transition border-2 border-brand-primary">
+          <div class="bg-gradient-to-br from-brand-primary to-brand-secondary h-32 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-5xl">🏡</span>
+          </div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2">1-Bedroom Home</h3>
+          <p class="text-sm text-ink-600 mb-3">640 SF · Our bestseller. Perfect for couples or single families</p>
+          <p class="text-2xl font-bold text-brand-primary mb-4">$105K</p>
+          <a href="/models/container-homes" class="text-brand-primary font-semibold text-sm hover:text-brand-primary-700 transition">View Details →</a>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-large transition">
+          <div class="bg-gradient-to-br from-brand-primary to-brand-secondary h-32 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-5xl">🏘️</span>
+          </div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2">2-Bedroom Home</h3>
+          <p class="text-sm text-ink-600 mb-3">960 SF · Family-sized comfort with premium finishes</p>
+          <p class="text-2xl font-bold text-brand-primary mb-4">$155K</p>
+          <a href="/models/container-homes" class="text-brand-primary font-semibold text-sm hover:text-brand-primary-700 transition">View Details →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Homeowner Journey -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-ink-900 mb-4">Your Journey to Home Ownership</h2>
+        <p class="text-lg text-ink-700">
+          From your first conversation with Dylan through moving into your custom home, we make the process transparent and stress-free.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold flex-shrink-0">1</div>
+          <div>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">Discovery & Design</h3>
+            <p class="text-ink-700">Meet with Dylan to discuss your vision. Explore our models or start from scratch. We create 3D designs for your approval. (Weeks 1–4)</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
+          <div>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">Permitting & Engineering</h3>
+            <p class="text-ink-700">We handle permits while our team finalizes engineering. Most permits approve within 4–6 weeks. (Weeks 3–8)</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold flex-shrink-0">3</div>
+          <div>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">Factory Fabrication</h3>
+            <p class="text-ink-700">Your modules are built in our facility. Quality inspections at 50%, 80%, and 100%. You receive progress photos. (Weeks 5–32)</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 items-start">
+          <div class="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold flex-shrink-0">4</div>
+          <div>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">Delivery & Move-In</h3>
+            <p class="text-ink-700">Modules delivered to your site. Installation and system testing in 2–4 weeks. Final walkthrough and you move in! (Weeks 33–34)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financing Made Easy -->
+  <section class="py-section-y bg-brand-primary-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-ink-900 mb-4">Flexible Financing Options</h2>
+        <p class="text-lg text-ink-700">
+          Multiple financing paths to fit your situation. Construction loans, cash plans, or home equity options.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-soft">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Construction Loans</h3>
+          <p class="text-ink-700 mb-6">
+            Traditional construction financing available through major lenders. Factory-built quality qualifies for competitive rates.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ Approved by major lenders</li>
+            <li>✓ Competitive interest rates</li>
+            <li>✓ Professional appraisals</li>
+            <li>✓ Standard loan terms</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-soft">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Hearth Financing</h3>
+          <p class="text-ink-700 mb-6">
+            Pre-qualification takes 2 minutes. Funds in 24 hours. Hearth specializes in modular and alternative construction.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ Fast pre-qualification (2 min)</li>
+            <li>✓ Quick funding (24 hours)</li>
+            <li>✓ Modular-friendly terms</li>
+            <li>✓ Flexible payment plans</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-soft">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Cash Payment Plans</h3>
+          <p class="text-ink-700 mb-6">
+            Pay in phases as we build. 30/30/30/10 payment schedule aligns with construction milestones.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ 30% down to start design</li>
+            <li>✓ 30% at fabrication start</li>
+            <li>✓ 30% at delivery</li>
+            <li>✓ 10% at final handoff</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 shadow-soft">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Home Equity / HELOC</h3>
+          <p class="text-ink-700 mb-6">
+            Use existing equity to finance your modular home. Refinancing options available.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ Leverage existing equity</li>
+            <li>✓ Often lower rates</li>
+            <li>✓ Flexible terms</li>
+            <li>✓ Work with your lender</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="/financing" class="btn-primary">Learn More About Financing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Homes, Real Stories -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-ink-900 mb-4">Real Homes, Real Stories</h2>
+        <p class="text-lg text-ink-700 mb-8">
+          See what other homeowners have built with Saltgrass.
+        </p>
+        <a href="/projects" class="btn-secondary">View Project Gallery</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl p-8 text-center">
+          <p class="text-4xl mb-4">💬</p>
+          <p class="text-lg text-blue-900 font-semibold mb-3">
+            "Dylan listened to every detail of my vision and delivered a home that exceeded my expectations."
+          </p>
+          <p class="text-blue-800">— Atlanta homeowner, 960 SF luxury home</p>
+        </div>
+
+        <div class="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-8 text-center">
+          <p class="text-4xl mb-4">💬</p>
+          <p class="text-lg text-green-900 font-semibold mb-3">
+            "The new ADU rents immediately. Saltgrass made the whole process stress-free."
+          </p>
+          <p class="text-green-800">— Wagner homeowner, rental ADU</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ for Homeowners -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Questions Homeowners Ask</h2>
+
+        <div class="space-y-6">
+          <details class="bg-white rounded-lg p-6 group">
+            <summary class="cursor-pointer font-bold text-ink-900 flex items-center justify-between">
+              Can I customize the models?
+              <span class="text-2xl group-open:rotate-180 transition">▼</span>
+            </summary>
+            <p class="text-ink-700 mt-4 leading-relaxed">
+              Yes! Every model is fully customizable. Modify floor plans, add porches, choose finishes, select appliances, and more. The final price reflects your changes. During your Discovery phase, we walk through all customization options with detailed pricing.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-lg p-6 group">
+            <summary class="cursor-pointer font-bold text-ink-900 flex items-center justify-between">
+              How long does it really take?
+              <span class="text-2xl group-open:rotate-180 transition">▼</span>
+            </summary>
+            <p class="text-ink-700 mt-4 leading-relaxed">
+              8–9 months from start to move-in is typical. That's 30% faster than traditional construction. The timeline breaks down: 4 weeks design, 4 weeks permitting, 27 weeks factory fabrication (done in parallel with permits), and 2–4 weeks on-site assembly and final setup.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-lg p-6 group">
+            <summary class="cursor-pointer font-bold text-ink-900 flex items-center justify-between">
+              What's included in the price?
+              <span class="text-2xl group-open:rotate-180 transition">▼</span>
+            </summary>
+            <p class="text-ink-700 mt-4 leading-relaxed">
+              Everything: design, engineering, fabrication, delivery, installation, and system startup. Included are structure, HVAC, electrical, plumbing, appliances, and finishes. Optional add-ons (heating, smart home, premium finishes, landscaping) are priced separately with full transparency.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-lg p-6 group">
+            <summary class="cursor-pointer font-bold text-ink-900 flex items-center justify-between">
+              Are modular homes financed differently?
+              <span class="text-2xl group-open:rotate-180 transition">▼</span>
+            </summary>
+            <p class="text-ink-700 mt-4 leading-relaxed">
+              Traditional construction loans work fine with modular. Many homeowners use Hearth for faster approval and modular-friendly terms. Cash payment plans (30/30/30/10) are also popular, aligning payments with build milestones. We help coordinate with your lender.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-lg p-6 group">
+            <summary class="cursor-pointer font-bold text-ink-900 flex items-center justify-between">
+              What about permitting and building codes?
+              <span class="text-2xl group-open:rotate-180 transition">▼</span>
+            </summary>
+            <p class="text-ink-700 mt-4 leading-relaxed">
+              Modular homes meet or exceed International Building Code (IBC) standards. We handle permit applications and coordination with local building departments. Factory inspection and testing ensure code compliance before delivery. Permitting typically takes 4–6 weeks.
+            </p>
+          </details>
+
+          <details class="bg-white rounded-lg p-6 group">
+            <summary class="cursor-pointer font-bold text-ink-900 flex items-center justify-between">
+              Can I see the factory?
+              <span class="text-2xl group-open:rotate-180 transition">▼</span>
+            </summary>
+            <p class="text-ink-700 mt-4 leading-relaxed">
+              Absolutely! Our facility is in Wagner, Oklahoma. We encourage homeowners to visit and see their home being built. You'll receive progress photos throughout fabrication, and you can schedule a site visit anytime.
+            </p>
+          </details>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-ink-700 mb-6">Still have questions?</p>
+          <a href="/contact" class="btn-primary">Get Your Free Consultation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    headline="Ready to Build Your Dream Home?"
+    subhead="Start with a free consultation. No obligation, just an honest conversation about what's possible."
+  />
+</BaseLayout>

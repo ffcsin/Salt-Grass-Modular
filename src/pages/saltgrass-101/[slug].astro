@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+
+export async function getStaticPaths() {
+  return [
+    { params: { slug: 'modular-vs-traditional' } },
+    { params: { slug: 'cost-breakdown' } },
+    { params: { slug: 'permits-compliance' } },
+    { params: { slug: 'financing-guide' } },
+    { params: { slug: 'build-process' } },
+    { params: { slug: 'disaster-relief-guide' } },
+    { params: { slug: 'design-customization' } },
+    { params: { slug: 'sustainability' } },
+  ];
+}
+
+const { slug } = Astro.params;
+
+const guides: Record<string, any> = {
+  'modular-vs-traditional': {
+    title: 'Modular vs. Traditional Construction',
+    description: 'A detailed comparison of modular and traditional building methods.',
+    icon: '🏗️',
+    sections: [
+      { title: 'Speed', content: 'Modular construction typically takes 8-9 months from design to move-in, while traditional construction averages 12-18 months. This is because factory work happens in parallel with site preparation and permitting.' },
+      { title: 'Cost', content: 'Factory efficiency and reduced material waste save 20-30% compared to traditional construction. Transparent pricing means no hidden change orders or cost overruns.' },
+      { title: 'Quality', content: 'Factory-built homes are inspected at every stage. Each module is tested for structural integrity and systems performance before delivery, ensuring zero field defects.' },
+      { title: 'Sustainability', content: 'Precise fabrication minimizes waste. Factory efficiency reduces labor hours and carbon footprint. Consistent insulation performance means better energy efficiency.' },
+    ],
+  },
+  'cost-breakdown': {
+    title: 'Cost Breakdown & Pricing',
+    description: 'Understand the transparent pricing model for Saltgrass homes.',
+    icon: '💰',
+    sections: [
+      { title: 'Container Homes', content: 'Studio (320 SF): $75K | 1-Bed (640 SF): $105K | 2-Bed (960 SF): $155K. Custom homes priced based on specifications.' },
+      { title: 'Pools', content: 'Tube Steel + Fiberglass: $12K-$24K depending on size. Welded Steel + Epoxy: $18K-$36K for premium durability.' },
+      { title: 'What\'s Included', content: 'All prices include fabrication, delivery, installation, and initial systems startup. Optional add-ons include heating, lighting, automation, decking, and landscaping.' },
+      { title: 'Financing', content: 'Construction loans, cash payment plans, and home equity options available. Hearth pre-qualification takes minutes and doesn\'t affect your credit score.' },
+    ],
+  },
+  'permits-compliance': {
+    title: 'Permits & Compliance',
+    description: 'Navigate the permitting process with modular construction.',
+    icon: '📋',
+    sections: [
+      { title: 'Building Codes', content: 'Modular homes meet or exceed International Building Code (IBC) standards. Factory inspection and testing ensure compliance before delivery.' },
+      { title: 'Local Permitting', content: 'Our team handles coordination with local building departments. Permitting timelines vary by jurisdiction but are transparent from the start.' },
+      { title: 'Timeline Impact', content: 'Permitting happens in parallel with factory fabrication, compressing the overall schedule. Delays in permitting don\'t delay your home\'s factory work.' },
+      { title: 'FEMA & Government', content: 'Saltgrass homes are FEMA-approved for disaster relief. Government contracts and military specifications available upon request.' },
+    ],
+  },
+  'financing-guide': {
+    title: 'Financing Options',
+    description: 'Explore flexible financing for your modular home project.',
+    icon: '💳',
+    sections: [
+      { title: 'Construction Loans', content: 'Traditional construction loans available through major lenders. Factory-built quality qualifies for better rates in many cases.' },
+      { title: 'Cash Payment Plans', content: 'Pay in phases: 30% down, 30% when fabrication begins, 30% upon delivery, 10% at final handoff. Predictable timeline = predictable payments.' },
+      { title: 'Hearth Financing', content: 'Pre-qualification takes 2 minutes, funds in 24 hours. Hearth specializes in modular and alternative construction. Fast approval for investment properties.' },
+      { title: 'Investment Properties', content: 'Modular homes qualify for investment property financing. Fast construction = faster cash flow. Perfect for rental portfolios and development projects.' },
+    ],
+  },
+  'build-process': {
+    title: 'The Build Process',
+    description: 'Step-by-step walkthrough of how your Saltgrass home is built.',
+    icon: '⚙️',
+    sections: [
+      { title: '1. Discovery & Design (Weeks 1-4)', content: 'Meet with Dylan to discuss your vision. Explore our models or start from scratch. We create 3D designs and finalize specifications.' },
+      { title: '2. Permitting & Engineering (Weeks 3-8)', content: 'Parallel track: permit applications filed while engineering finalizes plans. Most permits approve within 4-6 weeks.' },
+      { title: '3. Fabrication (Weeks 5-32)', content: 'Factory builds your modules. Quality inspections at 50%, 80%, and 100%. You\'ll receive progress photos throughout.' },
+      { title: '4. Delivery & Install (Weeks 33-34)', content: 'Modules delivered to your site. Installation team assembles and connects all systems in 2-4 weeks. Initial walkthrough and handoff.' },
+    ],
+  },
+  'disaster-relief-guide': {
+    title: 'Disaster Relief & Rapid Deployment',
+    description: 'How modular housing helps communities rebuild faster.',
+    icon: '🆘',
+    sections: [
+      { title: 'Speed Matters', content: 'Families displaced by disasters need housing fast. Modular units deploy in weeks, not months. Pre-built modules are ready to assemble on-site.' },
+      { title: 'Government-Ready', content: 'FEMA-approved housing. GSA-certified specifications. Saltgrass has government contracts and rapid-response partnerships.' },
+      { title: 'Scalability', content: 'Need 10 units or 1,000? Modular production scales to match demand. Phased delivery coordinates with site preparation.' },
+      { title: 'Quality Assurance', content: 'Factory-built means consistent quality under any conditions. Every module inspected and tested before deployment.' },
+    ],
+  },
+  'design-customization': {
+    title: 'Design & Customization',
+    description: 'Make your modular home truly yours.',
+    icon: '🎨',
+    sections: [
+      { title: 'Start Anywhere', content: 'Pick one of our popular models or start with a blank canvas. Our design team works with you to create your perfect home.' },
+      { title: 'Finish Options', content: 'Choose exterior colors, siding materials, roofing, interior finishes, flooring, kitchen cabinetry, and bathroom fixtures.' },
+      { title: 'Layout Flexibility', content: 'Modify floor plans, add porches, create unique room configurations. Modular doesn\'t mean cookie-cutter.' },
+      { title: 'Smart Home Ready', content: 'Add smart home wiring during fabrication. Integrated HVAC, electrical, and plumbing systems ready for automation.' },
+    ],
+  },
+  'sustainability': {
+    title: 'Sustainability & Durability',
+    description: 'Long-term value and environmental responsibility.',
+    icon: '🌍',
+    sections: [
+      { title: 'Factory Efficiency', content: 'Precise fabrication minimizes material waste. Factory processes are optimized for sustainability. Lower carbon footprint than traditional construction.' },
+      { title: 'Energy Efficiency', content: 'Consistent insulation performance (R-30 walls, R-40 ceiling). Sealed construction prevents air leaks. High-performance windows reduce heating/cooling loads.' },
+      { title: 'Durability', content: 'Factory-built quality means no weather damage during construction. Steel containers last 40+ years. Our buildings are designed to last a lifetime.' },
+      { title: 'Material Quality', content: 'Grade A materials throughout. Metal roofing (lifetime warranty), high-performance insulation, premium appliances, and solid fixtures standard on all homes.' },
+    ],
+  },
+};
+
+const guide = guides[slug];
+if (!guide) return Astro.redirect('/saltgrass-101');
+
+const breadcrumb = slug
+  .split('-')
+  .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+  .join(' ');
+---
+
+<BaseLayout
+  title={`${guide.title} - Saltgrass 101`}
+  description={guide.description}
+  keywords={slug}
+>
+  <Hero
+    eyebrow="Saltgrass 101"
+    headline={guide.title}
+    subhead={guide.description}
+    image="/img/saltgrass-101-hero.jpg"
+  />
+
+  <nav class="bg-ink-50 border-b border-ink-200">
+    <div class="container px-4 sm:px-6 lg:px-8 py-3">
+      <ol class="flex items-center text-sm text-ink-600">
+        <li><a href="/" class="hover:text-brand-primary transition">Home</a></li>
+        <li class="mx-2">/</li>
+        <li><a href="/saltgrass-101" class="hover:text-brand-primary transition">Saltgrass 101</a></li>
+        <li class="mx-2">/</li>
+        <li class="text-ink-900 font-semibold truncate">{guide.title}</li>
+      </ol>
+    </div>
+  </nav>
+
+  <article class="py-section-y bg-white">
+    <div class="container max-w-3xl">
+      <div class="flex gap-4 mb-8 items-start">
+        <div class="text-5xl flex-shrink-0">{guide.icon}</div>
+        <div>
+          <h1 class="text-4xl font-bold text-ink-900">{guide.title}</h1>
+          <p class="text-lg text-ink-700 mt-2">{guide.description}</p>
+        </div>
+      </div>
+
+      <div class="space-y-10">
+        {guide.sections.map((section: any) => (
+          <div>
+            <h2 class="text-2xl font-bold text-ink-900 mb-4">{section.title}</h2>
+            <p class="text-lg text-ink-700 leading-relaxed mb-6">{section.content}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-12 pt-12 border-t-2 border-ink-200">
+        <div class="flex gap-4">
+          <a href="/saltgrass-101"
+            class="inline-flex items-center gap-2 px-6 py-3 text-brand-primary font-semibold hover:text-brand-primary-700 transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            Back to Learning Hub
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <CtaBanner
+    headline="Want to Learn More?"
+    subhead="Visit our blog for detailed case studies, guides, and industry insights."
+  />
+</BaseLayout>

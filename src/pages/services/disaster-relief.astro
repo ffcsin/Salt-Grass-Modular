@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="Disaster Relief & Rapid Deployment - Saltgrass Modular"
+  description="Modular housing solutions for disaster relief, rapid deployment, temporary facilities, and emergency response. FEMA-compatible, government-ready."
+>
+  <Hero
+    eyebrow="Disaster Relief"
+    headline="Rapid Deployment Housing When It Matters Most"
+    subhead="Modular solutions for emergency housing, temporary facilities, and disaster relief. FEMA-compatible. Deployable in weeks, not months."
+    image="/img/disaster-relief-hero.jpg"
+  />
+
+  <!-- Services Overview -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">What We Provide</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          {
+            icon: '🏠',
+            name: 'Emergency Housing',
+            desc: 'Rapid deployment temporary homes for disaster survivors. Fast construction, durable, safe.',
+          },
+          {
+            icon: '🚿',
+            name: 'Modular Bathrooms',
+            desc: 'Portable bathroom facilities for disaster sites, camps, temporary communities.',
+          },
+          {
+            icon: '🏥',
+            name: 'Medical Facilities',
+            desc: 'Mobile field hospitals, medical clinics, triage facilities for emergency response.',
+          },
+          {
+            icon: '📦',
+            name: 'Storage & Supply',
+            desc: 'Secure modular containers for emergency supplies, equipment, and resources.',
+          },
+          {
+            icon: '🛡️',
+            name: 'Tornado Shelters',
+            desc: 'Safe rooms and shelters rated for extreme weather and disaster protection.',
+          },
+          {
+            icon: '🌍',
+            name: 'Custom Solutions',
+            desc: 'Tailored modular solutions for unique disaster response and emergency needs.',
+          },
+        ].map(service => (
+          <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-large transition text-center">
+            <div class="text-5xl mb-4">{service.icon}</div>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">{service.name}</h3>
+            <p class="text-ink-700 text-sm">{service.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Modular for Disaster Relief -->
+  <section class="py-section-y bg-brand-primary text-white">
+    <div class="container">
+      <h2 class="text-4xl font-bold mb-12 text-center">Why Modular for Disaster Relief</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Speed</h3>
+          <p class="mb-4 leading-relaxed">
+            Modular housing deploys in weeks, not months. Pre-built modules are transported to the site and assembled quickly, providing safe shelter when communities need it most.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Scalability</h3>
+          <p class="mb-4 leading-relaxed">
+            Need 10 units or 1,000? Modular can scale from small emergency responses to large-scale disaster deployments. Flexible, repeatable solutions.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Quality Control</h3>
+          <p class="mb-4 leading-relaxed">
+            Factory-built quality ensures consistent, safe construction. Every module is inspected and tested before deployment—no site weather delays or construction variability.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Cost Efficiency</h3>
+          <p class="mb-4 leading-relaxed">
+            Lower per-unit costs through factory efficiency and modular repetition. Government budgets stretch further with transparent, all-in pricing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies / Applications -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Deployment Scenarios</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-2xl p-8 border-l-4 border-brand-primary">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Hurricane/Tornado Relief</h3>
+          <p class="text-ink-700 mb-4">
+            Homeowners displaced by major storms need temporary housing while rebuilding. Modular units provide safe, dignified shelter within weeks of deployment.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ Rapid assessment & site prep</li>
+            <li>✓ 2–4 week deployment</li>
+            <li>✓ Temporary or permanent housing</li>
+            <li>✓ Coordinates with FEMA programs</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border-l-4 border-brand-primary">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Military Housing</h3>
+          <p class="text-ink-700 mb-4">
+            Forward operating bases, training camps, and temporary installations need rapid housing solutions. Modular delivers military-spec temporary facilities.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ Military-grade construction</li>
+            <li>✓ Quick assembly & disassembly</li>
+            <li>✓ Scalable deployment</li>
+            <li>✓ Government contract-ready</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border-l-4 border-brand-primary">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Pandemic Response</h3>
+          <p class="text-ink-700 mb-4">
+            During health crises, quarantine facilities, medical isolation units, and temporary hospitals can be deployed at speed to contain and respond.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ Isolation unit modules</li>
+            <li>✓ Medical facility configurations</li>
+            <li>✓ Sanitation systems built-in</li>
+            <li>✓ Rapid assembly & logistics</li>
+          </ul>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 border-l-4 border-brand-primary">
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Infrastructure Projects</h3>
+          <p class="text-ink-700 mb-4">
+            Large construction projects, remote work sites, and infrastructure repairs need temporary worker housing. Modular keeps projects on schedule.
+          </p>
+          <ul class="space-y-2 text-sm text-ink-700">
+            <li>✓ Worker housing & camps</li>
+            <li>✓ Temporary admin offices</li>
+            <li>✓ Storage & supply units</li>
+            <li>✓ Scales with project phases</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications & Compliance -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Technical Specifications</h2>
+      <div class="max-w-3xl mx-auto space-y-8">
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Standard Emergency Housing Module</h3>
+          <div class="bg-white rounded-xl p-6">
+            <ul class="space-y-2 text-ink-700">
+              <li><strong>Size:</strong> 40' x 10' transportable module</li>
+              <li><strong>Capacity:</strong> 2-person or family configuration</li>
+              <li><strong>Construction:</strong> Steel frame, insulated walls & roof</li>
+              <li><strong>Systems:</strong> Electrical, heating, sanitation (toilet, sink)</li>
+              <li><strong>Assembly:</strong> 2–4 hours on-site with team</li>
+              <li><strong>Compliance:</strong> IRC, IBC, FEMA-compatible</li>
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Certifications & Standards</h3>
+          <div class="bg-white rounded-xl p-6">
+            <ul class="space-y-2 text-ink-700">
+              <li>✓ International Building Code (IBC) compliant</li>
+              <li>✓ FEMA-approved temporary housing</li>
+              <li>✓ GSA schedule ready (government procurement)</li>
+              <li>✓ Military housing specifications</li>
+              <li>✓ Disaster response agency coordination</li>
+              <li>✓ Transportation DOT-certified</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact for Disaster Relief -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="max-w-3xl mx-auto bg-brand-primary text-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Emergency Response Inquiries</h2>
+        <p class="text-lg opacity-90 mb-8">
+          For government agencies, FEMA partnerships, or emergency deployment needs, contact Dylan directly for rapid response.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+14056591949" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-brand-primary px-8 py-3 font-semibold hover:shadow-lg transition">
+            Call Now (405) 659-1949
+          </a>
+          <a href="mailto:Dylan.Walker@saltgrassmodular.com" class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-3 font-semibold text-white hover:bg-white hover:text-brand-primary transition">
+            Email Dylan
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

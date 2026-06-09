@@ -1,0 +1,276 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+
+const models = [
+  {
+    id: 'studio-320',
+    name: '320 SF Studio',
+    sqft: 320,
+    beds: 'Studio',
+    baths: '1',
+    price: 75000,
+    description: 'Perfect for minimalists, interns, or guest housing. Open-concept living with sleeping loft.',
+    features: ['Open concept living', 'Kitchenette with appliances', 'Full bathroom', 'Sleeping loft', 'Large windows'],
+    specs: {
+      dimensions: '40\' x 8\'',
+      height: '13\' interior',
+      roofing: 'Metal standing seam',
+      insulation: 'R-30 walls, R-40 ceiling',
+      flooring: 'Luxury vinyl or hardwood',
+    },
+  },
+  {
+    id: 'onebed-640',
+    name: '640 SF 1-Bedroom',
+    sqft: 640,
+    beds: '1',
+    baths: '1',
+    price: 105000,
+    description: 'The bestseller. Great for couples or single families. Full kitchen and separate bedroom.',
+    features: ['Separate bedroom', 'Full kitchen', 'Living room', 'Full bathroom', 'Washer/dryer hookup'],
+    specs: {
+      dimensions: '40\' x 16\'',
+      height: '13\' interior',
+      roofing: 'Metal standing seam',
+      insulation: 'R-30 walls, R-40 ceiling',
+      flooring: 'Luxury vinyl or hardwood',
+    },
+  },
+  {
+    id: 'twobedroom-960',
+    name: '960 SF 2-Bedroom',
+    sqft: 960,
+    beds: '2',
+    baths: '1.5',
+    price: 155000,
+    description: 'Family-sized comfort with premium finishes. Master suite plus guest bedroom.',
+    features: ['Master bedroom', 'Guest bedroom', 'Premium kitchen', 'Living room with dining', 'Laundry room', '1.5 baths'],
+    specs: {
+      dimensions: '40\' x 24\'',
+      height: '13\' interior',
+      roofing: 'Metal standing seam',
+      insulation: 'R-30 walls, R-40 ceiling',
+      flooring: 'Luxury vinyl or hardwood',
+    },
+  },
+  {
+    id: 'custom-build',
+    name: 'Custom Configurations',
+    sqft: null,
+    beds: 'Custom',
+    baths: 'Custom',
+    price: null,
+    description: 'Not seeing what you want? We build completely custom container homes to your specifications.',
+    features: ['Any size layout', 'Custom finishes', 'Unique architectural features', 'Multi-unit configurations', 'Commercial spaces'],
+    specs: {
+      dimensions: 'Custom',
+      height: 'Custom',
+      roofing: 'Your choice',
+      insulation: 'Your choice',
+      flooring: 'Your choice',
+    },
+  },
+];
+---
+
+<BaseLayout
+  title="Container Home Models - Saltgrass Modular"
+  description="Browse our container home models. Customizable floor plans from 320 SF studios to 960 SF family homes with transparent pricing."
+>
+  <Hero
+    eyebrow="Browse Models"
+    headline="Container Home Models"
+    subhead="Explore our popular floor plans. Every model is fully customizable to match your vision and budget."
+    image="/img/models-hero.jpg"
+  />
+
+  <!-- Models Grid -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {models.map(model => (
+          <div class="bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition">
+            {/* Image Placeholder */}
+            <div class="bg-gradient-to-br from-brand-primary to-brand-secondary h-48 flex items-center justify-center">
+              <div class="text-center text-white">
+                <div class="text-4xl mb-2">
+                  {model.beds === 'Studio' && '🏠'}
+                  {model.beds === '1' && '🏡'}
+                  {model.beds === '2' && '🏘️'}
+                  {model.beds === 'Custom' && '🎨'}
+                </div>
+                <p class="text-sm font-semibold">{model.name}</p>
+              </div>
+            </div>
+
+            {/* Content */}
+            <div class="p-6">
+              <h3 class="text-2xl font-bold text-ink-900 mb-2">{model.name}</h3>
+              <p class="text-sm text-ink-600 mb-4">{model.description}</p>
+
+              {/* Quick Stats */}
+              <div class="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-ink-200">
+                {model.sqft && (
+                  <div>
+                    <p class="text-xs text-ink-600">Square Feet</p>
+                    <p class="text-lg font-bold text-ink-900">{model.sqft}</p>
+                  </div>
+                )}
+                <div>
+                  <p class="text-xs text-ink-600">Bedrooms</p>
+                  <p class="text-lg font-bold text-ink-900">{model.beds}</p>
+                </div>
+                <div>
+                  <p class="text-xs text-ink-600">Bathrooms</p>
+                  <p class="text-lg font-bold text-ink-900">{model.baths}</p>
+                </div>
+              </div>
+
+              {/* Features */}
+              <div class="mb-6">
+                <h4 class="text-xs font-bold text-ink-900 mb-3 uppercase tracking-wide">Features</h4>
+                <ul class="space-y-1">
+                  {model.features.map(feature => (
+                    <li class="text-xs text-ink-700 flex gap-2">
+                      <span class="text-brand-primary">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Pricing */}
+              {model.price ? (
+                <div class="mb-6 pb-6 border-b border-ink-200">
+                  <p class="text-xs text-ink-600 mb-1">Starting Price</p>
+                  <p class="text-3xl font-bold text-brand-primary">${(model.price / 1000).toFixed(0)}K</p>
+                </div>
+              ) : (
+                <div class="mb-6 pb-6 border-b border-ink-200">
+                  <p class="text-sm text-ink-600">Custom pricing based on specifications</p>
+                </div>
+              )}
+
+              {/* CTA */}
+              <button class="w-full btn-primary text-sm">Request Quote</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Specifications Section -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Standard Specifications (All Models)</h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="font-bold text-ink-900 mb-4">Construction & Materials</h3>
+            <ul class="space-y-3 text-sm text-ink-700">
+              <li><strong>Frame:</strong> Steel shipping container (40 HC)</li>
+              <li><strong>Roof:</strong> Metal standing seam (lifetime warranty material)</li>
+              <li><strong>Walls:</strong> Insulated, clad with fiber cement or metal siding</li>
+              <li><strong>Flooring:</strong> Luxury vinyl or hardwood options</li>
+              <li><strong>Insulation:</strong> R-30 walls, R-40 ceiling</li>
+              <li><strong>Windows:</strong> Dual-pane vinyl, low-E</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="font-bold text-ink-900 mb-4">Systems & Features</h3>
+            <ul class="space-y-3 text-sm text-ink-700">
+              <li><strong>HVAC:</strong> Central AC/heating with thermostat</li>
+              <li><strong>Electrical:</strong> 200A service, LED lighting</li>
+              <li><strong>Plumbing:</strong> Hot water heater, modern fixtures</li>
+              <li><strong>Appliances:</strong> Refrigerator, stove, microwave included</li>
+              <li><strong>Water:</strong> Tankless hot water system</li>
+              <li><strong>Warranty:</strong> 1-year comprehensive</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customization -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-8 text-center">Fully Customizable</h2>
+      <div class="max-w-3xl mx-auto bg-white rounded-2xl p-8 border-2 border-brand-primary">
+        <p class="text-ink-700 mb-6 leading-relaxed">
+          These models are starting points. Every container home is fully customizable. You can:
+        </p>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-ink-700">
+          {[
+            'Modify floor plans',
+            'Upgrade finishes (kitchen, bath, flooring)',
+            'Add porches or decks',
+            'Choose exterior colors & materials',
+            'Select appliance packages',
+            'Add smart home features',
+            'Modify window placements',
+            'Create unique room configurations',
+          ].map(item => (
+            <li class="flex gap-2">
+              <span class="text-brand-primary font-bold">✓</span>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="text-ink-700 mt-6 pt-6 border-t border-ink-200">
+          <strong>During your Discovery & Design phase,</strong> work directly with our team to customize your model. Budget impact depends on the changes—we'll provide detailed quotes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Financing & Next Steps -->
+  <section class="py-section-y bg-brand-primary text-white">
+    <div class="container">
+      <h2 class="text-3xl font-bold mb-8 text-center">Next Steps</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="flex gap-4">
+          <div class="text-3xl flex-shrink-0">1️⃣</div>
+          <div>
+            <h3 class="text-lg font-bold mb-2">Choose a Model</h3>
+            <p class="opacity-90">Pick a starting point from our popular models, or start with a blank canvas if none fit perfectly.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-3xl flex-shrink-0">2️⃣</div>
+          <div>
+            <h3 class="text-lg font-bold mb-2">Request a Quote</h3>
+            <p class="opacity-90">Tell us about your vision. We'll prepare a customized quote with design options and timeline.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-3xl flex-shrink-0">3️⃣</div>
+          <div>
+            <h3 class="text-lg font-bold mb-2">Schedule Discovery</h3>
+            <p class="opacity-90">Meet with Dylan to refine specs, explore financing, and lock in your timeline and budget.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4">
+          <div class="text-3xl flex-shrink-0">4️⃣</div>
+          <div>
+            <h3 class="text-lg font-bold mb-2">Design & Build</h3>
+            <p class="opacity-90">We handle design, permitting, fabrication, and delivery. You move into your custom home in 8–9 months.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <CtaBanner
+    headline="Ready to Design Your Perfect Model?"
+    subhead="Start with any of our models and customize it exactly how you want it."
+  />
+</BaseLayout>

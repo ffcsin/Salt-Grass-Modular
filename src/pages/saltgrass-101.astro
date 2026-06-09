@@ -1,0 +1,149 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+
+const guides = [
+  {
+    icon: '🏗️',
+    title: 'Modular vs. Traditional Construction',
+    description: 'Understand the key differences in speed, cost, quality, and sustainability.',
+    slug: 'modular-vs-traditional',
+  },
+  {
+    icon: '💰',
+    title: 'Cost Breakdown & Pricing',
+    description: 'Transparent pricing models for container homes, pools, and custom projects.',
+    slug: 'cost-breakdown',
+  },
+  {
+    icon: '📋',
+    title: 'Permits & Compliance',
+    description: 'Navigate local building codes and permitting with modular construction.',
+    slug: 'permits-compliance',
+  },
+  {
+    icon: '💳',
+    title: 'Financing Options',
+    description: 'Construction loans, cash plans, and flexible payment schedules.',
+    slug: 'financing-guide',
+  },
+  {
+    icon: '⚙️',
+    title: 'The Build Process',
+    description: 'Step-by-step walkthrough from discovery through final handoff.',
+    slug: 'build-process',
+  },
+  {
+    icon: '🆘',
+    title: 'Disaster Relief & Rapid Deployment',
+    description: 'How modular housing helps communities rebuild faster.',
+    slug: 'disaster-relief-guide',
+  },
+  {
+    icon: '🎨',
+    title: 'Design & Customization',
+    description: 'Make your modular home truly yours with unlimited customization.',
+    slug: 'design-customization',
+  },
+  {
+    icon: '🌍',
+    title: 'Sustainability & Durability',
+    description: 'Factory-built quality, energy efficiency, and long-term value.',
+    slug: 'sustainability',
+  },
+];
+---
+
+<BaseLayout
+  title="Saltgrass 101 - Your Modular Construction Guide"
+  description="Learn everything about modular construction, from costs to customization to financing."
+  keywords="modular construction guide, container homes, financing, permits, process"
+>
+  <Hero
+    eyebrow="Learn"
+    headline="Saltgrass 101"
+    subhead="Everything you need to know about modular construction, custom homes, and rapid deployment solutions."
+    image="/img/saltgrass-101-hero.jpg"
+  />
+
+  <!-- Educational Guides Grid -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="max-w-3xl mx-auto mb-12 text-center">
+        <h2 class="text-4xl font-bold text-ink-900 mb-4">Your Learning Hub</h2>
+        <p class="text-lg text-ink-700 leading-relaxed">
+          Explore our comprehensive guides covering every aspect of modular construction, from initial planning through final delivery. Whether you're a homeowner, developer, or agency, you'll find actionable insights here.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+        {guides.map(guide => (
+          <div class="bg-white rounded-2xl p-6 shadow-soft hover:shadow-large transition border-t-4 border-brand-primary">
+            <div class="text-5xl mb-4">{guide.icon}</div>
+            <h3 class="text-lg font-bold text-ink-900 mb-2">{guide.title}</h3>
+            <p class="text-sm text-ink-700 mb-4 leading-relaxed">{guide.description}</p>
+            <a href={`/saltgrass-101/${guide.slug}`}
+              class="inline-flex items-center gap-2 text-brand-primary font-semibold text-sm hover:gap-3 transition-all">
+              Read Guide
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <!-- Guide Sections Overview -->
+      <div class="bg-brand-primary-50 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-ink-900 mb-6">What's Covered</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="font-bold text-ink-900 mb-4 flex items-center gap-2">
+              <span class="text-2xl">🏠</span>
+              For Homeowners
+            </h4>
+            <ul class="space-y-2 text-sm text-ink-700">
+              <li>✓ How modular homes are built</li>
+              <li>✓ Customization & design options</li>
+              <li>✓ Financing & affordability</li>
+              <li>✓ Timeline from start to move-in</li>
+              <li>✓ Durability & warranty coverage</li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-ink-900 mb-4 flex items-center gap-2">
+              <span class="text-2xl">🏢</span>
+              For Developers & Agencies
+            </h4>
+            <ul class="space-y-2 text-sm text-ink-700">
+              <li>✓ Volume production capabilities</li>
+              <li>✓ RFQ process & timelines</li>
+              <li>✓ Government contracts & compliance</li>
+              <li>✓ Disaster relief deployment</li>
+              <li>✓ Competitive advantages</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Connection -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-3xl font-bold text-ink-900 mb-4">Keep Learning</h2>
+        <p class="text-ink-700 mb-8">
+          Visit our blog for regular updates, case studies, industry insights, and detailed how-to guides.
+        </p>
+        <a href="/blog" class="btn-primary">Read the Blog</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    headline="Ready to Start Your Modular Project?"
+    subhead="Explore our models, get a quote, or schedule a consultation with Dylan."
+  />
+</BaseLayout>

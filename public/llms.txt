@@ -1,0 +1,27 @@
+# Saltgrass Modular
+
+Custom modular construction company specializing in container homes, pools, and rapid deployment housing.
+
+## Services
+- Container Homes (320-960 sq ft, from $75K)
+- Modular Pools (Tube Steel & Fiberglass, $12K-$36K)
+- Traditional Builds & Design Customization
+- Disaster Relief & Emergency Housing
+- Government & Military Solutions
+
+## Service Area
+Primary: Oklahoma
+Available: Nationwide for large projects
+Emergency Deployment: International (FEMA-approved)
+
+## Hours
+By appointment — contact Dylan directly for consultations.
+
+## Contact
+- Phone: (405) 659-1949
+- Email: Dylan.Walker@saltgrassmodular.com
+- Website: https://saltgrass-modular.vercel.app
+- Facility: Wagner, Oklahoma (15,000 sq ft)
+
+## Full LLM context
+See /llms-full.txt for detailed information about services, pricing, process, and company philosophy.

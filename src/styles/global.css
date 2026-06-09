@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-ink-800 font-sans antialiased; }
+  h1, h2, h3, h4, h5, h6 { @apply font-display tracking-tight text-ink-900; }
+  h1 { @apply text-5xl md:text-6xl lg:text-7xl font-bold; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl font-semibold; }
+  h3 { @apply text-2xl md:text-3xl font-semibold; }
+  h4 { @apply text-xl md:text-2xl font-semibold; }
+  p  { @apply text-ink-700 leading-relaxed; }
+  a  { @apply text-brand-primary hover:text-brand-primary-700 transition-colors; }
+  ::selection { @apply bg-brand-primary text-white; }
+
+  :focus-visible { @apply outline-2 outline-offset-2 outline-brand-primary; }
+  .skip-to-content {
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4
+           focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:rounded-lg
+           focus:shadow-large;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg
+           bg-brand-primary px-6 py-3 font-semibold text-white
+           shadow-medium hover:shadow-glow-primary
+           hover:-translate-y-0.5 transition duration-200 ease-out-expo;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg
+           border-2 border-brand-primary px-6 py-3 font-semibold
+           text-brand-primary hover:bg-brand-primary hover:text-white
+           transition duration-200 ease-out-expo;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center gap-1 font-semibold
+           text-brand-primary hover:gap-2 transition-all;
+  }
+}

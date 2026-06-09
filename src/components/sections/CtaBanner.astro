@@ -1,0 +1,44 @@
+---
+interface Props {
+  headline?: string;
+  subhead?: string;
+  primaryCta?: { label: string; href: string; dataAction?: string };
+  secondaryCta?: { label: string; href: string; dataAction?: string };
+}
+
+const {
+  headline = 'Ready to Build Your Modular Project?',
+  subhead = 'Get a free consultation and transparent quote from our team.',
+  primaryCta = { label: 'Request a Quote', href: '#', dataAction: 'quote-modal' },
+  secondaryCta = { label: 'Schedule Consultation', href: '#', dataAction: 'consultation-modal' },
+} = Astro.props;
+---
+
+<section class="py-section-y bg-brand-primary text-white">
+  <div class="container text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 max-w-3xl mx-auto">
+      {headline}
+    </h2>
+    <p class="text-lg text-ink-100 mb-12 max-w-2xl mx-auto">
+      {subhead}
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href={primaryCta.href}
+        class="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-brand-primary px-8 py-3 font-semibold shadow-medium hover:shadow-xl hover:-translate-y-0.5 transition duration-200 ease-out-expo"
+        data-action={primaryCta.dataAction}
+      >
+        {primaryCta.label}
+      </a>
+      {secondaryCta && (
+        <a
+          href={secondaryCta.href}
+          class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-3 font-semibold text-white hover:bg-white hover:text-brand-primary transition duration-200 ease-out-expo"
+          data-action={secondaryCta.dataAction}
+        >
+          {secondaryCta.label}
+        </a>
+      )}
+    </div>
+  </div>
+</section>

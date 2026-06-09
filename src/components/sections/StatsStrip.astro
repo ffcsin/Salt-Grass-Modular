@@ -1,0 +1,32 @@
+---
+interface Stat {
+  value: string;
+  label: string;
+}
+
+interface Props {
+  stats?: Stat[];
+}
+
+const defaultStats: Stat[] = [
+  { value: '3+', label: 'Years Building Modular' },
+  { value: '50+', label: 'Projects Delivered' },
+  { value: '99%', label: 'Client Satisfaction' },
+  { value: 'USA+', label: 'Service Area' },
+];
+
+const { stats = defaultStats } = Astro.props;
+---
+
+<section class="py-section-y bg-brand-primary text-white">
+  <div class="container">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+      {stats.map(stat => (
+        <div class="text-center">
+          <div class="text-5xl md:text-6xl font-bold mb-2">{stat.value}</div>
+          <p class="text-ink-100 text-sm md:text-base font-medium">{stat.label}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

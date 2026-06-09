@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+
+const stages = [
+  {
+    number: 1,
+    name: 'Discovery',
+    duration: '1–2 weeks',
+    description: 'We listen. You share your vision, budget, timeline, and site details. Our team gathers everything needed to scope the project accurately.',
+    activities: [
+      'Initial consultation (phone, video, or in-person)',
+      'Site evaluation and photos',
+      'Preliminary budget and timeline estimate',
+      'Design style preferences and reference gathering',
+    ],
+  },
+  {
+    number: 2,
+    name: 'Design',
+    duration: '2–4 weeks',
+    description: 'Our engineers and architects create your custom design. You get 3D renderings, floor plans, specifications, and a detailed cost breakdown.',
+    activities: [
+      '3D renderings and floor plans',
+      'Structural and MEP (mechanical, electrical, plumbing) design',
+      'Cost breakdown by category',
+      'Design revisions based on your feedback',
+      'Final approval and contract signature',
+    ],
+  },
+  {
+    number: 3,
+    name: 'Permitting',
+    duration: '3–6 weeks',
+    description: 'We handle the paperwork. Our team submits plans to local authorities, coordinates reviews, and obtains all necessary permits before fabrication begins.',
+    activities: [
+      'Local building permit application',
+      'Zoning and foundation approvals',
+      'Utility coordination (water, electric, gas)',
+      'Follow-up inspections with local authorities',
+      'Final permit release',
+    ],
+  },
+  {
+    number: 4,
+    name: 'Fabrication',
+    duration: '8–10 weeks',
+    description: 'In our Oklahoma facility, your home takes shape. Every module is built to exacting standards, inspected, and quality-tested before leaving the yard.',
+    activities: [
+      'Materials procurement',
+      'CNC fabrication and assembly',
+      'Systems integration (electrical, plumbing, HVAC)',
+      'Factory inspections and testing',
+      'Final walkthrough and load preparation',
+    ],
+  },
+  {
+    number: 5,
+    name: 'Delivery',
+    duration: '1–2 weeks',
+    description: 'Your modules are carefully transported by our fleet to your site. We coordinate timing with site prep and foundation completion.',
+    activities: [
+      'Route planning and logistics coordination',
+      'Site preparation confirmation',
+      'Foundation and utility connections ready',
+      'Careful transport and positioning',
+      'Temporary stabilization and connections',
+    ],
+  },
+  {
+    number: 6,
+    name: 'Installation',
+    duration: '2–4 weeks',
+    description: 'Our certified technicians assemble modules on-site, connect all systems, and complete final inspections to ensure everything works perfectly.',
+    activities: [
+      'Module connection and sealing',
+      'Utility connections and testing',
+      'Final electrical, plumbing, and HVAC inspections',
+      'Punch list and final walk-through',
+      'Certificate of occupancy coordination',
+    ],
+  },
+  {
+    number: 7,
+    name: 'Handoff',
+    duration: '1 day',
+    description: 'Your home is complete and ready. We walk through all systems, provide manuals, and answer your questions before you move in.',
+    activities: [
+      'Final walkthrough with homeowner',
+      'Systems training and manual review',
+      'Warranty documentation',
+      'Contact info for any future service needs',
+      'Celebrate! Your custom home is ready.',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Our Process - Saltgrass Modular"
+  description="Understand Saltgrass Modular's 8-stage process: from initial discovery to handoff of your custom-built modular home."
+>
+  <Hero
+    eyebrow="How We Build"
+    headline="Our 8-Stage Process"
+    subhead="From your vision to your custom home. Transparent, predictable, and professional every step of the way."
+    image="/img/process-hero.jpg"
+  />
+
+  <!-- Process Timeline -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">The Journey from Vision to Home</h2>
+
+      <!-- Timeline visualization -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+        {stages.map((stage, idx) => (
+          <div class="relative">
+            <div class="bg-brand-primary rounded-full w-12 h-12 flex items-center justify-center text-white font-bold text-lg mx-auto mb-4">
+              {stage.number}
+            </div>
+            <h3 class="text-center font-bold text-ink-900">{stage.name}</h3>
+            {idx < stages.length - 1 && (
+              <div class="hidden lg:block absolute top-6 left-[calc(50%+24px)] w-[calc(100%+8px)] h-1 bg-gradient-to-r from-brand-primary to-ink-200"></div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <!-- Detailed stage descriptions -->
+      <div class="space-y-12">
+        {stages.map((stage) => (
+          <div class="bg-ink-50 rounded-2xl p-8 md:p-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <div class="flex items-baseline gap-3 mb-4">
+                  <div class="bg-brand-primary text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                    {stage.number}
+                  </div>
+                  <h3 class="text-2xl font-bold text-ink-900">{stage.name}</h3>
+                </div>
+                <p class="text-brand-primary font-semibold mb-3">⏱️ {stage.duration}</p>
+                <p class="text-ink-700 leading-relaxed">
+                  {stage.description}
+                </p>
+              </div>
+              <div class="md:col-span-2">
+                <h4 class="font-bold text-ink-900 mb-4">What Happens During This Stage:</h4>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {stage.activities.map((activity) => (
+                    <li class="flex gap-3">
+                      <span class="text-brand-primary font-bold text-lg leading-tight">✓</span>
+                      <span class="text-ink-700">{activity}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Summary -->
+  <section class="py-section-y bg-brand-primary text-white">
+    <div class="container text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Total Timeline</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+        <div>
+          <div class="text-5xl font-bold mb-2">8–9</div>
+          <p>months typical</p>
+        </div>
+        <div>
+          <div class="text-5xl font-bold mb-2">30%</div>
+          <p>faster than traditional builds</p>
+        </div>
+        <div>
+          <div class="text-5xl font-bold mb-2">100%</div>
+          <p>transparent pricing throughout</p>
+        </div>
+      </div>
+      <p class="mt-12 text-lg opacity-90">
+        Every project is unique. Rush timelines and extended ones are both possible—we'll discuss your specific needs during Discovery.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-ink-50 rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Can we compress the timeline?</h3>
+          <p class="text-ink-700">
+            Yes. Rush design (1–2 weeks) and expedited permitting are possible depending on your location and complexity. We'll discuss options during Discovery.
+          </p>
+        </div>
+        <div class="bg-ink-50 rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">What if permits take longer than expected?</h3>
+          <p class="text-ink-700">
+            We handle permitting, but some jurisdictions move slowly. We'll manage the coordination and keep you informed. Fabrication doesn't start until permits are in hand.
+          </p>
+        </div>
+        <div class="bg-ink-50 rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Can I make changes during fabrication?</h3>
+          <p class="text-ink-700">
+            Yes, but only before fabrication begins. Once cutting and assembly start, changes become expensive. This is why we lock the design before moving to Stage 4.
+          </p>
+        </div>
+        <div class="bg-ink-50 rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Who handles the site prep and foundation?</h3>
+          <p class="text-ink-700">
+            You coordinate with your local contractor or hire one we recommend. We provide detailed foundation specs and coordinate timing with delivery.
+          </p>
+        </div>
+        <div class="bg-ink-50 rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">What's included in the final walk-through?</h3>
+          <p class="text-ink-700">
+            Systems training (HVAC, water heater, electrical panels), warranty documentation, maintenance tips, and a direct contact for any future service needs.
+          </p>
+        </div>
+        <div class="bg-ink-50 rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Do you offer financing?</h3>
+          <p class="text-ink-700">
+            Yes. We partner with Hearth for flexible construction loans and offer cash payment plans. See our Financing page or ask during Discovery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <CtaBanner
+    headline="Ready to Start the Process?"
+    subhead="Book a free discovery call with Dylan to discuss your vision and get a timeline and budget estimate."
+  />
+</BaseLayout>

@@ -1,0 +1,74 @@
+---
+interface Service {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+}
+
+interface Props {
+  services?: Service[];
+}
+
+const defaultServices: Service[] = [
+  {
+    title: 'Custom Container Homes',
+    description: 'Unique, tornado-resistant homes built from shipping containers with premium finishes.',
+    icon: '🏠',
+    href: '/services/container-homes',
+  },
+  {
+    title: 'Traditional Modular Builds',
+    description: 'Classic modular construction for dream homes, designed and delivered with precision.',
+    icon: '🏗️',
+    href: '/services/traditional-builds',
+  },
+  {
+    title: 'Modular Pools',
+    description: 'Fast, stunning pools that outperform traditional concrete construction.',
+    icon: '💧',
+    href: '/services/modular-pools',
+  },
+  {
+    title: 'Disaster Relief',
+    description: 'Rapid deployment housing, shelters, and medical facilities when speed matters.',
+    icon: '🆘',
+    href: '/services/disaster-relief',
+  },
+  {
+    title: 'Developers & Military',
+    description: 'Scale, compliance, and rapid deployment for commercial and government projects.',
+    icon: '🤝',
+    href: '/services/developers-military',
+  },
+];
+
+const { services = defaultServices } = Astro.props;
+---
+
+<section class="py-section-y bg-ink-50">
+  <div class="container">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-ink-900 mb-4">What We Build</h2>
+      <p class="text-lg text-ink-700 max-w-2xl mx-auto">
+        From container homes to disaster relief, we solve housing challenges with innovation and precision.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {services.map(service => (
+        <a
+          href={service.href}
+          class="group block rounded-2xl bg-white p-8 shadow-soft hover:shadow-large
+                  hover:-translate-y-1 transition duration-200 ease-out-expo
+                  border border-ink-100 hover:border-brand-primary"
+        >
+          <div class="text-4xl mb-4">{service.icon}</div>
+          <h3 class="text-xl font-semibold text-ink-900 mb-3">{service.title}</h3>
+          <p class="text-ink-700 mb-4 leading-relaxed">{service.description}</p>
+          <span class="btn-ghost">Learn more →</span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

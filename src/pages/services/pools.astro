@@ -1,0 +1,236 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="Modular Pools - Saltgrass Modular"
+  description="Factory-built modular pools with two design options: tube steel + fiberglass or welded steel + epoxy liner. Fast installation, durable, transparent pricing."
+>
+  <Hero
+    eyebrow="Modular Pools"
+    headline="Beautiful Pools. Built Fast."
+    subhead="Two proven designs. Factory-built quality. Professional installation. Starting at $12K for 20' tube steel pools."
+    image="/img/pools-hero.jpg"
+  />
+
+  <!-- Pool Options -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Two Proven Designs</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Tube Steel + Fiberglass -->
+        <div class="bg-white border-2 border-brand-primary rounded-2xl p-8">
+          <div class="text-5xl mb-4">🏊</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Tube Steel Frame + Fiberglass Insert</h3>
+          <p class="text-ink-700 mb-6">
+            Our most popular design. Durable galvanized steel frame with smooth fiberglass interior. Easy maintenance, attractive appearance.
+          </p>
+
+          <div class="bg-ink-50 rounded-lg p-4 mb-6">
+            <h4 class="font-bold text-ink-900 mb-3">Specifications:</h4>
+            <ul class="space-y-2 text-sm text-ink-700">
+              <li>• Frame: Galvanized steel tube (maintenance-free)</li>
+              <li>• Interior: Fiberglass (smooth, durable)</li>
+              <li>• Above-ground installation</li>
+              <li>• Standard sizes: 20', 25', 30'</li>
+              <li>• Depth: 3.5–4' typical</li>
+              <li>• Warranty: 2 years frame, 5 years fiberglass</li>
+            </ul>
+          </div>
+
+          <div class="space-y-3 mb-6">
+            <div>
+              <p class="text-sm text-ink-600">20' x 40' (2,800 gal)</p>
+              <p class="text-2xl font-bold text-brand-primary">Starting at $12,000</p>
+            </div>
+            <div>
+              <p class="text-sm text-ink-600">25' x 50' (4,700 gal)</p>
+              <p class="text-2xl font-bold text-brand-primary">Starting at $18,000</p>
+            </div>
+            <div>
+              <p class="text-sm text-ink-600">30' x 60' (6,750 gal)</p>
+              <p class="text-2xl font-bold text-brand-primary">Starting at $24,000</p>
+            </div>
+          </div>
+
+          <button class="w-full btn-primary">Request Quote</button>
+        </div>
+
+        <!-- Welded Steel + Epoxy Liner -->
+        <div class="bg-white border-2 border-brand-primary rounded-2xl p-8">
+          <div class="text-5xl mb-4">🌊</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">7-Gauge Welded Steel + Epoxy Liner</h3>
+          <p class="text-ink-700 mb-6">
+            Premium in-ground option. Welded steel frame with epoxy liner. Built to last 20+ years. Perfect for permanent installations.
+          </p>
+
+          <div class="bg-ink-50 rounded-lg p-4 mb-6">
+            <h4 class="font-bold text-ink-900 mb-3">Specifications:</h4>
+            <ul class="space-y-2 text-sm text-ink-700">
+              <li>• Frame: 7-gauge welded steel (commercial-grade)</li>
+              <li>• Interior: Food-grade epoxy liner</li>
+              <li>• In-ground installation</li>
+              <li>• Custom sizes available</li>
+              <li>• Depth: Up to 5'</li>
+              <li>• Warranty: 10 years frame, 15 years epoxy</li>
+            </ul>
+          </div>
+
+          <div class="space-y-3 mb-6">
+            <div>
+              <p class="text-sm text-ink-600">20' x 40' (2,800 gal)</p>
+              <p class="text-2xl font-bold text-brand-primary">Starting at $18,000</p>
+            </div>
+            <div>
+              <p class="text-sm text-ink-600">25' x 50' (4,700 gal)</p>
+              <p class="text-2xl font-bold text-brand-primary">Starting at $26,000</p>
+            </div>
+            <div>
+              <p class="text-sm text-ink-600">30' x 60' (6,750 gal)</p>
+              <p class="text-2xl font-bold text-brand-primary">Starting at $36,000</p>
+            </div>
+          </div>
+
+          <button class="w-full btn-primary">Request Quote</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-8 text-center">Which Pool Is Right for You?</h2>
+      <div class="max-w-4xl mx-auto overflow-x-auto">
+        <table class="w-full bg-white rounded-2xl overflow-hidden shadow-soft">
+          <thead class="bg-brand-primary text-white">
+            <tr>
+              <th class="px-6 py-4 text-left font-bold">Feature</th>
+              <th class="px-6 py-4 text-center font-bold">Tube Steel + Fiberglass</th>
+              <th class="px-6 py-4 text-center font-bold">Welded Steel + Epoxy</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-ink-200">
+            <tr class="hover:bg-ink-50">
+              <td class="px-6 py-4 font-semibold">Installation Type</td>
+              <td class="px-6 py-4 text-center">Above-ground</td>
+              <td class="px-6 py-4 text-center">In-ground</td>
+            </tr>
+            <tr class="hover:bg-ink-50">
+              <td class="px-6 py-4 font-semibold">Durability</td>
+              <td class="px-6 py-4 text-center">8–12 years</td>
+              <td class="px-6 py-4 text-center">20+ years</td>
+            </tr>
+            <tr class="hover:bg-ink-50">
+              <td class="px-6 py-4 font-semibold">Maintenance</td>
+              <td class="px-6 py-4 text-center">Seasonal cover, standard</td>
+              <td class="px-6 py-4 text-center">Minimal</td>
+            </tr>
+            <tr class="hover:bg-ink-50">
+              <td class="px-6 py-4 font-semibold">Cost (20' pool)</td>
+              <td class="px-6 py-4 text-center">$12K–$15K</td>
+              <td class="px-6 py-4 text-center">$18K–$22K</td>
+            </tr>
+            <tr class="hover:bg-ink-50">
+              <td class="px-6 py-4 font-semibold">Best For</td>
+              <td class="px-6 py-4 text-center">Families, seasonal use, budget-conscious</td>
+              <td class="px-6 py-4 text-center">Permanent, high-use, long-term investment</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Included -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-8 text-center">What's Included in Your Pool</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+        <div>
+          <h3 class="font-bold text-ink-900 mb-4">Included:</h3>
+          <ul class="space-y-2">
+            {[
+              'Pool frame (galvanized steel or welded steel)',
+              'Interior finish (fiberglass or epoxy)',
+              'Circulation system (pump, filter, plumbing)',
+              'Skimmer and drain system',
+              'Site delivery and installation labor',
+              'Initial fill and system testing',
+              'Owner\'s manual and maintenance guide',
+            ].map(item => (
+              <li class="flex gap-3">
+                <span class="text-brand-primary font-bold">✓</span>
+                <span class="text-ink-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-ink-900 mb-4">Not Included (Optional Add-ons):</h3>
+          <ul class="space-y-2">
+            {[
+              'Deck or surround construction',
+              'Heating system (gas or electric)',
+              'Automation/smart controls',
+              'Lighting',
+              'Diving board or water features',
+              'Pool cover',
+              'Ongoing maintenance service',
+            ].map(item => (
+              <li class="flex gap-3">
+                <span class="text-ink-600">•</span>
+                <span class="text-ink-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Pool FAQs</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">How long does installation take?</h3>
+          <p class="text-ink-700">
+            2–4 weeks from delivery to swim-ready. This includes site prep, foundation, frame assembly, and system testing. Welded steel pools may take longer if in-ground excavation is required.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">What's the lifespan of each pool type?</h3>
+          <p class="text-ink-700">
+            Tube steel + fiberglass: 8–12 years with proper maintenance. Welded steel + epoxy: 20+ years. Both can be refurbished or upgraded if needed.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Can I customize the size?</h3>
+          <p class="text-ink-700">
+            Yes. Standard sizes are available, but we build custom pools too. Custom sizes may take longer and cost more. Ask during your quote.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Do you offer financing?</h3>
+          <p class="text-ink-700">
+            Yes. Construction loans, cash payment plans, and financing partnerships available. See our Financing page or contact Dylan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaBanner
+    headline="Ready to Build Your Dream Pool?"
+    subhead="Get a free quote and compare our two pool designs."
+  />
+</BaseLayout>

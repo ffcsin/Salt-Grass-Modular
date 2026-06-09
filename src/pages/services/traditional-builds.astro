@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="Custom Traditional Builds - Saltgrass Modular"
+  description="Fully custom traditional-style modular homes. Designed to look and feel completely custom, built with modular efficiency."
+>
+  <Hero
+    eyebrow="Traditional Custom Builds"
+    headline="Custom Modular Homes That Look Traditional"
+    subhead="All the beauty of a custom-built home. All the efficiency of modular construction. Fully customizable layouts, finishes, and architectural styles."
+    image="/img/traditional-builds-hero.jpg"
+  />
+
+  <!-- Service Overview -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h2 class="text-4xl font-bold text-ink-900 mb-6">Custom Architecture Meets Modular Efficiency</h2>
+          <p class="text-lg text-ink-700 mb-4 leading-relaxed">
+            Want a beautiful custom home without the traditional construction timeline and cost? Traditional modular builds are your answer.
+          </p>
+          <p class="text-lg text-ink-700 mb-6 leading-relaxed">
+            We design homes that look completely custom—ranch, farmhouse, craftsman, contemporary—but are built using modular methods. You get the aesthetic you love with 30-40% faster timelines and transparent pricing.
+          </p>
+          <div class="space-y-3">
+            <p class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">✓</span>
+              <span class="text-ink-700">Unlimited architectural styles</span>
+            </p>
+            <p class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">✓</span>
+              <span class="text-ink-700">Fully customizable floor plans</span>
+            </p>
+            <p class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">✓</span>
+              <span class="text-ink-700">Premium materials & finishes</span>
+            </p>
+            <p class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">✓</span>
+              <span class="text-ink-700">1-year comprehensive warranty</span>
+            </p>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-xl h-96 md:h-full">
+          <img
+            src="/img/traditional-home-exterior.jpg"
+            alt="Custom traditional modular home"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Styles -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Architectural Styles We Build</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {[
+          { name: 'Farmhouse', desc: 'Timeless charm with modern efficiency' },
+          { name: 'Craftsman', desc: 'Detailed architecture, premium craftsmanship' },
+          { name: 'Modern/Contemporary', desc: 'Clean lines, open concepts, minimalist elegance' },
+          { name: 'Ranch', desc: 'Classic horizontal lines, covered porches' },
+          { name: 'Colonial', desc: 'Symmetrical, traditional, timeless' },
+          { name: 'Custom/Mixed', desc: 'Your vision, our engineering' },
+        ].map(style => (
+          <div class="bg-white rounded-2xl p-6 text-center shadow-soft hover:shadow-large transition">
+            <h3 class="text-xl font-bold text-ink-900 mb-2">{style.name}</h3>
+            <p class="text-ink-700">{style.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process & Timeline -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-8 text-center">Timeline & Process</h2>
+      <div class="max-w-3xl mx-auto bg-brand-primary text-white rounded-2xl p-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div>
+            <p class="text-sm opacity-90 mb-2">Design Phase</p>
+            <p class="text-2xl font-bold">2–4 weeks</p>
+          </div>
+          <div>
+            <p class="text-sm opacity-90 mb-2">Permitting</p>
+            <p class="text-2xl font-bold">3–6 weeks</p>
+          </div>
+          <div>
+            <p class="text-sm opacity-90 mb-2">Build & Install</p>
+            <p class="text-2xl font-bold">10–16 weeks</p>
+          </div>
+        </div>
+        <p class="text-center text-lg font-semibold mt-8">Total: 15–26 weeks (vs. 9–12 months traditional)</p>
+      </div>
+
+      <div class="bg-ink-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-ink-900 mb-6">What's Included</h3>
+        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            'Architectural design & 3D renderings',
+            'Structural engineering',
+            'Full MEP (mechanical, electrical, plumbing) design',
+            'Premium kitchen & bathroom finishes',
+            'HVAC, water heater, electrical panel',
+            'Flooring, paint, trim, doors',
+            'On-site delivery & installation',
+            '1-year comprehensive warranty',
+            'Certificate of occupancy coordination',
+            'Final walkthrough & systems training',
+          ].map(item => (
+            <div class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">✓</span>
+              <span class="text-ink-700">{item}</span>
+            </div>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Transparent Pricing</h2>
+      <div class="max-w-2xl mx-auto bg-white border-2 border-brand-primary rounded-2xl p-8">
+        <p class="text-ink-700 mb-6">
+          Traditional custom modular homes are priced per square foot based on finishes and complexity. Every project is unique, so we provide a detailed quote during the Design phase.
+        </p>
+        <div class="space-y-4 mb-8">
+          <div class="flex justify-between items-center pb-4 border-b border-ink-200">
+            <span class="text-ink-700">Modest finishes (good quality, standard materials)</span>
+            <span class="font-bold text-brand-primary">$85–$110/SF</span>
+          </div>
+          <div class="flex justify-between items-center pb-4 border-b border-ink-200">
+            <span class="text-ink-700">Premium finishes (high-end materials, custom details)</span>
+            <span class="font-bold text-brand-primary">$120–$160/SF</span>
+          </div>
+          <div class="flex justify-between items-center">
+            <span class="text-ink-700">Luxury finishes (premium everything, custom architecture)</span>
+            <span class="font-bold text-brand-primary">$160+/SF</span>
+          </div>
+        </div>
+        <p class="text-sm text-ink-600">
+          <strong>Example:</strong> 1,500 SF home at $110/SF = $165,000 all-in (design, build, delivery, install).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Common Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">How is this different from traditional construction?</h3>
+          <p class="text-ink-700">
+            Traditional construction builds on-site in all weather. Modular builds your home in a factory (controlled conditions), then delivers finished modules for on-site assembly. Result: faster, more consistent quality, better cost control.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Will it look like a modular home?</h3>
+          <p class="text-ink-700">
+            No. Our homes look completely custom. The modular seams are sealed and finished to be invisible. Architectural style, roofline, exterior finishes—all are indistinguishable from traditional builds.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Can I get financing?</h3>
+          <p class="text-ink-700">
+            Yes. Construction loans, cash payment plans, and home equity financing all work. See our Financing page for details.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">What if I want to add a deck or second story later?</h3>
+          <p class="text-ink-700">
+            Your modular home is built like a traditional home—you can add decks, porches, and future additions as needed. We design the foundation to support expansion.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <CtaBanner
+    headline="Ready to Design Your Custom Home?"
+    subhead="Schedule a consultation to discuss your vision, timeline, and budget."
+  />
+</BaseLayout>

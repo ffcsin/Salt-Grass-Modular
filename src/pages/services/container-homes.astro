@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+
+const specs = [
+  { label: 'Tornado Resistance', value: 'F3-Rated' },
+  { label: 'Construction Timeline', value: '8–9 months' },
+  { label: 'Warranty', value: '1 year comprehensive' },
+  { label: 'Locations Served', value: 'USA-wide' },
+];
+
+const features = [
+  'Fully customizable interior layout',
+  'High-quality finishes (kitchen, bath, flooring)',
+  'Energy-efficient insulation & HVAC',
+  'Modular design allows future additions',
+  'Environmentally sustainable building method',
+  'Transparent, all-in pricing',
+];
+
+const faqItems = [
+  {
+    q: 'Are container homes safe?',
+    a: 'Absolutely. Our container homes are F3 tornado-resistant, meet all IRC and IBC codes, and undergo rigorous factory inspections. They\'re as safe as traditional homes—just built faster.',
+  },
+  {
+    q: 'Can I customize the layout?',
+    a: 'Yes, completely. Every container home is custom-designed to your specifications. We work with you on floor plans, room layout, finishes, and features.',
+  },
+  {
+    q: 'How much does a container home cost?',
+    a: 'Pricing varies based on size and finishes. A typical 640 SF one-bedroom ranges from $90K–$120K. Request a quote for exact pricing tailored to your project.',
+  },
+  {
+    q: 'How long does construction take?',
+    a: '8–9 months from design approval to move-in. This includes design (2–4 weeks), permitting (3–6 weeks), fabrication (8–10 weeks), delivery (1–2 weeks), and installation (2–4 weeks).',
+  },
+  {
+    q: 'Can I get financing?',
+    a: 'Yes. We partner with Hearth for construction loans and offer cash payment plans. See our Financing page for details.',
+  },
+  {
+    q: 'Do you ship nationwide?',
+    a: 'Yes. We deliver and install across the USA. Shipping costs vary by distance—we\'ll provide an estimate during your quote.',
+  },
+];
+---
+
+<BaseLayout
+  title="Custom Container Homes - Saltgrass Modular"
+  description="Custom-designed modular container homes with F3 tornado rating, transparent pricing, and fast 8-9 month timelines."
+>
+  <Hero
+    eyebrow="Custom Container Homes"
+    headline="Beautifully Built Container Homes"
+    subhead="From studio to multi-bedroom. Fully customizable, tornado-resistant, and built in our Oklahoma facility. Starting at $75K."
+    image="/img/container-homes-hero.jpg"
+  />
+
+  <!-- Service Overview -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h2 class="text-4xl font-bold text-ink-900 mb-6">Container Homes Reimagined</h2>
+          <p class="text-lg text-ink-700 mb-4 leading-relaxed">
+            Container homes aren't just trendy—they're practical, affordable, and sustainable. At Saltgrass, we take shipping containers and transform them into stunning, fully-functional homes that exceed building codes.
+          </p>
+          <p class="text-lg text-ink-700 mb-6 leading-relaxed">
+            Whether you're building your first home, an ADU for your property, or a rental investment, our container homes offer:
+          </p>
+          <ul class="space-y-3">
+            {features.map(feature => (
+              <li class="flex gap-3">
+                <span class="text-brand-primary font-bold text-lg leading-tight">✓</span>
+                <span class="text-ink-700">{feature}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-xl h-96 md:h-full">
+          <img
+            src="/img/container-home-interior.jpg"
+            alt="Modern container home interior"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specs Strip -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {specs.map(spec => (
+          <div class="text-center">
+            <p class="text-sm text-ink-600 mb-2">{spec.label}</p>
+            <p class="text-2xl font-bold text-brand-primary">{spec.value}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Models Gallery -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Popular Models</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-primary to-brand-secondary h-48"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-2">320 SF Studio</h3>
+            <p class="text-sm text-ink-600 mb-4">Perfect for minimalists, interns, or guest housing.</p>
+            <ul class="text-sm text-ink-700 space-y-2 mb-6">
+              <li>• 320 sq ft open concept</li>
+              <li>• Kitchenette + full bath</li>
+              <li>• Loft sleeping area</li>
+            </ul>
+            <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $75K</p>
+            <button class="w-full btn-primary text-sm">Request Quote</button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-secondary to-ink-700 h-48"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-2">640 SF 1-Bedroom</h3>
+            <p class="text-sm text-ink-600 mb-4">The bestseller. Great for couples or single families.</p>
+            <ul class="text-sm text-ink-700 space-y-2 mb-6">
+              <li>• 640 sq ft layout</li>
+              <li>• 1 bed + 1 bath</li>
+              <li>• Full kitchen & living area</li>
+            </ul>
+            <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $105K</p>
+            <button class="w-full btn-primary text-sm">Request Quote</button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
+          <div class="bg-gradient-to-br from-ink-700 to-brand-primary h-48"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-2">960 SF 2-Bedroom</h3>
+            <p class="text-sm text-ink-600 mb-4">Family-sized comfort with premium finishes.</p>
+            <ul class="text-sm text-ink-700 space-y-2 mb-6">
+              <li>• 960 sq ft layout</li>
+              <li>• 2 bed + 1.5 bath</li>
+              <li>• Spacious kitchen & den</li>
+            </ul>
+            <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $155K</p>
+            <button class="w-full btn-primary text-sm">Request Quote</button>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-ink-600 mt-8">
+        These are popular starting points. <strong>Full customization available</strong> for any size or layout.
+      </p>
+    </div>
+  </section>
+
+  <!-- Project Gallery -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Recent Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="rounded-2xl overflow-hidden shadow-soft">
+          <div class="bg-gradient-to-br from-blue-400 to-blue-600 h-64"></div>
+          <div class="p-6 bg-white">
+            <h3 class="font-bold text-ink-900 mb-2">Atlanta, Georgia</h3>
+            <p class="text-sm text-ink-700 mb-4">960 SF luxury home. Ritz Carlton-inspired finishes. 9-month timeline.</p>
+            <p class="text-sm"><strong>Client:</strong> Young professional</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden shadow-soft">
+          <div class="bg-gradient-to-br from-green-400 to-green-600 h-64"></div>
+          <div class="p-6 bg-white">
+            <h3 class="font-bold text-ink-900 mb-2">Wagner, Oklahoma</h3>
+            <p class="text-sm text-ink-700 mb-4">640 SF one-bedroom ADU. Family addition project. 8-month build.</p>
+            <p class="text-sm"><strong>Client:</strong> Homeowner expansion</p>
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden shadow-soft">
+          <div class="bg-gradient-to-br from-amber-400 to-amber-600 h-64"></div>
+          <div class="p-6 bg-white">
+            <h3 class="font-bold text-ink-900 mb-2">Alamosa, Colorado</h3>
+            <p class="text-sm text-ink-700 mb-4">320 SF studio rental property. Mountain location. 7-month timeline.</p>
+            <p class="text-sm"><strong>Client:</strong> Real estate investor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Container Homes -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Why Choose Container Homes?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-6">Advantages</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">1.</span>
+              <div>
+                <p class="font-bold text-ink-900">Speed</p>
+                <p class="text-sm text-ink-700">Factory-built modules mean faster timelines and less on-site work.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">2.</span>
+              <div>
+                <p class="font-bold text-ink-900">Cost</p>
+                <p class="text-sm text-ink-700">30-40% cheaper than traditional construction for the same square footage.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">3.</span>
+              <div>
+                <p class="font-bold text-ink-900">Sustainability</p>
+                <p class="text-sm text-ink-700">Repurpose containers, reduce waste, lower carbon footprint.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-brand-primary font-bold text-lg">4.</span>
+              <div>
+                <p class="font-bold text-ink-900">Quality</p>
+                <p class="text-sm text-ink-700">Factory inspections ensure consistent, high-quality construction.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-6">Perfect For</h3>
+          <ul class="space-y-4">
+            <li class="flex gap-3">
+              <span class="text-4xl">🏠</span>
+              <div>
+                <p class="font-bold text-ink-900">Primary Residences</p>
+                <p class="text-sm text-ink-700">Beautiful, custom homes for owner-occupants.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-4xl">🏡</span>
+              <div>
+                <p class="font-bold text-ink-900">ADUs & Guest Houses</p>
+                <p class="text-sm text-ink-700">Perfect addition to existing properties.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-4xl">💰</span>
+              <div>
+                <p class="font-bold text-ink-900">Investment Properties</p>
+                <p class="text-sm text-ink-700">Rental units with strong ROI and quick time-to-market.</p>
+              </div>
+            </li>
+            <li class="flex gap-3">
+              <span class="text-4xl">🌍</span>
+              <div>
+                <p class="font-bold text-ink-900">Disaster Relief</p>
+                <p class="text-sm text-ink-700">Rapid deployment for emergency housing.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        {faqItems.map(item => (
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-bold text-ink-900 mb-3">{item.q}</h3>
+            <p class="text-ink-700">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <CtaBanner
+    headline="Ready to Build Your Container Home?"
+    subhead="Get a free quote and personalized timeline for your custom project."
+  />
+</BaseLayout>

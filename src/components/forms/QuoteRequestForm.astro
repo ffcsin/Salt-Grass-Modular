@@ -1,0 +1,219 @@
+---
+const API_BASE = import.meta.env.PUBLIC_API_URL || 'https://lpai-monorepo-production.up.railway.app';
+const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID || 'plan_chNIQv7tfy09Ew_h1liV';
+---
+
+<form id="quote-request-form" data-location-id={LOCATION_ID} class="space-y-4">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label for="firstName" class="block text-sm font-semibold text-ink-900 mb-2">
+        First Name <span class="text-brand-primary">*</span>
+      </label>
+      <input
+        id="firstName"
+        name="firstName"
+        type="text"
+        placeholder="John"
+        required
+        class="btn-input w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+      />
+    </div>
+    <div>
+      <label for="lastName" class="block text-sm font-semibold text-ink-900 mb-2">
+        Last Name <span class="text-brand-primary">*</span>
+      </label>
+      <input
+        id="lastName"
+        name="lastName"
+        type="text"
+        placeholder="Smith"
+        required
+        class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label for="email" class="block text-sm font-semibold text-ink-900 mb-2">
+      Email Address <span class="text-brand-primary">*</span>
+    </label>
+    <input
+      id="email"
+      name="email"
+      type="email"
+      placeholder="you@example.com"
+      required
+      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+    />
+  </div>
+
+  <div>
+    <label for="phone" class="block text-sm font-semibold text-ink-900 mb-2">
+      Phone Number <span class="text-brand-primary">*</span>
+    </label>
+    <input
+      id="phone"
+      name="phone"
+      type="tel"
+      placeholder="(405) 555-0123"
+      required
+      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+    />
+  </div>
+
+  <div>
+    <label for="projectType" class="block text-sm font-semibold text-ink-900 mb-2">
+      Project Type <span class="text-brand-primary">*</span>
+    </label>
+    <select
+      id="projectType"
+      name="projectType"
+      required
+      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+    >
+      <option value="">Select a project type…</option>
+      <option value="Container Home">Container Home</option>
+      <option value="Traditional Build">Traditional Build</option>
+      <option value="Modular Pool">Modular Pool</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="location" class="block text-sm font-semibold text-ink-900 mb-2">
+      Project Location <span class="text-brand-primary">*</span>
+    </label>
+    <input
+      id="location"
+      name="location"
+      type="text"
+      placeholder="Norman, OK"
+      required
+      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+    />
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label for="budgetRange" class="block text-sm font-semibold text-ink-900 mb-2">
+        Budget Range <span class="text-brand-primary">*</span>
+      </label>
+      <select
+        id="budgetRange"
+        name="budgetRange"
+        required
+        class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+      >
+        <option value="">Select…</option>
+        <option value="$50K - $100K">$50K - $100K</option>
+        <option value="$100K - $200K">$100K - $200K</option>
+        <option value="$200K - $500K">$200K - $500K</option>
+        <option value="$500K+">$500K+</option>
+      </select>
+    </div>
+    <div>
+      <label for="timeline" class="block text-sm font-semibold text-ink-900 mb-2">
+        Timeline <span class="text-brand-primary">*</span>
+      </label>
+      <select
+        id="timeline"
+        name="timeline"
+        required
+        class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+      >
+        <option value="">Select…</option>
+        <option value="ASAP (1-3 months)">ASAP (1-3 months)</option>
+        <option value="Next quarter">Next quarter</option>
+        <option value="Next year">Next year</option>
+        <option value="Just exploring">Just exploring</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <label for="message" class="block text-sm font-semibold text-ink-900 mb-2">
+      Project Details
+    </label>
+    <textarea
+      id="message"
+      name="message"
+      rows="4"
+      placeholder="Tell us about your vision..."
+      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
+    ></textarea>
+  </div>
+
+  <!-- Honeypot -->
+  <input
+    name="website_url"
+    type="text"
+    tabindex="-1"
+    autocomplete="off"
+    style="position:absolute;left:-9999px;opacity:0;pointer-events:none"
+    aria-hidden="true"
+  />
+
+  <div id="quote-request-error" class="hidden text-sm text-red-600 bg-red-50 p-3 rounded-lg"></div>
+
+  <button
+    type="submit"
+    class="btn-primary w-full"
+  >
+    Get Free Quote
+  </button>
+
+  <div id="quote-request-success" class="hidden text-center py-6">
+    <div class="text-4xl mb-3">✓</div>
+    <h4 class="text-lg font-semibold text-ink-900 mb-2">Thanks!</h4>
+    <p class="text-ink-700">We received your quote request. Dylan will contact you within 24 hours.</p>
+  </div>
+</form>
+
+<script define:vars={{ API_BASE, LOCATION_ID }}>
+  const form = document.getElementById('quote-request-form');
+  const errEl = document.getElementById('quote-request-error');
+  const successEl = document.getElementById('quote-request-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.target);
+
+    // Honeypot check
+    if (fd.get('website_url')) {
+      form.classList.add('hidden');
+      successEl.classList.remove('hidden');
+      return;
+    }
+
+    const data = {};
+    for (const [k, v] of fd.entries()) {
+      if (k === 'website_url') continue;
+      data[k] = v;
+    }
+
+    errEl.classList.add('hidden');
+
+    try {
+      const res = await fetch(`${API_BASE}/api/portal/forms/quote-request/submit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          locationId: LOCATION_ID,
+          data,
+          meta: { referrer: document.referrer },
+        }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.message || 'Could not submit quote request');
+      }
+
+      form.classList.add('hidden');
+      successEl.classList.remove('hidden');
+    } catch (err) {
+      errEl.textContent = err.message;
+      errEl.classList.remove('hidden');
+    }
+  });
+</script>

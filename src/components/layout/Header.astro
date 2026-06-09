@@ -1,0 +1,35 @@
+---
+const nav = [
+  { label: 'Services', href: '/services' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
+];
+const phone = '405-659-1949';
+---
+
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-ink-100">
+  <div class="container mx-auto flex items-center justify-between py-4">
+    <a href="/" class="flex items-center gap-2 font-display text-xl font-bold text-ink-900" aria-label="Saltgrass Modular home">
+      <span>Saltgrass Modular</span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+      {nav.map(item => (
+        <a href={item.href} class="text-ink-700 hover:text-brand-primary font-medium transition-colors">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href={`tel:${phone}`} class="hidden sm:inline text-ink-700 hover:text-brand-primary font-medium transition-colors">
+        {phone}
+      </a>
+      <a href="/contact" class="btn-primary">Get Quote</a>
+      <button class="md:hidden p-2" aria-label="Open menu" data-mobile-menu-toggle>
+        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      </button>
+    </div>
+  </div>
+</header>

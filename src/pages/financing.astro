@@ -1,0 +1,309 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="Financing Your Modular Home - Saltgrass Modular"
+  description="Flexible financing options including Hearth construction loans, cash payment plans, and ROI calculators for modular homes."
+>
+  <Hero
+    eyebrow="Financing Solutions"
+    headline="Making Your Modular Dream Affordable"
+    subhead="Multiple flexible financing options to fit your budget and timeline. Pre-qualify in minutes with Hearth or explore cash payment plans."
+    image="/img/financing-hero.jpg"
+  />
+
+  <!-- Financing Options Overview -->
+  <section class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Your Financing Options</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white border-2 border-brand-primary rounded-2xl p-8 hover:shadow-large transition">
+          <div class="text-4xl mb-4">🏦</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Construction Loans</h3>
+          <p class="text-ink-700 mb-6">
+            Traditional construction financing for homes and projects. Borrow the full amount upfront, pay interest during construction, then convert to a mortgage.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm text-ink-700">
+            <li>✓ Full financing available</li>
+            <li>✓ Flexible terms (5–30 years)</li>
+            <li>✓ Competitive rates</li>
+            <li>✓ Covers design to completion</li>
+          </ul>
+          <a href="#hearth-section" class="btn-primary w-full text-center">Learn More</a>
+        </div>
+
+        <div class="bg-white border-2 border-brand-primary rounded-2xl p-8 hover:shadow-large transition">
+          <div class="text-4xl mb-4">💵</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Cash Payment Plans</h3>
+          <p class="text-ink-700 mb-6">
+            Flexible payment schedules tied to project milestones. Pay as we build, with transparent phase-based breakdowns.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm text-ink-700">
+            <li>✓ Phase-based payments</li>
+            <li>✓ No interest on deferred payments</li>
+            <li>✓ Clear milestone breakdowns</li>
+            <li>✓ Perfect for self-funded projects</li>
+          </ul>
+          <a href="#cash-plans" class="btn-secondary w-full text-center">View Payment Schedules</a>
+        </div>
+
+        <div class="bg-white border-2 border-brand-primary rounded-2xl p-8 hover:shadow-large transition">
+          <div class="text-4xl mb-4">📊</div>
+          <h3 class="text-2xl font-bold text-ink-900 mb-4">Home Equity / HELOC</h3>
+          <p class="text-ink-700 mb-6">
+            If you own a home with equity, a HELOC or home equity loan can fund your modular project at competitive rates.
+          </p>
+          <ul class="space-y-2 mb-6 text-sm text-ink-700">
+            <li>✓ Lower interest rates</li>
+            <li>✓ Flexible draw schedule</li>
+            <li>✓ Tax advantages</li>
+            <li>✓ Works for ADUs & investments</li>
+          </ul>
+          <a href="#contact-financing" class="btn-secondary w-full text-center">Talk to Dylan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hearth Section -->
+  <section id="hearth-section" class="py-section-y bg-ink-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-ink-900 mb-8 text-center">Construction Financing with Hearth</h2>
+
+        <div class="bg-white rounded-2xl p-8 md:p-10 mb-8">
+          <p class="text-lg text-ink-700 mb-6 leading-relaxed">
+            We partner with <strong>Hearth</strong>, a leading construction financing platform that specializes in modular and custom homes. Hearth makes it fast, transparent, and easy to finance your Saltgrass project.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <h3 class="font-bold text-ink-900 mb-4">How It Works:</h3>
+              <ol class="space-y-3 text-ink-700">
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">1.</span>
+                  <span>Pre-qualify online (takes ~5 minutes)</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">2.</span>
+                  <span>Get a pre-approval letter</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">3.</span>
+                  <span>We finalize specs and cost estimate</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">4.</span>
+                  <span>Hearth funds project phases as we build</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">5.</span>
+                  <span>Convert to permanent mortgage after completion</span>
+                </li>
+              </ol>
+            </div>
+
+            <div>
+              <h3 class="font-bold text-ink-900 mb-4">Hearth Advantages:</h3>
+              <ul class="space-y-3 text-ink-700">
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">✓</span>
+                  <span>Fast pre-qualification (same day)</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">✓</span>
+                  <span>Up to 100% financing available</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">✓</span>
+                  <span>Competitive rates for qualified buyers</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">✓</span>
+                  <span>Transparent, no hidden fees</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="text-brand-primary font-bold">✓</span>
+                  <span>Supports modular-specific lending</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-brand-primary text-white rounded-xl p-6 text-center">
+            <p class="mb-4">Ready to explore construction financing?</p>
+            <a href="https://hearth.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-brand-primary px-8 py-3 font-semibold hover:shadow-lg transition">
+              Pre-Qualify with Hearth →
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-blue-50 border-l-4 border-blue-500 rounded p-6 text-sm text-blue-900">
+          <p>
+            <strong>Note:</strong> Hearth is a third-party lender. Pre-qualification and approval are subject to their underwriting standards. Saltgrass can recommend local lenders and help coordinate financing conversations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cash Payment Plans -->
+  <section id="cash-plans" class="py-section-y">
+    <div class="container">
+      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Cash Payment Plans</h2>
+
+      <p class="text-center text-ink-700 mb-12 max-w-2xl mx-auto">
+        If you're self-funding, our phased payment plan aligns with our construction stages. Pay as we build—no interest, no hidden costs.
+      </p>
+
+      <!-- Container Homes Payment Schedule -->
+      <div class="max-w-3xl mx-auto mb-12">
+        <h3 class="text-2xl font-bold text-ink-900 mb-6">Container Homes & Custom Builds</h3>
+        <div class="bg-white border-2 border-ink-300 rounded-2xl overflow-hidden">
+          <table class="w-full">
+            <thead class="bg-brand-primary text-white">
+              <tr>
+                <th class="px-6 py-4 text-left font-bold">Milestone</th>
+                <th class="px-6 py-4 text-right font-bold">Payment</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-ink-200">
+              <tr class="hover:bg-ink-50">
+                <td class="px-6 py-4">Design & Permitting (Discovery → Design Approval)</td>
+                <td class="px-6 py-4 text-right font-semibold">30%</td>
+              </tr>
+              <tr class="hover:bg-ink-50">
+                <td class="px-6 py-4">Fabrication Start (Foundation Ready → Fabrication Complete)</td>
+                <td class="px-6 py-4 text-right font-semibold">30%</td>
+              </tr>
+              <tr class="hover:bg-ink-50">
+                <td class="px-6 py-4">Delivery & Installation (Modules Delivered → Installation Start)</td>
+                <td class="px-6 py-4 text-right font-semibold">30%</td>
+              </tr>
+              <tr class="bg-ink-100">
+                <td class="px-6 py-4 font-bold">Final Handoff (Systems Complete → Move-In Ready)</td>
+                <td class="px-6 py-4 text-right font-bold">10%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-600 mt-4">
+          <strong>Example:</strong> $300,000 home = $90K design, $90K fabrication, $90K delivery/install, $30K final.
+        </p>
+      </div>
+
+      <!-- Pools Payment Schedule -->
+      <div class="max-w-3xl mx-auto">
+        <h3 class="text-2xl font-bold text-ink-900 mb-6">Modular Pools</h3>
+        <div class="bg-white border-2 border-ink-300 rounded-2xl overflow-hidden">
+          <table class="w-full">
+            <thead class="bg-brand-primary text-white">
+              <tr>
+                <th class="px-6 py-4 text-left font-bold">Milestone</th>
+                <th class="px-6 py-4 text-right font-bold">Payment</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-ink-200">
+              <tr class="hover:bg-ink-50">
+                <td class="px-6 py-4">Design & Permitting</td>
+                <td class="px-6 py-4 text-right font-semibold">50%</td>
+              </tr>
+              <tr class="hover:bg-ink-50">
+                <td class="px-6 py-4">Fabrication Complete</td>
+                <td class="px-6 py-4 text-right font-semibold">25%</td>
+              </tr>
+              <tr class="hover:bg-ink-50">
+                <td class="px-6 py-4">Delivery & Installation Start</td>
+                <td class="px-6 py-4 text-right font-semibold">20%</td>
+              </tr>
+              <tr class="bg-ink-100">
+                <td class="px-6 py-4 font-bold">Final Completion & Permit Sign-Off</td>
+                <td class="px-6 py-4 text-right font-bold">5%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-sm text-ink-600 mt-4">
+          <strong>Example:</strong> $50,000 pool = $25K design, $12.5K fabrication, $10K delivery/install, $2.5K final.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Financing FAQs</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">What credit score do I need?</h3>
+          <p class="text-ink-700">
+            Hearth typically requires a minimum 620 credit score, though 700+ qualifies for better rates. Traditional construction lenders may have similar requirements. Ask us about alternative programs if your score is below 620.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Can I get 100% financing?</h3>
+          <p class="text-ink-700">
+            Yes, up to 100% of the project cost is available through some programs, especially if you have significant equity or strong credit. Most loans require 10-20% down. We'll help you understand your options during the Discovery phase.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">How long does approval take?</h3>
+          <p class="text-ink-700">
+            Hearth pre-qualification happens in days. Full approval depends on appraisal and underwriting—typically 2-4 weeks. We manage the coordination to keep your project on schedule.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">What if I'm financing an investment property or ADU?</h3>
+          <p class="text-ink-700">
+            Investment financing has different terms, but Hearth and other lenders support ADU and rental projects. Tell us during Discovery and we'll connect you with the right programs.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Do you offer discounts for cash deals?</h3>
+          <p class="text-ink-700">
+            Our pricing is transparent and not dependent on financing method. Cash deals don't receive a discount, but you do get the benefit of faster project completion with no lender contingencies.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-xl p-6">
+          <h3 class="font-bold text-ink-900 mb-3">Can you recommend local lenders?</h3>
+          <p class="text-ink-700">
+            Absolutely. We work with several local Oklahoma lenders and can provide referrals. We can also facilitate conversations between you and your chosen lender to explain the modular process and timeline.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact for Financing -->
+  <section id="contact-financing" class="py-section-y">
+    <div class="container">
+      <div class="bg-brand-primary text-white rounded-2xl p-8 md:p-12 text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Talk Financing?</h2>
+        <p class="text-lg opacity-90 mb-8">
+          Dylan and the Saltgrass team are happy to discuss financing options tailored to your situation. No pressure, just honest guidance.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+14056591949" class="inline-flex items-center justify-center gap-2 rounded-lg bg-white text-brand-primary px-8 py-3 font-semibold hover:shadow-lg transition">
+            Call Now
+          </a>
+          <a
+            href="#"
+            onclick="document.getElementById('consultation-modal')?.classList.remove('hidden'); return false;"
+            class="inline-flex items-center justify-center gap-2 rounded-lg border-2 border-white px-8 py-3 font-semibold text-white hover:bg-white hover:text-brand-primary transition"
+          >
+            Schedule Call
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
