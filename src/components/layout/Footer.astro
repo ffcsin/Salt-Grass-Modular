@@ -10,11 +10,11 @@ const featuredMetros = METRO_LOCATIONS
   .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
-<footer class="bg-ink-900 text-ink-300">
+<footer class="bg-ink-900 text-ink-200">
   <div class="container py-section-y grid gap-12 md:grid-cols-4">
     <div>
       <h3 class="text-white font-bold text-lg mb-4">Saltgrass Modular</h3>
-      <p class="text-sm leading-relaxed mb-4">Custom modular construction solving housing crises across the USA. Container homes, pools, and rapid deployment solutions.</p>
+      <p class="text-[0.95rem] leading-relaxed mb-4 text-ink-100">Custom modular construction solving housing crises across the USA. Container homes, pools, and rapid deployment solutions.</p>
       <address class="not-italic text-sm space-y-1">
         <div>Oklahoma, USA</div>
         <a href="tel:405-659-1949" class="hover:text-white block">405-659-1949</a>
@@ -77,9 +77,10 @@ const featuredMetros = METRO_LOCATIONS
 
 <style>
   /* The global `a` rule paints links crimson (text-brand-primary) — unreadable
-     on the dark ink-900 footer. Override to a light neutral with white on hover.
-     ink-300 (#CBD5E1) on ink-900 (#0F172A) ≈ 11:1 contrast (WCAG AAA). */
-  footer a { color: #CBD5E1; }
+     on the dark ink-900 footer. Override to a light neutral (matching the dark
+     header's ink-200 links) with white on hover.
+     ink-200 (#E2E8F0) on ink-900 (#0F172A) ≈ 13:1 contrast (WCAG AAA). */
+  footer a { color: #E2E8F0; }
   footer a:hover { color: #ffffff; }
   /* Keep section headings + the brand mark crisp white. */
   footer h3, footer h4 { color: #ffffff; }
