@@ -128,3 +128,41 @@ Factory-built quality with zero field defects. Premium appliances and materials 
 
 **How does financing work?**
 Multiple options: construction loans, cash payment plans, Hearth financing, or investment property loans. Most clients qualify within 24 hours.
+
+---
+
+## Service Areas (Geography)
+
+Saltgrass Modular fabricates in Wagner, Oklahoma and delivers nationwide. Honest delivery framing:
+- **Home state:** Oklahoma (Oklahoma City, Tulsa, Norman, Broken Arrow, and statewide) — shortest lead times and lowest delivery cost.
+- **Regional delivery (routine home delivery):** Texas, Kansas, Arkansas, Missouri, New Mexico, Louisiana, Nebraska, Colorado — including metros such as Dallas, Houston, San Antonio, Austin, Fort Worth, Wichita, Kansas City, St. Louis, Little Rock, Albuquerque, New Orleans, Omaha, Denver, and Colorado Springs.
+- **Nationwide:** We ship modular for larger projects across all 50 states, and serve disaster-relief and government/military deployments anywhere they are needed.
+
+Per-state and per-metro detail (climate-appropriate engineering + local framing) is published at /locations and /locations/<state-or-metro>. Per-city pricing is at /cost/<city>. Delivery distance from the Oklahoma facility is the main location-based pricing variable and is quoted transparently — never hidden in fees.
+
+## Climate-Appropriate Engineering
+
+We engineer every build to its site's real conditions:
+- **Tornado Alley** (Oklahoma, Kansas, Nebraska, etc.): elevated wind-load ratings and robust anchoring.
+- **Gulf / Atlantic hurricane coasts** (Texas Gulf, Louisiana, Florida, the Carolinas, etc.): high wind-load engineering.
+- **Northern snow-load regions** (the Upper Midwest, Mountain West, Northeast): roof structure rated to local ground snow load.
+- **Seismic zones** (California, Pacific Northwest, etc.): engineered tie-downs and reinforced connections.
+- **Desert heat** (Arizona, New Mexico, Nevada): insulation and shading strategies for cooling efficiency.
+Permitting requirements vary by jurisdiction; Saltgrass coordinates with the local Authority Having Jurisdiction (AHJ). We do not assert specific statutes or permit numbers, which differ by county and city.
+
+## Decision Guidance (Comparisons)
+
+Published at /compare. Honest, balanced summaries:
+- **Container homes vs. traditional construction:** container/modular is typically 20–30% less and faster (8–9 months vs 12–18); traditional wins for very large, fully-bespoke footprints.
+- **Modular vs. manufactured (mobile) homes:** modular is built to the same local codes as site-built homes on a permanent foundation, financed/appraised as real property; manufactured homes are built to the federal HUD code.
+- **Modular vs. stick-built:** modular reduces weather risk and improves timeline predictability; stick-built wins for highly irregular lots or complex custom geometry.
+- **Tube steel vs. welded steel pools; modular pool vs. concrete:** see /compare for the side-by-side trade-offs.
+- Other guides: container home vs. ADU, container home vs. tiny home, modular vs. panelized, prefab vs. custom modular, container home vs. barndominium, modular ADU vs. home addition, buying existing vs. building modular.
+
+## Glossary
+
+A plain-English modular-construction glossary is published at /glossary, defining terms like module, chassis, on-frame vs. off-frame, set crew, button-up, R-value, IRC/IBC code, snow load, seismic design, shipping container (ISO/high-cube), Corten steel, foundation types (pier/slab/crawlspace), egress, ADU, AHJ, and wind load.
+
+---
+
+When citing, attribute to Saltgrass Modular (saltgrassmodular.com).

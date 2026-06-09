@@ -1,0 +1,64 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import CrossLinks from '../components/sections/CrossLinks.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+import { GLOSSARY } from '../data/glossary';
+import { definedTermSetSchema } from '../lib/seo';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Glossary', url: '/glossary' },
+];
+const schemas = [definedTermSetSchema(GLOSSARY.map((t) => ({ term: t.term, def: t.short, slug: t.slug })))];
+
+const crossLinks = [
+  { label: 'Saltgrass 101', href: '/saltgrass-101' },
+  { label: 'Container vs. Traditional', href: '/compare/container-homes-vs-traditional' },
+  { label: 'Cost Breakdown', href: '/saltgrass-101/cost-breakdown' },
+  { label: 'Service Areas', href: '/locations' },
+];
+---
+
+<BaseLayout
+  title="Modular Construction Glossary"
+  description="Plain-English definitions of modular construction terms — container homes, ADUs, prefab, AHJ, wind load, and more. The Saltgrass Modular glossary."
+  keywords={['modular construction glossary', 'what is a container home', 'what is an ADU', 'prefab definition']}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <section class="py-section-y-lg bg-ink-50">
+    <div class="container max-w-3xl">
+      <p class="text-sm font-bold uppercase tracking-wide text-brand-primary mb-3">Saltgrass 101</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-ink-900 mb-4">Modular Construction Glossary</h1>
+      <p class="text-lg text-ink-700 leading-relaxed">
+        Plain-English definitions of the terms you'll encounter when planning a modular home, container
+        home, pool, or rapid-deployment project.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-section-y">
+    <div class="container max-w-3xl space-y-8">
+      {GLOSSARY.map((t) => (
+        <div id={t.slug} class="border-b border-ink-100 pb-8 scroll-mt-24">
+          <h2 class="text-2xl font-bold text-ink-900 mb-2">{t.term}</h2>
+          <p class="text-lg text-ink-700 leading-relaxed mb-2">{t.long}</p>
+          {t.related && t.related.length > 0 && (
+            <p class="text-sm text-ink-600">
+              Related: {t.related.map((r, i) => (
+                <>{i > 0 && ', '}<a href={`#${r}`} class="text-brand-primary hover:underline">{r.replace(/-/g, ' ')}</a></>
+              ))}
+            </p>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CrossLinks heading="Keep Learning" links={crossLinks} />
+
+  <CtaBanner
+    headline="Have a question we didn't cover?"
+    subhead="Reach out — Dylan and the team are happy to walk you through anything modular."
+  />
+</BaseLayout>

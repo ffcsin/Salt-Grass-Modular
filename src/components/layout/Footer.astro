@@ -1,4 +1,13 @@
 ---
+import { STATE_LOCATIONS, METRO_LOCATIONS } from '../../data/locations';
+
+// Curated footer subsets (not all 50 states) for the internal-linking backbone.
+const featuredStates = STATE_LOCATIONS
+  .filter((s) => ['oklahoma', 'texas', 'colorado', 'kansas', 'arkansas', 'missouri'].includes(s.slug))
+  .sort((a, b) => a.name.localeCompare(b.name));
+const featuredMetros = METRO_LOCATIONS
+  .filter((m) => ['oklahoma-city', 'tulsa', 'dallas', 'houston', 'denver'].includes(m.slug))
+  .sort((a, b) => a.name.localeCompare(b.name));
 ---
 
 <footer class="bg-ink-900 text-ink-300">
@@ -25,23 +34,29 @@
     </div>
 
     <div>
-      <h4 class="text-white font-semibold mb-4">Company</h4>
+      <h4 class="text-white font-semibold mb-4">Service Areas</h4>
       <ul class="space-y-2 text-sm">
-        <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
-        <li><a href="/projects" class="hover:text-white transition-colors">Projects</a></li>
-        <li><a href="/process" class="hover:text-white transition-colors">Process</a></li>
-        <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
-        <li><a href="/saltgrass-101" class="hover:text-white transition-colors">Saltgrass 101</a></li>
+        {featuredMetros.map((m) => (
+          <li><a href={`/locations/${m.slug}`} class="hover:text-white transition-colors">{m.name}, {m.stateAbbr}</a></li>
+        ))}
+        {featuredStates.slice(0, 3).map((s) => (
+          <li><a href={`/locations/${s.slug}`} class="hover:text-white transition-colors">{s.name}</a></li>
+        ))}
+        <li><a href="/locations" class="hover:text-white font-semibold transition-colors">All Service Areas →</a></li>
       </ul>
     </div>
 
     <div>
-      <h4 class="text-white font-semibold mb-4">Resources</h4>
+      <h4 class="text-white font-semibold mb-4">Guides & Company</h4>
       <ul class="space-y-2 text-sm">
-        <li><a href="/financing" class="hover:text-white transition-colors">Financing Options</a></li>
+        <li><a href="/saltgrass-101" class="hover:text-white transition-colors">Saltgrass 101</a></li>
+        <li><a href="/compare" class="hover:text-white transition-colors">Guides & Comparisons</a></li>
+        <li><a href="/glossary" class="hover:text-white transition-colors">Glossary</a></li>
         <li><a href="/saltgrass-101/cost-breakdown" class="hover:text-white transition-colors">Pricing</a></li>
-        <li><a href="/contact" class="hover:text-white transition-colors">Get a Quote</a></li>
-        <li><a href="/contact" class="hover:text-white transition-colors">Schedule Consultation</a></li>
+        <li><a href="/financing" class="hover:text-white transition-colors">Financing</a></li>
+        <li><a href="/about" class="hover:text-white transition-colors">About</a></li>
+        <li><a href="/projects" class="hover:text-white transition-colors">Projects</a></li>
+        <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
       </ul>
     </div>
   </div>

@@ -1,0 +1,15 @@
+---
+// AEO "Quick Answer" lead box — a concise, citable answer at the top of a page
+// so AI answer engines (ChatGPT / Perplexity / Google AI Overview) can lift it.
+interface Props {
+  question: string;
+  answer: string;
+}
+const { question, answer } = Astro.props;
+---
+
+<div class="bg-brand-primary-50 border-l-4 border-brand-primary rounded-r-xl p-6 my-8">
+  <p class="text-sm font-bold uppercase tracking-wide text-brand-primary mb-2">Quick Answer</p>
+  <p class="text-lg font-semibold text-ink-900 mb-2">{question}</p>
+  <p class="text-ink-700 leading-relaxed">{answer}</p>
+</div>

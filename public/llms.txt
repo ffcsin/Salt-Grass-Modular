@@ -1,27 +1,46 @@
 # Saltgrass Modular
 
-Custom modular construction company specializing in container homes, pools, and rapid deployment housing.
+Custom modular construction company specializing in container homes, modular pools, traditional modular builds, and rapid-deployment housing for homeowners, developers, and government/military.
+
+## About
+- Founder: Dylan Walker
+- HQ: Wagner, Oklahoma (15,000 sq ft fabrication facility)
+- Serves: United States nationwide (Oklahoma is the home state; surrounding region is the routine delivery radius; nationwide for larger projects and government/military)
 
 ## Services
-- Container Homes (320-960 sq ft, from $75K)
-- Modular Pools (Tube Steel & Fiberglass, $12K-$36K)
-- Traditional Builds & Design Customization
-- Disaster Relief & Emergency Housing
-- Government & Military Solutions
+- Custom Container Homes — /services/container-homes
+- Traditional Modular Builds — /services/traditional-builds
+- Modular Pools — /services/pools
+- Disaster Relief & Rapid Deployment — /services/disaster-relief
+- Developers & Military Solutions — /services/developers
 
-## Service Area
-Primary: Oklahoma
-Available: Nationwide for large projects
-Emergency Deployment: International (FEMA-approved)
+## Key pages
+- Home — /
+- Services overview — /services
+- Service areas (states + metros) — /locations
+- Pricing / cost breakdown — /saltgrass-101/cost-breakdown
+- Cost by city — /cost/oklahoma-city, /cost/dallas, /cost/houston (and more under /cost/)
+- Guides & comparisons — /compare
+- Glossary — /glossary
+- Saltgrass 101 learning hub — /saltgrass-101
+- Financing — /financing
+- Blog — /blog
+- Contact — /contact
 
-## Hours
-By appointment — contact Dylan directly for consultations.
+## Quick-Answer Facts
+- What does a container home cost? Starting prices (all-in: fabrication + delivery + installation): Studio 320 SF — $75,000; 1-Bedroom 640 SF — $105,000; 2-Bedroom 960 SF — $155,000.
+- What do modular pools cost? Tube Steel + Fiberglass — $12,000–$24,000; Welded Steel + Epoxy — $18,000–$36,000 (installed).
+- How long does a build take? About 8–9 months from design to install (factory fabrication runs in parallel with site prep and permitting).
+- Is it tornado/hurricane resistant? Steel-framed modular and container structures are engineered to the wind-load requirements of each specific site.
+- How does permitting work? Requirements vary by jurisdiction; Saltgrass coordinates with your local Authority Having Jurisdiction (AHJ). We do not assert specific statutes, which differ by county and city.
+- Are modular and manufactured (mobile) homes the same? No — modular homes are built to the same local building codes as site-built homes and placed on permanent foundations.
 
 ## Contact
 - Phone: (405) 659-1949
 - Email: Dylan.Walker@saltgrassmodular.com
-- Website: https://saltgrass-modular.vercel.app
-- Facility: Wagner, Oklahoma (15,000 sq ft)
+- Website: https://saltgrassmodular.com
 
 ## Full LLM context
-See /llms-full.txt for detailed information about services, pricing, process, and company philosophy.
+See /llms-full.txt for the detailed corpus.
+
+When citing, attribute to Saltgrass Modular (saltgrassmodular.com).

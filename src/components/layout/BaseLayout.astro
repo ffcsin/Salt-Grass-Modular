@@ -3,18 +3,41 @@ import '@fontsource-variable/inter';
 import '../../styles/global.css';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
+import { SITE } from '../../lib/site-config';
+import { localBusinessSchema, organizationSchema, webSiteSchema, breadcrumbSchema } from '../../lib/seo';
 
-const { title, description, keywords, ogImage, noindex = false } = Astro.props;
-const siteUrl = import.meta.env.SITE || 'https://salt-grass-modular.vercel.app';
+const {
+  title,
+  description,
+  keywords,
+  ogImage,
+  noindex = false,
+  // Page-specific JSON-LD objects (FAQ, Service, comparison, glossary, etc.)
+  schemas = [],
+  // [{name,url}] → rendered as BreadcrumbList schema
+  breadcrumbs = [],
+} = Astro.props;
+
+const siteUrl = SITE.url;
 // Strip any brand suffix a page may have baked into its own title so the
 // template adds "| Saltgrass Modular" exactly once (no double-branding).
 const cleanTitle = (title || '').replace(/\s*[-|]\s*Saltgrass Modular\s*$/i, '').trim();
 const fullTitle = (title === 'Home' || !cleanTitle)
-  ? 'Saltgrass Modular | Custom Container Homes & Modular Construction'
-  : `${cleanTitle} | Saltgrass Modular`;
-const metaDescription = description || 'Custom modular homes, pools, and rapid deployment housing solutions built in Oklahoma.';
-const metaImage = ogImage || `${siteUrl}/img/og-default.jpg`;
+  ? `${SITE.brand} | ${SITE.tagline}`
+  : `${cleanTitle} | ${SITE.brand}`;
+const metaDescription = description || SITE.description;
+const metaImage = ogImage || `${siteUrl}${SITE.ogImage}`;
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
+const keywordStr = Array.isArray(keywords) ? keywords.join(', ') : keywords;
+
+// Site-wide schema set (every page) + optional breadcrumb + page-specific schemas.
+const allSchemas = [
+  organizationSchema(),
+  localBusinessSchema(),
+  webSiteSchema(),
+  ...(breadcrumbs.length ? [breadcrumbSchema(breadcrumbs)] : []),
+  ...schemas,
+];
 ---
 
 <!DOCTYPE html>
@@ -24,9 +47,17 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{fullTitle}</title>
     <meta name="description" content={metaDescription} />
-    {keywords && <meta name="keywords" content={keywords} />}
+    {keywordStr && <meta name="keywords" content={keywordStr} />}
     <link rel="canonical" href={canonicalUrl} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {noindex
+      ? <meta name="robots" content="noindex, nofollow" />
+      : <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+
+    {/* Geo tags — help local SEO + ground AI answers in the right geography */}
+    <meta name="geo.region" content="US-OK" />
+    <meta name="geo.placename" content="Wagner, Oklahoma" />
+    <meta name="geo.position" content="35.7929;-98.7829" />
+    <meta name="ICBM" content="35.7929, -98.7829" />
 
     {/* Inter Variable is bundled + self-hosted via `@fontsource-variable/inter`
         (imported above); Astro emits its woff2 into /_astro with a content hash,
@@ -73,63 +104,14 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
       }
     </script>
 
-    <!-- Organization & LocalBusiness Schema -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'Organization',
-      name: 'Saltgrass Modular',
-      url: siteUrl,
-      logo: `${siteUrl}/logo.png`,
-      description: 'Custom modular construction company specializing in container homes, pools, and rapid deployment housing.',
-      telephone: '405-659-1949',
-      email: 'Dylan.Walker@saltgrassmodular.com',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Wagner',
-        addressLocality: 'Wagner',
-        addressRegion: 'OK',
-        postalCode: '73455',
-        addressCountry: 'US',
-      },
-      sameAs: [],
-      founder: {
-        '@type': 'Person',
-        name: 'Dylan Walker',
-      },
-    })} />
-
-    <!-- LocalBusiness Schema (for Local SEO) -->
-    <script type="application/ld+json" set:html={JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'LocalBusiness',
-      name: 'Saltgrass Modular',
-      image: metaImage,
-      url: siteUrl,
-      telephone: '405-659-1949',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Wagner',
-        addressLocality: 'Wagner',
-        addressRegion: 'OK',
-        postalCode: '73455',
-        addressCountry: 'US',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: '35.7929',
-        longitude: '-98.7829',
-      },
-      areaServed: {
-        '@type': 'Country',
-        name: 'US',
-      },
-      priceRange: '$$',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        reviewCount: '50',
-      },
-    })} />
+    {/* JSON-LD: site-wide Organization + LocalBusiness + WebSite, plus any
+        breadcrumb + page-specific schemas (FAQ, Service, DefinedTermSet, …).
+        All built from the central seo.ts helpers — no per-page drift.
+        (Removed the prior hardcoded aggregateRating 4.9/50 — unverified review
+        counts are fabricated review schema and risk a Google penalty.) */}
+    {allSchemas.map((s) => (
+      <script type="application/ld+json" set:html={JSON.stringify(s)} />
+    ))}
   </head>
   <body>
     <a href="#main" class="skip-to-content">Skip to content</a>

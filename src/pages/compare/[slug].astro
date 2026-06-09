@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import FaqSection from '../../components/sections/FaqSection.astro';
+import CrossLinks from '../../components/sections/CrossLinks.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { COMPARISONS, getComparison } from '../../data/comparisons';
+import { faqSchema } from '../../lib/seo';
+
+export function getStaticPaths() {
+  return COMPARISONS.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+
+const { c } = Astro.props;
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Guides & Comparisons', url: '/compare' },
+  { name: c.title, url: `/compare/${c.slug}` },
+];
+const schemas = [faqSchema(c.faqs)];
+
+const related = (c.related || [])
+  .map((s) => getComparison(s))
+  .filter(Boolean)
+  .map((rc) => ({ label: rc!.title, href: `/compare/${rc!.slug}` }));
+const crossLinks = [
+  ...related,
+  { label: 'Container Homes', href: '/services/container-homes' },
+  { label: 'Modular Pools', href: '/services/pools' },
+  { label: 'Cost Breakdown', href: '/saltgrass-101/cost-breakdown' },
+  { label: 'Glossary', href: '/glossary' },
+].slice(0, 6);
+---
+
+<BaseLayout
+  title={c.metaTitle}
+  description={c.description}
+  keywords={[c.slug.replace(/-/g, ' '), `${c.optionA} vs ${c.optionB}`, 'modular construction comparison']}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <section class="py-section-y-lg bg-ink-50">
+    <div class="container max-w-3xl">
+      <p class="text-sm font-bold uppercase tracking-wide text-brand-primary mb-3">Guides & Comparisons</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-ink-900 mb-6">{c.title}</h1>
+      <p class="text-lg text-ink-700 leading-relaxed">{c.intro}</p>
+    </div>
+  </section>
+
+  <section class="py-section-y">
+    <div class="container max-w-3xl">
+      <h2 class="text-3xl font-bold text-ink-900 mb-6">{c.optionA} vs. {c.optionB}</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b-2 border-ink-200">
+              <th class="py-3 pr-4 font-semibold text-ink-900"></th>
+              <th class="py-3 pr-4 font-semibold text-brand-primary">{c.optionA}</th>
+              <th class="py-3 font-semibold text-ink-900">{c.optionB}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {c.rows.map((r) => (
+              <tr class="border-b border-ink-100 align-top">
+                <td class="py-3 pr-4 font-semibold text-ink-900">{r.dimension}</td>
+                <td class="py-3 pr-4 text-ink-700">{r.a}</td>
+                <td class="py-3 text-ink-700">{r.b}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="bg-brand-primary-50 border-l-4 border-brand-primary rounded-r-xl p-6 mt-10">
+        <h2 class="text-xl font-bold text-ink-900 mb-2">The Verdict</h2>
+        <p class="text-ink-700 leading-relaxed">{c.verdict}</p>
+      </div>
+    </div>
+  </section>
+
+  <FaqSection faqs={c.faqs} heading={`${c.title} — FAQ`} />
+
+  <CrossLinks heading="Keep Researching" links={crossLinks} />
+
+  <CtaBanner
+    headline="Still deciding? Talk to Dylan."
+    subhead="We'll give you an honest recommendation based on your project — not a sales pitch."
+  />
+</BaseLayout>

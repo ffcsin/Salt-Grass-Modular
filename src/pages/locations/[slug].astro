@@ -1,0 +1,125 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import QuickAnswer from '../../components/sections/QuickAnswer.astro';
+import FaqSection from '../../components/sections/FaqSection.astro';
+import CrossLinks from '../../components/sections/CrossLinks.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { LOCATIONS, getLocation, metrosInState } from '../../data/locations';
+import { getCostCity } from '../../data/cost';
+import { SERVICES, SITE } from '../../lib/site-config';
+import { faqSchema, serviceSchema } from '../../lib/seo';
+
+export function getStaticPaths() {
+  return LOCATIONS.map((loc) => ({ params: { slug: loc.slug }, props: { loc } }));
+}
+
+const { loc } = Astro.props;
+const childMetros = loc.kind === 'state' ? metrosInState(loc.slug) : [];
+const cost = getCostCity(loc.slug);
+
+const reachLabel =
+  loc.reach === 'home' ? 'Our home state' :
+  loc.reach === 'regional' ? 'Regional delivery area' :
+  'Nationwide delivery';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Service Areas', url: '/locations' },
+  { name: loc.name, url: `/locations/${loc.slug}` },
+];
+
+const schemas = [
+  serviceSchema({
+    name: `Modular Construction in ${loc.name}`,
+    description: loc.intro,
+    areaServed: loc.kind === 'state' ? loc.name : `${loc.name}, ${loc.stateAbbr}`,
+    url: `${SITE.url}/locations/${loc.slug}`,
+  }),
+  faqSchema(loc.faqs),
+];
+
+// Cross-links weave the clusters together
+const crossLinks = [
+  cost ? { label: `Cost of modular in ${loc.name}`, href: `/cost/${loc.slug}` } : null,
+  { label: 'Container Homes', href: '/services/container-homes' },
+  { label: 'Modular Pools', href: '/services/pools' },
+  { label: 'Financing Options', href: '/financing' },
+  { label: 'Container vs. Traditional', href: '/compare/container-homes-vs-traditional' },
+  { label: 'Modular Construction Glossary', href: '/glossary' },
+].filter(Boolean) as { label: string; href: string }[];
+---
+
+<BaseLayout
+  title={`Modular Homes & Container Homes in ${loc.name}`}
+  description={`Custom container homes, modular pools & rapid-deployment housing in ${loc.name}. ${reachLabel} from Saltgrass Modular's Oklahoma facility. Get a transparent quote.`}
+  keywords={[`container homes ${loc.name}`, `modular homes ${loc.name}`, `modular construction ${loc.stateName}`, `ADU ${loc.name}`]}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <Hero
+    eyebrow={reachLabel}
+    headline={`Modular Construction in ${loc.name}`}
+    subhead={loc.intro}
+    primaryCta={{ label: 'Request a Quote', href: '/contact' }}
+    secondaryCta={{ label: 'Explore Services', href: '/services' }}
+    image="/img/services-hero.jpg"
+  />
+
+  <section class="py-section-y">
+    <div class="container max-w-3xl">
+      <QuickAnswer
+        question={`Does Saltgrass Modular build in ${loc.name}?`}
+        answer={`Yes — ${loc.name} is part of our ${loc.reach === 'home' ? 'home state' : loc.reach === 'regional' ? 'regional delivery area' : 'nationwide delivery footprint'}. We build custom container homes, modular pools, traditional modular homes, and rapid-deployment housing here, engineered for local conditions and delivered from our Wagner, Oklahoma facility.`}
+      />
+
+      <h2 class="text-3xl font-bold text-ink-900 mb-4 mt-12">Building for {loc.name}'s Climate</h2>
+      <p class="text-lg text-ink-700 leading-relaxed mb-4"><strong>{loc.climate}.</strong> {loc.climateDetail}</p>
+      <p class="text-ink-700 leading-relaxed">
+        Permitting requirements vary by jurisdiction across {loc.stateName}. We coordinate with your
+        local authority having jurisdiction (AHJ) and handle the documentation as part of our process —
+        you don't navigate code adoption or zoning alone.
+      </p>
+
+      <h2 class="text-3xl font-bold text-ink-900 mb-6 mt-12">What We Build in {loc.name}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {SERVICES.map((s) => (
+          <a href={`/services/${s.slug}`} class="block rounded-xl border border-ink-200 p-5 hover:border-brand-primary transition">
+            <span class="font-semibold text-ink-900">{s.name}</span>
+          </a>
+        ))}
+      </div>
+
+      {loc.cities && loc.cities.length > 0 && (
+        <>
+          <h2 class="text-3xl font-bold text-ink-900 mb-4 mt-12">Areas We Serve in {loc.name}</h2>
+          <p class="text-ink-700 leading-relaxed">
+            We deliver throughout {loc.name}, including {loc.cities.join(', ')} — plus rural and
+            unincorporated areas. Site access is assessed during your quote so delivery logistics are
+            clear up front.
+          </p>
+        </>
+      )}
+
+      {childMetros.length > 0 && (
+        <>
+          <h2 class="text-3xl font-bold text-ink-900 mb-4 mt-12">{loc.name} Metro Areas</h2>
+          <div class="flex flex-wrap gap-3">
+            {childMetros.map((m) => (
+              <a href={`/locations/${m.slug}`} class="rounded-full bg-brand-primary-50 text-brand-primary px-4 py-2 text-sm font-semibold hover:bg-brand-primary hover:text-white transition">{m.name}</a>
+            ))}
+          </div>
+        </>
+      )}
+    </div>
+  </section>
+
+  <FaqSection faqs={loc.faqs} heading={`Modular Construction in ${loc.name} — FAQ`} />
+
+  <CrossLinks heading="Plan Your Build" links={crossLinks} />
+
+  <CtaBanner
+    headline={`Ready to build in ${loc.name}?`}
+    subhead="Get a transparent, all-in quote — fabrication, delivery, and installation included."
+  />
+</BaseLayout>

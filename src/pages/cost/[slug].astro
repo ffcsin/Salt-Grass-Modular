@@ -1,0 +1,94 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import QuickAnswer from '../../components/sections/QuickAnswer.astro';
+import FaqSection from '../../components/sections/FaqSection.astro';
+import CrossLinks from '../../components/sections/CrossLinks.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { COST_CITIES, getCostCity, COST_TIERS, PRICE_INCLUDES } from '../../data/cost';
+import { getLocation } from '../../data/locations';
+import { SITE, HEARTH_PREQUAL } from '../../lib/site-config';
+import { faqSchema } from '../../lib/seo';
+
+export function getStaticPaths() {
+  return COST_CITIES.map((c) => ({ params: { slug: c.slug }, props: { c } }));
+}
+
+const { c } = Astro.props;
+const loc = getLocation(c.slug);
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Pricing', url: '/saltgrass-101/cost-breakdown' },
+  { name: `${c.city} Cost`, url: `/cost/${c.slug}` },
+];
+const schemas = [faqSchema(c.faqs)];
+
+const crossLinks = [
+  loc ? { label: `Building in ${c.city}`, href: `/locations/${c.slug}` } : null,
+  { label: 'Financing Options', href: '/financing' },
+  { label: 'Container Homes', href: '/services/container-homes' },
+  { label: 'Modular Pools', href: '/services/pools' },
+  { label: 'Full Cost Breakdown', href: '/saltgrass-101/cost-breakdown' },
+].filter(Boolean) as { label: string; href: string }[];
+---
+
+<BaseLayout
+  title={`Modular & Container Home Cost in ${c.city}, ${c.stateAbbr}`}
+  description={`What does a modular or container home cost in ${c.city}? Transparent Saltgrass pricing — studios from $75K, all-in with delivery and installation.`}
+  keywords={[`container home cost ${c.city}`, `modular home price ${c.city}`, `how much does a modular home cost ${c.stateAbbr}`]}
+  breadcrumbs={breadcrumbs}
+  schemas={schemas}
+>
+  <section class="py-section-y-lg bg-ink-50">
+    <div class="container max-w-3xl">
+      <p class="text-sm font-bold uppercase tracking-wide text-brand-primary mb-3">Pricing · {c.city}, {c.stateAbbr}</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-ink-900 mb-6">Modular & Container Home Cost in {c.city}</h1>
+      <QuickAnswer
+        question={`How much does a container home cost in ${c.city}?`}
+        answer={c.quickAnswer}
+      />
+    </div>
+  </section>
+
+  <section class="py-section-y">
+    <div class="container max-w-3xl">
+      <h2 class="text-3xl font-bold text-ink-900 mb-6">Saltgrass Starting Prices</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b-2 border-ink-200">
+              <th class="py-3 pr-4 font-semibold text-ink-900">Model</th>
+              <th class="py-3 pr-4 font-semibold text-ink-900">Size</th>
+              <th class="py-3 font-semibold text-ink-900">Starting Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            {COST_TIERS.map((t) => (
+              <tr class="border-b border-ink-100">
+                <td class="py-3 pr-4 text-ink-700">{t.model}</td>
+                <td class="py-3 pr-4 text-ink-700">{t.size}</td>
+                <td class="py-3 font-semibold text-brand-primary">{t.price}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-ink-700 leading-relaxed mt-6">{PRICE_INCLUDES}</p>
+      {c.note && <p class="text-ink-700 leading-relaxed mt-3">{c.note}</p>}
+
+      <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="/contact" class="btn-primary">Get Your {c.city} Quote</a>
+        <a href={HEARTH_PREQUAL} target="_blank" rel="noopener" class="btn-secondary">Pre-Qualify for Financing</a>
+      </div>
+    </div>
+  </section>
+
+  <FaqSection faqs={c.faqs} heading={`${c.city} Pricing — FAQ`} />
+
+  <CrossLinks heading="Plan Your Build" links={crossLinks} />
+
+  <CtaBanner
+    headline={`Get an all-in quote for ${c.city}`}
+    subhead="Transparent pricing with fabrication, delivery, and installation included — no hidden change orders."
+  />
+</BaseLayout>

@@ -1,0 +1,63 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { STATE_LOCATIONS, METRO_LOCATIONS } from '../../data/locations';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Service Areas', url: '/locations' },
+];
+const states = [...STATE_LOCATIONS].sort((a, b) => a.name.localeCompare(b.name));
+const metros = [...METRO_LOCATIONS].sort((a, b) => a.name.localeCompare(b.name));
+---
+
+<BaseLayout
+  title="Service Areas — Where Saltgrass Modular Builds"
+  description="Saltgrass Modular delivers container homes, modular pools, and rapid-deployment housing across the United States from our Wagner, Oklahoma facility. Find your state or metro."
+  keywords={['modular construction service areas', 'container homes near me', 'modular homes by state']}
+  breadcrumbs={breadcrumbs}
+>
+  <section class="py-section-y-lg bg-ink-50">
+    <div class="container max-w-4xl">
+      <h1 class="text-4xl md:text-5xl font-bold text-ink-900 mb-4">Where We Build</h1>
+      <p class="text-lg text-ink-700 leading-relaxed max-w-2xl">
+        Saltgrass Modular fabricates in Wagner, Oklahoma and delivers nationwide. Oklahoma is our home
+        state; we routinely serve the surrounding region and ship modular nationwide for larger projects
+        — plus rapid-deployment housing for government and military anywhere it's needed.
+      </p>
+    </div>
+  </section>
+
+  {metros.length > 0 && (
+    <section class="py-section-y">
+      <div class="container max-w-4xl">
+        <h2 class="text-3xl font-bold text-ink-900 mb-6">Metro Areas</h2>
+        <div class="flex flex-wrap gap-3">
+          {metros.map((m) => (
+            <a href={`/locations/${m.slug}`} class="rounded-full bg-white border border-ink-200 px-4 py-2 text-sm font-semibold text-ink-800 hover:border-brand-primary hover:text-brand-primary transition">
+              {m.name}, {m.stateAbbr}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section class="py-section-y bg-ink-50">
+    <div class="container max-w-4xl">
+      <h2 class="text-3xl font-bold text-ink-900 mb-6">States We Serve</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+        {states.map((s) => (
+          <a href={`/locations/${s.slug}`} class="rounded-lg bg-white border border-ink-200 px-4 py-3 text-sm font-semibold text-ink-800 hover:border-brand-primary hover:text-brand-primary transition">
+            {s.name}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    headline="Don't see your area? Ask anyway."
+    subhead="We ship modular nationwide for larger projects and government work. Tell us your location and we'll give you an honest answer on delivery."
+  />
+</BaseLayout>

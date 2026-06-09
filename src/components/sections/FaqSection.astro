@@ -1,0 +1,29 @@
+---
+// Visual FAQ accordion. The FAQPage JSON-LD is emitted separately via
+// BaseLayout's `schemas` prop (pass faqSchema(faqs)) so the markup + schema
+// stay in sync without duplicating data.
+interface Props {
+  faqs: { q: string; a: string }[];
+  heading?: string;
+}
+const { faqs, heading = 'Frequently Asked Questions' } = Astro.props;
+---
+
+{faqs.length > 0 && (
+  <section class="py-section-y bg-ink-50">
+    <div class="container max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-ink-900 mb-8 text-center">{heading}</h2>
+      <div class="space-y-4">
+        {faqs.map((f) => (
+          <details class="group bg-white rounded-xl border border-ink-200 p-6">
+            <summary class="flex items-center justify-between cursor-pointer font-semibold text-ink-900 list-none">
+              <span>{f.q}</span>
+              <span class="text-brand-primary text-2xl leading-none transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="text-ink-700 leading-relaxed mt-4">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+)}
