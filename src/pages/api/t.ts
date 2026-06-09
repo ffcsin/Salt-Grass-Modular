@@ -1,5 +1,8 @@
 import type { APIRoute } from 'astro';
 
+// On-demand: proxies tracking beacons (POST) to the LPAI backend.
+export const prerender = false;
+
 const BACKEND = import.meta.env.PUBLIC_API_URL || 'https://lpai-monorepo-production.up.railway.app';
 
 export const POST: APIRoute = async ({ request }) => {

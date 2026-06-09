@@ -1,5 +1,8 @@
 import type { APIRoute } from 'astro';
 
+// On-demand: live health probe — must reflect real-time backend state.
+export const prerender = false;
+
 const BACKEND = import.meta.env.PUBLIC_API_URL || 'https://lpai-monorepo-production.up.railway.app';
 const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID;
 
