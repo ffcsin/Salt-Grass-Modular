@@ -144,13 +144,9 @@ const breadcrumb = slug
 
   <article class="py-section-y bg-white">
     <div class="container max-w-3xl">
-      <div class="flex gap-4 mb-8 items-start">
-        <div class="text-5xl flex-shrink-0">{guide.icon}</div>
-        <div>
-          <h1 class="text-4xl font-bold text-ink-900">{guide.title}</h1>
-          <p class="text-lg text-ink-700 mt-2">{guide.description}</p>
-        </div>
-      </div>
+      {/* Title + description already render in the Hero above — avoid a second
+          <h1> (one per page) and visual repetition; lead with a subtle icon. */}
+      <div class="text-5xl mb-8" aria-hidden="true">{guide.icon}</div>
 
       <div class="space-y-10">
         {guide.sections.map((section: any) => (

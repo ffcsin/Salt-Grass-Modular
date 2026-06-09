@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../components/layout/BaseLayout.astro';
+import Hero from '../../components/sections/Hero.astro';
+import ServicesGrid from '../../components/sections/ServicesGrid.astro';
+import CtaBanner from '../../components/sections/CtaBanner.astro';
+---
+
+<BaseLayout
+  title="Our Services"
+  description="Explore Saltgrass Modular's full range of services — custom container homes, traditional modular builds, modular pools, disaster relief housing, and developer & government solutions."
+  keywords="modular construction services, container homes, modular pools, disaster relief housing, developer modular"
+>
+  <Hero
+    eyebrow="What We Build"
+    headline="Modular Solutions for Every Need"
+    subhead="From a single custom container home to large-scale developer and government deployments, Saltgrass delivers precision-built modular construction with transparent pricing and fast timelines."
+    primaryCta={{ label: 'Request a Quote', href: '/contact' }}
+    secondaryCta={{ label: 'See Our Process', href: '/process' }}
+    image="/img/services-hero.jpg"
+  />
+
+  <ServicesGrid />
+
+  <!-- Why Modular -->
+  <section class="py-section-y">
+    <div class="container">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-4xl font-bold text-ink-900 mb-4">Why Choose Modular Construction</h2>
+        <p class="text-lg text-ink-700 leading-relaxed">
+          Factory-built precision, delivered on your timeline. Every Saltgrass build is engineered for
+          quality, speed, and value — no matter the scale.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="bg-white rounded-2xl p-8 shadow-soft text-center">
+          <div class="text-4xl mb-4">⚡</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2">30% Faster</h3>
+          <p class="text-ink-700">Factory fabrication runs in parallel with site prep and permitting, compressing your timeline.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft text-center">
+          <div class="text-4xl mb-4">💰</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2">20–30% Less</h3>
+          <p class="text-ink-700">Reduced material waste and labor efficiency mean transparent, predictable pricing.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-soft text-center">
+          <div class="text-4xl mb-4">✓</div>
+          <h3 class="text-xl font-bold text-ink-900 mb-2">Higher Quality</h3>
+          <p class="text-ink-700">Every module inspected at 50%, 80%, and 100% — zero field defects, warranty-backed.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    headline="Not sure which service fits your project?"
+    subhead="Talk to Dylan directly. We'll help you find the right modular solution for your needs and budget."
+  />
+</BaseLayout>

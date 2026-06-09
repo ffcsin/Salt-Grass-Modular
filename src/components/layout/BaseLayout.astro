@@ -5,8 +5,13 @@ import Header from './Header.astro';
 import Footer from './Footer.astro';
 
 const { title, description, keywords, ogImage, noindex = false } = Astro.props;
-const siteUrl = import.meta.env.SITE || 'https://saltgrass-modular.vercel.app';
-const fullTitle = title === 'Home' ? 'Saltgrass Modular | Custom Container Homes & Modular Construction' : `${title} | Saltgrass Modular`;
+const siteUrl = import.meta.env.SITE || 'https://salt-grass-modular.vercel.app';
+// Strip any brand suffix a page may have baked into its own title so the
+// template adds "| Saltgrass Modular" exactly once (no double-branding).
+const cleanTitle = (title || '').replace(/\s*[-|]\s*Saltgrass Modular\s*$/i, '').trim();
+const fullTitle = (title === 'Home' || !cleanTitle)
+  ? 'Saltgrass Modular | Custom Container Homes & Modular Construction'
+  : `${cleanTitle} | Saltgrass Modular`;
 const metaDescription = description || 'Custom modular homes, pools, and rapid deployment housing solutions built in Oklahoma.';
 const metaImage = ogImage || `${siteUrl}/img/og-default.jpg`;
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
@@ -23,11 +28,16 @@ const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;
     <link rel="canonical" href={canonicalUrl} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
-    <link rel="preload" as="font" type="font/woff2"
-          href="/fonts/inter-variable.woff2" crossorigin />
+    {/* Inter Variable is bundled + self-hosted via `@fontsource-variable/inter`
+        (imported above); Astro emits its woff2 into /_astro with a content hash,
+        so there is no stable path to hand-preload. A hardcoded /fonts/*.woff2
+        preload here would 404. If font-load becomes the LCP bottleneck, copy the
+        woff2 into public/fonts and preload that exact file. */}
 
-    <!-- Preload OG image for faster social embeds -->
-    {metaImage && <link rel="preload" as="image" href={metaImage} />}
+    {/* No OG-image preload: og:image is only fetched by social crawlers from
+        the meta tag below, never rendered on-page, so preloading it just wastes
+        real users' bandwidth. The per-page LCP hero <img> carries
+        fetchpriority="high" + loading="eager" in Hero.astro instead. */}
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonicalUrl} />

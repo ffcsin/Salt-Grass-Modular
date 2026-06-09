@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+
+const effectiveDate = 'June 9, 2026';
+---
+
+<BaseLayout
+  title="Terms of Service"
+  description="The terms and conditions governing your use of the Saltgrass Modular website and the information provided on it."
+>
+  <section class="py-section-y bg-ink-50 border-b border-ink-200">
+    <div class="container max-w-3xl">
+      <nav class="text-sm text-ink-600 mb-4" aria-label="Breadcrumb">
+        <a href="/" class="hover:text-brand-primary">Home</a>
+        <span class="mx-2">/</span>
+        <span class="text-ink-900 font-semibold">Terms of Service</span>
+      </nav>
+      <h1 class="text-4xl md:text-5xl font-bold text-ink-900">Terms of Service</h1>
+      <p class="text-ink-600 mt-3">Effective {effectiveDate}</p>
+    </div>
+  </section>
+
+  <article class="py-section-y bg-white">
+    <div class="container max-w-3xl prose prose-ink prose-headings:font-display prose-headings:text-ink-900 prose-p:text-ink-700 prose-li:text-ink-700 prose-a:text-brand-primary">
+      <p>
+        These Terms of Service ("Terms") govern your use of the Saltgrass Modular website (the "Site").
+        By accessing or using the Site, you agree to these Terms.
+      </p>
+
+      <h2>Use of the Site</h2>
+      <p>
+        You may use the Site for lawful purposes only. You agree not to use the Site in any way that
+        could damage, disable, or impair it, or interfere with anyone else's use of it.
+      </p>
+
+      <h2>Information and Estimates</h2>
+      <p>
+        Content on this Site — including pricing ranges, timelines, models, and specifications — is
+        provided for general informational purposes. Pricing and availability are estimates and may
+        vary based on your specific project, location, site conditions, and material costs. Nothing on
+        this Site constitutes a binding offer. Final pricing and terms are established in a written
+        agreement for your specific project.
+      </p>
+
+      <h2>Quotes and Consultations</h2>
+      <p>
+        Submitting a quote or consultation request does not create a contract or obligation to purchase.
+        Any project agreement will be set out in a separate written contract signed by both parties.
+      </p>
+
+      <h2>Intellectual Property</h2>
+      <p>
+        All content on this Site — including text, graphics, logos, and images — is the property of
+        Saltgrass Modular or its licensors and is protected by applicable intellectual property laws.
+        You may not reproduce or distribute it without our written permission.
+      </p>
+
+      <h2>Third-Party Links</h2>
+      <p>
+        The Site may contain links to third-party websites. We are not responsible for the content,
+        policies, or practices of any third-party sites.
+      </p>
+
+      <h2>Disclaimer of Warranties</h2>
+      <p>
+        The Site is provided "as is" without warranties of any kind, express or implied. We do not
+        warrant that the Site will be uninterrupted, error-free, or free of harmful components. Project
+        warranties, where applicable, are governed by your written project agreement.
+      </p>
+
+      <h2>Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by law, Saltgrass Modular shall not be liable for any indirect,
+        incidental, or consequential damages arising from your use of the Site.
+      </p>
+
+      <h2>Governing Law</h2>
+      <p>
+        These Terms are governed by the laws of the State of Oklahoma, without regard to its conflict
+        of law provisions.
+      </p>
+
+      <h2>Changes to These Terms</h2>
+      <p>
+        We may update these Terms from time to time. Continued use of the Site after changes are posted
+        constitutes acceptance of the revised Terms.
+      </p>
+
+      <h2>Contact Us</h2>
+      <ul>
+        <li>Email: <a href="mailto:Dylan.Walker@saltgrassmodular.com">Dylan.Walker@saltgrassmodular.com</a></li>
+        <li>Phone: <a href="tel:+14056591949">(405) 659-1949</a></li>
+        <li>Location: Wagner, Oklahoma</li>
+      </ul>
+    </div>
+  </article>
+</BaseLayout>

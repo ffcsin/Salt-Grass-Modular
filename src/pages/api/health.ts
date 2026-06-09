@@ -6,24 +6,28 @@ export const prerender = false;
 const BACKEND = import.meta.env.PUBLIC_API_URL || 'https://lpai-monorepo-production.up.railway.app';
 const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID;
 
+type CheckState = 'ok' | 'error' | 'timeout' | 'unknown';
+
 interface HealthStatus {
   status: 'ok' | 'degraded' | 'error';
   timestamp: string;
   checks: {
-    frontend: 'ok' | 'error';
-    backend: 'ok' | 'error' | 'timeout';
-    database?: 'ok' | 'error' | 'timeout';
+    frontend: CheckState;
+    backend: CheckState;
+    // 'unknown' = the backend health response did not expose a database
+    // sub-check; we don't claim it's broken when we simply can't see it.
+    database: CheckState;
   };
   version: string;
-  uptime: number;
+  responseTimeMs: number;
 }
 
 export const GET: APIRoute = async () => {
   const startTime = Date.now();
-  const checks = {
-    frontend: 'ok' as const,
-    backend: 'error' as const,
-    database: 'error' as const,
+  const checks: HealthStatus['checks'] = {
+    frontend: 'ok',
+    backend: 'error',
+    database: 'unknown',
   };
 
   // Check backend health
@@ -33,9 +37,11 @@ export const GET: APIRoute = async () => {
     });
     if (res.ok) {
       checks.backend = 'ok';
-      const backendHealth = await res.json();
-      if (backendHealth.checks?.database) {
-        checks.database = backendHealth.checks.database === 'ok' ? 'ok' : 'error';
+      const backendHealth = await res.json().catch(() => ({}));
+      // Only report a database state if the backend actually surfaced one.
+      const dbState = backendHealth?.checks?.database;
+      if (typeof dbState === 'string') {
+        checks.database = dbState === 'ok' ? 'ok' : 'error';
       }
     }
   } catch (error) {
@@ -44,15 +50,18 @@ export const GET: APIRoute = async () => {
     }
   }
 
-  const statusCode = checks.backend === 'ok' ? 200 : checks.backend === 'timeout' ? 503 : 503;
-  const overallStatus = checks.backend === 'ok' ? 'ok' : checks.backend === 'timeout' ? 'degraded' : 'error';
+  // Overall status is driven by backend reachability — a missing/unknown
+  // database sub-check must NOT degrade an otherwise-healthy response.
+  const overallStatus =
+    checks.backend === 'ok' ? 'ok' : checks.backend === 'timeout' ? 'degraded' : 'error';
+  const statusCode = overallStatus === 'ok' ? 200 : 503;
 
   const response: HealthStatus = {
     status: overallStatus,
     timestamp: new Date().toISOString(),
     checks,
     version: '1.0',
-    uptime: startTime,
+    responseTimeMs: Date.now() - startTime,
   };
 
   return new Response(JSON.stringify(response), {
