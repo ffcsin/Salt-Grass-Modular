@@ -1,37 +1,141 @@
 ---
-const nav = [
-  { label: 'Services', href: '/services' },
-  { label: 'Service Areas', href: '/locations' },
-  { label: 'Saltgrass 101', href: '/saltgrass-101' },
+import { SERVICES } from '../../lib/site-config';
+import { STATE_LOCATIONS, METRO_LOCATIONS } from '../../data/locations';
+
+const phone = '405-659-1949';
+
+// Curated dropdown subsets (full lists live on the hub pages).
+const featMetros = METRO_LOCATIONS
+  .filter((m) => ['oklahoma-city', 'tulsa', 'dallas', 'houston', 'denver', 'phoenix'].includes(m.slug))
+  .map((m) => ({ label: `${m.name}, ${m.stateAbbr}`, href: `/locations/${m.slug}` }));
+const featStates = STATE_LOCATIONS
+  .filter((s) => ['oklahoma', 'texas', 'colorado', 'kansas'].includes(s.slug))
+  .map((s) => ({ label: s.name, href: `/locations/${s.slug}` }));
+
+type NavChild = { label: string; href: string };
+type NavItem = { label: string; href: string; children?: NavChild[] };
+
+const nav: NavItem[] = [
+  {
+    label: 'Services',
+    href: '/services',
+    children: [
+      ...SERVICES.map((s) => ({ label: s.name, href: `/services/${s.slug}` })),
+      { label: 'All Services →', href: '/services' },
+    ],
+  },
+  {
+    label: 'Service Areas',
+    href: '/locations',
+    children: [
+      ...featMetros,
+      ...featStates,
+      { label: 'All Service Areas →', href: '/locations' },
+    ],
+  },
+  {
+    label: 'Learn',
+    href: '/saltgrass-101',
+    children: [
+      { label: 'Saltgrass 101', href: '/saltgrass-101' },
+      { label: 'Guides & Comparisons', href: '/compare' },
+      { label: 'Glossary', href: '/glossary' },
+      { label: 'Cost Breakdown', href: '/saltgrass-101/cost-breakdown' },
+      { label: 'Financing', href: '/financing' },
+      { label: 'Blog', href: '/blog' },
+    ],
+  },
   { label: 'Projects', href: '/projects' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/contact' },
 ];
-const phone = '405-659-1949';
 ---
 
-<header class="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-ink-100">
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-ink-100">
   <div class="container mx-auto flex items-center justify-between py-4">
-    <a href="/" class="flex items-center gap-2 font-display text-xl font-bold text-ink-900" aria-label="Saltgrass Modular home">
+    <a href="/" class="flex items-center gap-2 font-display text-xl font-bold text-ink-900 shrink-0" aria-label="Saltgrass Modular home">
       <span>Saltgrass Modular</span>
     </a>
 
-    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
-      {nav.map(item => (
-        <a href={item.href} class="text-ink-700 hover:text-brand-primary font-medium transition-colors">
-          {item.label}
-        </a>
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-7" aria-label="Main navigation">
+      {nav.map((item) => (
+        item.children ? (
+          <div class="relative group">
+            <a
+              href={item.href}
+              class="inline-flex items-center gap-1 text-ink-700 hover:text-brand-primary font-medium transition-colors py-2"
+              aria-haspopup="true"
+            >
+              {item.label}
+              <svg class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </a>
+            <!-- pt-3 bridges the hover gap so the panel doesn't close between trigger + menu -->
+            <div class="absolute left-1/2 -translate-x-1/2 top-full pt-3 z-50
+                        opacity-0 invisible translate-y-1 pointer-events-none
+                        group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:pointer-events-auto
+                        group-focus-within:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:pointer-events-auto
+                        transition-all duration-200">
+              <div class="bg-white rounded-xl shadow-large border border-ink-100 py-2 min-w-[256px]">
+                {item.children.map((c) => (
+                  <a href={c.href} class="block px-4 py-2.5 text-sm text-ink-700 hover:bg-ink-50 hover:text-brand-primary transition-colors">{c.label}</a>
+                ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <a href={item.href} class="text-ink-700 hover:text-brand-primary font-medium transition-colors py-2">{item.label}</a>
+        )
       ))}
     </nav>
 
     <div class="flex items-center gap-3">
-      <a href={`tel:${phone}`} class="hidden sm:inline text-ink-700 hover:text-brand-primary font-medium transition-colors">
-        {phone}
-      </a>
-      <a href="/contact" class="btn-primary">Get Quote</a>
-      <button class="md:hidden p-2" aria-label="Open menu" data-mobile-menu-toggle>
-        <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+      <a href={`tel:${phone}`} class="hidden xl:inline text-ink-700 hover:text-brand-primary font-medium transition-colors">{phone}</a>
+      <a href="/contact" class="hidden sm:inline-flex btn-primary !py-2.5">Get Quote</a>
+      <button class="lg:hidden p-2 text-ink-800" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-mobile-menu-toggle>
+        <svg class="menu-open w-6 h-6" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
+        <svg class="menu-close hidden w-6 h-6" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" /></svg>
       </button>
     </div>
   </div>
+
+  <!-- Mobile nav panel -->
+  <nav id="mobile-nav" class="hidden lg:hidden border-t border-ink-100 bg-white" aria-label="Mobile navigation">
+    <div class="container py-4 space-y-1">
+      {nav.map((item) => (
+        item.children ? (
+          <details class="group border-b border-ink-100 last:border-0">
+            <summary class="flex items-center justify-between py-3 font-medium text-ink-800 cursor-pointer list-none">
+              <a href={item.href} class="hover:text-brand-primary">{item.label}</a>
+              <svg class="w-5 h-5 text-ink-500 transition-transform group-open:rotate-180" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
+            </summary>
+            <div class="pb-3 pl-3 space-y-1">
+              {item.children.map((c) => (
+                <a href={c.href} class="block py-2 text-sm text-ink-600 hover:text-brand-primary">{c.label}</a>
+              ))}
+            </div>
+          </details>
+        ) : (
+          <a href={item.href} class="block py-3 font-medium text-ink-800 hover:text-brand-primary border-b border-ink-100 last:border-0">{item.label}</a>
+        )
+      ))}
+      <div class="pt-4 flex flex-col gap-3">
+        <a href={`tel:${phone}`} class="text-center text-ink-700 font-medium">{phone}</a>
+        <a href="/contact" class="btn-primary w-full">Get Quote</a>
+      </div>
+    </div>
+  </nav>
 </header>
+
+<script>
+  const btn = document.querySelector('[data-mobile-menu-toggle]');
+  const panel = document.getElementById('mobile-nav');
+  const openIcon = btn?.querySelector('.menu-open');
+  const closeIcon = btn?.querySelector('.menu-close');
+  btn?.addEventListener('click', () => {
+    const isHidden = panel?.classList.toggle('hidden');
+    btn.setAttribute('aria-expanded', String(!isHidden));
+    openIcon?.classList.toggle('hidden', !isHidden);
+    closeIcon?.classList.toggle('hidden', isHidden);
+  });
+</script>

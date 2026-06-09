@@ -74,3 +74,13 @@ const featuredMetros = METRO_LOCATIONS
     </div>
   </div>
 </footer>
+
+<style>
+  /* The global `a` rule paints links crimson (text-brand-primary) — unreadable
+     on the dark ink-900 footer. Override to a light neutral with white on hover.
+     ink-300 (#CBD5E1) on ink-900 (#0F172A) ≈ 11:1 contrast (WCAG AAA). */
+  footer a { color: #CBD5E1; }
+  footer a:hover { color: #ffffff; }
+  /* Keep section headings + the brand mark crisp white. */
+  footer h3, footer h4 { color: #ffffff; }
+</style>
