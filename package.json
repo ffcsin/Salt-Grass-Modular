@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Saltgrass Modular - Custom container homes and modular construction",
   "type": "module",
+  "engines": {
+    "node": ">=22.0.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
