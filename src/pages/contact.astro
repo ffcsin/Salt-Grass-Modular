@@ -1,110 +1,94 @@
 ---
 import BaseLayout from '../components/layout/BaseLayout.astro';
-import Hero from '../components/sections/Hero.astro';
 import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
-import ConsultationForm from '../components/forms/ConsultationForm.astro';
+import { faqSchema } from '../lib/seo';
+
+const breadcrumbs = [
+  { name: 'Home', url: '/' },
+  { name: 'Contact', url: '/contact' },
+];
+const faqs = [
+  { q: 'How quickly will I hear back?', a: 'Dylan and the team respond to quote requests within 24 hours. For urgent or government/military deployment needs, call (405) 659-1949 directly.' },
+  { q: 'Is a quote free and no-obligation?', a: 'Yes. Requesting a quote is completely free and carries no obligation. We give you transparent, all-in pricing so you can plan with confidence.' },
+];
 ---
 
 <BaseLayout
   title="Contact Saltgrass Modular"
-  description="Get in touch with Dylan and the Saltgrass team. Request a quote, schedule a consultation, or ask any questions."
+  description="Request a free, no-obligation quote from Saltgrass Modular. Transparent all-in pricing on custom container homes, modular pools, and rapid-deployment housing."
+  keywords={['contact Saltgrass Modular', 'modular home quote', 'container home quote Oklahoma']}
+  breadcrumbs={breadcrumbs}
+  schemas={[faqSchema(faqs)]}
 >
-  <Hero
-    eyebrow="Let's Talk"
-    headline="Get in Touch with Saltgrass"
-    subhead="Whether you're ready to build or just exploring options, we're here to help. Multiple ways to connect."
-    image="/img/contact-hero.jpg"
-  />
+  <!-- Hero: prompt (left) + quote form on a white card (right), over brand navy -->
+  <section id="contact-hero" class="relative overflow-hidden bg-ink-900 text-white">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/25 via-ink-900 to-ink-900" aria-hidden="true"></div>
+    <div class="container relative py-section-y-lg">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <!-- Left: the pitch -->
+        <div>
+          <span class="inline-block text-sm font-bold uppercase tracking-wide text-[#fca5a5] mb-4">Let's Talk</span>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+            Let's Build Something Together
+          </h1>
+          <p class="text-lg md:text-xl text-ink-200 leading-relaxed mb-10">
+            Tell us about your project — a custom container home, a modular pool, a development, or a
+            rapid-deployment need. You'll get transparent, all-in pricing and a reply from Dylan within
+            24 hours.
+          </p>
 
-  <!-- Contact Options -->
-  <section class="py-section-y">
-    <div class="container">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <div class="bg-ink-50 rounded-2xl p-8 text-center">
-          <div class="text-4xl mb-4">📞</div>
-          <h3 class="text-xl font-bold text-ink-900 mb-3">Call Us</h3>
-          <p class="text-ink-700 mb-4">Direct line to Dylan and the team</p>
-          <a href="tel:+14056591949" class="text-brand-primary font-bold text-lg hover:text-brand-primary-700">
-            (405) 659-1949
-          </a>
-          <p class="text-sm text-ink-600 mt-3">Monday–Friday, 8am–5pm CST</p>
-        </div>
-        <div class="bg-ink-50 rounded-2xl p-8 text-center">
-          <div class="text-4xl mb-4">✉️</div>
-          <h3 class="text-xl font-bold text-ink-900 mb-3">Email Us</h3>
-          <p class="text-ink-700 mb-4">Detailed questions or project info</p>
-          <a href="mailto:Dylan.Walker@saltgrassmodular.com" class="text-brand-primary font-bold text-lg hover:text-brand-primary-700">
-            Dylan.Walker@saltgrassmodular.com
-          </a>
-          <p class="text-sm text-ink-600 mt-3">Response within 24 hours</p>
-        </div>
-        <div class="bg-ink-50 rounded-2xl p-8 text-center">
-          <div class="text-4xl mb-4">📍</div>
-          <h3 class="text-xl font-bold text-ink-900 mb-3">Visit Us</h3>
-          <p class="text-ink-700 mb-4">See our facility in person</p>
-          <p class="text-brand-primary font-bold">Wagner, Oklahoma</p>
-          <p class="text-sm text-ink-600 mt-3">Facility tours available by appointment</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Forms Section -->
-  <section class="py-section-y bg-ink-50">
-    <div class="container">
-      <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">How Can We Help?</h2>
-
-      <!-- Tabbed Forms -->
-      <div class="max-w-4xl mx-auto">
-        <div class="flex gap-4 mb-8 border-b border-ink-200">
-          <button
-            class="tab-btn px-6 py-3 font-semibold text-ink-700 hover:text-ink-900 border-b-2 border-transparent hover:border-brand-primary transition active"
-            onclick="switchTab('quote')"
-            data-tab="quote"
-          >
-            Quote Request
-          </button>
-          <button
-            class="tab-btn px-6 py-3 font-semibold text-ink-700 hover:text-ink-900 border-b-2 border-transparent hover:border-brand-primary transition"
-            onclick="switchTab('consultation')"
-            data-tab="consultation"
-          >
-            Schedule Consultation
-          </button>
+          <!-- Contact methods -->
+          <div class="space-y-5">
+            <a href="tel:+14056591949" class="flex items-start gap-4 group">
+              <span class="text-2xl" aria-hidden="true">📞</span>
+              <span>
+                <span class="block text-white font-semibold group-hover:text-[#fca5a5] transition-colors">(405) 659-1949</span>
+                <span class="block text-sm text-ink-300">Monday–Friday, 8am–5pm CST</span>
+              </span>
+            </a>
+            <a href="mailto:Dylan.Walker@saltgrassmodular.com" class="flex items-start gap-4 group">
+              <span class="text-2xl" aria-hidden="true">✉️</span>
+              <span>
+                <span class="block text-white font-semibold group-hover:text-[#fca5a5] transition-colors break-all">Dylan.Walker@saltgrassmodular.com</span>
+                <span class="block text-sm text-ink-300">Response within 24 hours</span>
+              </span>
+            </a>
+            <div class="flex items-start gap-4">
+              <span class="text-2xl" aria-hidden="true">📍</span>
+              <span>
+                <span class="block text-white font-semibold">Wagner, Oklahoma</span>
+                <span class="block text-sm text-ink-300">15,000 sq ft facility — tours by appointment</span>
+              </span>
+            </div>
+          </div>
         </div>
 
-        <!-- Quote Form Tab -->
-        <div id="quote-tab" class="tab-content bg-white rounded-2xl p-8 md:p-10">
-          <h3 class="text-2xl font-bold text-ink-900 mb-6">Request a Free Quote</h3>
+        <!-- Right: white form card -->
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 lg:p-10">
+          <h2 class="text-2xl md:text-3xl font-bold text-ink-900 mb-1">Request a Free Quote</h2>
+          <p class="text-ink-600 text-sm mb-6">Transparent all-in pricing. No obligation.</p>
           <QuoteRequestForm />
         </div>
-
-        <!-- Consultation Form Tab -->
-        <div id="consultation-tab" class="tab-content hidden bg-white rounded-2xl p-8 md:p-10">
-          <h3 class="text-2xl font-bold text-ink-900 mb-6">Schedule Your Consultation</h3>
-          <ConsultationForm />
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Calendly Integration Section -->
-  <section class="py-section-y">
+  <!-- Schedule a consultation (LPAI calendar) -->
+  <section class="py-section-y bg-ink-50">
     <div class="container">
       <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold text-ink-900 mb-4 text-center">Schedule Your Consultation</h2>
+        <h2 class="text-3xl font-bold text-ink-900 mb-4 text-center">Prefer to Schedule a Call?</h2>
         <p class="text-center text-ink-700 mb-8">
-          Prefer to book your own time? Use our integrated calendar to find a time that works for you.
+          Book a consultation directly and we'll walk you through your options, pricing, and timeline.
         </p>
 
         <!-- LPAI Calendar Widget -->
         <div class="bg-white rounded-2xl p-8 min-h-96 border-2 border-ink-200 flex items-center justify-center">
           <div class="text-center">
-            <p class="text-ink-600 mb-4">
-              🗓️ Calendar booking system integrated with LPAI CRM
-            </p>
+            <p class="text-ink-600 mb-4">🗓️ Calendar booking system integrated with LPAI CRM</p>
             <p class="text-sm text-ink-500">
-              LPAI calendar system is live in the LPAI admin. Customer-facing booking links and embedded calendar will be configured during account setup.
+              The LPAI calendar is live in the admin. Customer-facing booking links and the embedded
+              calendar are configured during account setup.
             </p>
             <p class="text-xs text-ink-400 mt-4">
               Location ID: <code class="bg-ink-100 px-2 py-1 rounded">plan_chNIQv7tfy09Ew_h1liV</code>
@@ -113,63 +97,34 @@ import ConsultationForm from '../components/forms/ConsultationForm.astro';
         </div>
 
         <p class="text-center text-ink-600 text-sm mt-6">
-          Questions? Call <strong>(405) 659-1949</strong> to book over the phone or email Dylan at <strong>Dylan.Walker@saltgrassmodular.com</strong>
+          Or call <strong>(405) 659-1949</strong> to book over the phone.
         </p>
       </div>
     </div>
   </section>
 
   <!-- FAQ Quick Links -->
-  <section class="py-section-y bg-ink-50">
+  <section class="py-section-y">
     <div class="container">
       <h2 class="text-3xl font-bold text-ink-900 mb-8 text-center">Quick Answers</h2>
       <div class="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a href="/process" class="bg-white rounded-xl p-6 hover:shadow-large transition">
+        <a href="/process" class="bg-white rounded-xl border border-ink-200 p-6 hover:shadow-large hover:border-brand-primary transition">
           <h3 class="font-bold text-ink-900 mb-2">How does the process work?</h3>
           <p class="text-sm text-ink-600">See our 8-stage timeline →</p>
         </a>
-        <a href="/about" class="bg-white rounded-xl p-6 hover:shadow-large transition">
-          <h3 class="font-bold text-ink-900 mb-2">Tell me about Saltgrass</h3>
-          <p class="text-sm text-ink-600">Meet Dylan and the team →</p>
+        <a href="/saltgrass-101/cost-breakdown" class="bg-white rounded-xl border border-ink-200 p-6 hover:shadow-large hover:border-brand-primary transition">
+          <h3 class="font-bold text-ink-900 mb-2">What does it cost?</h3>
+          <p class="text-sm text-ink-600">See transparent pricing →</p>
         </a>
-        <a href="/" class="bg-white rounded-xl p-6 hover:shadow-large transition">
+        <a href="/services" class="bg-white rounded-xl border border-ink-200 p-6 hover:shadow-large hover:border-brand-primary transition">
           <h3 class="font-bold text-ink-900 mb-2">What services do you offer?</h3>
           <p class="text-sm text-ink-600">Explore our services →</p>
         </a>
-        <a href="#" class="bg-white rounded-xl p-6 hover:shadow-large transition" onclick="document.getElementById('contact-hero').scrollIntoView({ behavior: 'smooth' })">
-          <h3 class="font-bold text-ink-900 mb-2">Still have questions?</h3>
-          <p class="text-sm text-ink-600">Scroll up to contact us →</p>
+        <a href="/about" class="bg-white rounded-xl border border-ink-200 p-6 hover:shadow-large hover:border-brand-primary transition">
+          <h3 class="font-bold text-ink-900 mb-2">Tell me about Saltgrass</h3>
+          <p class="text-sm text-ink-600">Meet Dylan and the team →</p>
         </a>
       </div>
     </div>
   </section>
-
-  <script>
-    function switchTab(tabName) {
-      // Hide all tabs
-      document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.add('hidden');
-      });
-
-      // Show selected tab
-      document.getElementById(tabName + '-tab')?.classList.remove('hidden');
-
-      // Update button styles
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active', 'border-brand-primary', 'text-ink-900');
-        btn.classList.add('text-ink-700', 'border-transparent');
-      });
-
-      // Activate selected button
-      document.querySelector(`[data-tab="${tabName}"]`)?.classList.add('active', 'border-brand-primary', 'text-ink-900');
-    }
-
-    // Initialize first tab as active on load
-    document.addEventListener('DOMContentLoaded', () => {
-      const firstBtn = document.querySelector('[data-tab="quote"]');
-      if (firstBtn) {
-        firstBtn.classList.add('border-brand-primary', 'text-ink-900');
-      }
-    });
-  </script>
 </BaseLayout>
