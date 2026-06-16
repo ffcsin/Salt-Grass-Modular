@@ -1,0 +1,227 @@
+[
+  {
+    "name": "Astro component composition pattern",
+    "evidence": "Uses BaseLayout + Hero + CtaBanner as composable section components — consistent pattern likely repo-wide for Saltgrass Modular pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "PUBLIC_API_URL + PUBLIC_LOCATION_ID env pattern",
+    "evidence": "Both vars referenced at top of file as Astro env imports with Railway fallback URL — consistent pattern across all saltgrass-modular API routes",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Silent-fail / empty-response on error",
+    "evidence": "AbortError caught and returns degraded status rather than throwing — same silent-fail convention seen in s.ts and t.ts",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Same-origin proxy for ad-blocker bypass",
+    "evidence": "Rewrites tracking URL from absolute backend URL to /api/t — repo-wide pattern for LPAI client sites to bypass ad-blocker domain blacklists",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "BlogPosting JSON-LD schema injection",
+    "evidence": "Inline <script type='application/ld+json'> with BlogPosting schema including headline, author, publisher, datePublished, wordCount — likely a repo-wide pattern for blog detail pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "astro:page-load event listener pattern",
+    "evidence": "Client-side scripts initialize on both DOMContentLoaded and astro:page-load to handle Astro view transitions",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Build-time data-attribute injection for client-side filtering",
+    "evidence": "data-cat / data-title / data-excerpt injected on each post card element, enabling zero-latency JS filtering without any client-side API calls",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Honeypot bot-protection pattern on all forms",
+    "evidence": "Both QuoteRequestForm and ConsultationForm include a visually-hidden input name='website_url' with aria-hidden and position:absolute;left:-9999px. The submit handler checks fd.get('website_url') and silently succeeds without posting if filled.",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "LPAI portal forms API as form submission target",
+    "evidence": "Both forms POST to /api/portal/forms/<slug>/submit on the LPAI Railway backend with { locationId, data, meta } shape",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "BaseLayout accepts keywords prop for SEO",
+    "evidence": "Line 11 passes keywords='modular development, developer solutions, multi-unit housing, volume production' to BaseLayout — first file in this batch to use the keywords prop, suggesting BaseLayout renders a <meta name=keywords> tag",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Inline onclick modal trigger pattern",
+    "evidence": "Line 299: onclick directly calls document.getElementById('consultation-modal')?.classList.remove('hidden') — same pattern as index.astro's CTA buttons",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Native HTML details/summary accordion for FAQ",
+    "evidence": "Lines 257-315 use <details class='...' group> with Tailwind group-open utilities rather than a JS-driven accordion — a progressive-enhancement pattern",
+    "appliesTo": "this file"
+  },
+  {
+    "name": "data-action modal trigger pattern",
+    "evidence": "Lines 87-90: querySelectorAll('[data-action=\"modalId\"]') iterates all triggers and attaches click→classList.remove('hidden'). Allows any element anywhere in the page to open a named modal without inline JS.",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Modal outside-click dismiss",
+    "evidence": "Lines 94-98: listens on the modal backdrop div itself; closes when e.target.id === modalId, meaning clicks on the backdrop (not the inner content) close the modal.",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Direct contact CTA pattern (phone + email) for specialty verticals",
+    "evidence": "military.astro has a dedicated 'Ready to Deploy?' section with tel: and mailto: links to Dylan Walker rather than routing to /contact or a form embed — same as homeowners.astro likely does for its CTA",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "BaseLayout keywords prop usage is inconsistent across pages",
+    "evidence": "military.astro passes keywords prop; container-homes.astro and pools.astro do not — no enforced contract at the component level",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Hardcoded frontmatter data arrays for product catalogs",
+    "evidence": "models array defined in Astro frontmatter (lines 6-75) drives the entire page render — no fetch to LPAI backend for product data, unlike blog/[slug].astro which calls the API",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Dead CTA button pattern",
+    "evidence": "'Request Quote' buttons exist in both container-homes.astro and pools.astro with no action wired — consistent across model catalog pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Inline onclick + global window function for client-side interactivity",
+    "evidence": "scrollToSection() defined in <script> block called via onclick attribute strings — bypasses Astro's module scoping, a pattern that works but is fragile",
+    "appliesTo": "this file"
+  },
+  {
+    "name": "Hardcoded frontmatter data arrays for process/stages content",
+    "evidence": "stages array (lines 6-97) drives the entire timeline visualization and detail cards — no CMS fetch, same pattern as model catalog pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Client-side DOM filter pattern via global onclick + data-category attributes",
+    "evidence": "filterProjects() reads data-category from card elements and toggles display:none/block — same inline-onclick-global-function pattern as pools.astro scrollToSection()",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Gradient string as image placeholder in data arrays",
+    "evidence": "projects array stores Tailwind gradient class strings in the image field (e.g. 'gradient-to-br from-blue-400 to-blue-600') used as bg- class suffix — signals real photos not yet integrated",
+    "appliesTo": "this file"
+  },
+  {
+    "name": "SSR redirect via Astro.redirect / new Response",
+    "evidence": "File uses `import { redirect } from 'astro'` and `new Response(..., { status: 404 })` — Astro SSR response-termination pattern",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Astro static site generation with hardcoded slug manifest",
+    "evidence": "getStaticPaths() returns a literal array of slug objects rather than fetching from backend — content-as-code pattern, unlike blog/[slug].astro which fetches LPAI backend",
+    "appliesTo": "this file"
+  },
+  {
+    "name": "Inline data arrays for static content",
+    "evidence": "specs, features, and faqItems defined as JS arrays in frontmatter and mapped in template — reusable without a CMS",
+    "appliesTo": "this file"
+  },
+  {
+    "name": "Hardcoded contact info pattern",
+    "evidence": "Phone and email embedded directly in template markup rather than pulled from a config or CMS — same pattern used across saltgrass-modular service pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Three-import Astro page pattern (BaseLayout + Hero + CtaBanner)",
+    "evidence": "pools.astro imports exactly BaseLayout, Hero, CtaBanner and no other dependencies — same pattern seen in about.astro and traditional-builds.astro",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Fully static service detail pages with no runtime data fetching",
+    "evidence": "No fetch/API call anywhere in the file; all content is hardcoded in the template",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Inline .map() for dynamic list rendering in Astro templates",
+    "evidence": "Lines 65-77 (architectural styles), 107-125 (included items) use .map() with JSX-style rendering inside Astro templates",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Nav/Footer slot injection pattern in web-marketing",
+    "evidence": "terms.astro passes <Nav slot='nav'> and <Footer slot='footer'> to BaseLayout — distinct from saltgrass-modular which uses no explicit slots",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "IntersectionObserver for sticky sidebar TOC active-state",
+    "evidence": "Client-side script (lines 317-341) uses IntersectionObserver with rootMargin '-80px 0px -60% 0px' to highlight the TOC link matching the on-screen section",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Mobile vs desktop TOC via accordion + sticky sidebar",
+    "evidence": "Two parallel TOC implementations: mobile accordion (lines 41-58, JS toggle at 284-302) and desktop sticky sidebar (lines 65-79). Same sections array drives both.",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Silent-fail / 204 empty response on backend error",
+    "evidence": "s.ts, t.ts, and health.ts all catch errors silently and return either empty body or degraded status — explicit design choice to never surface backend errors to end users",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Astro static site generation with LPAI backend as content source",
+    "evidence": "blog/[slug].astro uses getStaticPaths() calling backend /api/blog/posts to enumerate slugs at build time — SSG pattern with LPAI as headless CMS",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "BaseLayout accepts keywords prop for SEO meta",
+    "evidence": "developers.astro line 11 passes keywords prop to BaseLayout — extends the known BaseLayout prop surface beyond title/description",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Modals scoped exclusively to index.astro DOM",
+    "evidence": "Both quote-modal and consultation-modal divs are only rendered in index.astro; other pages reference them via onclick/data-action creating a cross-page dependency that silently fails on direct navigation",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Hardcoded frontmatter data arrays for product and process content",
+    "evidence": "container-homes.astro, pools.astro, and process.astro all define their primary content as static JS arrays in the Astro frontmatter — no LPAI backend fetch for product/pricing/stage data",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Dead CTA button pattern on model catalog pages",
+    "evidence": "'Request Quote' buttons in container-homes.astro (line 157) and pools.astro (lines 104, 163) have no onclick, href, or form action — consistent unfinished wiring across catalog pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Gradient CSS class string as image placeholder in data arrays",
+    "evidence": "projects.astro stores Tailwind gradient strings in the image field consumed as bg- class suffix — signals placeholder state, not a real asset reference pattern",
+    "appliesTo": "this file"
+  },
+  {
+    "name": "SSR redirect via Astro redirect() / new Response()",
+    "evidence": "qr/[code].astro uses Astro's redirect() for 302 and `new Response('...', { status: 404 })` to terminate SSR — Astro SSR response-termination pattern",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Gradient placeholder blocks instead of real images",
+    "evidence": "container-homes.astro uses `bg-gradient-to-br` divs for model gallery and project gallery instead of <img> tags — unfinished placeholder pattern that may ship to production",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Three-import Astro service page pattern (BaseLayout + Hero + CtaBanner)",
+    "evidence": "Both pools.astro and traditional-builds.astro import exactly these three components and no others — a repeating template for all saltgrass-modular service detail pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Fully static service detail pages with hardcoded pricing",
+    "evidence": "pools.astro and traditional-builds.astro contain no fetch/API calls; all product specs and pricing are hardcoded in the Astro template — any price change requires a code edit",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Dead CTA buttons pattern on service pages",
+    "evidence": "pools.astro lines 58/96 have <button> elements with no action; traditional-builds.astro CTA banner has no link target — consistent unfinished wiring across service pages",
+    "appliesTo": "this module"
+  },
+  {
+    "name": "Nav/Footer slot injection pattern in web-marketing vs implicit in saltgrass-modular",
+    "evidence": "terms.astro (web-marketing) uses explicit slot='nav' and slot='footer' on Nav/Footer components; saltgrass-modular pages use no slots — two different layout composition patterns across the two apps",
+    "appliesTo": "repo-wide"
+  }
+]

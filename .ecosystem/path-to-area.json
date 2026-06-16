@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-16T17:32:21.434Z",
+  "mappings": [
+    {
+      "glob": "src/pages/**",
+      "area": "about.astro",
+      "doc": ".ecosystem/areas/about.astro.md"
+    },
+    {
+      "glob": "src/pages/api/**",
+      "area": "health",
+      "doc": ".ecosystem/areas/health.md"
+    },
+    {
+      "glob": "src/pages/api/s.ts",
+      "area": "s",
+      "doc": ".ecosystem/areas/s.md"
+    },
+    {
+      "glob": "src/pages/api/t.ts",
+      "area": "t",
+      "doc": ".ecosystem/areas/t.md"
+    },
+    {
+      "glob": "src/pages/blog/**",
+      "area": "blog",
+      "doc": ".ecosystem/areas/blog.md"
+    },
+    {
+      "glob": "src/pages/compare/**",
+      "area": "compare",
+      "doc": ".ecosystem/areas/compare.md"
+    },
+    {
+      "glob": "src/pages/contact.astro",
+      "area": "contact.astro",
+      "doc": ".ecosystem/areas/contact.astro.md"
+    },
+    {
+      "glob": "src/pages/cost/**",
+      "area": "cost",
+      "doc": ".ecosystem/areas/cost.md"
+    },
+    {
+      "glob": "src/pages/developers.astro",
+      "area": "developers.astro",
+      "doc": ".ecosystem/areas/developers.astro.md"
+    },
+    {
+      "glob": "src/pages/financing.astro",
+      "area": "financing.astro",
+      "doc": ".ecosystem/areas/financing.astro.md"
+    },
+    {
+      "glob": "src/pages/glossary.astro",
+      "area": "glossary.astro",
+      "doc": ".ecosystem/areas/glossary.astro.md"
+    },
+    {
+      "glob": "src/pages/homeowners.astro",
+      "area": "homeowners.astro",
+      "doc": ".ecosystem/areas/homeowners.astro.md"
+    },
+    {
+      "glob": "src/pages/index.astro",
+      "area": "index.astro",
+      "doc": ".ecosystem/areas/index.astro.md"
+    },
+    {
+      "glob": "src/pages/locations/**",
+      "area": "locations",
+      "doc": ".ecosystem/areas/locations.md"
+    },
+    {
+      "glob": "src/pages/military.astro",
+      "area": "military.astro",
+      "doc": ".ecosystem/areas/military.astro.md"
+    },
+    {
+      "glob": "src/pages/models/**",
+      "area": "models",
+      "doc": ".ecosystem/areas/models.md"
+    },
+    {
+      "glob": "src/pages/privacy.astro",
+      "area": "privacy.astro",
+      "doc": ".ecosystem/areas/privacy.astro.md"
+    },
+    {
+      "glob": "src/pages/process.astro",
+      "area": "process.astro",
+      "doc": ".ecosystem/areas/process.astro.md"
+    },
+    {
+      "glob": "src/pages/projects.astro",
+      "area": "projects.astro",
+      "doc": ".ecosystem/areas/projects.astro.md"
+    },
+    {
+      "glob": "src/pages/qr/**",
+      "area": "qr",
+      "doc": ".ecosystem/areas/qr.md"
+    },
+    {
+      "glob": "src/pages/saltgrass-101.astro",
+      "area": "saltgrass-101.astro",
+      "doc": ".ecosystem/areas/saltgrass-101.astro.md"
+    },
+    {
+      "glob": "src/pages/saltgrass-101/**",
+      "area": "saltgrass-101",
+      "doc": ".ecosystem/areas/saltgrass-101.md"
+    },
+    {
+      "glob": "src/pages/services/**",
+      "area": "services",
+      "doc": ".ecosystem/areas/services.md"
+    },
+    {
+      "glob": "src/pages/terms.astro",
+      "area": "terms.astro",
+      "doc": ".ecosystem/areas/terms.astro.md"
+    }
+  ]
+}

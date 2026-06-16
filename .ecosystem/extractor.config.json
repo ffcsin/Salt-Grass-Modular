@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "stack": {
+    "languages": [
+      "javascript"
+    ],
+    "frameworks": [
+      "astro"
+    ],
+    "sourceRoots": [
+      {
+        "path": "src",
+        "kind": "frontend"
+      }
+    ],
+    "manifests": [
+      "package.json"
+    ],
+    "deployTargets": [
+      "vercel.json"
+    ],
+    "staticSite": true,
+    "isLibrary": false
+  },
+  "fileGlobs": {
+    "frontend": [
+      "src/**/*.astro",
+      "src/lib/**/*.ts"
+    ],
+    "backend": [
+      "src/pages/**/*.ts"
+    ]
+  },
+  "feCallPatterns": [
+    {
+      "regex": "fetch\\(\\s*`([^`]*)`",
+      "flags": "g",
+      "urlGroup": 1,
+      "methodHint": "GET"
+    },
+    {
+      "regex": "fetch\\(\\s*['\"]([^'\"]+)['\"]",
+      "flags": "g",
+      "urlGroup": 1,
+      "methodHint": "GET"
+    }
+  ],
+  "routePatterns": [],
+  "fileRoutes": [
+    {
+      "baseDir": "src/pages",
+      "routePrefix": "",
+      "exts": [
+        ".astro",
+        ".ts"
+      ]
+    }
+  ],
+  "surfacePatterns": [
+    {
+      "regex": "addEventListener\\(\\s*['\"](\\w+)['\"]",
+      "flags": "g",
+      "kindGroup": 1
+    },
+    {
+      "regex": "data-action=['\"]([\\w-]+)['\"]",
+      "flags": "g",
+      "kindGroup": 1
+    }
+  ]
+}

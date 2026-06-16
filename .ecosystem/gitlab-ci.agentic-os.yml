@@ -1,0 +1,61 @@
+# agentic-os pipeline — mature scaffold (stages · cache · per-gate jobs · services · deploy). Edit freely.
+stages: [lint, test, build, deploy]
+
+workflow:
+  auto_cancel: { on_new_commit: interruptible }
+  rules:
+    - if: '$CI_COMMIT_MESSAGE =~ /\[skip ci\]/'
+      when: never
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+
+# Free, zero-config security scanning (covers the secret-scan / dep-audit gates).
+include:
+  - template: Security/Secret-Detection.gitlab-ci.yml
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+
+default:
+  interruptible: true
+  image: node:22
+
+.base:
+  image: node:22
+  variables:
+    npm_config_cache: ${CI_PROJECT_DIR}/.npm
+  cache:
+    key: { files: [package-lock.json] }
+    paths: [.npm/]
+  before_script:
+    - npm ci || npm install
+
+build:
+  stage: build
+  extends: .base
+  needs: []
+  script: ["npm run build"]
+
+lint:
+  stage: lint
+  extends: .base
+  needs: []
+  script: ["npm run lint"]
+  allow_failure: true
+
+typecheck:
+  stage: lint
+  extends: .base
+  needs: []
+  script: ["npx --no-install tsc --noEmit"]
+  allow_failure: true
+
+# Deploy scaffold — guarded, tracked as a GitLab Environment. Fill in your host command.
+deploy:
+  stage: deploy
+  needs: []
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+      when: manual
+  environment: { name: production }
+  script:
+    - echo "TODO: deploy command (kamal deploy / flyctl deploy / railway up / vercel --prod / …)"

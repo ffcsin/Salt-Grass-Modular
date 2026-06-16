@@ -1,0 +1,9 @@
+# security findings (7)
+
+- [low] apps/saltgrass-modular/src/pages/api/health.ts:18 — No auth on this endpoint — intentional for uptime probing, but the response includes database status which could inform an attacker whether the DB is reachable. Low practical risk but worth noting.
+- [med] apps/saltgrass-modular/src/pages/api/t.ts:5 — No validation or rate-limiting on the proxy — any client can POST arbitrary payloads to the backend tracking endpoint via this relay. The backend must enforce its own validation and rate limits.
+- [med] apps/saltgrass-modular/src/pages/blog/[slug].astro:68 — chrome.headerHtml, chrome.footerHtml, and post.content are all rendered with set:html (raw HTML injection). If the backend returns malicious HTML (e.g. from a compromised CMS record), it executes in the browser. Trust is
+- [med] apps/saltgrass-modular/src/pages/contact.astro:110 — The LPAI location ID 'plan_chNIQv7tfy09Ew_h1liV' is hardcoded as a fallback default inside both QuoteRequestForm.astro (line 3) and ConsultationForm.astro (line 3) and also visible in the HTML source at contact.astro lin
+- [high] src/pages/projects.astro:303 — filterProjects() (line 303) references the implicit global `event` object rather than receiving it as a parameter. This is a browser-specific implicit global that is deprecated and not available in all contexts. Should b
+- [med] apps/saltgrass-modular/src/pages/qr/[code].astro:9 — The `code` param is passed through encodeURIComponent before being interpolated into the fetch URL, which is correct. However, no length or character-set validation is applied before the fetch — an arbitrarily long code 
+- [med] apps/saltgrass-modular/src/pages/services/disaster-relief.astro:203 — Dylan's direct phone number (405-659-1949) and email address (Dylan.Walker@saltgrassmodular.com) are hardcoded in the template markup (lines 203-207). These are publicly visible in source and at risk of harvesting by scr

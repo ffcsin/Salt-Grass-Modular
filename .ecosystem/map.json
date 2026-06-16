@@ -1,0 +1,809 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-16T17:15:55.410Z",
+  "stack": {
+    "languages": [
+      "javascript"
+    ],
+    "frameworks": [],
+    "sourceRoots": [
+      {
+        "path": "src",
+        "kind": "unknown"
+      }
+    ],
+    "manifests": [
+      "package.json"
+    ],
+    "services": [],
+    "deployTargets": [
+      "vercel.json"
+    ],
+    "staticSite": true,
+    "isLibrary": false,
+    "ci": [],
+    "tooling": {
+      "packageManager": "npm",
+      "lint": null,
+      "typecheck": "tsc",
+      "test": null,
+      "sast": null,
+      "secretScan": "builtin",
+      "depAudit": "npm-or-osv",
+      "commitlint": null
+    }
+  },
+  "feCalls": [
+    {
+      "file": "src/lib/blog.ts",
+      "line": 60,
+      "method": "GET",
+      "url": "/api/blog/posts?locationId=${LOCATION_ID}&status=published&limit=100",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/lib/blog.ts",
+      "line": 72,
+      "method": "GET",
+      "url": "/api/blog/posts/${encodeURIComponent(slug)}?locationId=${LOCATION_ID}",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/lib/blog.ts",
+      "line": 84,
+      "method": "GET",
+      "url": "/api/blog/categories?locationId=${LOCATION_ID}",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/lib/blog.ts",
+      "line": 104,
+      "method": "GET",
+      "url": "/api/blog/posts?${params}",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/lib/blog.ts",
+      "line": 118,
+      "method": "GET",
+      "url": "/api/blog/ctas?locationId=${LOCATION_ID}",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/lib/blog.ts",
+      "line": 148,
+      "method": "GET",
+      "url": "/api/blog/settings/${LOCATION_ID}",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/pages/api/health.ts",
+      "line": 35,
+      "method": "GET",
+      "url": "/api/health?locationId=${LOCATION_ID}",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/pages/api/s.ts",
+      "line": 10,
+      "method": "GET",
+      "url": "/api/website-clients/tracking-script",
+      "urlKind": "deep"
+    },
+    {
+      "file": "src/pages/api/t.ts",
+      "line": 11,
+      "method": "POST",
+      "url": "/api/website-clients/track",
+      "urlKind": "deep"
+    }
+  ],
+  "routes": [
+    {
+      "file": "src/pages/about.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/about.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/api/health.ts",
+      "line": 1,
+      "method": "ANY",
+      "route": "/api/health",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/api/s.ts",
+      "line": 1,
+      "method": "ANY",
+      "route": "/api/s",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/api/t.ts",
+      "line": 1,
+      "method": "ANY",
+      "route": "/api/t",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/blog/[slug].astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/blog/:slug.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/blog/index.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/blog/index.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/blog/rss.xml.ts",
+      "line": 1,
+      "method": "ANY",
+      "route": "/blog/rss.xml",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/compare/[slug].astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/compare/:slug.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/compare/index.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/compare/index.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/contact.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/contact.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/cost/[slug].astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/cost/:slug.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/developers.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/developers.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/financing.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/financing.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/glossary.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/glossary.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/homeowners.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/homeowners.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/index.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/index.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/locations/[slug].astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/locations/:slug.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/locations/index.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/locations/index.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/military.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/military.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/models/container-homes.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/models/container-homes.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/models/pools.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/models/pools.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/privacy.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/privacy.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/process.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/process.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/projects.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/projects.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/qr/[code].astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/qr/:code.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/saltgrass-101/[slug].astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/saltgrass-101/:slug.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/saltgrass-101.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/saltgrass-101.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/services/container-homes.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/services/container-homes.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/services/developers.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/services/developers.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/services/disaster-relief.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/services/disaster-relief.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/services/index.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/services/index.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/services/pools.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/services/pools.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/services/traditional-builds.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/services/traditional-builds.astro",
+      "handler": "",
+      "source": "file-route"
+    },
+    {
+      "file": "src/pages/terms.astro",
+      "line": 1,
+      "method": "ANY",
+      "route": "/terms.astro",
+      "handler": "",
+      "source": "file-route"
+    }
+  ],
+  "surfaces": [],
+  "wireup": [
+    {
+      "from": {
+        "file": "src/lib/blog.ts",
+        "line": 60
+      },
+      "method": "GET",
+      "url": "/api/blog/posts?locationId=${LOCATION_ID}&status=published&limit=100",
+      "match": "unmatched"
+    },
+    {
+      "from": {
+        "file": "src/lib/blog.ts",
+        "line": 72
+      },
+      "method": "GET",
+      "url": "/api/blog/posts/${encodeURIComponent(slug)}?locationId=${LOCATION_ID}",
+      "match": "unmatched"
+    },
+    {
+      "from": {
+        "file": "src/lib/blog.ts",
+        "line": 84
+      },
+      "method": "GET",
+      "url": "/api/blog/categories?locationId=${LOCATION_ID}",
+      "match": "unmatched"
+    },
+    {
+      "from": {
+        "file": "src/lib/blog.ts",
+        "line": 104
+      },
+      "method": "GET",
+      "url": "/api/blog/posts?${params}",
+      "match": "unmatched"
+    },
+    {
+      "from": {
+        "file": "src/lib/blog.ts",
+        "line": 118
+      },
+      "method": "GET",
+      "url": "/api/blog/ctas?locationId=${LOCATION_ID}",
+      "match": "unmatched"
+    },
+    {
+      "from": {
+        "file": "src/lib/blog.ts",
+        "line": 148
+      },
+      "method": "GET",
+      "url": "/api/blog/settings/${LOCATION_ID}",
+      "match": "unmatched"
+    },
+    {
+      "from": {
+        "file": "src/pages/api/health.ts",
+        "line": 35
+      },
+      "method": "GET",
+      "url": "/api/health?locationId=${LOCATION_ID}",
+      "match": "matched",
+      "route": "/api/health",
+      "handler": "",
+      "ambiguous": false
+    },
+    {
+      "from": {
+        "file": "src/pages/api/s.ts",
+        "line": 10
+      },
+      "method": "GET",
+      "url": "/api/website-clients/tracking-script",
+      "match": "unmatched"
+    },
+    {
+      "from": {
+        "file": "src/pages/api/t.ts",
+        "line": 11
+      },
+      "method": "POST",
+      "url": "/api/website-clients/track",
+      "match": "unmatched"
+    }
+  ],
+  "orphans": {
+    "routesNoCaller": [
+      {
+        "file": "src/pages/about.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/about.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/api/s.ts",
+        "line": 1,
+        "method": "ANY",
+        "route": "/api/s",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/api/t.ts",
+        "line": 1,
+        "method": "ANY",
+        "route": "/api/t",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/blog/[slug].astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/blog/:slug.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/blog/index.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/blog/index.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/blog/rss.xml.ts",
+        "line": 1,
+        "method": "ANY",
+        "route": "/blog/rss.xml",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/compare/[slug].astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/compare/:slug.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/compare/index.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/compare/index.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/contact.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/contact.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/cost/[slug].astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/cost/:slug.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/developers.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/developers.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/financing.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/financing.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/glossary.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/glossary.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/homeowners.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/homeowners.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/index.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/index.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/locations/[slug].astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/locations/:slug.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/locations/index.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/locations/index.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/military.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/military.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/models/container-homes.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/models/container-homes.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/models/pools.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/models/pools.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/privacy.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/privacy.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/process.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/process.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/projects.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/projects.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/qr/[code].astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/qr/:code.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/saltgrass-101/[slug].astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/saltgrass-101/:slug.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/saltgrass-101.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/saltgrass-101.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/services/container-homes.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/services/container-homes.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/services/developers.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/services/developers.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/services/disaster-relief.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/services/disaster-relief.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/services/index.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/services/index.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/services/pools.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/services/pools.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/services/traditional-builds.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/services/traditional-builds.astro",
+        "handler": "",
+        "source": "file-route"
+      },
+      {
+        "file": "src/pages/terms.astro",
+        "line": 1,
+        "method": "ANY",
+        "route": "/terms.astro",
+        "handler": "",
+        "source": "file-route"
+      }
+    ],
+    "feCallsUnmatched": [
+      {
+        "from": {
+          "file": "src/lib/blog.ts",
+          "line": 60
+        },
+        "method": "GET",
+        "url": "/api/blog/posts?locationId=${LOCATION_ID}&status=published&limit=100",
+        "match": "unmatched"
+      },
+      {
+        "from": {
+          "file": "src/lib/blog.ts",
+          "line": 72
+        },
+        "method": "GET",
+        "url": "/api/blog/posts/${encodeURIComponent(slug)}?locationId=${LOCATION_ID}",
+        "match": "unmatched"
+      },
+      {
+        "from": {
+          "file": "src/lib/blog.ts",
+          "line": 84
+        },
+        "method": "GET",
+        "url": "/api/blog/categories?locationId=${LOCATION_ID}",
+        "match": "unmatched"
+      },
+      {
+        "from": {
+          "file": "src/lib/blog.ts",
+          "line": 104
+        },
+        "method": "GET",
+        "url": "/api/blog/posts?${params}",
+        "match": "unmatched"
+      },
+      {
+        "from": {
+          "file": "src/lib/blog.ts",
+          "line": 118
+        },
+        "method": "GET",
+        "url": "/api/blog/ctas?locationId=${LOCATION_ID}",
+        "match": "unmatched"
+      },
+      {
+        "from": {
+          "file": "src/lib/blog.ts",
+          "line": 148
+        },
+        "method": "GET",
+        "url": "/api/blog/settings/${LOCATION_ID}",
+        "match": "unmatched"
+      },
+      {
+        "from": {
+          "file": "src/pages/api/s.ts",
+          "line": 10
+        },
+        "method": "GET",
+        "url": "/api/website-clients/tracking-script",
+        "match": "unmatched"
+      },
+      {
+        "from": {
+          "file": "src/pages/api/t.ts",
+          "line": 11
+        },
+        "method": "POST",
+        "url": "/api/website-clients/track",
+        "match": "unmatched"
+      }
+    ]
+  },
+  "accuracy": {
+    "maxDrift": 1,
+    "precision": null,
+    "trusted": false
+  }
+}

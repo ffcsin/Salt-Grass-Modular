@@ -30,3 +30,4 @@ Thumbs.db
 # Build
 .astro/
 .vercel
+.env*.local
