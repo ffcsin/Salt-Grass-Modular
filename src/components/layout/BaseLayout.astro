@@ -20,8 +20,8 @@ const {
 
 const siteUrl = SITE.url;
 // Strip any brand suffix a page may have baked into its own title so the
-// template adds "| Saltgrass Modular" exactly once (no double-branding).
-const cleanTitle = (title || '').replace(/\s*[-|]\s*Saltgrass Modular\s*$/i, '').trim();
+// template adds "| SaltGrass Modular" exactly once (no double-branding).
+const cleanTitle = (title || '').replace(/\s*[-|]\s*SaltGrass Modular\s*$/i, '').trim();
 const fullTitle = (title === 'Home' || !cleanTitle)
   ? `${SITE.brand} | ${SITE.tagline}`
   : `${cleanTitle} | ${SITE.brand}`;
@@ -55,9 +55,9 @@ const allSchemas = [
 
     {/* Geo tags — help local SEO + ground AI answers in the right geography */}
     <meta name="geo.region" content="US-OK" />
-    <meta name="geo.placename" content="Wagner, Oklahoma" />
-    <meta name="geo.position" content="35.7929;-98.7829" />
-    <meta name="ICBM" content="35.7929, -98.7829" />
+    <meta name="geo.placename" content="Oklahoma City, Oklahoma" />
+    <meta name="geo.position" content="35.4676;-97.5164" />
+    <meta name="ICBM" content="35.4676, -97.5164" />
 
     {/* Inter Variable is bundled + self-hosted via `@fontsource-variable/inter`
         (imported above); Astro emits its woff2 into /_astro with a content hash,

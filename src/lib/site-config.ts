@@ -2,8 +2,8 @@
 // Change a fact once, it propagates everywhere.
 
 export const SITE = {
-  brand: 'Saltgrass Modular',
-  legalName: 'Saltgrass Modular, LLC',
+  brand: 'SaltGrass Modular',
+  legalName: 'SaltGrass Modular, LLC',
   // Live host (hyphenated Vercel project). At domain cutover → https://saltgrassmodular.com
   url: import.meta.env.SITE || 'https://salt-grass-modular.vercel.app',
   domain: 'saltgrassmodular.com',
@@ -16,20 +16,20 @@ export const SITE = {
   email: 'Dylan.Walker@saltgrassmodular.com',
   // NAP
   address: {
-    locality: 'Wagner',
+    locality: 'Oklahoma City',
     region: 'OK',
     regionName: 'Oklahoma',
-    postalCode: '73455',
+    postalCode: '73102',
     country: 'US',
   },
-  geo: { lat: 35.7929, lng: -98.7829 },
+  geo: { lat: 35.4676, lng: -97.5164 },
   hours: 'Mo-Fr 08:00-17:00',
   priceRange: '$$',
   ogImage: '/img/og-default.jpg',
   logo: '/logo.png',
   sameAs: [] as string[], // social profiles — add when provided
   // Facility / capacity facts (true, partner-confirmed in spec)
-  facility: 'Wagner, Oklahoma (15,000 sq ft fabrication facility)',
+  facility: 'Oklahoma City, Oklahoma (40,000+ sq ft fabrication facility)',
   defaultKeywords: [
     'modular construction',
     'container homes',

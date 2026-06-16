@@ -17,14 +17,14 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Topeka",
       "Overland Park"
     ],
-    "intro": "Kansas sits squarely in our regional delivery range, so homes leave our 15,000 sq ft Wagner, Oklahoma facility and arrive ready for install across the state. Founder Dylan Walker's team builds custom container homes, traditional modular houses, and modular pools for owners near Wichita, Kansas City, Topeka, and Overland Park. Because the factory works in parallel with your site prep and permitting, most projects run roughly eight to nine months from design to installation. Plain pricing, all-in: fabrication, delivery, and setup are bundled into one figure.",
+    "intro": "Kansas sits squarely in our regional delivery range, so homes leave our 40,000+ sq ft Oklahoma City, Oklahoma facility and arrive ready for install across the state. Founder Dylan Walker's team builds custom container homes, traditional modular houses, and modular pools for owners near Wichita, Kansas City, Topeka, and Overland Park. Because the factory works in parallel with your site prep and permitting, most projects run roughly eight to nine months from design to installation. Plain pricing, all-in: fabrication, delivery, and setup are bundled into one figure.",
     "faqs": [
       {
         "q": "Do you actually deliver modular homes to Kansas?",
-        "a": "Yes. Kansas is part of our regular regional delivery footprint. We fabricate at our Wagner, Oklahoma shop and transport completed modules to your Kansas site for installation, covering metros like Wichita, Kansas City, Topeka, and Overland Park."
+        "a": "Yes. Kansas is part of our regular regional delivery footprint. We fabricate at our Oklahoma City, Oklahoma shop and transport completed modules to your Kansas site for installation, covering metros like Wichita, Kansas City, Topeka, and Overland Park."
       },
       {
-        "q": "How is a Saltgrass home built to handle Kansas tornadoes?",
+        "q": "How is a SaltGrass home built to handle Kansas tornadoes?",
         "a": "We engineer for elevated wind loads and use heavy anchoring suited to high-wind regions. Specific design targets depend on your local jurisdiction's requirements, and we coordinate the engineering details with your AHJ before fabrication."
       },
       {
@@ -48,11 +48,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Fort Smith",
       "Springdale"
     ],
-    "intro": "Arkansas is a short haul from our Wagner, Oklahoma fabrication shop, which makes it one of our most natural regional markets. We routinely truck finished container homes, traditional modular builds, and modular pools to clients near Little Rock, Fayetteville, Fort Smith, and Springdale. Dylan Walker's crew handles the build inside our 15,000 sq ft facility while your site prep and permits move forward in parallel, keeping the typical timeline around eight to nine months. Every quote is all-in: one price covers fabrication, transport, and on-site installation.",
+    "intro": "Arkansas is a short haul from our Oklahoma City, Oklahoma fabrication shop, which makes it one of our most natural regional markets. We routinely truck finished container homes, traditional modular builds, and modular pools to clients near Little Rock, Fayetteville, Fort Smith, and Springdale. Dylan Walker's crew handles the build inside our 40,000+ sq ft facility while your site prep and permits move forward in parallel, keeping the typical timeline around eight to nine months. Every quote is all-in: one price covers fabrication, transport, and on-site installation.",
     "faqs": [
       {
         "q": "Is Arkansas within your delivery range?",
-        "a": "Absolutely. Arkansas borders Oklahoma, so it's a frequent regional run for us. We deliver completed modules from Wagner to sites across the state, including Little Rock, Fayetteville, Fort Smith, and Springdale."
+        "a": "Absolutely. Arkansas borders Oklahoma, so it's a frequent regional run for us. We deliver completed modules from Oklahoma City to sites across the state, including Little Rock, Fayetteville, Fort Smith, and Springdale."
       },
       {
         "q": "How do your homes handle Arkansas humidity?",
@@ -60,7 +60,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Can you build a modular pool in Arkansas too?",
-        "a": "Yes. Our Tube Steel and Fiberglass pools start in the $12,000-$24,000 range, and Welded Steel with Epoxy pools start at $18,000-$36,000, all delivered and installed."
+        "a": "Yes. Our Tube Steel and Fiberglass pools start in the at $48,000 range, and Welded Steel with Epoxy pools start at $52,000, all delivered and installed."
       }
     ]
   },
@@ -79,11 +79,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Springfield",
       "Columbia"
     ],
-    "intro": "Missouri is well inside our regional reach, so Saltgrass homes are built in Wagner, Oklahoma and trucked north for installation. From Kansas City and St. Louis to Springfield and Columbia, we deliver custom container homes, traditional modular houses, and modular pools across the state. While Dylan Walker's team fabricates inside our 15,000 sq ft facility, your local site work and permitting run alongside it, so most builds land at roughly eight to nine months. Pricing stays simple and honest, fabrication, delivery, and installation rolled into a single all-in number.",
+    "intro": "Missouri is well inside our regional reach, so SaltGrass homes are built in Oklahoma City, Oklahoma and trucked north for installation. From Kansas City and St. Louis to Springfield and Columbia, we deliver custom container homes, traditional modular houses, and modular pools across the state. While Dylan Walker's team fabricates inside our 40,000+ sq ft facility, your local site work and permitting run alongside it, so most builds land at roughly eight to nine months. Pricing stays simple and honest, fabrication, delivery, and installation rolled into a single all-in number.",
     "faqs": [
       {
         "q": "Do you serve both Kansas City and St. Louis sides of Missouri?",
-        "a": "Yes. Missouri is a regular regional destination for us, and we deliver statewide, from Kansas City and St. Louis to Springfield and Columbia. Modules are fabricated in Wagner, Oklahoma and installed on your site."
+        "a": "Yes. Missouri is a regular regional destination for us, and we deliver statewide, from Kansas City and St. Louis to Springfield and Columbia. Modules are fabricated in Oklahoma City, Oklahoma and installed on your site."
       },
       {
         "q": "How long does a Missouri project take start to finish?",
@@ -91,7 +91,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who handles permits for a Missouri build?",
-        "a": "Permitting varies by jurisdiction, and Saltgrass coordinates directly with your local AHJ. We align the engineering and documentation to your municipality's requirements before the modules ship."
+        "a": "Permitting varies by jurisdiction, and SaltGrass coordinates directly with your local AHJ. We align the engineering and documentation to your municipality's requirements before the modules ship."
       }
     ]
   },
@@ -110,11 +110,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Santa Fe",
       "Rio Rancho"
     ],
-    "intro": "New Mexico is part of our regional delivery territory, so we fabricate in Wagner, Oklahoma and haul finished modules west for installation. We build custom container homes, traditional modular houses, and modular pools for clients near Albuquerque, Las Cruces, Santa Fe, and Rio Rancho. Dylan Walker's team keeps the factory work moving while your site prep and permits proceed in parallel, which holds the typical schedule near eight to nine months. As always, the price you see is all-in, covering fabrication, transport, and on-site setup in one figure.",
+    "intro": "New Mexico is part of our regional delivery territory, so we fabricate in Oklahoma City, Oklahoma and haul finished modules west for installation. We build custom container homes, traditional modular houses, and modular pools for clients near Albuquerque, Las Cruces, Santa Fe, and Rio Rancho. Dylan Walker's team keeps the factory work moving while your site prep and permits proceed in parallel, which holds the typical schedule near eight to nine months. As always, the price you see is all-in, covering fabrication, transport, and on-site setup in one figure.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver to high-altitude New Mexico sites?",
-        "a": "Yes. New Mexico is within our regional range, including higher-elevation areas around Santa Fe. We transport completed modules from Wagner, Oklahoma and install them at your location, also serving Albuquerque, Las Cruces, and Rio Rancho."
+        "q": "Can SaltGrass deliver to high-altitude New Mexico sites?",
+        "a": "Yes. New Mexico is within our regional range, including higher-elevation areas around Santa Fe. We transport completed modules from Oklahoma City, Oklahoma and install them at your location, also serving Albuquerque, Las Cruces, and Rio Rancho."
       },
       {
         "q": "How do your homes perform in desert heat?",
@@ -141,7 +141,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Shreveport",
       "Lafayette"
     ],
-    "intro": "Louisiana falls within our regional delivery range, so Saltgrass homes are fabricated in Wagner, Oklahoma and shipped south for installation. We build custom container homes, traditional modular houses, and modular pools for owners near New Orleans, Baton Rouge, Shreveport, and Lafayette. While Dylan Walker's crew works inside our 15,000 sq ft facility, your site prep and permitting advance in parallel, keeping most projects around eight to nine months. Pricing is honest and bundled, one all-in figure that covers fabrication, delivery, and the on-site install.",
+    "intro": "Louisiana falls within our regional delivery range, so SaltGrass homes are fabricated in Oklahoma City, Oklahoma and shipped south for installation. We build custom container homes, traditional modular houses, and modular pools for owners near New Orleans, Baton Rouge, Shreveport, and Lafayette. While Dylan Walker's crew works inside our 40,000+ sq ft facility, your site prep and permitting advance in parallel, keeping most projects around eight to nine months. Pricing is honest and bundled, one all-in figure that covers fabrication, delivery, and the on-site install.",
     "faqs": [
       {
         "q": "Do you build for hurricane-prone parts of Louisiana?",
@@ -172,11 +172,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Bellevue",
       "Grand Island"
     ],
-    "intro": "Nebraska is part of our regional delivery range, so we fabricate in Wagner, Oklahoma and transport finished modules north for installation. From Omaha and Lincoln to Bellevue and Grand Island, we deliver custom container homes, traditional modular builds, and modular pools across the state. Dylan Walker's team keeps the factory work running while your site prep and permitting move in parallel, which holds most projects near eight to nine months. Every quote is all-in, with fabrication, delivery, and on-site installation combined into a single transparent price.",
+    "intro": "Nebraska is part of our regional delivery range, so we fabricate in Oklahoma City, Oklahoma and transport finished modules north for installation. From Omaha and Lincoln to Bellevue and Grand Island, we deliver custom container homes, traditional modular builds, and modular pools across the state. Dylan Walker's team keeps the factory work running while your site prep and permitting move in parallel, which holds most projects near eight to nine months. Every quote is all-in, with fabrication, delivery, and on-site installation combined into a single transparent price.",
     "faqs": [
       {
-        "q": "Does Saltgrass deliver across Nebraska?",
-        "a": "Yes. Nebraska is within our regional delivery area, and we ship completed modules from Wagner, Oklahoma for installation statewide, including Omaha, Lincoln, Bellevue, and Grand Island."
+        "q": "Does SaltGrass deliver across Nebraska?",
+        "a": "Yes. Nebraska is within our regional delivery area, and we ship completed modules from Oklahoma City, Oklahoma for installation statewide, including Omaha, Lincoln, Bellevue, and Grand Island."
       },
       {
         "q": "Are your homes built for Nebraska snow loads?",
@@ -203,10 +203,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Huntsville",
       "Mobile"
     ],
-    "intro": "Alabama is part of our national reach: for larger projects we ship modular construction across the country, and we serve government and military clients in the state. Working from our 15,000 sq ft Wagner, Oklahoma facility, Dylan Walker's team produces container homes, traditional modular builds, modular pools, and rapid-deployment housing for sites near Birmingham, Montgomery, Huntsville, and Mobile. Because factory work runs alongside your site prep and permitting, projects typically land near eight to nine months. Pricing stays all-in, with fabrication, delivery, and installation combined.",
+    "intro": "Alabama is part of our national reach: for larger projects we ship modular construction across the country, and we serve government and military clients in the state. Working from our 40,000+ sq ft Oklahoma City, Oklahoma facility, Dylan Walker's team produces container homes, traditional modular builds, modular pools, and rapid-deployment housing for sites near Birmingham, Montgomery, Huntsville, and Mobile. Because factory work runs alongside your site prep and permitting, projects typically land near eight to nine months. Pricing stays all-in, with fabrication, delivery, and installation combined.",
     "faqs": [
       {
-        "q": "Does Saltgrass work with government and military in Alabama?",
+        "q": "Does SaltGrass work with government and military in Alabama?",
         "a": "Yes. Our national reach includes developer, government, and military solutions, and Alabama hosts significant defense and federal activity. We also ship modular construction nationwide for larger residential and commercial projects."
       },
       {
@@ -233,10 +233,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Fairbanks",
       "Juneau"
     ],
-    "intro": "Alaska falls under our national reach: we ship modular construction nationwide for larger projects and serve government and military clients in the state. From our 15,000 sq ft facility in Wagner, Oklahoma, Dylan Walker's team builds container homes, traditional modular structures, and rapid-deployment housing destined for Anchorage, Fairbanks, and Juneau. Given the distance and logistics, Alaska work is geared toward sizable builds and institutional projects rather than one-off deliveries. Factory fabrication runs in parallel with site prep and permitting, and pricing remains all-in across fabrication, delivery, and installation.",
+    "intro": "Alaska falls under our national reach: we ship modular construction nationwide for larger projects and serve government and military clients in the state. From our 40,000+ sq ft facility in Oklahoma City, Oklahoma, Dylan Walker's team builds container homes, traditional modular structures, and rapid-deployment housing destined for Anchorage, Fairbanks, and Juneau. Given the distance and logistics, Alaska work is geared toward sizable builds and institutional projects rather than one-off deliveries. Factory fabrication runs in parallel with site prep and permitting, and pricing remains all-in across fabrication, delivery, and installation.",
     "faqs": [
       {
-        "q": "Does Saltgrass really serve Alaska?",
+        "q": "Does SaltGrass really serve Alaska?",
         "a": "Yes, on a national basis. We ship modular construction for larger projects and support government and military clients in Anchorage, Fairbanks, and Juneau. The distance means Alaska work focuses on substantial builds rather than single small deliveries."
       },
       {
@@ -264,7 +264,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Mesa",
       "Scottsdale"
     ],
-    "intro": "Arizona is part of our national reach: we ship modular construction across the country for larger projects and serve government and military clients in the state. Built in our 15,000 sq ft Wagner, Oklahoma facility, Saltgrass container homes, traditional modular structures, and modular pools reach sites near Phoenix, Tucson, Mesa, and Scottsdale. Dylan Walker's team runs factory fabrication in parallel with your site prep and permitting, so projects generally land around eight to nine months. Pricing is straightforward and all-in, bundling fabrication, delivery, and on-site installation.",
+    "intro": "Arizona is part of our national reach: we ship modular construction across the country for larger projects and serve government and military clients in the state. Built in our 40,000+ sq ft Oklahoma City, Oklahoma facility, SaltGrass container homes, traditional modular structures, and modular pools reach sites near Phoenix, Tucson, Mesa, and Scottsdale. Dylan Walker's team runs factory fabrication in parallel with your site prep and permitting, so projects generally land around eight to nine months. Pricing is straightforward and all-in, bundling fabrication, delivery, and on-site installation.",
     "faqs": [
       {
         "q": "Why is Arizona national reach instead of regional?",
@@ -276,7 +276,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Do you build modular pools in Arizona?",
-        "a": "Yes. Our Tube Steel and Fiberglass pools start at $12,000-$24,000, and Welded Steel with Epoxy pools start at $18,000-$36,000, each delivered and installed."
+        "a": "Yes. Our Tube Steel and Fiberglass pools start at $48,000, and Welded Steel with Epoxy pools start at $52,000, each delivered and installed."
       }
     ]
   },
@@ -295,15 +295,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Sacramento",
       "Fresno"
     ],
-    "intro": "California is part of our national reach: we ship modular construction across the country for larger projects and serve government and military clients in the state. From our 15,000 sq ft facility in Wagner, Oklahoma, Dylan Walker's team fabricates container homes, traditional modular structures, and modular pools bound for Los Angeles, San Diego, Sacramento, and Fresno. Factory work runs in parallel with your site prep and permitting, keeping qualifying projects near eight to nine months. Pricing stays honest and all-in, with fabrication, delivery, and installation combined into one figure.",
+    "intro": "California is part of our national reach: we ship modular construction across the country for larger projects and serve government and military clients in the state. From our 40,000+ sq ft facility in Oklahoma City, Oklahoma, Dylan Walker's team fabricates container homes, traditional modular structures, and modular pools bound for Los Angeles, San Diego, Sacramento, and Fresno. Factory work runs in parallel with your site prep and permitting, keeping qualifying projects near eight to nine months. Pricing stays honest and all-in, with fabrication, delivery, and installation combined into one figure.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver modular homes to California?",
+        "q": "Can SaltGrass deliver modular homes to California?",
         "a": "Yes, through our national reach. We ship modular construction for larger projects and serve government and military clients, with deliveries reaching Los Angeles, San Diego, Sacramento, and Fresno for qualifying builds."
       },
       {
         "q": "How do you handle California's seismic and wildfire requirements?",
-        "a": "We engineer for seismic forces and factor wildfire-zone exposure into material and design choices. Specific requirements vary by jurisdiction, and Saltgrass coordinates the details with your local AHJ."
+        "a": "We engineer for seismic forces and factor wildfire-zone exposure into material and design choices. Specific requirements vary by jurisdiction, and SaltGrass coordinates the details with your local AHJ."
       },
       {
         "q": "What's the starting price for a California modular build?",
@@ -326,11 +326,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Hartford",
       "Stamford"
     ],
-    "intro": "Saltgrass Modular builds out of Wagner, Oklahoma, and supports Connecticut as a national-reach state — we ship modular for larger projects and serve government and military clients across the region. Founder Dylan Walker's 15,000-square-foot facility fabricates custom container homes, traditional modular builds, modular pools, and rapid-deployment housing, then coordinates delivery and installation. From Stamford and Bridgeport along the coast to Hartford and New Haven inland, our all-in pricing covers fabrication, freight, and install so Nutmeg State buyers know the real number up front.",
+    "intro": "SaltGrass Modular builds out of Oklahoma City, Oklahoma, and supports Connecticut as a national-reach state — we ship modular for larger projects and serve government and military clients across the region. Founder Dylan Walker's 40,000+-square-foot facility fabricates custom container homes, traditional modular builds, modular pools, and rapid-deployment housing, then coordinates delivery and installation. From Stamford and Bridgeport along the coast to Hartford and New Haven inland, our all-in pricing covers fabrication, freight, and install so Nutmeg State buyers know the real number up front.",
     "faqs": [
       {
         "q": "How does delivery to Connecticut work from Oklahoma?",
-        "a": "Because Connecticut is a national-reach state for us, your unit is fabricated in our Wagner, OK facility, then freighted to your site for installation. We focus this distance on larger projects and government or military work where the logistics make sense, and the quoted all-in price already includes fabrication, delivery, and installation."
+        "a": "Because Connecticut is a national-reach state for us, your unit is fabricated in our Oklahoma City, OK facility, then freighted to your site for installation. We focus this distance on larger projects and government or military work where the logistics make sense, and the quoted all-in price already includes fabrication, delivery, and installation."
       },
       {
         "q": "Will the build hold up to coastal wind and Northeast snow?",
@@ -338,7 +338,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who handles Connecticut permits?",
-        "a": "Permitting varies by jurisdiction and by your local authority having jurisdiction (AHJ). Saltgrass coordinates directly with your AHJ to align our factory-built unit with local requirements; we don't quote specific code sections, because those differ by town."
+        "a": "Permitting varies by jurisdiction and by your local authority having jurisdiction (AHJ). SaltGrass coordinates directly with your AHJ to align our factory-built unit with local requirements; we don't quote specific code sections, because those differ by town."
       }
     ]
   },
@@ -356,10 +356,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Dover",
       "Newark"
     ],
-    "intro": "Operating from our Wagner, Oklahoma headquarters, Saltgrass Modular treats Delaware as a national-reach state — we ship modular structures for larger builds and support government and military projects across the First State. Dylan Walker's team fabricates custom container homes, traditional modular units, modular pools, and disaster-relief housing inside a 15,000-square-foot facility, then handles freight and on-site installation. Whether your lot sits in Wilmington, the Dover capital area, or near Newark, our pricing is all-in: design and fabrication, delivery, and installation rolled into one honest figure.",
+    "intro": "Operating from our Oklahoma City, Oklahoma headquarters, SaltGrass Modular treats Delaware as a national-reach state — we ship modular structures for larger builds and support government and military projects across the First State. Dylan Walker's team fabricates custom container homes, traditional modular units, modular pools, and disaster-relief housing inside a 40,000+-square-foot facility, then handles freight and on-site installation. Whether your lot sits in Wilmington, the Dover capital area, or near Newark, our pricing is all-in: design and fabrication, delivery, and installation rolled into one honest figure.",
     "faqs": [
       {
-        "q": "Is Saltgrass actually shipping homes to Delaware?",
+        "q": "Is SaltGrass actually shipping homes to Delaware?",
         "a": "For Delaware we focus on larger projects and government or military solutions rather than every single-unit residential order. Each structure is built in Oklahoma and delivered to your Delaware site, with fabrication, freight, and installation all included in the quoted price."
       },
       {
@@ -368,7 +368,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "How are permits handled in a small state like Delaware?",
-        "a": "Permit rules vary by jurisdiction and authority having jurisdiction. Saltgrass coordinates with your local AHJ in Wilmington, Dover, Newark, or wherever your site is, so the factory-built unit lines up with local requirements."
+        "a": "Permit rules vary by jurisdiction and authority having jurisdiction. SaltGrass coordinates with your local AHJ in Wilmington, Dover, Newark, or wherever your site is, so the factory-built unit lines up with local requirements."
       }
     ]
   },
@@ -387,19 +387,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Tampa",
       "Orlando"
     ],
-    "intro": "From our Wagner, Oklahoma base, Saltgrass Modular serves Florida as a national-reach state, shipping modular structures for larger developments and supporting government and military housing needs statewide. Founder Dylan Walker's 15,000-square-foot facility produces custom container homes, traditional modular builds, modular pools, and rapid-deployment shelters. Across Jacksonville, Miami, Tampa, and Orlando, we deliver and install with all-in pricing — fabrication, freight, and setup in one number. For a state defined by hurricane exposure, factory-controlled construction gives a consistent, engineered starting point.",
+    "intro": "From our Oklahoma City, Oklahoma base, SaltGrass Modular serves Florida as a national-reach state, shipping modular structures for larger developments and supporting government and military housing needs statewide. Founder Dylan Walker's 40,000+-square-foot facility produces custom container homes, traditional modular builds, modular pools, and rapid-deployment shelters. Across Jacksonville, Miami, Tampa, and Orlando, we deliver and install with all-in pricing — fabrication, freight, and setup in one number. For a state defined by hurricane exposure, factory-controlled construction gives a consistent, engineered starting point.",
     "faqs": [
       {
-        "q": "Are Saltgrass units built for Florida's hurricane wind loads?",
+        "q": "Are SaltGrass units built for Florida's hurricane wind loads?",
         "a": "We engineer each structure for the wind conditions at its destination. For Florida sites in high wind-load hurricane zones near Miami, Tampa, or Jacksonville, that means designing the unit for elevated wind pressures during the factory build phase."
       },
       {
         "q": "Do you offer pools for Florida properties?",
-        "a": "Yes. We build modular pools as part of our lineup. A tube-steel with fiberglass pool starts in the $12,000–$24,000 range, and a welded-steel with epoxy pool runs $18,000–$36,000, with the all-in figure covering fabrication, delivery, and installation."
+        "a": "Yes. We build modular pools as part of our lineup. A tube-steel with fiberglass pool starts in the at $48,000 range, and a welded-steel with epoxy pool start at $52,000, with the all-in figure covering fabrication, delivery, and installation."
       },
       {
         "q": "Who pulls the permits in Florida?",
-        "a": "Permitting varies by jurisdiction and by your local authority having jurisdiction. Saltgrass coordinates with your Florida AHJ to align our modular or container build with local requirements; we don't cite specific code provisions, since they differ across the state."
+        "a": "Permitting varies by jurisdiction and by your local authority having jurisdiction. SaltGrass coordinates with your Florida AHJ to align our modular or container build with local requirements; we don't cite specific code provisions, since they differ across the state."
       }
     ]
   },
@@ -418,19 +418,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Savannah",
       "Columbus"
     ],
-    "intro": "Saltgrass Modular runs from Wagner, Oklahoma, and reaches Georgia on a national basis — delivering modular structures for larger projects and serving government and military clients across the Peach State. Dylan Walker's 15,000-square-foot shop fabricates custom container homes, traditional modular builds, modular pools, and disaster-relief housing, then arranges freight and installation. From metro Atlanta to Augusta, Savannah's coast, and Columbus, our quotes are all-in: fabrication, delivery, and install combined into one transparent price with no surprise add-ons.",
+    "intro": "SaltGrass Modular runs from Oklahoma City, Oklahoma, and reaches Georgia on a national basis — delivering modular structures for larger projects and serving government and military clients across the Peach State. Dylan Walker's 40,000+-square-foot shop fabricates custom container homes, traditional modular builds, modular pools, and disaster-relief housing, then arranges freight and installation. From metro Atlanta to Augusta, Savannah's coast, and Columbus, our quotes are all-in: fabrication, delivery, and install combined into one transparent price with no surprise add-ons.",
     "faqs": [
       {
         "q": "How long does a Georgia project take start to finish?",
         "a": "Plan on roughly eight to nine months from design to installation. The factory build in Oklahoma runs in parallel with your Georgia site prep and permitting, so those tracks overlap rather than stacking end to end."
       },
       {
-        "q": "What kinds of projects does Saltgrass take in Georgia?",
+        "q": "What kinds of projects does SaltGrass take in Georgia?",
         "a": "As a national-reach state, Georgia is where we focus on larger projects plus government and military solutions. We also build custom container homes, traditional modular units, and modular pools, all delivered and installed from our Oklahoma facility."
       },
       {
-        "q": "Does Saltgrass handle Georgia permitting?",
-        "a": "Permit requirements vary by jurisdiction and by the local authority having jurisdiction. Saltgrass coordinates with your AHJ in Atlanta, Savannah, or wherever the site sits, so the factory-built structure meets local requirements."
+        "q": "Does SaltGrass handle Georgia permitting?",
+        "a": "Permit requirements vary by jurisdiction and by the local authority having jurisdiction. SaltGrass coordinates with your AHJ in Atlanta, Savannah, or wherever the site sits, so the factory-built structure meets local requirements."
       }
     ]
   },
@@ -448,10 +448,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Hilo",
       "Kailua"
     ],
-    "intro": "Saltgrass Modular is based in Wagner, Oklahoma, and serves Hawaii as a national-reach state — shipping modular for larger projects and supporting government and military needs across the islands. Founder Dylan Walker's 15,000-square-foot facility builds custom container homes, traditional modular structures, modular pools, and rapid-deployment housing, with delivery and installation included in every all-in quote. For sites near Honolulu on Oahu, Hilo on the Big Island, or Kailua, factory-built modular offers a controlled, repeatable construction path well suited to remote island logistics.",
+    "intro": "SaltGrass Modular is based in Oklahoma City, Oklahoma, and serves Hawaii as a national-reach state — shipping modular for larger projects and supporting government and military needs across the islands. Founder Dylan Walker's 40,000+-square-foot facility builds custom container homes, traditional modular structures, modular pools, and rapid-deployment housing, with delivery and installation included in every all-in quote. For sites near Honolulu on Oahu, Hilo on the Big Island, or Kailua, factory-built modular offers a controlled, repeatable construction path well suited to remote island logistics.",
     "faqs": [
       {
-        "q": "Can Saltgrass really ship modular to Hawaii?",
+        "q": "Can SaltGrass really ship modular to Hawaii?",
         "a": "Yes, as a national-reach state Hawaii is part of our shipping footprint, focused on larger projects and government or military solutions where ocean freight makes sense. Units are built in Oklahoma, then transported and installed, with the all-in price covering fabrication, delivery, and installation."
       },
       {
@@ -460,7 +460,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who manages island permitting?",
-        "a": "Permitting varies by jurisdiction and by the local authority having jurisdiction. Saltgrass coordinates with your Hawaii AHJ to align the modular or container build with local requirements; specific code details differ across the islands, so we don't quote them."
+        "a": "Permitting varies by jurisdiction and by the local authority having jurisdiction. SaltGrass coordinates with your Hawaii AHJ to align the modular or container build with local requirements; specific code details differ across the islands, so we don't quote them."
       }
     ]
   },
@@ -479,7 +479,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Nampa",
       "Idaho Falls"
     ],
-    "intro": "From Wagner, Oklahoma, Saltgrass Modular supports Idaho as a national-reach state, shipping modular structures for larger builds and serving government and military clients across the Gem State. Dylan Walker's 15,000-square-foot facility fabricates custom container homes, traditional modular builds, modular pools, and disaster-relief housing, then coordinates freight and installation. Whether the lot sits in the Boise-Meridian-Nampa corridor or out toward Idaho Falls, our pricing stays all-in — fabrication, delivery, and installation in one figure so mountain-state buyers see the honest total.",
+    "intro": "From Oklahoma City, Oklahoma, SaltGrass Modular supports Idaho as a national-reach state, shipping modular structures for larger builds and serving government and military clients across the Gem State. Dylan Walker's 40,000+-square-foot facility fabricates custom container homes, traditional modular builds, modular pools, and disaster-relief housing, then coordinates freight and installation. Whether the lot sits in the Boise-Meridian-Nampa corridor or out toward Idaho Falls, our pricing stays all-in — fabrication, delivery, and installation in one figure so mountain-state buyers see the honest total.",
     "faqs": [
       {
         "q": "Will the structure handle Idaho's mountain snow load?",
@@ -491,7 +491,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "How does permitting work in Idaho?",
-        "a": "Permit rules vary by jurisdiction and by your local authority having jurisdiction. Saltgrass coordinates with your Idaho AHJ so the factory-built unit aligns with local requirements; we don't reference specific statutes, since those differ by county and city."
+        "a": "Permit rules vary by jurisdiction and by your local authority having jurisdiction. SaltGrass coordinates with your Idaho AHJ so the factory-built unit aligns with local requirements; we don't reference specific statutes, since those differ by county and city."
       }
     ]
   },
@@ -510,10 +510,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Springfield",
       "Peoria"
     ],
-    "intro": "Saltgrass Modular operates from Wagner, Oklahoma, and reaches Illinois on a national basis — delivering modular for larger projects and serving government and military clients across the Prairie State. Dylan Walker's 15,000-square-foot facility produces custom container homes, traditional modular builds, modular pools, and rapid-deployment housing, with freight and installation bundled into one all-in price. From Chicago and Aurora in the north to Springfield and Peoria downstate, buyers get a single transparent figure covering fabrication, delivery, and setup.",
+    "intro": "SaltGrass Modular operates from Oklahoma City, Oklahoma, and reaches Illinois on a national basis — delivering modular for larger projects and serving government and military clients across the Prairie State. Dylan Walker's 40,000+-square-foot facility produces custom container homes, traditional modular builds, modular pools, and rapid-deployment housing, with freight and installation bundled into one all-in price. From Chicago and Aurora in the north to Springfield and Peoria downstate, buyers get a single transparent figure covering fabrication, delivery, and setup.",
     "faqs": [
       {
-        "q": "Is Illinois a place Saltgrass ships to?",
+        "q": "Is Illinois a place SaltGrass ships to?",
         "a": "Yes, as a national-reach state. We focus Illinois work on larger projects plus government and military solutions, with each structure built in Oklahoma and delivered for installation. The quoted price already folds in fabrication, freight, and install."
       },
       {
@@ -522,7 +522,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who handles the permitting in Illinois?",
-        "a": "Permitting varies by jurisdiction and by the local authority having jurisdiction. Saltgrass coordinates with your Illinois AHJ to align the modular or container build with local requirements rather than quoting specific code, which varies city to city."
+        "a": "Permitting varies by jurisdiction and by the local authority having jurisdiction. SaltGrass coordinates with your Illinois AHJ to align the modular or container build with local requirements rather than quoting specific code, which varies city to city."
       }
     ]
   },
@@ -541,10 +541,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Evansville",
       "South Bend"
     ],
-    "intro": "Headquartered in Wagner, Oklahoma, Saltgrass Modular serves Indiana as a national-reach state, shipping modular structures for larger builds and supporting government and military projects across the Hoosier State. Dylan Walker's 15,000-square-foot facility fabricates custom container homes, traditional modular units, modular pools, and disaster-relief housing, then arranges delivery and installation. From Indianapolis and Fort Wayne to Evansville and South Bend, every quote is all-in — fabrication, freight, and installation combined into a single honest number.",
+    "intro": "Headquartered in Oklahoma City, Oklahoma, SaltGrass Modular serves Indiana as a national-reach state, shipping modular structures for larger builds and supporting government and military projects across the Hoosier State. Dylan Walker's 40,000+-square-foot facility fabricates custom container homes, traditional modular units, modular pools, and disaster-relief housing, then arranges delivery and installation. From Indianapolis and Fort Wayne to Evansville and South Bend, every quote is all-in — fabrication, freight, and installation combined into a single honest number.",
     "faqs": [
       {
-        "q": "What does Saltgrass build for Indiana clients?",
+        "q": "What does SaltGrass build for Indiana clients?",
         "a": "We offer custom container homes, traditional modular builds, and modular pools, and as a national-reach state we focus Indiana on larger projects plus government and military solutions. Everything is fabricated in Oklahoma and delivered for on-site installation."
       },
       {
@@ -552,8 +552,8 @@ export const GENERATED_LOCATIONS: LocationData[] = [
         "a": "Expect roughly eight to nine months from design to installation. Our Oklahoma factory runs in parallel with your Indiana site prep and permitting, so the two timelines overlap instead of running back to back."
       },
       {
-        "q": "Does Saltgrass coordinate Indiana permits?",
-        "a": "Yes. Permit requirements vary by jurisdiction and by the local authority having jurisdiction, so Saltgrass works with your AHJ in Indianapolis, Fort Wayne, or wherever your site sits to align the build with local requirements."
+        "q": "Does SaltGrass coordinate Indiana permits?",
+        "a": "Yes. Permit requirements vary by jurisdiction and by the local authority having jurisdiction, so SaltGrass works with your AHJ in Indianapolis, Fort Wayne, or wherever your site sits to align the build with local requirements."
       }
     ]
   },
@@ -571,11 +571,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Cedar Rapids",
       "Davenport"
     ],
-    "intro": "Saltgrass Modular is based in Wagner, Oklahoma, and supports Iowa as a national-reach state — shipping modular for larger projects and serving government and military clients across the Hawkeye State. Dylan Walker's 15,000-square-foot facility builds custom container homes, traditional modular structures, modular pools, and rapid-deployment housing, then handles freight and installation. Whether your site is in Des Moines, Cedar Rapids, or Davenport along the river, our pricing is all-in: fabrication, delivery, and install in one transparent figure for plains-state buyers.",
+    "intro": "SaltGrass Modular is based in Oklahoma City, Oklahoma, and supports Iowa as a national-reach state — shipping modular for larger projects and serving government and military clients across the Hawkeye State. Dylan Walker's 40,000+-square-foot facility builds custom container homes, traditional modular structures, modular pools, and rapid-deployment housing, then handles freight and installation. Whether your site is in Des Moines, Cedar Rapids, or Davenport along the river, our pricing is all-in: fabrication, delivery, and install in one transparent figure for plains-state buyers.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver to Iowa from Oklahoma?",
-        "a": "Yes. Iowa is a national-reach state for us, so units are fabricated in Wagner, OK and freighted to your site for installation, with a focus on larger projects and government or military work. The all-in price already includes fabrication, delivery, and installation."
+        "q": "Can SaltGrass deliver to Iowa from Oklahoma?",
+        "a": "Yes. Iowa is a national-reach state for us, so units are fabricated in Oklahoma City, OK and freighted to your site for installation, with a focus on larger projects and government or military work. The all-in price already includes fabrication, delivery, and installation."
       },
       {
         "q": "Are the structures built for plains storms and heavy snow?",
@@ -583,7 +583,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who handles permitting in Iowa?",
-        "a": "Permitting varies by jurisdiction and by your local authority having jurisdiction. Saltgrass coordinates with your Iowa AHJ so the factory-built unit meets local requirements; we don't cite specific code sections, since those differ across counties."
+        "a": "Permitting varies by jurisdiction and by your local authority having jurisdiction. SaltGrass coordinates with your Iowa AHJ so the factory-built unit meets local requirements; we don't cite specific code sections, since those differ across counties."
       }
     ]
   },
@@ -601,10 +601,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Lexington",
       "Bowling Green"
     ],
-    "intro": "From Wagner, Oklahoma, Saltgrass Modular reaches Kentucky on a national basis, shipping modular structures for larger projects and serving government and military clients across the Bluegrass State. Dylan Walker's 15,000-square-foot facility fabricates custom container homes, traditional modular builds, modular pools, and disaster-relief housing, then coordinates delivery and installation. From Louisville and Lexington to Bowling Green, every quote is all-in — fabrication, freight, and installation rolled into one straightforward figure, so Kentucky buyers know the real cost from the start.",
+    "intro": "From Oklahoma City, Oklahoma, SaltGrass Modular reaches Kentucky on a national basis, shipping modular structures for larger projects and serving government and military clients across the Bluegrass State. Dylan Walker's 40,000+-square-foot facility fabricates custom container homes, traditional modular builds, modular pools, and disaster-relief housing, then coordinates delivery and installation. From Louisville and Lexington to Bowling Green, every quote is all-in — fabrication, freight, and installation rolled into one straightforward figure, so Kentucky buyers know the real cost from the start.",
     "faqs": [
       {
-        "q": "What types of builds does Saltgrass offer in Kentucky?",
+        "q": "What types of builds does SaltGrass offer in Kentucky?",
         "a": "We produce custom container homes, traditional modular builds, and modular pools, and as a national-reach state we focus Kentucky on larger projects plus government and military solutions. All units are fabricated in Oklahoma and installed on your Kentucky site."
       },
       {
@@ -613,7 +613,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "How is Kentucky permitting handled?",
-        "a": "Permit rules vary by jurisdiction and by the local authority having jurisdiction. Saltgrass coordinates with your AHJ in Louisville, Lexington, Bowling Green, or wherever the site is, so the factory-built structure aligns with local requirements."
+        "a": "Permit rules vary by jurisdiction and by the local authority having jurisdiction. SaltGrass coordinates with your AHJ in Louisville, Lexington, Bowling Green, or wherever the site is, so the factory-built structure aligns with local requirements."
       }
     ]
   },
@@ -631,14 +631,14 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Lewiston",
       "Bangor"
     ],
-    "intro": "Maine sits a long way from our Wagner, Oklahoma fabrication floor, so our honest role here is national: we ship modular for larger developments and serve government and military projects across the state. From Portland's working waterfront up to Bangor and the mill towns around Lewiston, factory-built structures arrive ready to set on prepared foundations. Whether it's a container studio, a traditional modular build, or rapid-deployment housing after a hard winter, Saltgrass handles fabrication, freight, and installation as one coordinated package.",
+    "intro": "Maine sits a long way from our Oklahoma City, Oklahoma fabrication floor, so our honest role here is national: we ship modular for larger developments and serve government and military projects across the state. From Portland's working waterfront up to Bangor and the mill towns around Lewiston, factory-built structures arrive ready to set on prepared foundations. Whether it's a container studio, a traditional modular build, or rapid-deployment housing after a hard winter, SaltGrass handles fabrication, freight, and installation as one coordinated package.",
     "faqs": [
       {
         "q": "Do you actually deliver to Maine from Oklahoma?",
-        "a": "Yes. Maine is a national-reach state for us, so we focus on larger projects, developer work, and government or military contracts where shipping modular sections across the country pencils out. We coordinate freight and on-site installation from our Wagner facility."
+        "a": "Yes. Maine is a national-reach state for us, so we focus on larger projects, developer work, and government or military contracts where shipping modular sections across the country pencils out. We coordinate freight and on-site installation from our Oklahoma City facility."
       },
       {
-        "q": "Will a Saltgrass build hold up to Maine winters?",
+        "q": "Will a SaltGrass build hold up to Maine winters?",
         "a": "We design for the structural loads of the delivery site, including the heavy snow and coastal wind common across Maine. Specific engineering targets depend on your location and are confirmed during the design phase before fabrication begins."
       },
       {
@@ -662,7 +662,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Annapolis",
       "Frederick"
     ],
-    "intro": "Maryland is a national-reach state for Saltgrass, meaning we ship modular for sizable developments and support government and military projects rather than routine one-off home deliveries. From Baltimore's dense neighborhoods out to Columbia, Frederick, and the waterside grid of Annapolis, our factory-built container homes, traditional modular structures, and rapid-deployment housing arrive crated and ready to set. We build the sections in Wagner, Oklahoma, then manage the freight and installation so a Maryland site receives a finished, code-ready structure instead of a months-long stick-build.",
+    "intro": "Maryland is a national-reach state for SaltGrass, meaning we ship modular for sizable developments and support government and military projects rather than routine one-off home deliveries. From Baltimore's dense neighborhoods out to Columbia, Frederick, and the waterside grid of Annapolis, our factory-built container homes, traditional modular structures, and rapid-deployment housing arrive crated and ready to set. We build the sections in Oklahoma City, Oklahoma, then manage the freight and installation so a Maryland site receives a finished, code-ready structure instead of a months-long stick-build.",
     "faqs": [
       {
         "q": "What kinds of Maryland projects make sense for shipped modular?",
@@ -670,10 +670,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who handles permitting in Maryland?",
-        "a": "Requirements vary by jurisdiction across the state, from Baltimore County to the Eastern Shore. Saltgrass coordinates with your local AHJ so the design meets what your specific authority requires before anything ships."
+        "a": "Requirements vary by jurisdiction across the state, from Baltimore County to the Eastern Shore. SaltGrass coordinates with your local AHJ so the design meets what your specific authority requires before anything ships."
       },
       {
-        "q": "What does a container home start at?",
+        "q": "What does a container home starts at?",
         "a": "Our studio container home starts at $75,000 all-in, a one-bedroom at $105,000, and a two-bedroom at $155,000. Those figures cover fabrication, delivery, and installation."
       }
     ]
@@ -693,7 +693,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Springfield",
       "Cambridge"
     ],
-    "intro": "Massachusetts falls under our national reach, so the honest picture is this: we ship modular for larger projects and take on government and military work across the Commonwealth, not everyday single-home runs. From Boston and Cambridge through Worcester and out to Springfield, our container homes, traditional modular builds, and rapid-deployment housing leave the Wagner, Oklahoma floor as finished sections and arrive ready to install. Saltgrass owns the whole chain, fabrication through freight to on-site set, so a New England project lands a code-ready structure without years of on-site labor.",
+    "intro": "Massachusetts falls under our national reach, so the honest picture is this: we ship modular for larger projects and take on government and military work across the Commonwealth, not everyday single-home runs. From Boston and Cambridge through Worcester and out to Springfield, our container homes, traditional modular builds, and rapid-deployment housing leave the Oklahoma City, Oklahoma floor as finished sections and arrive ready to install. SaltGrass owns the whole chain, fabrication through freight to on-site set, so a New England project lands a code-ready structure without years of on-site labor.",
     "faqs": [
       {
         "q": "Can you serve government or military sites in Massachusetts?",
@@ -705,7 +705,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Do you offer modular pools too?",
-        "a": "We do. Tube steel with fiberglass pools run $12,000 to $24,000, and welded steel with epoxy run $18,000 to $36,000, all-in. Pools ship as part of the same coordinated logistics."
+        "a": "We do. Tube steel with fiberglass pools start at $48,000, and welded steel with epoxy start at $52,000, all-in. Pools ship as part of the same coordinated logistics."
       }
     ]
   },
@@ -724,11 +724,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Ann Arbor",
       "Lansing"
     ],
-    "intro": "Michigan is a national-reach state for us, which means we ship modular for larger developments and support government and military projects rather than routine home-by-home delivery. From Detroit and Ann Arbor across to Grand Rapids and the capital in Lansing, Saltgrass fabricates container homes, traditional modular structures, and rapid-deployment housing at our Wagner, Oklahoma facility, then freights and installs them. The factory-first approach means a Michigan site receives finished, weather-ready sections, with our crews handling the set instead of a long open-air build through the seasons.",
+    "intro": "Michigan is a national-reach state for us, which means we ship modular for larger developments and support government and military projects rather than routine home-by-home delivery. From Detroit and Ann Arbor across to Grand Rapids and the capital in Lansing, SaltGrass fabricates container homes, traditional modular structures, and rapid-deployment housing at our Oklahoma City, Oklahoma facility, then freights and installs them. The factory-first approach means a Michigan site receives finished, weather-ready sections, with our crews handling the set instead of a long open-air build through the seasons.",
     "faqs": [
       {
         "q": "Does shipping modular to Michigan from Oklahoma make sense?",
-        "a": "For larger projects, yes. Developer housing, multi-unit builds, and government or military facilities carry the scale that justifies cross-country freight. We coordinate delivery and installation as one package from Wagner."
+        "a": "For larger projects, yes. Developer housing, multi-unit builds, and government or military facilities carry the scale that justifies cross-country freight. We coordinate delivery and installation as one package from Oklahoma City."
       },
       {
         "q": "How is lake-effect snow handled in the design?",
@@ -755,7 +755,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Rochester",
       "Duluth"
     ],
-    "intro": "Minnesota sits firmly in our national reach, so we're upfront: we ship modular for larger projects and serve government and military work here, not casual single deliveries. From the Twin Cities of Minneapolis and St. Paul down to Rochester and up to Duluth on Lake Superior, Saltgrass builds container homes, traditional modular structures, and rapid-deployment housing in Wagner, Oklahoma, then ships and installs them. Factory fabrication is a real advantage in a state with a short build window, since the structure is finished indoors while the site is being prepared.",
+    "intro": "Minnesota sits firmly in our national reach, so we're upfront: we ship modular for larger projects and serve government and military work here, not casual single deliveries. From the Twin Cities of Minneapolis and St. Paul down to Rochester and up to Duluth on Lake Superior, SaltGrass builds container homes, traditional modular structures, and rapid-deployment housing in Oklahoma City, Oklahoma, then ships and installs them. Factory fabrication is a real advantage in a state with a short build window, since the structure is finished indoors while the site is being prepared.",
     "faqs": [
       {
         "q": "Why use modular for a Minnesota project?",
@@ -767,7 +767,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who manages permits in Minnesota?",
-        "a": "Permitting varies by jurisdiction, from Hennepin County to rural townships. Saltgrass coordinates with your local AHJ so the design satisfies your specific authority before anything is fabricated or shipped."
+        "a": "Permitting varies by jurisdiction, from Hennepin County to rural townships. SaltGrass coordinates with your local AHJ so the design satisfies your specific authority before anything is fabricated or shipped."
       }
     ]
   },
@@ -786,10 +786,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Southaven",
       "Biloxi"
     ],
-    "intro": "Mississippi is a national-reach state for Saltgrass, so our honest role is shipping modular for larger projects and supporting government and military work across the state. From Jackson in the center down to the Gulf Coast at Gulfport and Biloxi, and up to Southaven near Memphis, we fabricate container homes, traditional modular structures, rapid-deployment housing, and modular pools in Wagner, Oklahoma. After hurricanes or floods, our rapid-deployment housing is built to move quickly, and the whole job, fabrication through install, runs as one coordinated process from our facility.",
+    "intro": "Mississippi is a national-reach state for SaltGrass, so our honest role is shipping modular for larger projects and supporting government and military work across the state. From Jackson in the center down to the Gulf Coast at Gulfport and Biloxi, and up to Southaven near Memphis, we fabricate container homes, traditional modular structures, rapid-deployment housing, and modular pools in Oklahoma City, Oklahoma. After hurricanes or floods, our rapid-deployment housing is built to move quickly, and the whole job, fabrication through install, runs as one coordinated process from our facility.",
     "faqs": [
       {
-        "q": "Can Saltgrass help with disaster relief housing in Mississippi?",
+        "q": "Can SaltGrass help with disaster relief housing in Mississippi?",
         "a": "Yes. Rapid-deployment and disaster-relief housing is one of our core services. Because units are fabricated in Oklahoma and shipped ready to set, they can reach Gulf Coast sites quickly after a storm."
       },
       {
@@ -798,7 +798,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What do your modular pools cost?",
-        "a": "Tube steel with fiberglass pools start at $12,000 and run to $24,000; welded steel with epoxy run $18,000 to $36,000. Each price is all-in, covering fabrication, delivery, and installation."
+        "a": "Tube steel with fiberglass pools start at $12,000 and run to $24,000; welded steel with epoxy start at $52,000. Each price is all-in, covering fabrication, delivery, and installation."
       }
     ]
   },
@@ -817,7 +817,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Bozeman",
       "Great Falls"
     ],
-    "intro": "Montana falls under our national reach, meaning we ship modular for larger developments and serve government and military projects rather than routine single-home runs. Across the distances between Billings, Missoula, Bozeman, and Great Falls, factory-built structures make practical sense: Saltgrass fabricates container homes, traditional modular builds, and rapid-deployment housing in Wagner, Oklahoma, then freights and installs them. In a state where remote sites and a tight building season complicate stick construction, receiving a finished module ready to set is a real schedule advantage.",
+    "intro": "Montana falls under our national reach, meaning we ship modular for larger developments and serve government and military projects rather than routine single-home runs. Across the distances between Billings, Missoula, Bozeman, and Great Falls, factory-built structures make practical sense: SaltGrass fabricates container homes, traditional modular builds, and rapid-deployment housing in Oklahoma City, Oklahoma, then freights and installs them. In a state where remote sites and a tight building season complicate stick construction, receiving a finished module ready to set is a real schedule advantage.",
     "faqs": [
       {
         "q": "Is modular practical for remote Montana sites?",
@@ -848,10 +848,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Henderson",
       "Carson City"
     ],
-    "intro": "Nevada is a national-reach state for Saltgrass, so we ship modular for larger projects and take on government and military work across it. From the Las Vegas valley and neighboring Henderson up to Reno and the capital at Carson City, our container homes, traditional modular structures, and modular pools are fabricated in Wagner, Oklahoma, then freighted and installed. Building indoors and shipping finished sections is well suited to Nevada's desert conditions, where on-site labor in extreme heat slows traditional construction. Saltgrass coordinates the entire chain end to end.",
+    "intro": "Nevada is a national-reach state for SaltGrass, so we ship modular for larger projects and take on government and military work across it. From the Las Vegas valley and neighboring Henderson up to Reno and the capital at Carson City, our container homes, traditional modular structures, and modular pools are fabricated in Oklahoma City, Oklahoma, then freighted and installed. Building indoors and shipping finished sections is well suited to Nevada's desert conditions, where on-site labor in extreme heat slows traditional construction. SaltGrass coordinates the entire chain end to end.",
     "faqs": [
       {
-        "q": "Does Saltgrass account for seismic conditions in Nevada?",
+        "q": "Does SaltGrass account for seismic conditions in Nevada?",
         "a": "Yes. Structural connections and anchoring are engineered for the destination's seismic profile. Specific targets are confirmed during design, and we coordinate with your local AHJ on what your jurisdiction requires."
       },
       {
@@ -860,7 +860,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Can you ship a modular pool to Nevada?",
-        "a": "We can. Tube steel with fiberglass pools run $12,000 to $24,000, and welded steel with epoxy run $18,000 to $36,000, all-in. Pools travel as part of the same coordinated logistics."
+        "a": "We can. Tube steel with fiberglass pools start at $48,000, and welded steel with epoxy start at $52,000, all-in. Pools travel as part of the same coordinated logistics."
       }
     ]
   },
@@ -878,7 +878,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Nashua",
       "Concord"
     ],
-    "intro": "New Hampshire is a national-reach state for us, so the honest framing is that we ship modular for larger projects and support government and military work rather than routine single deliveries. From Manchester and Nashua in the south up to the capital at Concord and the White Mountains beyond, Saltgrass fabricates container homes, traditional modular structures, and rapid-deployment housing in Wagner, Oklahoma, then manages freight and installation. The factory-first model fits a state with hard winters: the structure arrives finished and weather-ready, and our crews handle the set on a prepared foundation.",
+    "intro": "New Hampshire is a national-reach state for us, so the honest framing is that we ship modular for larger projects and support government and military work rather than routine single deliveries. From Manchester and Nashua in the south up to the capital at Concord and the White Mountains beyond, SaltGrass fabricates container homes, traditional modular structures, and rapid-deployment housing in Oklahoma City, Oklahoma, then manages freight and installation. The factory-first model fits a state with hard winters: the structure arrives finished and weather-ready, and our crews handle the set on a prepared foundation.",
     "faqs": [
       {
         "q": "Does cross-country shipping to New Hampshire make sense?",
@@ -890,7 +890,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who handles permitting?",
-        "a": "Permitting varies by jurisdiction across the state. Saltgrass coordinates with your local AHJ so the design meets your specific authority's requirements before anything ships."
+        "a": "Permitting varies by jurisdiction across the state. SaltGrass coordinates with your local AHJ so the design meets your specific authority's requirements before anything ships."
       }
     ]
   },
@@ -909,7 +909,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Trenton",
       "Atlantic City"
     ],
-    "intro": "New Jersey falls under our national reach, so we ship modular for larger developments and serve government and military projects across the state rather than routine home-by-home runs. From Newark and Jersey City in the dense north down to Trenton and the shore at Atlantic City, Saltgrass fabricates container homes, traditional modular structures, rapid-deployment housing, and modular pools in Wagner, Oklahoma. We freight and install finished sections, so a tight or built-up New Jersey site receives a code-ready structure with minimal on-site construction time, and we manage the logistics end to end.",
+    "intro": "New Jersey falls under our national reach, so we ship modular for larger developments and serve government and military projects across the state rather than routine home-by-home runs. From Newark and Jersey City in the dense north down to Trenton and the shore at Atlantic City, SaltGrass fabricates container homes, traditional modular structures, rapid-deployment housing, and modular pools in Oklahoma City, Oklahoma. We freight and install finished sections, so a tight or built-up New Jersey site receives a code-ready structure with minimal on-site construction time, and we manage the logistics end to end.",
     "faqs": [
       {
         "q": "Why modular for a built-up New Jersey site?",
@@ -940,19 +940,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Rochester",
       "Albany"
     ],
-    "intro": "Saltgrass Modular builds custom container homes, traditional modular structures, and modular pools out of our 15,000-square-foot facility in Wagner, Oklahoma, and we ship completed projects to New York for larger developments and government and military work. Founder Dylan Walker's team handles fabrication while your site prep and permitting move forward, so a project bound for New York City, Buffalo, Rochester, or Albany lands ready to set. Pricing is all-in and transparent, covering fabrication, delivery, and installation.",
+    "intro": "SaltGrass Modular builds custom container homes, traditional modular structures, and modular pools out of our 40,000+-square-foot facility in Oklahoma City, Oklahoma, and we ship completed projects to New York for larger developments and government and military work. Founder Dylan Walker's team handles fabrication while your site prep and permitting move forward, so a project bound for New York City, Buffalo, Rochester, or Albany lands ready to set. Pricing is all-in and transparent, covering fabrication, delivery, and installation.",
     "faqs": [
       {
-        "q": "Can Saltgrass really deliver a modular build to New York from Oklahoma?",
-        "a": "Yes. For larger projects and government or military work, we ship modular units nationally from our Wagner, Oklahoma facility. Because fabrication runs in parallel with your local site prep and permitting, the long haul doesn't add the time you'd expect."
+        "q": "Can SaltGrass really deliver a modular build to New York from Oklahoma?",
+        "a": "Yes. For larger projects and government or military work, we ship modular units nationally from our Oklahoma City, Oklahoma facility. Because fabrication runs in parallel with your local site prep and permitting, the long haul doesn't add the time you'd expect."
       },
       {
         "q": "How do permits work for a project in New York?",
-        "a": "Permitting varies by jurisdiction, and Saltgrass coordinates directly with your local authority having jurisdiction (AHJ). We don't make assumptions about specific codes from afar — we work with your municipality to confirm what's required before the build is finalized."
+        "a": "Permitting varies by jurisdiction, and SaltGrass coordinates directly with your local authority having jurisdiction (AHJ). We don't make assumptions about specific codes from afar — we work with your municipality to confirm what's required before the build is finalized."
       },
       {
-        "q": "What does a Saltgrass project cost?",
-        "a": "Our container homes start at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom. Modular pools range from $12,000 to $36,000 depending on construction. Every figure is all-in: fabrication, delivery, and installation."
+        "q": "What does a SaltGrass project cost?",
+        "a": "Our container homes start at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom. Modular pools start at $48,000–$52,000 depending on construction. Every figure is all-in: fabrication, delivery, and installation."
       }
     ]
   },
@@ -971,10 +971,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Greensboro",
       "Durham"
     ],
-    "intro": "From our fabrication shop in Wagner, Oklahoma, Saltgrass Modular delivers container homes, traditional modular builds, and modular pools into North Carolina for substantial projects and for government and military clients. Dylan Walker founded the company on plain, honest building, and that shows in all-in pricing and a roughly eight-to-nine-month design-to-install timeline. Whether your site sits near Charlotte, Raleigh, Greensboro, or Durham, the structure is built to spec in our 15,000-square-foot facility and shipped ready for installation.",
+    "intro": "From our fabrication shop in Oklahoma City, Oklahoma, SaltGrass Modular delivers container homes, traditional modular builds, and modular pools into North Carolina for substantial projects and for government and military clients. Dylan Walker founded the company on plain, honest building, and that shows in all-in pricing and a roughly eight-to-nine-month design-to-install timeline. Whether your site sits near Charlotte, Raleigh, Greensboro, or Durham, the structure is built to spec in our 40,000+-square-foot facility and shipped ready for installation.",
     "faqs": [
       {
-        "q": "Does Saltgrass serve military and government projects in North Carolina?",
+        "q": "Does SaltGrass serve military and government projects in North Carolina?",
         "a": "Yes. Alongside larger private developments, we provide modular and rapid-deployment solutions for government and military clients nationwide, including across North Carolina, all fabricated at our Oklahoma facility and shipped to site."
       },
       {
@@ -983,7 +983,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Will my coastal North Carolina build hold up to storms?",
-        "a": "We engineer each structure for its destination during the factory build. Specific code requirements vary by jurisdiction, and Saltgrass coordinates with your local AHJ to confirm what applies to your site before the unit ships."
+        "a": "We engineer each structure for its destination during the factory build. Specific code requirements vary by jurisdiction, and SaltGrass coordinates with your local AHJ to confirm what applies to your site before the unit ships."
       }
     ]
   },
@@ -1001,7 +1001,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Bismarck",
       "Grand Forks"
     ],
-    "intro": "Saltgrass Modular fabricates container homes, traditional modular buildings, and modular pools in Wagner, Oklahoma, and ships them to North Dakota for larger builds and for government and military needs. Founder Dylan Walker's crew works in our 15,000-square-foot shop, completing the structure while permitting and site prep proceed near Fargo, Bismarck, or Grand Forks. The result is a unit that arrives ready to set, with one all-in price covering fabrication, delivery, and installation rather than a string of surprise line items.",
+    "intro": "SaltGrass Modular fabricates container homes, traditional modular buildings, and modular pools in Oklahoma City, Oklahoma, and ships them to North Dakota for larger builds and for government and military needs. Founder Dylan Walker's crew works in our 40,000+-square-foot shop, completing the structure while permitting and site prep proceed near Fargo, Bismarck, or Grand Forks. The result is a unit that arrives ready to set, with one all-in price covering fabrication, delivery, and installation rather than a string of surprise line items.",
     "faqs": [
       {
         "q": "Can a modular home handle North Dakota winters?",
@@ -1012,8 +1012,8 @@ export const GENERATED_LOCATIONS: LocationData[] = [
         "a": "For larger projects and government or military work, yes. Shipping nationally is part of what we do, and because our factory build overlaps with your site prep and permitting, the distance doesn't stretch the overall timeline the way people assume."
       },
       {
-        "q": "What can I build with Saltgrass?",
-        "a": "Custom container homes, traditional modular structures, modular pools, and rapid-deployment disaster-relief housing, plus developer and military solutions. Container homes start at $75,000 for a studio, and modular pools run $12,000 to $36,000 depending on the build."
+        "q": "What can I build with SaltGrass?",
+        "a": "Custom container homes, traditional modular structures, modular pools, and rapid-deployment disaster-relief housing, plus developer and military solutions. Container homes start at $75,000 for a studio, and modular pools start at $48,000–$52,000 depending on the build."
       }
     ]
   },
@@ -1032,18 +1032,18 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Cincinnati",
       "Toledo"
     ],
-    "intro": "Saltgrass Modular ships container homes, traditional modular builds, and modular pools into Ohio from our 15,000-square-foot facility in Wagner, Oklahoma, serving larger projects and government and military clients. Under founder Dylan Walker, the team fabricates your structure while your local permitting and site work move ahead near Columbus, Cleveland, Cincinnati, or Toledo. Pricing stays all-in across fabrication, delivery, and installation, and most projects run about eight to nine months from first design to a finished, installed building.",
+    "intro": "SaltGrass Modular ships container homes, traditional modular builds, and modular pools into Ohio from our 40,000+-square-foot facility in Oklahoma City, Oklahoma, serving larger projects and government and military clients. Under founder Dylan Walker, the team fabricates your structure while your local permitting and site work move ahead near Columbus, Cleveland, Cincinnati, or Toledo. Pricing stays all-in across fabrication, delivery, and installation, and most projects run about eight to nine months from first design to a finished, installed building.",
     "faqs": [
       {
-        "q": "What's included in the Saltgrass price for an Ohio project?",
+        "q": "What's included in the SaltGrass price for an Ohio project?",
         "a": "Every quoted figure is all-in: fabrication at our Oklahoma shop, delivery to your Ohio site, and installation. A 320 SF studio container home starts at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000."
       },
       {
         "q": "Who handles permitting for an Ohio build?",
-        "a": "Requirements vary by jurisdiction, so Saltgrass coordinates with your local authority having jurisdiction. We confirm what your municipality needs rather than assuming a code applies, which keeps the project from stalling at inspection."
+        "a": "Requirements vary by jurisdiction, so SaltGrass coordinates with your local authority having jurisdiction. We confirm what your municipality needs rather than assuming a code applies, which keeps the project from stalling at inspection."
       },
       {
-        "q": "Does Saltgrass do disaster-relief housing in Ohio?",
+        "q": "Does SaltGrass do disaster-relief housing in Ohio?",
         "a": "Yes. Rapid-deployment and disaster-relief housing is one of our core services, fabricated quickly in Oklahoma and shipped where it's needed, including Ohio, for both emergency response and government work."
       }
     ]
@@ -1063,19 +1063,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Eugene",
       "Bend"
     ],
-    "intro": "Out of Wagner, Oklahoma, Saltgrass Modular builds custom container homes, traditional modular structures, and modular pools, shipping them to Oregon for larger developments and for government and military projects. Founder Dylan Walker keeps the process straightforward: the structure is fabricated in our 15,000-square-foot facility while your Oregon site prep and permitting proceed, whether the destination is Portland, Salem, Eugene, or Bend. One all-in number covers fabrication, delivery, and installation, with no hype and no hidden extras.",
+    "intro": "Out of Oklahoma City, Oklahoma, SaltGrass Modular builds custom container homes, traditional modular structures, and modular pools, shipping them to Oregon for larger developments and for government and military projects. Founder Dylan Walker keeps the process straightforward: the structure is fabricated in our 40,000+-square-foot facility while your Oregon site prep and permitting proceed, whether the destination is Portland, Salem, Eugene, or Bend. One all-in number covers fabrication, delivery, and installation, with no hype and no hidden extras.",
     "faqs": [
       {
-        "q": "How does Saltgrass account for Oregon's seismic and wet conditions?",
-        "a": "We engineer each structure for where it's going during the factory build. Seismic and moisture considerations vary by jurisdiction, and Saltgrass coordinates with your local AHJ to confirm exactly what your Oregon site requires."
+        "q": "How does SaltGrass account for Oregon's seismic and wet conditions?",
+        "a": "We engineer each structure for where it's going during the factory build. Seismic and moisture considerations vary by jurisdiction, and SaltGrass coordinates with your local AHJ to confirm exactly what your Oregon site requires."
       },
       {
         "q": "Can you ship a modular pool to Oregon?",
-        "a": "Yes. We offer Tube Steel and Fiberglass pools starting at $12,000 to $24,000 and Welded Steel and Epoxy pools from $18,000 to $36,000, all-in, and ship them nationally as part of larger projects."
+        "a": "Yes. We offer Tube Steel and Fiberglass pools starting at $48,000 and Welded Steel and Epoxy pools at $52,000, all-in, and ship them nationally as part of larger projects."
       },
       {
         "q": "Why Oklahoma fabrication for an Oregon project?",
-        "a": "Centralized fabrication in our Wagner shop gives us tight quality control and a parallel timeline. Your structure is built while Oregon site work and permitting run concurrently, so cross-country delivery doesn't add the months you'd expect."
+        "a": "Centralized fabrication in our Oklahoma City shop gives us tight quality control and a parallel timeline. Your structure is built while Oregon site work and permitting run concurrently, so cross-country delivery doesn't add the months you'd expect."
       }
     ]
   },
@@ -1094,11 +1094,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Allentown",
       "Harrisburg"
     ],
-    "intro": "Saltgrass Modular delivers container homes, traditional modular builds, and modular pools into Pennsylvania from our shop in Wagner, Oklahoma, taking on larger projects and government and military work. Founder Dylan Walker's team fabricates your build in a 15,000-square-foot facility while permitting and site prep advance near Philadelphia, Pittsburgh, Allentown, or Harrisburg. Pricing is all-in across fabrication, delivery, and installation, and the typical design-to-install window runs about eight to nine months thanks to factory and site work happening side by side.",
+    "intro": "SaltGrass Modular delivers container homes, traditional modular builds, and modular pools into Pennsylvania from our shop in Oklahoma City, Oklahoma, taking on larger projects and government and military work. Founder Dylan Walker's team fabricates your build in a 40,000+-square-foot facility while permitting and site prep advance near Philadelphia, Pittsburgh, Allentown, or Harrisburg. Pricing is all-in across fabrication, delivery, and installation, and the typical design-to-install window runs about eight to nine months thanks to factory and site work happening side by side.",
     "faqs": [
       {
         "q": "Is a modular build a good fit for Pennsylvania's seasons?",
-        "a": "It is. We engineer for snow load and the full seasonal swing during fabrication. Specific requirements vary by jurisdiction, so Saltgrass coordinates with your local AHJ to confirm the right specs for your Pennsylvania site."
+        "a": "It is. We engineer for snow load and the full seasonal swing during fabrication. Specific requirements vary by jurisdiction, so SaltGrass coordinates with your local AHJ to confirm the right specs for your Pennsylvania site."
       },
       {
         "q": "How are larger Pennsylvania developments handled?",
@@ -1124,19 +1124,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Warwick",
       "Cranston"
     ],
-    "intro": "Saltgrass Modular fabricates container homes, traditional modular structures, and modular pools in Wagner, Oklahoma, and ships them to Rhode Island for sizable projects and for government and military clients. Founder Dylan Walker's crew completes the build in our 15,000-square-foot facility while your local permitting and site work progress near Providence, Warwick, or Cranston. The price you see is all-in, covering fabrication, delivery, and installation, with the plain, honest approach we bring to every state we serve.",
+    "intro": "SaltGrass Modular fabricates container homes, traditional modular structures, and modular pools in Oklahoma City, Oklahoma, and ships them to Rhode Island for sizable projects and for government and military clients. Founder Dylan Walker's crew completes the build in our 40,000+-square-foot facility while your local permitting and site work progress near Providence, Warwick, or Cranston. The price you see is all-in, covering fabrication, delivery, and installation, with the plain, honest approach we bring to every state we serve.",
     "faqs": [
       {
-        "q": "Does Saltgrass work in a small state like Rhode Island?",
+        "q": "Does SaltGrass work in a small state like Rhode Island?",
         "a": "Yes. We ship modular structures nationally for larger projects and serve government and military clients, and Rhode Island is well within that reach. Your build is fabricated in Oklahoma and delivered ready to install."
       },
       {
         "q": "How is coastal wind handled for a Rhode Island home?",
-        "a": "We build each structure for its destination's conditions during fabrication. Wind-related requirements vary by jurisdiction, and Saltgrass coordinates with your local AHJ to confirm what your specific Rhode Island site calls for."
+        "a": "We build each structure for its destination's conditions during fabrication. Wind-related requirements vary by jurisdiction, and SaltGrass coordinates with your local AHJ to confirm what your specific Rhode Island site calls for."
       },
       {
         "q": "What are the starting prices for a container home?",
-        "a": "A 320 SF studio starts at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000. Each price is all-in, bundling fabrication, delivery to Rhode Island, and installation."
+        "a": "A 320 SF studio start at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000. Each price is all-in, bundling fabrication, delivery to Rhode Island, and installation."
       }
     ]
   },
@@ -1155,19 +1155,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Greenville",
       "Myrtle Beach"
     ],
-    "intro": "From Wagner, Oklahoma, Saltgrass Modular builds container homes, traditional modular structures, and modular pools and ships them to South Carolina for larger projects and for government and military work. Founder Dylan Walker's team handles fabrication in our 15,000-square-foot facility while your South Carolina permitting and site prep move forward, whether near Charleston, Columbia, Greenville, or Myrtle Beach. Pricing is all-in for fabrication, delivery, and installation, so you know the full cost up front instead of chasing add-ons.",
+    "intro": "From Oklahoma City, Oklahoma, SaltGrass Modular builds container homes, traditional modular structures, and modular pools and ships them to South Carolina for larger projects and for government and military work. Founder Dylan Walker's team handles fabrication in our 40,000+-square-foot facility while your South Carolina permitting and site prep move forward, whether near Charleston, Columbia, Greenville, or Myrtle Beach. Pricing is all-in for fabrication, delivery, and installation, so you know the full cost up front instead of chasing add-ons.",
     "faqs": [
       {
-        "q": "Are Saltgrass builds suited to the South Carolina coast?",
-        "a": "We engineer each unit for the conditions where it's installed, including coastal wind exposure. The exact requirements vary by jurisdiction, and Saltgrass coordinates with your local AHJ to confirm them before your build ships."
+        "q": "Are SaltGrass builds suited to the South Carolina coast?",
+        "a": "We engineer each unit for the conditions where it's installed, including coastal wind exposure. The exact requirements vary by jurisdiction, and SaltGrass coordinates with your local AHJ to confirm them before your build ships."
       },
       {
-        "q": "Can Saltgrass support a developer project in South Carolina?",
+        "q": "Can SaltGrass support a developer project in South Carolina?",
         "a": "Yes. Developer and military solutions are a core service. We fabricate multiple units in Oklahoma and deliver them to South Carolina, each carrying one all-in price across fabrication, delivery, and installation."
       },
       {
         "q": "Do you offer modular pools in South Carolina?",
-        "a": "We do. Tube Steel and Fiberglass pools start at $12,000 to $24,000, and Welded Steel and Epoxy pools run $18,000 to $36,000, all-in, and ship as part of larger South Carolina projects."
+        "a": "We do. Tube Steel and Fiberglass pools start at $48,000, and Welded Steel and Epoxy pools start at $52,000, all-in, and ship as part of larger South Carolina projects."
       }
     ]
   },
@@ -1185,19 +1185,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Rapid City",
       "Aberdeen"
     ],
-    "intro": "Saltgrass Modular ships container homes, traditional modular builds, and modular pools into South Dakota from our 15,000-square-foot facility in Wagner, Oklahoma, taking on larger projects and government and military work. Founder Dylan Walker keeps things plainspoken: your structure is fabricated in Oklahoma while permitting and site prep proceed near Sioux Falls, Rapid City, or Aberdeen. The result arrives ready to set, with one all-in figure covering fabrication, delivery, and installation rather than a pile of separate charges.",
+    "intro": "SaltGrass Modular ships container homes, traditional modular builds, and modular pools into South Dakota from our 40,000+-square-foot facility in Oklahoma City, Oklahoma, taking on larger projects and government and military work. Founder Dylan Walker keeps things plainspoken: your structure is fabricated in Oklahoma while permitting and site prep proceed near Sioux Falls, Rapid City, or Aberdeen. The result arrives ready to set, with one all-in figure covering fabrication, delivery, and installation rather than a pile of separate charges.",
     "faqs": [
       {
         "q": "Will a modular build stand up to South Dakota wind and snow?",
-        "a": "We build for the destination, addressing cold, snow load, and wind during fabrication. Because exact specs vary by jurisdiction, Saltgrass coordinates with your local AHJ to confirm what your South Dakota site requires."
+        "a": "We build for the destination, addressing cold, snow load, and wind during fabrication. Because exact specs vary by jurisdiction, SaltGrass coordinates with your local AHJ to confirm what your South Dakota site requires."
       },
       {
-        "q": "Is South Dakota too far for Saltgrass to deliver?",
+        "q": "Is South Dakota too far for SaltGrass to deliver?",
         "a": "Not for larger projects or government and military work. We ship nationally from Oklahoma, and the parallel factory-and-site timeline means the distance to South Dakota doesn't significantly extend your schedule."
       },
       {
-        "q": "What kinds of buildings does Saltgrass make?",
-        "a": "Custom container homes, traditional modular structures, modular pools, and rapid-deployment disaster-relief housing, plus developer and military solutions. Container homes begin at $75,000 for a 320 SF studio, all-in."
+        "q": "What kinds of buildings does SaltGrass make?",
+        "a": "Custom container homes, traditional modular structures, modular pools, and rapid-deployment disaster-relief housing, plus developer and military solutions. Container homes start at $75,000 for a 320 SF studio, all-in."
       }
     ]
   },
@@ -1216,11 +1216,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Knoxville",
       "Chattanooga"
     ],
-    "intro": "Saltgrass Modular builds container homes, traditional modular structures, and modular pools in Wagner, Oklahoma, and ships them to Tennessee for larger projects and for government and military clients. Founder Dylan Walker's team fabricates your structure in our 15,000-square-foot facility while permitting and site prep advance near Nashville, Memphis, Knoxville, or Chattanooga. Every quote is all-in across fabrication, delivery, and installation, and most projects run about eight to nine months from design to a finished, installed building.",
+    "intro": "SaltGrass Modular builds container homes, traditional modular structures, and modular pools in Oklahoma City, Oklahoma, and ships them to Tennessee for larger projects and for government and military clients. Founder Dylan Walker's team fabricates your structure in our 40,000+-square-foot facility while permitting and site prep advance near Nashville, Memphis, Knoxville, or Chattanooga. Every quote is all-in across fabrication, delivery, and installation, and most projects run about eight to nine months from design to a finished, installed building.",
     "faqs": [
       {
-        "q": "How does Saltgrass handle Tennessee's storm season?",
-        "a": "We engineer each structure for its destination's conditions in the factory. Specific requirements vary by jurisdiction, and Saltgrass coordinates with your local AHJ to confirm exactly what your Tennessee site needs before the build ships."
+        "q": "How does SaltGrass handle Tennessee's storm season?",
+        "a": "We engineer each structure for its destination's conditions in the factory. Specific requirements vary by jurisdiction, and SaltGrass coordinates with your local AHJ to confirm exactly what your Tennessee site needs before the build ships."
       },
       {
         "q": "What does a Tennessee project cost up front?",
@@ -1247,19 +1247,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Ogden",
       "St. George"
     ],
-    "intro": "Utah pairs alpine elevation with high-desert valleys, and Saltgrass Modular builds for both. From our 15,000 sq ft facility in Wagner, Oklahoma, founder Dylan Walker's team fabricates custom container homes, traditional modular builds, and modular pools, then ships them west for projects across Salt Lake City, Provo, Ogden, and St. George. On larger developments and for government or military work, we engineer to the structural demands of Utah's mountain corridors. Each build runs roughly eight to nine months from design to install, with factory work moving in parallel to your site prep.",
+    "intro": "Utah pairs alpine elevation with high-desert valleys, and SaltGrass Modular builds for both. From our 40,000+ sq ft facility in Oklahoma City, Oklahoma, founder Dylan Walker's team fabricates custom container homes, traditional modular builds, and modular pools, then ships them west for projects across Salt Lake City, Provo, Ogden, and St. George. On larger developments and for government or military work, we engineer to the structural demands of Utah's mountain corridors. Each build runs roughly eight to nine months from design to install, with factory work moving in parallel to your site prep.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver a modular home all the way to Utah from Oklahoma?",
-        "a": "Yes. We routinely ship modular units nationally for larger projects and for government or military clients. A finished unit is built in Wagner, Oklahoma, then transported and installed at your Utah site as part of the all-in price."
+        "q": "Can SaltGrass deliver a modular home all the way to Utah from Oklahoma?",
+        "a": "Yes. We routinely ship modular units nationally for larger projects and for government or military clients. A finished unit is built in Oklahoma City, Oklahoma, then transported and installed at your Utah site as part of the all-in price."
       },
       {
         "q": "Will a container or modular home handle Salt Lake area snow?",
-        "a": "We design the structure to meet the snow load and seismic figures your jurisdiction requires. Saltgrass coordinates with your local Authority Having Jurisdiction so the engineering matches your specific site and elevation."
+        "a": "We design the structure to meet the snow load and seismic figures your jurisdiction requires. SaltGrass coordinates with your local Authority Having Jurisdiction so the engineering matches your specific site and elevation."
       },
       {
         "q": "What does a starter unit cost delivered to Utah?",
-        "a": "Pricing starts at $75,000 for a 320 SF studio container home, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom. Those figures are all-in, covering fabrication, delivery, and installation."
+        "a": "Pricing start at $75,000 for a 320 SF studio container home, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom. Those figures are all-in, covering fabrication, delivery, and installation."
       }
     ]
   },
@@ -1277,19 +1277,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Montpelier",
       "Rutland"
     ],
-    "intro": "Vermont's Green Mountains and tight-knit towns call for housing that holds up to long, heavy winters. Saltgrass Modular fabricates custom container homes, traditional modular builds, and modular pools at our Wagner, Oklahoma shop and delivers them nationally for sizable projects and for government or military needs around Burlington, Montpelier, and Rutland. Founder Dylan Walker's crew builds each unit in a controlled 15,000 sq ft facility, which keeps weather out of the framing stage. Plan on about eight to nine months from first design to a finished, installed structure.",
+    "intro": "Vermont's Green Mountains and tight-knit towns call for housing that holds up to long, heavy winters. SaltGrass Modular fabricates custom container homes, traditional modular builds, and modular pools at our Oklahoma City, Oklahoma shop and delivers them nationally for sizable projects and for government or military needs around Burlington, Montpelier, and Rutland. Founder Dylan Walker's crew builds each unit in a controlled 40,000+ sq ft facility, which keeps weather out of the framing stage. Plan on about eight to nine months from first design to a finished, installed structure.",
     "faqs": [
       {
-        "q": "Does Saltgrass actually serve Vermont from Oklahoma?",
-        "a": "We do, on a national basis. Larger projects and government or military clients in Vermont receive units fabricated in Wagner, Oklahoma and trucked north for installation, with transport built into the quoted all-in price."
+        "q": "Does SaltGrass actually serve Vermont from Oklahoma?",
+        "a": "We do, on a national basis. Larger projects and government or military clients in Vermont receive units fabricated in Oklahoma City, Oklahoma and trucked north for installation, with transport built into the quoted all-in price."
       },
       {
         "q": "How do you handle Vermont's heavy snow loads?",
-        "a": "The structure is engineered to the snow load your jurisdiction specifies. Because permitting and load requirements vary by town, Saltgrass coordinates directly with your local Authority Having Jurisdiction before fabrication."
+        "a": "The structure is engineered to the snow load your jurisdiction specifies. Because permitting and load requirements vary by town, SaltGrass coordinates directly with your local Authority Having Jurisdiction before fabrication."
       },
       {
         "q": "What's the price for a modular pool in Vermont?",
-        "a": "Our Tube Steel and Fiberglass pools start at $12,000 to $24,000, and Welded Steel with Epoxy pools start at $18,000 to $36,000. Both ranges are all-in, covering fabrication, delivery, and installation."
+        "a": "Our Tube Steel and Fiberglass pools start at $48,000, and Welded Steel with Epoxy pools start at $52,000. Both ranges are all-in, covering fabrication, delivery, and installation."
       }
     ]
   },
@@ -1308,15 +1308,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Norfolk",
       "Arlington"
     ],
-    "intro": "Virginia stretches from Atlantic beaches to Blue Ridge foothills, and Saltgrass Modular ships into all of it. We build custom container homes, traditional modular structures, modular pools, and rapid-deployment housing at our 15,000 sq ft facility in Wagner, Oklahoma, then deliver nationally for larger projects and for government or military work near Virginia Beach, Richmond, Norfolk, and Arlington. Founder Dylan Walker's team handles fabrication while your site prep and permitting move forward in parallel. Most builds reach installation in roughly eight to nine months from the design phase.",
+    "intro": "Virginia stretches from Atlantic beaches to Blue Ridge foothills, and SaltGrass Modular ships into all of it. We build custom container homes, traditional modular structures, modular pools, and rapid-deployment housing at our 40,000+ sq ft facility in Oklahoma City, Oklahoma, then deliver nationally for larger projects and for government or military work near Virginia Beach, Richmond, Norfolk, and Arlington. Founder Dylan Walker's team handles fabrication while your site prep and permitting move forward in parallel. Most builds reach installation in roughly eight to nine months from the design phase.",
     "faqs": [
       {
-        "q": "Can Saltgrass support a project in coastal Virginia?",
-        "a": "Yes. We deliver nationally for larger projects and serve government and military clients across Virginia. Units are fabricated in Wagner, Oklahoma and transported to your site, with delivery and installation included in the all-in price."
+        "q": "Can SaltGrass support a project in coastal Virginia?",
+        "a": "Yes. We deliver nationally for larger projects and serve government and military clients across Virginia. Units are fabricated in Oklahoma City, Oklahoma and transported to your site, with delivery and installation included in the all-in price."
       },
       {
         "q": "Are these homes built for the Virginia Beach area's storm exposure?",
-        "a": "We engineer each structure to the wind and load requirements your jurisdiction sets. Saltgrass coordinates with your local Authority Having Jurisdiction, since coastal sites often carry different standards than inland ones."
+        "a": "We engineer each structure to the wind and load requirements your jurisdiction sets. SaltGrass coordinates with your local Authority Having Jurisdiction, since coastal sites often carry different standards than inland ones."
       },
       {
         "q": "What does a two-bedroom container home cost in Virginia?",
@@ -1339,15 +1339,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Tacoma",
       "Vancouver"
     ],
-    "intro": "Washington runs from the wet, forested coast to the drier inland plateau, and Saltgrass Modular engineers for the full range. From our Wagner, Oklahoma facility, founder Dylan Walker's team fabricates custom container homes, traditional modular builds, and modular pools, then ships them nationally for larger projects and for government or military clients around Seattle, Spokane, Tacoma, and Vancouver. The controlled 15,000 sq ft shop keeps the build dry and on schedule regardless of Pacific Northwest weather. Expect roughly eight to nine months from design to a finished, installed unit.",
+    "intro": "Washington runs from the wet, forested coast to the drier inland plateau, and SaltGrass Modular engineers for the full range. From our Oklahoma City, Oklahoma facility, founder Dylan Walker's team fabricates custom container homes, traditional modular builds, and modular pools, then ships them nationally for larger projects and for government or military clients around Seattle, Spokane, Tacoma, and Vancouver. The controlled 40,000+ sq ft shop keeps the build dry and on schedule regardless of Pacific Northwest weather. Expect roughly eight to nine months from design to a finished, installed unit.",
     "faqs": [
       {
-        "q": "Does Saltgrass ship modular homes to Washington State?",
-        "a": "Yes, on a national basis. We fabricate in Wagner, Oklahoma and deliver to Washington for larger projects and government or military work, with transport and installation included in the all-in quoted price."
+        "q": "Does SaltGrass ship modular homes to Washington State?",
+        "a": "Yes, on a national basis. We fabricate in Oklahoma City, Oklahoma and deliver to Washington for larger projects and government or military work, with transport and installation included in the all-in quoted price."
       },
       {
         "q": "How are these builds prepared for Washington's seismic activity?",
-        "a": "We engineer the structure to the seismic design category your jurisdiction specifies. Saltgrass coordinates with your local Authority Having Jurisdiction so the connections and bracing match your specific site."
+        "a": "We engineer the structure to the seismic design category your jurisdiction specifies. SaltGrass coordinates with your local Authority Having Jurisdiction so the connections and bracing match your specific site."
       },
       {
         "q": "What's the starting price for a studio container home delivered to Washington?",
@@ -1369,15 +1369,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Huntington",
       "Morgantown"
     ],
-    "intro": "West Virginia is mountain country through and through, and Saltgrass Modular builds with that terrain in mind. We fabricate custom container homes, traditional modular structures, and modular pools at our 15,000 sq ft facility in Wagner, Oklahoma, then deliver nationally for larger projects and for government or military work near Charleston, Huntington, and Morgantown. Founder Dylan Walker's team completes the build in a controlled shop while your site work and permitting advance alongside it. From design to install typically runs about eight to nine months.",
+    "intro": "West Virginia is mountain country through and through, and SaltGrass Modular builds with that terrain in mind. We fabricate custom container homes, traditional modular structures, and modular pools at our 40,000+ sq ft facility in Oklahoma City, Oklahoma, then deliver nationally for larger projects and for government or military work near Charleston, Huntington, and Morgantown. Founder Dylan Walker's team completes the build in a controlled shop while your site work and permitting advance alongside it. From design to install typically runs about eight to nine months.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver to mountainous West Virginia sites?",
-        "a": "Yes. We ship nationally for larger projects and serve government and military clients in West Virginia. Units are built in Wagner, Oklahoma and transported in, with delivery and installation folded into the all-in price."
+        "q": "Can SaltGrass deliver to mountainous West Virginia sites?",
+        "a": "Yes. We ship nationally for larger projects and serve government and military clients in West Virginia. Units are built in Oklahoma City, Oklahoma and transported in, with delivery and installation folded into the all-in price."
       },
       {
         "q": "How do you account for West Virginia's snow and terrain?",
-        "a": "The roof and structure are engineered to your jurisdiction's snow load. Saltgrass coordinates with your local Authority Having Jurisdiction and plans site access carefully, since steep terrain affects both placement and delivery."
+        "a": "The roof and structure are engineered to your jurisdiction's snow load. SaltGrass coordinates with your local Authority Having Jurisdiction and plans site access carefully, since steep terrain affects both placement and delivery."
       },
       {
         "q": "What does a one-bedroom container home cost in West Virginia?",
@@ -1400,15 +1400,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Green Bay",
       "Kenosha"
     ],
-    "intro": "Wisconsin winters are long and snow-heavy, and Saltgrass Modular builds structures that meet them head-on. From our 15,000 sq ft facility in Wagner, Oklahoma, founder Dylan Walker's team fabricates custom container homes, traditional modular builds, and modular pools, then delivers nationally for larger projects and for government or military clients around Milwaukee, Madison, Green Bay, and Kenosha. Building indoors keeps moisture and cold out of the framing, which protects quality and schedule. A typical Saltgrass project runs roughly eight to nine months from design through installation.",
+    "intro": "Wisconsin winters are long and snow-heavy, and SaltGrass Modular builds structures that meet them head-on. From our 40,000+ sq ft facility in Oklahoma City, Oklahoma, founder Dylan Walker's team fabricates custom container homes, traditional modular builds, and modular pools, then delivers nationally for larger projects and for government or military clients around Milwaukee, Madison, Green Bay, and Kenosha. Building indoors keeps moisture and cold out of the framing, which protects quality and schedule. A typical SaltGrass project runs roughly eight to nine months from design through installation.",
     "faqs": [
       {
-        "q": "Will Saltgrass deliver a modular home to Wisconsin?",
-        "a": "Yes, nationally. For larger projects and government or military clients in Wisconsin, we fabricate in Wagner, Oklahoma and ship the unit north, with delivery and installation included in the all-in price."
+        "q": "Will SaltGrass deliver a modular home to Wisconsin?",
+        "a": "Yes, nationally. For larger projects and government or military clients in Wisconsin, we fabricate in Oklahoma City, Oklahoma and ship the unit north, with delivery and installation included in the all-in price."
       },
       {
         "q": "Are these builds rated for Wisconsin snow?",
-        "a": "We engineer the structure to the snow load your jurisdiction specifies. Saltgrass coordinates with your local Authority Having Jurisdiction so the roof and framing match your specific location's requirements."
+        "a": "We engineer the structure to the snow load your jurisdiction specifies. SaltGrass coordinates with your local Authority Having Jurisdiction so the roof and framing match your specific location's requirements."
       },
       {
         "q": "How long until a Wisconsin build is installed?",
@@ -1431,19 +1431,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       "Laramie",
       "Jackson"
     ],
-    "intro": "Wyoming combines wide-open wind exposure with high mountain elevations, and Saltgrass Modular engineers for both extremes. We fabricate custom container homes, traditional modular structures, and modular pools at our Wagner, Oklahoma shop, then deliver nationally for larger projects and for government or military work near Cheyenne, Casper, Laramie, and Jackson. Founder Dylan Walker's crew completes the build in a controlled 15,000 sq ft facility, then transports and installs it on site. Most projects move from design to installation in roughly eight to nine months, with fabrication running parallel to your prep.",
+    "intro": "Wyoming combines wide-open wind exposure with high mountain elevations, and SaltGrass Modular engineers for both extremes. We fabricate custom container homes, traditional modular structures, and modular pools at our Oklahoma City, Oklahoma shop, then deliver nationally for larger projects and for government or military work near Cheyenne, Casper, Laramie, and Jackson. Founder Dylan Walker's crew completes the build in a controlled 40,000+ sq ft facility, then transports and installs it on site. Most projects move from design to installation in roughly eight to nine months, with fabrication running parallel to your prep.",
     "faqs": [
       {
-        "q": "Does Saltgrass serve Wyoming from its Oklahoma facility?",
-        "a": "Yes. We deliver nationally for larger projects and serve government and military clients across Wyoming. Units are built in Wagner, Oklahoma and shipped in, with transport and installation included in the all-in price."
+        "q": "Does SaltGrass serve Wyoming from its Oklahoma facility?",
+        "a": "Yes. We deliver nationally for larger projects and serve government and military clients across Wyoming. Units are built in Oklahoma City, Oklahoma and shipped in, with transport and installation included in the all-in price."
       },
       {
         "q": "How are these homes built for Wyoming's wind and snow?",
-        "a": "We engineer the structure to the wind and snow load standards your jurisdiction sets. Saltgrass coordinates with your local Authority Having Jurisdiction, which matters given the contrast between windy plains and snowy mountain sites."
+        "a": "We engineer the structure to the wind and snow load standards your jurisdiction sets. SaltGrass coordinates with your local Authority Having Jurisdiction, which matters given the contrast between windy plains and snowy mountain sites."
       },
       {
         "q": "What does a modular pool cost in Wyoming?",
-        "a": "Tube Steel and Fiberglass pools start at $12,000 to $24,000, and Welded Steel with Epoxy pools start at $18,000 to $36,000. Both ranges are all-in, covering fabrication, delivery, and installation."
+        "a": "Tube Steel and Fiberglass pools start at $48,000, and Welded Steel with Epoxy pools start at $52,000. Both ranges are all-in, covering fabrication, delivery, and installation."
       }
     ]
   },
@@ -1457,18 +1457,18 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Gulf hurricane wind zones + humidity",
     "climateDetail": "Houston sits in a Gulf Coast hurricane wind zone with high humidity, so wind-load engineering and moisture-resistant detailing matter for any structure here.",
-    "intro": "Saltgrass Modular brings custom container homes, traditional modular builds, and modular pools to the greater Houston area. Everything is fabricated at our 15,000 sq ft facility in Wagner, Oklahoma, then delivered and installed on your Houston-region site. Founder Dylan Walker built the company around honest pricing and durable construction, with a typical design-to-install window of roughly 8 to 9 months because the factory runs in parallel with your site prep and permitting. We also handle disaster-relief, developer, and military housing needs across the region.",
+    "intro": "SaltGrass Modular brings custom container homes, traditional modular builds, and modular pools to the greater Houston area. Everything is fabricated at our 40,000+ sq ft facility in Oklahoma City, Oklahoma, then delivered and installed on your Houston-region site. Founder Dylan Walker built the company around honest pricing and durable construction, with a typical design-to-install window of roughly 8 to 9 months because the factory runs in parallel with your site prep and permitting. We also handle disaster-relief, developer, and military housing needs across the region.",
     "faqs": [
       {
-        "q": "Does Saltgrass deliver container homes to Houston?",
-        "a": "Yes. We serve the greater Houston region. Units are built in Wagner, Oklahoma and trucked down for installation, so the delivery leg is a longer haul than for our nearby Oklahoma builds, but it's a standard part of every regional project we quote."
+        "q": "Does SaltGrass deliver container homes to Houston?",
+        "a": "Yes. We serve the greater Houston region. Units are built in Oklahoma City, Oklahoma and trucked down for installation, so the delivery leg is a longer haul than for our nearby Oklahoma builds, but it's a standard part of every regional project we quote."
       },
       {
         "q": "How are Houston permits handled?",
-        "a": "Permitting varies by jurisdiction. Saltgrass coordinates directly with your local authority having jurisdiction (AHJ) and runs permitting in parallel with factory fabrication so the two timelines overlap rather than stack."
+        "a": "Permitting varies by jurisdiction. SaltGrass coordinates directly with your local authority having jurisdiction (AHJ) and runs permitting in parallel with factory fabrication so the two timelines overlap rather than stack."
       },
       {
-        "q": "Can a Saltgrass home stand up to Gulf Coast weather?",
+        "q": "Can a SaltGrass home stand up to Gulf Coast weather?",
         "a": "Our builds are engineered for the wind and humidity conditions of the delivery site. For a hurricane-prone area like Houston, that means appropriate wind-load engineering and moisture-aware detailing factored into the design."
       }
     ]
@@ -1483,15 +1483,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Inland heat + occasional severe storms",
     "climateDetail": "San Antonio's inland location brings sustained summer heat and the occasional severe storm, so durable, well-insulated construction holds up better than lightweight alternatives.",
-    "intro": "Serving the San Antonio region, Saltgrass Modular designs and builds custom container homes, traditional modular structures, and modular pools. Each project is fabricated at our 15,000 sq ft shop in Wagner, Oklahoma under founder Dylan Walker, then delivered and set on your South Texas property. Most builds move from design to install in about 8 to 9 months, since factory work happens at the same time as your site preparation and permitting. We also support disaster-relief, developer, and military housing projects throughout the area.",
+    "intro": "Serving the San Antonio region, SaltGrass Modular designs and builds custom container homes, traditional modular structures, and modular pools. Each project is fabricated at our 40,000+ sq ft shop in Oklahoma City, Oklahoma under founder Dylan Walker, then delivered and set on your South Texas property. Most builds move from design to install in about 8 to 9 months, since factory work happens at the same time as your site preparation and permitting. We also support disaster-relief, developer, and military housing projects throughout the area.",
     "faqs": [
       {
-        "q": "Will Saltgrass build a container home near San Antonio?",
-        "a": "Yes, San Antonio falls within our regional service area. We fabricate in Wagner, Oklahoma and deliver to your site, so plan for a multi-state transport leg that's already baked into the project."
+        "q": "Will SaltGrass build a container home near San Antonio?",
+        "a": "Yes, San Antonio falls within our regional service area. We fabricate in Oklahoma City, Oklahoma and deliver to your site, so plan for a multi-state transport leg that's already baked into the project."
       },
       {
         "q": "Who handles San Antonio permitting?",
-        "a": "Requirements vary by jurisdiction, and Saltgrass coordinates with your local AHJ on your behalf. Permitting runs alongside fabrication so it doesn't add extra months to the overall timeline."
+        "a": "Requirements vary by jurisdiction, and SaltGrass coordinates with your local AHJ on your behalf. Permitting runs alongside fabrication so it doesn't add extra months to the overall timeline."
       }
     ]
   },
@@ -1505,15 +1505,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Hill Country heat + flash-flood awareness",
     "climateDetail": "Austin's Hill Country setting combines strong summer heat with real flash-flood potential, so site placement and drainage planning deserve attention alongside the build itself.",
-    "intro": "Saltgrass Modular serves the Austin and Central Texas region with custom container homes, traditional modular builds, and modular pools. We fabricate every unit at our 15,000 sq ft facility in Wagner, Oklahoma — a company founded by Dylan Walker on straightforward pricing and solid construction — then deliver and install on your Austin-area lot. A typical project takes around 8 to 9 months from design to install, because the factory build runs concurrently with your site prep and permitting. Disaster-relief, developer, and military housing solutions are available too.",
+    "intro": "SaltGrass Modular serves the Austin and Central Texas region with custom container homes, traditional modular builds, and modular pools. We fabricate every unit at our 40,000+ sq ft facility in Oklahoma City, Oklahoma — a company founded by Dylan Walker on straightforward pricing and solid construction — then deliver and install on your Austin-area lot. A typical project takes around 8 to 9 months from design to install, because the factory build runs concurrently with your site prep and permitting. Disaster-relief, developer, and military housing solutions are available too.",
     "faqs": [
       {
-        "q": "Does Saltgrass ship container homes to Austin?",
-        "a": "Yes. Austin is within our regional reach. Units leave our Wagner, Oklahoma facility and travel to your site for installation, so the delivery distance is longer than for nearby Oklahoma projects."
+        "q": "Does SaltGrass ship container homes to Austin?",
+        "a": "Yes. Austin is within our regional reach. Units leave our Oklahoma City, Oklahoma facility and travel to your site for installation, so the delivery distance is longer than for nearby Oklahoma projects."
       },
       {
         "q": "What about flood-zone considerations around Austin?",
-        "a": "Flash-flood awareness is real in the Hill Country. While permitting and floodplain rules vary by jurisdiction, Saltgrass coordinates with your local AHJ and factors site conditions into how your unit is placed and prepared."
+        "a": "Flash-flood awareness is real in the Hill Country. While permitting and floodplain rules vary by jurisdiction, SaltGrass coordinates with your local AHJ and factors site conditions into how your unit is placed and prepared."
       },
       {
         "q": "Can I add a modular pool in Austin?",
@@ -1531,15 +1531,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "North Texas heat + severe storms",
     "climateDetail": "Fort Worth sees intense North Texas summer heat and a meaningful share of severe storms, so wind-load engineering and weather-resistant detailing are part of how we approach every build here.",
-    "intro": "Saltgrass Modular delivers custom container homes, traditional modular builds, and modular pools across the Fort Worth and North Texas region. Each structure is fabricated at our 15,000 sq ft facility in Wagner, Oklahoma, led by founder Dylan Walker, then transported and installed on your site. Most projects run about 8 to 9 months from design to install, with factory work happening in parallel with your local site prep and permitting. We also build for disaster-relief, developer, and military housing needs throughout the area.",
+    "intro": "SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools across the Fort Worth and North Texas region. Each structure is fabricated at our 40,000+ sq ft facility in Oklahoma City, Oklahoma, led by founder Dylan Walker, then transported and installed on your site. Most projects run about 8 to 9 months from design to install, with factory work happening in parallel with your local site prep and permitting. We also build for disaster-relief, developer, and military housing needs throughout the area.",
     "faqs": [
       {
-        "q": "Is Fort Worth within Saltgrass's delivery range?",
-        "a": "Yes. Fort Worth is part of our regional service area. Because we build in Wagner, Oklahoma, the delivery leg into North Texas is shorter than our deeper-Texas routes but still a multi-state transport."
+        "q": "Is Fort Worth within SaltGrass's delivery range?",
+        "a": "Yes. Fort Worth is part of our regional service area. Because we build in Oklahoma City, Oklahoma, the delivery leg into North Texas is shorter than our deeper-Texas routes but still a multi-state transport."
       },
       {
         "q": "How does permitting work for a Fort Worth build?",
-        "a": "It varies by jurisdiction. Saltgrass works directly with your local AHJ and runs the permitting process concurrently with fabrication so it doesn't extend your overall timeline."
+        "a": "It varies by jurisdiction. SaltGrass works directly with your local AHJ and runs the permitting process concurrently with fabrication so it doesn't extend your overall timeline."
       }
     ]
   },
@@ -1553,11 +1553,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Tornado Alley — high wind-load engineering",
     "climateDetail": "Wichita sits squarely in Tornado Alley, where high winds are a genuine design factor, so wind-load engineering is central to how structures should be built and anchored here.",
-    "intro": "Saltgrass Modular serves the Wichita region with custom container homes, traditional modular construction, and modular pools. We build every unit at our 15,000 sq ft facility in Wagner, Oklahoma under founder Dylan Walker, then deliver and install on your Kansas site. A typical build runs roughly 8 to 9 months from design to install because factory fabrication overlaps with your site prep and permitting. We also handle disaster-relief and rapid-deployment housing, plus developer and military solutions, across the area.",
+    "intro": "SaltGrass Modular serves the Wichita region with custom container homes, traditional modular construction, and modular pools. We build every unit at our 40,000+ sq ft facility in Oklahoma City, Oklahoma under founder Dylan Walker, then deliver and install on your Kansas site. A typical build runs roughly 8 to 9 months from design to install because factory fabrication overlaps with your site prep and permitting. We also handle disaster-relief and rapid-deployment housing, plus developer and military solutions, across the area.",
     "faqs": [
       {
-        "q": "Does Saltgrass build container homes in the Wichita area?",
-        "a": "Yes. Wichita is within our regional reach, and the haul from Wagner, Oklahoma is relatively short by our standards. Units are fabricated at the shop and delivered to your site for installation."
+        "q": "Does SaltGrass build container homes in the Wichita area?",
+        "a": "Yes. Wichita is within our regional reach, and the haul from Oklahoma City, Oklahoma is relatively short by our standards. Units are fabricated at the shop and delivered to your site for installation."
       },
       {
         "q": "How are tornado-zone wind loads handled?",
@@ -1565,7 +1565,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who manages Wichita permitting?",
-        "a": "Permitting varies by jurisdiction. Saltgrass coordinates with your local AHJ and runs that process alongside fabrication so it doesn't add to your overall timeline."
+        "a": "Permitting varies by jurisdiction. SaltGrass coordinates with your local AHJ and runs that process alongside fabrication so it doesn't add to your overall timeline."
       }
     ]
   },
@@ -1579,15 +1579,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Severe storms + variable seasons",
     "climateDetail": "Kansas City experiences severe storms and sharply variable seasons, from hot, stormy summers to cold winters, so insulation and weather-resistant detailing are worth planning for in any build.",
-    "intro": "Saltgrass Modular brings custom container homes, traditional modular builds, and modular pools to the Kansas City region. Every unit is fabricated at our 15,000 sq ft facility in Wagner, Oklahoma — founded by Dylan Walker around honest pricing and durable construction — then delivered and installed on your Missouri site. Projects typically take about 8 to 9 months from design to install, since the factory build runs in parallel with site prep and permitting. Disaster-relief, developer, and military housing solutions are available throughout the area as well.",
+    "intro": "SaltGrass Modular brings custom container homes, traditional modular builds, and modular pools to the Kansas City region. Every unit is fabricated at our 40,000+ sq ft facility in Oklahoma City, Oklahoma — founded by Dylan Walker around honest pricing and durable construction — then delivered and installed on your Missouri site. Projects typically take about 8 to 9 months from design to install, since the factory build runs in parallel with site prep and permitting. Disaster-relief, developer, and military housing solutions are available throughout the area as well.",
     "faqs": [
       {
-        "q": "Does Saltgrass deliver to Kansas City?",
-        "a": "Yes. Kansas City is within our regional service area. Units are built in Wagner, Oklahoma and trucked north for installation, so the transport leg is a standard, planned part of the project."
+        "q": "Does SaltGrass deliver to Kansas City?",
+        "a": "Yes. Kansas City is within our regional service area. Units are built in Oklahoma City, Oklahoma and trucked north for installation, so the transport leg is a standard, planned part of the project."
       },
       {
         "q": "How is permitting handled around Kansas City?",
-        "a": "Permitting varies by jurisdiction. Saltgrass coordinates with your local AHJ and times that process to overlap with fabrication so it doesn't lengthen the overall schedule."
+        "a": "Permitting varies by jurisdiction. SaltGrass coordinates with your local AHJ and times that process to overlap with fabrication so it doesn't lengthen the overall schedule."
       }
     ]
   },
@@ -1601,15 +1601,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Severe storms + humid summers",
     "climateDetail": "St. Louis gets severe storms along with hot, humid summers, so moisture-aware detailing and sound weather protection help a structure hold up well over time.",
-    "intro": "Saltgrass Modular serves the St. Louis region with custom container homes, traditional modular construction, and modular pools. Each project is fabricated at our 15,000 sq ft facility in Wagner, Oklahoma, founded and run by Dylan Walker, then delivered and installed on your Missouri property. Most builds move from design to install in about 8 to 9 months, with factory work running alongside your site prep and permitting. We also provide disaster-relief, rapid-deployment, developer, and military housing solutions across the area.",
+    "intro": "SaltGrass Modular serves the St. Louis region with custom container homes, traditional modular construction, and modular pools. Each project is fabricated at our 40,000+ sq ft facility in Oklahoma City, Oklahoma, founded and run by Dylan Walker, then delivered and installed on your Missouri property. Most builds move from design to install in about 8 to 9 months, with factory work running alongside your site prep and permitting. We also provide disaster-relief, rapid-deployment, developer, and military housing solutions across the area.",
     "faqs": [
       {
-        "q": "Can Saltgrass build a container home near St. Louis?",
-        "a": "Yes. St. Louis falls within our regional reach. We fabricate in Wagner, Oklahoma and deliver to your site, so the project includes a multi-state transport leg that we plan for up front."
+        "q": "Can SaltGrass build a container home near St. Louis?",
+        "a": "Yes. St. Louis falls within our regional reach. We fabricate in Oklahoma City, Oklahoma and deliver to your site, so the project includes a multi-state transport leg that we plan for up front."
       },
       {
         "q": "Who handles St. Louis permitting?",
-        "a": "Requirements vary by jurisdiction. Saltgrass coordinates with your local AHJ and runs permitting concurrently with fabrication so the two timelines overlap."
+        "a": "Requirements vary by jurisdiction. SaltGrass coordinates with your local AHJ and runs permitting concurrently with fabrication so the two timelines overlap."
       },
       {
         "q": "Are modular pools available in the St. Louis area?",
@@ -1627,15 +1627,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Severe storms + humid summers",
     "climateDetail": "Little Rock contends with severe storms and humid summers, so wind-aware construction and moisture-resistant detailing both matter for a build meant to last in this climate.",
-    "intro": "Saltgrass Modular delivers custom container homes, traditional modular builds, and modular pools across the Little Rock region. We fabricate every unit at our 15,000 sq ft facility in Wagner, Oklahoma under founder Dylan Walker, then deliver and install on your Arkansas site. A typical project runs about 8 to 9 months from design to install, since the factory build happens at the same time as your site prep and permitting. Disaster-relief, rapid-deployment, developer, and military housing solutions are all available throughout the area.",
+    "intro": "SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools across the Little Rock region. We fabricate every unit at our 40,000+ sq ft facility in Oklahoma City, Oklahoma under founder Dylan Walker, then deliver and install on your Arkansas site. A typical project runs about 8 to 9 months from design to install, since the factory build happens at the same time as your site prep and permitting. Disaster-relief, rapid-deployment, developer, and military housing solutions are all available throughout the area.",
     "faqs": [
       {
-        "q": "Does Saltgrass serve Little Rock?",
-        "a": "Yes. Little Rock is within our regional service area and a comparatively short haul from our Wagner, Oklahoma facility. Units are built at the shop and delivered to your site for installation."
+        "q": "Does SaltGrass serve Little Rock?",
+        "a": "Yes. Little Rock is within our regional service area and a comparatively short haul from our Oklahoma City, Oklahoma facility. Units are built at the shop and delivered to your site for installation."
       },
       {
         "q": "How does Little Rock permitting work?",
-        "a": "It varies by jurisdiction. Saltgrass coordinates with your local AHJ and times permitting to overlap with fabrication so it doesn't extend the overall schedule."
+        "a": "It varies by jurisdiction. SaltGrass coordinates with your local AHJ and times permitting to overlap with fabrication so it doesn't extend the overall schedule."
       }
     ]
   },
@@ -1649,11 +1649,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "High-desert heat + altitude",
     "climateDetail": "Albuquerque's high-desert setting brings strong daytime heat, significant elevation, and wide day-to-night temperature swings, so insulation and thermal performance are worth prioritizing in a build here.",
-    "intro": "Saltgrass Modular serves the Albuquerque region with custom container homes, traditional modular construction, and modular pools. Each unit is fabricated at our 15,000 sq ft facility in Wagner, Oklahoma, a company founded by Dylan Walker on transparent pricing and durable construction, then delivered and installed on your New Mexico site. Most projects take roughly 8 to 9 months from design to install because factory fabrication overlaps with your site prep and permitting. We also support disaster-relief, developer, and military housing needs across the area.",
+    "intro": "SaltGrass Modular serves the Albuquerque region with custom container homes, traditional modular construction, and modular pools. Each unit is fabricated at our 40,000+ sq ft facility in Oklahoma City, Oklahoma, a company founded by Dylan Walker on transparent pricing and durable construction, then delivered and installed on your New Mexico site. Most projects take roughly 8 to 9 months from design to install because factory fabrication overlaps with your site prep and permitting. We also support disaster-relief, developer, and military housing needs across the area.",
     "faqs": [
       {
-        "q": "Does Saltgrass deliver container homes to Albuquerque?",
-        "a": "Yes. Albuquerque is within our regional reach. Units are fabricated in Wagner, Oklahoma and transported west for installation, so the delivery leg is a longer multi-state haul that we plan for from the outset."
+        "q": "Does SaltGrass deliver container homes to Albuquerque?",
+        "a": "Yes. Albuquerque is within our regional reach. Units are fabricated in Oklahoma City, Oklahoma and transported west for installation, so the delivery leg is a longer multi-state haul that we plan for from the outset."
       },
       {
         "q": "How is high-desert and high-altitude building handled?",
@@ -1661,7 +1661,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who coordinates Albuquerque permitting?",
-        "a": "Permitting varies by jurisdiction. Saltgrass works with your local AHJ and runs the process alongside fabrication so it doesn't lengthen the overall timeline."
+        "a": "Permitting varies by jurisdiction. SaltGrass works with your local AHJ and runs the process alongside fabrication so it doesn't lengthen the overall timeline."
       }
     ]
   },
@@ -1675,14 +1675,14 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Gulf hurricane wind zones + humidity",
     "climateDetail": "New Orleans sits in a Gulf Coast hurricane wind zone with high year-round humidity, so builds here are engineered for strong wind loads and detailed for moisture resistance.",
-    "intro": "Saltgrass Modular builds container homes, traditional modular structures, and modular pools for the New Orleans area from our 15,000-square-foot fabrication facility in Wagner, Oklahoma. Founder Dylan Walker leads a shop that fabricates your home in a controlled factory while site prep and permitting happen in parallel back in Louisiana. New Orleans sits within our regional delivery reach, so hauling a finished unit down is straightforward. From studios to two-bedroom layouts, every build is steel-framed and engineered with the Gulf Coast in mind.",
+    "intro": "SaltGrass Modular builds container homes, traditional modular structures, and modular pools for the New Orleans area from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma. Founder Dylan Walker leads a shop that fabricates your home in a controlled factory while site prep and permitting happen in parallel back in Louisiana. New Orleans sits within our regional delivery reach, so hauling a finished unit down is straightforward. From studios to two-bedroom layouts, every build is steel-framed and engineered with the Gulf Coast in mind.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver a container home to the New Orleans area?",
-        "a": "Yes. New Orleans falls within our regional delivery reach from our Wagner, Oklahoma facility, so transporting a finished modular or container home there is a routine haul we coordinate as part of the all-in price."
+        "q": "Can SaltGrass deliver a container home to the New Orleans area?",
+        "a": "Yes. New Orleans falls within our regional delivery reach from our Oklahoma City, Oklahoma facility, so transporting a finished modular or container home there is a routine haul we coordinate as part of the all-in price."
       },
       {
-        "q": "Are Saltgrass homes built for hurricane wind zones?",
+        "q": "Are SaltGrass homes built for hurricane wind zones?",
         "a": "Our steel-framed container and modular builds are engineered for the wind loads the Gulf Coast sees. Specific wind-rating requirements vary by jurisdiction, and we coordinate with your local AHJ to meet them."
       },
       {
@@ -1701,11 +1701,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Plains storms + snow load",
     "climateDetail": "Omaha endures strong Plains thunderstorms and meaningful winter snow loads, so roofs and framing here are engineered to carry seasonal snow and withstand high straight-line winds.",
-    "intro": "For the Omaha area, Saltgrass Modular fabricates custom container homes, traditional modular builds, and modular pools at our 15,000-square-foot shop in Wagner, Oklahoma. Founder Dylan Walker's team assembles your structure indoors while your Nebraska site is prepped and permits move forward, so the two timelines overlap instead of stacking. Omaha is within our regional delivery range, which keeps the haul north efficient. Whether you want a compact studio or a two-bedroom, each unit is steel-framed and built to handle Plains weather.",
+    "intro": "For the Omaha area, SaltGrass Modular fabricates custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot shop in Oklahoma City, Oklahoma. Founder Dylan Walker's team assembles your structure indoors while your Nebraska site is prepped and permits move forward, so the two timelines overlap instead of stacking. Omaha is within our regional delivery range, which keeps the haul north efficient. Whether you want a compact studio or a two-bedroom, each unit is steel-framed and built to handle Plains weather.",
     "faqs": [
       {
-        "q": "Does Saltgrass serve the Omaha, Nebraska market?",
-        "a": "Yes. Omaha is within our regional delivery reach from Wagner, Oklahoma, and we coordinate the haul north as part of the project. The all-in price already covers getting the unit to your site."
+        "q": "Does SaltGrass serve the Omaha, Nebraska market?",
+        "a": "Yes. Omaha is within our regional delivery reach from Oklahoma City, Oklahoma, and we coordinate the haul north as part of the project. The all-in price already covers getting the unit to your site."
       },
       {
         "q": "Are these builds rated for Nebraska snow loads?",
@@ -1723,11 +1723,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "High-altitude snow load",
     "climateDetail": "Denver's high-altitude setting brings significant snow loads, so structures here are engineered with reinforced roof framing to carry heavy seasonal snow.",
-    "intro": "Saltgrass Modular brings custom container homes, traditional modular construction, and modular pools to the Denver area, all fabricated at our 15,000-square-foot facility in Wagner, Oklahoma. Founder Dylan Walker's crew builds your home under roof while your Colorado lot is prepared and permitting advances, so progress happens on both fronts at once. Denver sits within our regional delivery reach, making the haul west practical. Every build, from a 320-square-foot studio to a 960-square-foot two-bedroom, is steel-framed and engineered for high-altitude conditions.",
+    "intro": "SaltGrass Modular brings custom container homes, traditional modular construction, and modular pools to the Denver area, all fabricated at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Founder Dylan Walker's crew builds your home under roof while your Colorado lot is prepared and permitting advances, so progress happens on both fronts at once. Denver sits within our regional delivery reach, making the haul west practical. Every build, from a 320-square-foot studio to a 960-square-foot two-bedroom, is steel-framed and engineered for high-altitude conditions.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver to Denver?",
-        "a": "Yes. Denver is within our regional delivery range from Wagner, Oklahoma. We handle transport and installation as part of the all-in price, so the haul west is already accounted for."
+        "q": "Can SaltGrass deliver to Denver?",
+        "a": "Yes. Denver is within our regional delivery range from Oklahoma City, Oklahoma. We handle transport and installation as part of the all-in price, so the haul west is already accounted for."
       },
       {
         "q": "Are the homes built for Denver's snow loads?",
@@ -1749,11 +1749,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "High-altitude snow load + wind",
     "climateDetail": "Colorado Springs combines high-altitude snow loads with strong wind exposure along the Front Range, so builds here are engineered for both heavy snow and elevated wind loads.",
-    "intro": "In the Colorado Springs area, Saltgrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 15,000-square-foot Wagner, Oklahoma facility. Under founder Dylan Walker, the shop assembles your structure indoors while your site is graded and permits are pursued, letting both timelines overlap. Colorado Springs is within our regional delivery reach, so moving a finished unit there is a clean haul. From studios to two-bedrooms, each steel-framed build is engineered for the high-altitude, wind-prone Front Range.",
+    "intro": "In the Colorado Springs area, SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Under founder Dylan Walker, the shop assembles your structure indoors while your site is graded and permits are pursued, letting both timelines overlap. Colorado Springs is within our regional delivery reach, so moving a finished unit there is a clean haul. From studios to two-bedrooms, each steel-framed build is engineered for the high-altitude, wind-prone Front Range.",
     "faqs": [
       {
-        "q": "Does Saltgrass build for Colorado Springs?",
-        "a": "Yes. Colorado Springs falls within our regional delivery reach from Wagner, Oklahoma. Transport and installation are included in the all-in price, so the haul west is already covered."
+        "q": "Does SaltGrass build for Colorado Springs?",
+        "a": "Yes. Colorado Springs falls within our regional delivery reach from Oklahoma City, Oklahoma. Transport and installation are included in the all-in price, so the haul west is already covered."
       },
       {
         "q": "Are the structures rated for Front Range wind and snow?",
@@ -1771,11 +1771,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Desert heat — cooling efficiency",
     "climateDetail": "Phoenix faces intense, sustained desert heat, so builds here prioritize insulation and cooling efficiency to keep interiors comfortable through long, hot summers.",
-    "intro": "Saltgrass Modular serves the Phoenix area nationally, fabricating custom container homes, traditional modular builds, and modular pools at our 15,000-square-foot facility in Wagner, Oklahoma. Founder Dylan Walker's team completes your home indoors while your Arizona site is prepped and permits progress, so the factory and field tracks run side by side. Phoenix is a longer haul from Oklahoma than our regional markets, but as a national builder we plan that delivery into every project. Each steel-framed unit, studio through two-bedroom, is built with desert cooling in mind.",
+    "intro": "SaltGrass Modular serves the Phoenix area nationally, fabricating custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Founder Dylan Walker's team completes your home indoors while your Arizona site is prepped and permits progress, so the factory and field tracks run side by side. Phoenix is a longer haul from Oklahoma than our regional markets, but as a national builder we plan that delivery into every project. Each steel-framed unit, studio through two-bedroom, is built with desert cooling in mind.",
     "faqs": [
       {
-        "q": "Does Saltgrass deliver to Phoenix?",
-        "a": "Yes. We serve Phoenix as a national builder. It's a longer haul from our Wagner, Oklahoma facility than our regional markets, and we plan and price that delivery into every project up front."
+        "q": "Does SaltGrass deliver to Phoenix?",
+        "a": "Yes. We serve Phoenix as a national builder. It's a longer haul from our Oklahoma City, Oklahoma facility than our regional markets, and we plan and price that delivery into every project up front."
       },
       {
         "q": "Are these homes designed for desert heat?",
@@ -1797,10 +1797,10 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Desert heat + seismic",
     "climateDetail": "Las Vegas combines extreme desert heat with regional seismic activity, so builds here focus on cooling efficiency and a steel frame that handles seismic loads.",
-    "intro": "Saltgrass Modular builds for the Las Vegas area as a national provider, fabricating custom container homes, traditional modular structures, and modular pools at our 15,000-square-foot Wagner, Oklahoma facility. Founder Dylan Walker leads a shop that assembles your home indoors while your Nevada site is readied and permitting moves forward in parallel. Las Vegas is a longer haul than our regional markets, but national delivery is part of how we work. Every steel-framed build, from a compact studio to a two-bedroom, is engineered for desert heat and seismic considerations.",
+    "intro": "SaltGrass Modular builds for the Las Vegas area as a national provider, fabricating custom container homes, traditional modular structures, and modular pools at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Founder Dylan Walker leads a shop that assembles your home indoors while your Nevada site is readied and permitting moves forward in parallel. Las Vegas is a longer haul than our regional markets, but national delivery is part of how we work. Every steel-framed build, from a compact studio to a two-bedroom, is engineered for desert heat and seismic considerations.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver a modular home to Las Vegas?",
+        "q": "Can SaltGrass deliver a modular home to Las Vegas?",
         "a": "Yes. We serve Las Vegas as a national builder. It's a longer trip from our Oklahoma facility than our regional service area, and we factor that delivery into the project from the start."
       },
       {
@@ -1819,15 +1819,15 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Humid summers + occasional hurricanes",
     "climateDetail": "Atlanta sees hot, humid summers and occasional remnants of hurricanes pushing inland, so builds here are detailed for moisture resistance and designed to handle elevated wind events.",
-    "intro": "Saltgrass Modular serves the Atlanta area as a national builder, producing custom container homes, traditional modular construction, and modular pools at our 15,000-square-foot facility in Wagner, Oklahoma. Under founder Dylan Walker, your home is fabricated indoors while your Georgia site is prepped and permitting advances, keeping both efforts moving together. Atlanta sits farther from Oklahoma than our regional markets, and we build that delivery into every plan. From studios to two-bedrooms, each steel-framed unit is engineered for humid summers and the occasional severe-weather event.",
+    "intro": "SaltGrass Modular serves the Atlanta area as a national builder, producing custom container homes, traditional modular construction, and modular pools at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Under founder Dylan Walker, your home is fabricated indoors while your Georgia site is prepped and permitting advances, keeping both efforts moving together. Atlanta sits farther from Oklahoma than our regional markets, and we build that delivery into every plan. From studios to two-bedrooms, each steel-framed unit is engineered for humid summers and the occasional severe-weather event.",
     "faqs": [
       {
-        "q": "Does Saltgrass build homes for the Atlanta area?",
-        "a": "Yes. We serve Atlanta as a national builder. It's a longer haul from our Wagner, Oklahoma facility than our regional markets, and we plan that delivery into the project up front."
+        "q": "Does SaltGrass build homes for the Atlanta area?",
+        "a": "Yes. We serve Atlanta as a national builder. It's a longer haul from our Oklahoma City, Oklahoma facility than our regional markets, and we plan that delivery into the project up front."
       },
       {
         "q": "How does permitting work for an Atlanta build?",
-        "a": "Permitting requirements vary by jurisdiction across the metro. Saltgrass coordinates with your local AHJ so the build meets applicable standards while fabrication runs in parallel with your site prep."
+        "a": "Permitting requirements vary by jurisdiction across the metro. SaltGrass coordinates with your local AHJ so the build meets applicable standards while fabrication runs in parallel with your site prep."
       }
     ]
   },
@@ -1841,14 +1841,14 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Hurricane wind zones — high wind-load",
     "climateDetail": "Tampa lies in a hurricane wind zone along Florida's Gulf coast, so builds here are engineered for high wind loads and detailed to stand up to severe coastal storms.",
-    "intro": "Saltgrass Modular builds for the Tampa area as a national provider, fabricating custom container homes, traditional modular builds, and modular pools at our 15,000-square-foot Wagner, Oklahoma facility. Founder Dylan Walker's team assembles your home indoors while your Florida site is prepped and permits are pursued in parallel. Tampa is a longer delivery than our regional markets, and national hauling is standard for how we operate. Each steel-framed unit, studio through two-bedroom, is engineered for the high wind loads of a hurricane-exposed coast.",
+    "intro": "SaltGrass Modular builds for the Tampa area as a national provider, fabricating custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Founder Dylan Walker's team assembles your home indoors while your Florida site is prepped and permits are pursued in parallel. Tampa is a longer delivery than our regional markets, and national hauling is standard for how we operate. Each steel-framed unit, studio through two-bedroom, is engineered for the high wind loads of a hurricane-exposed coast.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver a container home to Tampa?",
+        "q": "Can SaltGrass deliver a container home to Tampa?",
         "a": "Yes. We serve Tampa as a national builder. It's a longer haul from our Oklahoma facility than our regional service area, and we plan that delivery into every project from the outset."
       },
       {
-        "q": "Are Saltgrass builds engineered for Tampa's hurricane wind zone?",
+        "q": "Are SaltGrass builds engineered for Tampa's hurricane wind zone?",
         "a": "Our steel-framed homes are engineered for high wind loads. Because wind-rating requirements vary by jurisdiction in Florida, we coordinate with your local AHJ to meet the applicable standards."
       },
       {
@@ -1867,11 +1867,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Hurricane wind zones + heat",
     "climateDetail": "Orlando sits in a hurricane wind zone and contends with hot, humid weather much of the year, so builds here pair high wind-load engineering with insulation and cooling efficiency.",
-    "intro": "In the Orlando area, Saltgrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 15,000-square-foot Wagner, Oklahoma facility, serving Florida as a national builder. Founder Dylan Walker's shop completes your home indoors while your site is graded and permitting advances in parallel. Orlando is a longer haul than our regional markets, and we plan that national delivery into each project. From studios to two-bedrooms, every steel-framed build is engineered for hurricane wind exposure and Florida heat.",
+    "intro": "In the Orlando area, SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 40,000+-square-foot Oklahoma City, Oklahoma facility, serving Florida as a national builder. Founder Dylan Walker's shop completes your home indoors while your site is graded and permitting advances in parallel. Orlando is a longer haul than our regional markets, and we plan that national delivery into each project. From studios to two-bedrooms, every steel-framed build is engineered for hurricane wind exposure and Florida heat.",
     "faqs": [
       {
-        "q": "Does Saltgrass serve the Orlando market?",
-        "a": "Yes. We build for Orlando as a national provider. It's a longer trip from our Wagner, Oklahoma facility than our regional markets, and we factor that delivery into the project from the start."
+        "q": "Does SaltGrass serve the Orlando market?",
+        "a": "Yes. We build for Orlando as a national provider. It's a longer trip from our Oklahoma City, Oklahoma facility than our regional markets, and we factor that delivery into the project from the start."
       },
       {
         "q": "Are the homes built for Orlando's wind and heat?",
@@ -1889,11 +1889,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Severe storms + mixed seasons",
     "climateDetail": "Middle Tennessee sees a mix of hot, humid summers, cool winters, and periodic severe storms, so units are engineered with the seasonal swings and storm exposure of the region in mind.",
-    "intro": "Saltgrass Modular brings custom container homes and traditional modular builds to the Nashville, Tennessee metro from our 15,000-square-foot fabrication facility in Wagner, Oklahoma. Founded by Dylan Walker, our shop fabricates your studio, one-bedroom, or two-bedroom unit under a controlled roof while your Nashville site is prepped and permitted in parallel. We also build modular pools and rapid-deployment housing. Most projects run roughly 8 to 9 months from design to install. Permitting varies by jurisdiction, and Saltgrass coordinates directly with your local AHJ throughout.",
+    "intro": "SaltGrass Modular brings custom container homes and traditional modular builds to the Nashville, Tennessee metro from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma. Founded by Dylan Walker, our shop fabricates your studio, one-bedroom, or two-bedroom unit under a controlled roof while your Nashville site is prepped and permitted in parallel. We also build modular pools and rapid-deployment housing. Most projects run roughly 8 to 9 months from design to install. Permitting varies by jurisdiction, and SaltGrass coordinates directly with your local AHJ throughout.",
     "faqs": [
       {
-        "q": "Can Saltgrass deliver a container home to the Nashville area?",
-        "a": "Yes. We fabricate in Wagner, Oklahoma and deliver nationwide, including the greater Nashville metro. Your unit is built in our facility while site prep and permitting happen locally, then it ships and installs on your lot."
+        "q": "Can SaltGrass deliver a container home to the Nashville area?",
+        "a": "Yes. We fabricate in Oklahoma City, Oklahoma and deliver nationwide, including the greater Nashville metro. Your unit is built in our facility while site prep and permitting happen locally, then it ships and installs on your lot."
       },
       {
         "q": "How long does a Nashville modular build take?",
@@ -1901,7 +1901,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who handles permits in Nashville?",
-        "a": "Permitting requirements vary by jurisdiction across the Nashville metro. Saltgrass coordinates with your local authority having jurisdiction (AHJ) so your build stays aligned with the rules that apply to your specific site."
+        "a": "Permitting requirements vary by jurisdiction across the Nashville metro. SaltGrass coordinates with your local authority having jurisdiction (AHJ) so your build stays aligned with the rules that apply to your specific site."
       }
     ]
   },
@@ -1915,11 +1915,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Atlantic hurricane influence + mixed seasons",
     "climateDetail": "The Charlotte region carries a humid subtropical climate with hot summers, mild winters, and the residual wind and rain of Atlantic hurricane systems pushing inland, all of which inform how each unit is built.",
-    "intro": "Serving the Charlotte, North Carolina metro, Saltgrass Modular designs and fabricates custom container homes and traditional modular builds at our 15,000-square-foot facility in Wagner, Oklahoma. Owner Dylan Walker built the company around controlled, factory-grade fabrication — your unit takes shape indoors while your Charlotte lot is graded, prepped, and permitted at the same time. We also offer modular pools, disaster-relief housing, and developer and military solutions. Expect about 8 to 9 months from design to install, with permitting handled in cooperation with your local AHJ.",
+    "intro": "Serving the Charlotte, North Carolina metro, SaltGrass Modular designs and fabricates custom container homes and traditional modular builds at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Owner Dylan Walker built the company around controlled, factory-grade fabrication — your unit takes shape indoors while your Charlotte lot is graded, prepped, and permitted at the same time. We also offer modular pools, disaster-relief housing, and developer and military solutions. Expect about 8 to 9 months from design to install, with permitting handled in cooperation with your local AHJ.",
     "faqs": [
       {
-        "q": "Does Saltgrass build in Charlotte, NC?",
-        "a": "We do. Fabrication happens at our Wagner, Oklahoma shop, and we deliver across the country including the Charlotte metro. Your home is constructed off-site, then transported and installed on your prepared lot."
+        "q": "Does SaltGrass build in Charlotte, NC?",
+        "a": "We do. Fabrication happens at our Oklahoma City, Oklahoma shop, and we deliver across the country including the Charlotte metro. Your home is constructed off-site, then transported and installed on your prepared lot."
       },
       {
         "q": "What is the typical timeline for a Charlotte project?",
@@ -1927,7 +1927,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "How is permitting managed in the Charlotte area?",
-        "a": "Rules differ from one jurisdiction to the next across the metro. Saltgrass works directly with your local authority having jurisdiction (AHJ) to keep the project on track with the requirements for your address."
+        "a": "Rules differ from one jurisdiction to the next across the metro. SaltGrass works directly with your local authority having jurisdiction (AHJ) to keep the project on track with the requirements for your address."
       }
     ]
   },
@@ -1941,19 +1941,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Desert heat — cooling efficiency",
     "climateDetail": "Mesa sits in the Sonoran Desert, where intense summer heat dominates the year, making cooling efficiency and sun-conscious building a central consideration in every unit.",
-    "intro": "Saltgrass Modular extends custom container homes and modular construction to the Mesa and greater Phoenix, Arizona metro from our Wagner, Oklahoma fabrication facility — a 15,000-square-foot shop led by founder Dylan Walker. Your studio, one-, or two-bedroom unit is fabricated indoors while your Mesa site is prepped and permitted alongside it. We also build modular pools, rapid-deployment disaster housing, and developer and military solutions. The full design-to-install path typically runs 8 to 9 months, with Saltgrass coordinating permitting through your local AHJ as requirements vary by jurisdiction.",
+    "intro": "SaltGrass Modular extends custom container homes and modular construction to the Mesa and greater Phoenix, Arizona metro from our Oklahoma City, Oklahoma fabrication facility — a 40,000+-square-foot shop led by founder Dylan Walker. Your studio, one-, or two-bedroom unit is fabricated indoors while your Mesa site is prepped and permitted alongside it. We also build modular pools, rapid-deployment disaster housing, and developer and military solutions. The full design-to-install path typically runs 8 to 9 months, with SaltGrass coordinating permitting through your local AHJ as requirements vary by jurisdiction.",
     "faqs": [
       {
         "q": "Can a container home handle Mesa's desert heat?",
         "a": "Units are built with the region's high summer temperatures in mind, prioritizing cooling efficiency. Because fabrication is done in our controlled facility, the envelope and finishes are dialed in before the unit ever reaches your Mesa site."
       },
       {
-        "q": "Does Saltgrass deliver to Mesa and Phoenix?",
-        "a": "Yes. We fabricate in Wagner, Oklahoma and deliver nationally, including the Phoenix-Mesa metro. The unit is completed off-site, then shipped west and installed on your prepared lot."
+        "q": "Does SaltGrass deliver to Mesa and Phoenix?",
+        "a": "Yes. We fabricate in Oklahoma City, Oklahoma and deliver nationally, including the Phoenix-Mesa metro. The unit is completed off-site, then shipped west and installed on your prepared lot."
       },
       {
         "q": "How is permitting handled in the Phoenix-Mesa area?",
-        "a": "Requirements vary by jurisdiction throughout the metro. Saltgrass coordinates with your local authority having jurisdiction (AHJ) so the project meets the rules that apply where you're building."
+        "a": "Requirements vary by jurisdiction throughout the metro. SaltGrass coordinates with your local authority having jurisdiction (AHJ) so the project meets the rules that apply where you're building."
       }
     ]
   },
@@ -1967,19 +1967,19 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Mountain snow load + seismic",
     "climateDetail": "The Salt Lake City area combines significant winter snowfall along the Wasatch Front with seismic activity from the regional fault system, so snow-load capacity and structural integrity are built into each unit.",
-    "intro": "Saltgrass Modular serves the Salt Lake City, Utah metro with custom container homes and traditional modular builds fabricated at our 15,000-square-foot facility in Wagner, Oklahoma. Founder Dylan Walker keeps the work under one controlled roof, so your unit is built indoors while your Salt Lake site is prepped and permitted at the same time. We also produce modular pools, rapid-deployment housing, and developer and military solutions. Plan on roughly 8 to 9 months from design to install, with permitting coordinated through your local AHJ since requirements vary by jurisdiction.",
+    "intro": "SaltGrass Modular serves the Salt Lake City, Utah metro with custom container homes and traditional modular builds fabricated at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Founder Dylan Walker keeps the work under one controlled roof, so your unit is built indoors while your Salt Lake site is prepped and permitted at the same time. We also produce modular pools, rapid-deployment housing, and developer and military solutions. Plan on roughly 8 to 9 months from design to install, with permitting coordinated through your local AHJ since requirements vary by jurisdiction.",
     "faqs": [
       {
-        "q": "Are Saltgrass units built for Salt Lake's snow and seismic conditions?",
+        "q": "Are SaltGrass units built for Salt Lake's snow and seismic conditions?",
         "a": "Yes. Units are engineered with the region's snow load and seismic considerations in mind. Factory fabrication lets us control the structure precisely before the unit is delivered to your Salt Lake site."
       },
       {
-        "q": "Does Saltgrass deliver to the Salt Lake City metro?",
-        "a": "We deliver nationwide from Wagner, Oklahoma, and that includes the Salt Lake City area. Your home is fabricated off-site, then transported and installed on your prepared lot."
+        "q": "Does SaltGrass deliver to the Salt Lake City metro?",
+        "a": "We deliver nationwide from Oklahoma City, Oklahoma, and that includes the Salt Lake City area. Your home is fabricated off-site, then transported and installed on your prepared lot."
       },
       {
         "q": "Who handles permitting in Salt Lake City?",
-        "a": "Permitting differs by jurisdiction across the metro. Saltgrass coordinates with your local authority having jurisdiction (AHJ) to keep the build aligned with the rules for your specific location."
+        "a": "Permitting differs by jurisdiction across the metro. SaltGrass coordinates with your local authority having jurisdiction (AHJ) to keep the build aligned with the rules for your specific location."
       }
     ]
   },
@@ -1993,11 +1993,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "High-desert + mountain snow load",
     "climateDetail": "Boise sits in a high-desert valley with dry summers, cold winters, and meaningful mountain snowfall nearby, so units account for both arid conditions and snow-load demands.",
-    "intro": "Saltgrass Modular delivers custom container homes and modular builds to the Boise, Idaho metro from our 15,000-square-foot fabrication facility in Wagner, Oklahoma, founded by Dylan Walker. Each studio, one-, or two-bedroom unit is fabricated under a controlled roof while your Boise site is graded and permitted in parallel. Beyond homes, we build modular pools, disaster-relief housing, and developer and military solutions. The typical path runs about 8 to 9 months from design to install, and Saltgrass coordinates permitting with your local AHJ, which varies from one jurisdiction to the next.",
+    "intro": "SaltGrass Modular delivers custom container homes and modular builds to the Boise, Idaho metro from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma, founded by Dylan Walker. Each studio, one-, or two-bedroom unit is fabricated under a controlled roof while your Boise site is graded and permitted in parallel. Beyond homes, we build modular pools, disaster-relief housing, and developer and military solutions. The typical path runs about 8 to 9 months from design to install, and SaltGrass coordinates permitting with your local AHJ, which varies from one jurisdiction to the next.",
     "faqs": [
       {
-        "q": "Does Saltgrass build container homes for the Boise area?",
-        "a": "Yes. We fabricate in Wagner, Oklahoma and ship nationwide, including the Boise metro. Your unit is completed in our facility, then transported and installed on your prepared lot."
+        "q": "Does SaltGrass build container homes for the Boise area?",
+        "a": "Yes. We fabricate in Oklahoma City, Oklahoma and ship nationwide, including the Boise metro. Your unit is completed in our facility, then transported and installed on your prepared lot."
       },
       {
         "q": "Are units suited to Boise's high-desert and snow conditions?",
@@ -2005,7 +2005,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "How does permitting work in the Boise metro?",
-        "a": "Requirements vary by jurisdiction across the region. Saltgrass works with your local authority having jurisdiction (AHJ) so the project stays in step with the rules that govern your address."
+        "a": "Requirements vary by jurisdiction across the region. SaltGrass works with your local authority having jurisdiction (AHJ) so the project stays in step with the rules that govern your address."
       }
     ]
   },
@@ -2019,11 +2019,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "home",
     "climate": "Tornado Alley — high wind-load engineering",
     "climateDetail": "Norman sits squarely in Tornado Alley, where high winds and severe spring storms are a regular reality, so high wind-load engineering is a core part of how each unit is built.",
-    "intro": "Saltgrass Modular is an Oklahoma company, and the Norman and Oklahoma City metro is close to home — our 15,000-square-foot fabrication facility sits in Wagner, Oklahoma, founded and run by Dylan Walker. Being in-state means shorter delivery and tight coordination on your studio, one-, or two-bedroom container home or traditional modular build. We also produce modular pools, rapid-deployment disaster housing, and developer and military solutions. Most projects take roughly 8 to 9 months from design to install, with permitting coordinated through your local AHJ as requirements vary by jurisdiction.",
+    "intro": "SaltGrass Modular is an Oklahoma company, and the Norman and Oklahoma City metro is close to home — our 40,000+-square-foot fabrication facility sits in Oklahoma City, Oklahoma, founded and run by Dylan Walker. Being in-state means shorter delivery and tight coordination on your studio, one-, or two-bedroom container home or traditional modular build. We also produce modular pools, rapid-deployment disaster housing, and developer and military solutions. Most projects take roughly 8 to 9 months from design to install, with permitting coordinated through your local AHJ as requirements vary by jurisdiction.",
     "faqs": [
       {
-        "q": "Is Saltgrass local to the Norman and OKC area?",
-        "a": "Yes. Our fabrication facility is in Wagner, Oklahoma, so the Norman-Oklahoma City metro is one of our closest service areas. That proximity means a shorter delivery leg and easy coordination throughout the build."
+        "q": "Is SaltGrass local to the Norman and OKC area?",
+        "a": "Yes. Our fabrication facility is in Oklahoma City, Oklahoma, so the Norman-Oklahoma City metro is one of our closest service areas. That proximity means a shorter delivery leg and easy coordination throughout the build."
       },
       {
         "q": "Are units engineered for Tornado Alley wind loads?",
@@ -2031,7 +2031,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "How is permitting handled around Norman?",
-        "a": "Permitting varies by jurisdiction across the metro. Saltgrass coordinates directly with your local authority having jurisdiction (AHJ) so the project meets the rules for your specific site."
+        "a": "Permitting varies by jurisdiction across the metro. SaltGrass coordinates directly with your local authority having jurisdiction (AHJ) so the project meets the rules for your specific site."
       }
     ]
   },
@@ -2045,11 +2045,11 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "home",
     "climate": "Tornado Alley — high wind-load engineering",
     "climateDetail": "Broken Arrow sits within Tornado Alley, where strong winds and severe seasonal storms are common, making high wind-load engineering a built-in priority for every unit.",
-    "intro": "Broken Arrow is right in Saltgrass Modular's backyard — our 15,000-square-foot fabrication facility is in Wagner, Oklahoma, founded by Dylan Walker, just a short delivery from the Tulsa-area suburb. We build custom container homes, traditional modular structures, modular pools, disaster-relief housing, and developer and military solutions. Your studio, one-, or two-bedroom unit is fabricated under a controlled roof while your Broken Arrow lot is prepped and permitted in parallel. Expect about 8 to 9 months from design to install, with permitting coordinated through your local AHJ as it varies by jurisdiction.",
+    "intro": "Broken Arrow is right in SaltGrass Modular's backyard — our 40,000+-square-foot fabrication facility is in Oklahoma City, Oklahoma, founded by Dylan Walker, just a short delivery from the Tulsa-area suburb. We build custom container homes, traditional modular structures, modular pools, disaster-relief housing, and developer and military solutions. Your studio, one-, or two-bedroom unit is fabricated under a controlled roof while your Broken Arrow lot is prepped and permitted in parallel. Expect about 8 to 9 months from design to install, with permitting coordinated through your local AHJ as it varies by jurisdiction.",
     "faqs": [
       {
-        "q": "How close is Saltgrass to Broken Arrow?",
-        "a": "Very close. Our Wagner, Oklahoma facility is a short haul from Broken Arrow, so it's one of our nearest service areas. That means a brief delivery leg and direct coordination throughout your build."
+        "q": "How close is SaltGrass to Broken Arrow?",
+        "a": "Very close. Our Oklahoma City, Oklahoma facility is a short haul from Broken Arrow, so it's one of our nearest service areas. That means a brief delivery leg and direct coordination throughout your build."
       },
       {
         "q": "Are units built for Broken Arrow's storm and wind exposure?",
@@ -2057,7 +2057,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "Who coordinates permitting in Broken Arrow?",
-        "a": "Permitting requirements vary by jurisdiction. Saltgrass works with your local authority having jurisdiction (AHJ) so your project lines up with the rules that apply to your address."
+        "a": "Permitting requirements vary by jurisdiction. SaltGrass works with your local authority having jurisdiction (AHJ) so your project lines up with the rules that apply to your address."
       }
     ]
   }

@@ -13,12 +13,17 @@ export default {
     extend: {
       colors: {
         brand: {
-          primary: '#C41E3A',
-          'primary-50':  '#f9e5e7',
-          'primary-100': '#f3cccf',
-          'primary-600': '#b01a34',
-          'primary-700': '#8b1628',
-          secondary: '#1a1a2e',
+          // Crimson taken a few shades deeper (was #C41E3A) for a richer red + better
+          // white-text contrast on buttons.
+          primary: '#9E1B30',
+          'primary-50':  '#f7e8ea',
+          'primary-100': '#eccfd3',
+          'primary-600': '#87172A',
+          'primary-700': '#6E1221',
+          // Navy lifted a few shades lighter (was #1a1a2e) so the dark surfaces read as
+          // navy-blue, not near-black-on-red.
+          secondary: '#2A2A4E',
+          'secondary-700': '#1F1F3A',
           accent: '#F59E0B',
         },
         ink: {
@@ -72,7 +77,7 @@ export default {
         'medium': '0 4px 6px -1px rgb(15 23 42 / 0.08), 0 2px 4px -2px rgb(15 23 42 / 0.06)',
         'large':  '0 10px 15px -3px rgb(15 23 42 / 0.08), 0 4px 6px -4px rgb(15 23 42 / 0.05)',
         'xl':     '0 20px 25px -5px rgb(15 23 42 / 0.08), 0 8px 10px -6px rgb(15 23 42 / 0.05)',
-        'glow-primary': '0 8px 32px -8px rgba(196, 30, 58, 0.4)',
+        'glow-primary': '0 8px 32px -8px rgba(158, 27, 48, 0.4)',
       },
       transitionTimingFunction: {
         'out-expo':  'cubic-bezier(0.19, 1, 0.22, 1)',

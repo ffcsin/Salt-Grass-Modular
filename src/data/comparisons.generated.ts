@@ -42,7 +42,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Quality depends heavily on the individual crew and on-site supervision, which varies by builder."
       }
     ],
-    "verdict": "Choose modular when you value a predictable timeline, want to minimize weather risk, and your site has decent delivery access. Choose stick-built for highly irregular lots, very complex custom geometry, or when you need maximum on-site flexibility. Saltgrass builds the modular option, but we'll tell you plainly when a tight or unusual lot makes site-building the more sensible route.",
+    "verdict": "Choose modular when you value a predictable timeline, want to minimize weather risk, and your site has decent delivery access. Choose stick-built for highly irregular lots, very complex custom geometry, or when you need maximum on-site flexibility. SaltGrass builds the modular option, but we'll tell you plainly when a tight or unusual lot makes site-building the more sensible route.",
     "faqs": [
       {
         "q": "Is a modular home lower quality than a stick-built home?",
@@ -58,7 +58,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "What about permits and inspections?",
-        "a": "Requirements vary by jurisdiction. Saltgrass coordinates with your local AHJ on permitting and inspection steps for your specific location."
+        "a": "Requirements vary by jurisdiction. SaltGrass coordinates with your local AHJ on permitting and inspection steps for your specific location."
       }
     ]
   },
@@ -73,7 +73,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
     "rows": [
       {
         "dimension": "Starting Cost",
-        "a": "Our studio container ADU starts at $75,000 all-in (fabrication, delivery, install); a 1-bed 640 SF starts at $105,000.",
+        "a": "Our studio container ADU start at $75,000 all-in (fabrication, delivery, install); a 1-bed 640 SF start at $105,000.",
         "b": "Pricing varies widely by region, finishes, and site conditions; on-site framing labor can run higher per square foot in some markets."
       },
       {
@@ -102,11 +102,11 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Standard cavity insulation in framed walls is straightforward and familiar to local trades."
       }
     ],
-    "verdict": "Pick a container ADU if you want factory-built speed, a strong steel shell, and a clear all-in starting price, and you like (or don't mind) the modern look. Pick a traditional ADU if matching your main house's architecture exactly is a priority or your lot demands an unusual footprint. Saltgrass builds container ADUs, but we'll be honest when a framed unit better fits your style or site.",
+    "verdict": "Pick a container ADU if you want factory-built speed, a strong steel shell, and a clear all-in starting price, and you like (or don't mind) the modern look. Pick a traditional ADU if matching your main house's architecture exactly is a priority or your lot demands an unusual footprint. SaltGrass builds container ADUs, but we'll be honest when a framed unit better fits your style or site.",
     "faqs": [
       {
         "q": "Are container ADUs allowed where I live?",
-        "a": "ADU rules and whether container conversions qualify vary by jurisdiction. Saltgrass coordinates with your local AHJ to confirm what's permitted on your property."
+        "a": "ADU rules and whether container conversions qualify vary by jurisdiction. SaltGrass coordinates with your local AHJ to confirm what's permitted on your property."
       },
       {
         "q": "Do container ADUs get too hot or cold?",
@@ -133,8 +133,8 @@ export const GENERATED_COMPARISONS: Comparison[] = [
     "rows": [
       {
         "dimension": "Starting Price",
-        "a": "Starts at $12,000–$24,000 all-in (fabrication, delivery, install), making it our more budget-friendly steel option.",
-        "b": "Starts at $18,000–$36,000 all-in, reflecting the added welding labor and reinforced shell."
+        "a": "Starts at $48,000 all-in (fabrication, delivery, install), making it our more budget-friendly steel option.",
+        "b": "Starts at $52,000 all-in, reflecting the added welding labor and reinforced shell."
       },
       {
         "dimension": "Frame Construction",
@@ -162,7 +162,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Epoxy is durable and serviceable; refinishing follows the manufacturer's recommended cycle."
       }
     ],
-    "verdict": "Choose the tube steel + fiberglass pool for a strong, low-maintenance pool at a friendlier starting price — a great fit for most residential backyards. Choose the welded steel + epoxy pool when you want the most rigid shell and a hard epoxy finish, and the higher budget makes sense. Saltgrass fabricates both, so we'll size the recommendation to your yard and budget rather than upselling.",
+    "verdict": "Choose the tube steel + fiberglass pool for a strong, low-maintenance pool at a friendlier starting price — a great fit for most residential backyards. Choose the welded steel + epoxy pool when you want the most rigid shell and a hard epoxy finish, and the higher budget makes sense. SaltGrass fabricates both, so we'll size the recommendation to your yard and budget rather than upselling.",
     "faqs": [
       {
         "q": "Are steel pools as durable as concrete?",
@@ -170,7 +170,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "Which steel pool is cheaper?",
-        "a": "Tube steel with a fiberglass finish starts lower, at $12,000–$24,000 all-in, versus $18,000–$36,000 for the welded steel + epoxy build."
+        "a": "Tube steel with a fiberglass finish starts lower, at $48,000 all-in, versus at $52,000 for the welded steel + epoxy build."
       },
       {
         "q": "Do steel pools rust?",
@@ -198,7 +198,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "dimension": "Cost Predictability",
-        "a": "Factory fabrication gives clear all-in starting prices; our steel pools begin at $12,000–$36,000 depending on type.",
+        "a": "Factory fabrication gives clear all-in starting prices; our steel pools begin at $48,000–$52,000 depending on type.",
         "b": "More variable — excavation surprises, rebar, and finish choices can move the final cost in either direction."
       },
       {
@@ -222,7 +222,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Resurfacing and crack repair are well-understood but can be labor-intensive and costly."
       }
     ],
-    "verdict": "Go modular if you want a faster install, a clear starting price, and less prolonged backyard disruption — ideal for standard pool shapes. Go concrete if you need a fully custom freeform shape or unusual depth profile and you're comfortable with a longer, more variable build. Saltgrass builds modular pools, but we'll say so honestly when a true freeform concrete design is the better match for your vision.",
+    "verdict": "Go modular if you want a faster install, a clear starting price, and less prolonged backyard disruption — ideal for standard pool shapes. Go concrete if you need a fully custom freeform shape or unusual depth profile and you're comfortable with a longer, more variable build. SaltGrass builds modular pools, but we'll say so honestly when a true freeform concrete design is the better match for your vision.",
     "faqs": [
       {
         "q": "Is a modular pool an above-ground pool?",
@@ -282,7 +282,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Generally fixed footprint; expansion usually means adding a separate unit."
       }
     ],
-    "verdict": "Choose a container home if you want a permanent, rugged dwelling on a foundation with room to scale up by combining modules. Choose a tiny home if mobility matters most and you want the flexibility to relocate. Saltgrass builds container homes, but we won't pretend they're the answer if your real need is a towable, move-anywhere tiny home.",
+    "verdict": "Choose a container home if you want a permanent, rugged dwelling on a foundation with room to scale up by combining modules. Choose a tiny home if mobility matters most and you want the flexibility to relocate. SaltGrass builds container homes, but we won't pretend they're the answer if your real need is a towable, move-anywhere tiny home.",
     "faqs": [
       {
         "q": "Can a container home be moved later?",
@@ -293,12 +293,12 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "a": "The steel container shell is inherently strong and resists pests and weather. Tiny homes are durable when well-built but use lighter framing meant partly for towing."
       },
       {
-        "q": "What does a container home start at?",
+        "q": "What does a container home starts at?",
         "a": "Our studio 320 SF container home starts at $75,000 all-in, including fabrication, delivery, and installation. Larger one- and two-bedroom layouts start higher."
       },
       {
         "q": "Are container homes legal as primary residences?",
-        "a": "In many jurisdictions, yes, when built to code on a foundation. Rules vary, so Saltgrass coordinates with your local AHJ to confirm what's allowed."
+        "a": "In many jurisdictions, yes, when built to code on a foundation. Rules vary, so SaltGrass coordinates with your local AHJ to confirm what's allowed."
       }
     ]
   },
@@ -342,7 +342,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Sites with tight access or designs needing more on-site assembly flexibility."
       }
     ],
-    "verdict": "Choose modular when you want the most finished off-site and the fastest set on a site with delivery access. Choose panelized when transport access is tight, the design is geometrically complex, or you want more on-site finishing control. Saltgrass builds modular, but we'll point you toward panelized when access or design realities make it the smarter method.",
+    "verdict": "Choose modular when you want the most finished off-site and the fastest set on a site with delivery access. Choose panelized when transport access is tight, the design is geometrically complex, or you want more on-site finishing control. SaltGrass builds modular, but we'll point you toward panelized when access or design realities make it the smarter method.",
     "faqs": [
       {
         "q": "What's the core difference between modular and panelized?",
@@ -358,7 +358,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "Do both meet building codes?",
-        "a": "Yes. Both are code-compliant construction methods. Saltgrass coordinates with your local AHJ on permitting and inspections regardless of method."
+        "a": "Yes. Both are code-compliant construction methods. SaltGrass coordinates with your local AHJ on permitting and inspections regardless of method."
       }
     ]
   },
@@ -389,7 +389,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       {
         "dimension": "Cost Predictability",
         "a": "Purchase price is known, but post-move repairs and updates can add up unpredictably.",
-        "b": "Factory pricing gives clear starting figures; our 2-bed 960 SF starts at $155,000 all-in."
+        "b": "Factory pricing gives clear starting figures; our 2-bed 960 SF start at $155,000 all-in."
       },
       {
         "dimension": "Land Requirement",
@@ -402,7 +402,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "New build means current materials and systems from day one."
       }
     ],
-    "verdict": "Buy an existing home if you need to move in quickly, want the land bundled, and can accept its layout and condition. Build modular if you have (or can get) a buildable lot, want a new, customized home with predictable pricing, and can wait through the design-to-install window. Saltgrass builds modular homes, but we'll readily admit that buying existing is sometimes the faster, simpler answer.",
+    "verdict": "Buy an existing home if you need to move in quickly, want the land bundled, and can accept its layout and condition. Build modular if you have (or can get) a buildable lot, want a new, customized home with predictable pricing, and can wait through the design-to-install window. SaltGrass builds modular homes, but we'll readily admit that buying existing is sometimes the faster, simpler answer.",
     "faqs": [
       {
         "q": "Is building modular slower than buying?",
@@ -462,7 +462,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Rustic-modern barn aesthetic, often with high ceilings and large windows."
       }
     ],
-    "verdict": "Choose a container home for an efficient, modular, foundation-ready dwelling with clear all-in pricing — ideal for smaller lots or scalable layouts. Choose a barndominium when you want big open spans, a combined living-plus-shop footprint, and rural acreage to spread out. Saltgrass builds container homes, but if your heart is set on a wide-open barndominium, we'll tell you that's a different build.",
+    "verdict": "Choose a container home for an efficient, modular, foundation-ready dwelling with clear all-in pricing — ideal for smaller lots or scalable layouts. Choose a barndominium when you want big open spans, a combined living-plus-shop footprint, and rural acreage to spread out. SaltGrass builds container homes, but if your heart is set on a wide-open barndominium, we'll tell you that's a different build.",
     "faqs": [
       {
         "q": "Which gives more open interior space?",
@@ -478,7 +478,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "Can a container home work on rural land?",
-        "a": "Absolutely — they install on a foundation with adequate delivery access. Saltgrass coordinates with your local AHJ on any rural permitting requirements."
+        "a": "Absolutely — they install on a foundation with adequate delivery access. SaltGrass coordinates with your local AHJ on any rural permitting requirements."
       }
     ]
   },
@@ -522,11 +522,11 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Designed to blend seamlessly into the existing home's style and rooflines."
       }
     ],
-    "verdict": "Choose a modular ADU when you want a private, standalone unit with rental potential and minimal disruption to your current home. Choose an addition when you simply need more connected living space and seamless architectural blending matters most. Saltgrass builds modular ADUs, but we'll be straight with you: if you just need a bigger kitchen or another bedroom inside the house, an addition may serve you better.",
+    "verdict": "Choose a modular ADU when you want a private, standalone unit with rental potential and minimal disruption to your current home. Choose an addition when you simply need more connected living space and seamless architectural blending matters most. SaltGrass builds modular ADUs, but we'll be straight with you: if you just need a bigger kitchen or another bedroom inside the house, an addition may serve you better.",
     "faqs": [
       {
         "q": "Can a modular ADU be rented out?",
-        "a": "Often yes, where local code allows ADUs as separate dwellings. Rules vary by jurisdiction, so Saltgrass coordinates with your local AHJ to confirm rental eligibility."
+        "a": "Often yes, where local code allows ADUs as separate dwellings. Rules vary by jurisdiction, so SaltGrass coordinates with your local AHJ to confirm rental eligibility."
       },
       {
         "q": "Which causes less disruption to my home?",
@@ -582,7 +582,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
         "b": "Personalize the floor plan, room count, and flow from the ground up."
       }
     ],
-    "verdict": "Choose prefab when you want a proven layout, the fastest path, and maximum cost predictability. Choose custom modular when your needs, site, or vision justify designing the home around you. Saltgrass does custom container homes and traditional modular builds, but we'll happily steer you toward a standard plan when it gets you what you want faster and for less.",
+    "verdict": "Choose prefab when you want a proven layout, the fastest path, and maximum cost predictability. Choose custom modular when your needs, site, or vision justify designing the home around you. SaltGrass does custom container homes and traditional modular builds, but we'll happily steer you toward a standard plan when it gets you what you want faster and for less.",
     "faqs": [
       {
         "q": "Is custom modular much more expensive than prefab?",

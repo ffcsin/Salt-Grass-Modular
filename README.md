@@ -83,4 +83,4 @@ See [`PRE_LAUNCH_CHECKLIST.md`](./PRE_LAUNCH_CHECKLIST.md) for:
 
 ## License
 
-Proprietary — Saltgrass Modular, 2026
+Proprietary — SaltGrass Modular, 2026

@@ -30,7 +30,7 @@ const faqItems = [
   },
   {
     q: 'How much does a container home cost?',
-    a: 'Pricing varies based on size and finishes. A typical 640 SF one-bedroom ranges from $90K–$120K. Request a quote for exact pricing tailored to your project.',
+    a: 'Starting prices are all-in (fabrication, delivery, installation): 320 SF studio from $75K, 640 SF 2-bedroom from $105K, 960 SF 3-bedroom from $155K, 1,280 SF from $204,800, and 1,920 SF from $307,200. Request a quote for exact pricing tailored to your project.',
   },
   {
     q: 'How long does construction take?',
@@ -48,7 +48,7 @@ const faqItems = [
 ---
 
 <BaseLayout
-  title="Custom Container Homes - Saltgrass Modular"
+  title="Custom Container Homes - SaltGrass Modular"
   description="Custom-designed modular container homes with F3 tornado rating, transparent pricing, and fast 8-9 month timelines."
 >
   <Hero
@@ -65,7 +65,7 @@ const faqItems = [
         <div>
           <h2 class="text-4xl font-bold text-ink-900 mb-6">Container Homes Reimagined</h2>
           <p class="text-lg text-ink-700 mb-4 leading-relaxed">
-            Container homes aren't just trendy—they're practical, affordable, and sustainable. At Saltgrass, we take shipping containers and transform them into stunning, fully-functional homes that exceed building codes.
+            Container homes aren't just trendy—they're practical, affordable, and sustainable. At SaltGrass, we take shipping containers and transform them into stunning, fully-functional homes that exceed building codes.
           </p>
           <p class="text-lg text-ink-700 mb-6 leading-relaxed">
             Whether you're building your first home, an ADU for your property, or a rental investment, our container homes offer:
@@ -108,16 +108,17 @@ const faqItems = [
   <section class="py-section-y">
     <div class="container">
       <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Popular Models</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
           <div class="bg-gradient-to-br from-brand-primary to-brand-secondary h-48"></div>
           <div class="p-6">
             <h3 class="text-xl font-bold text-ink-900 mb-2">320 SF Studio</h3>
-            <p class="text-sm text-ink-600 mb-4">Perfect for minimalists, interns, or guest housing.</p>
+            <p class="text-sm text-ink-600 mb-4">Perfect for minimalists, guest housing, or a first home.</p>
             <ul class="text-sm text-ink-700 space-y-2 mb-6">
-              <li>• 320 sq ft open concept</li>
-              <li>• Kitchenette + full bath</li>
-              <li>• Loft sleeping area</li>
+              <li>• Full kitchen</li>
+              <li>• Full bath</li>
+              <li>• Living area</li>
+              <li>• Laundry</li>
             </ul>
             <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $75K</p>
             <button class="w-full btn-primary text-sm">Request Quote</button>
@@ -127,12 +128,12 @@ const faqItems = [
         <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
           <div class="bg-gradient-to-br from-brand-secondary to-ink-700 h-48"></div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-ink-900 mb-2">640 SF 1-Bedroom</h3>
-            <p class="text-sm text-ink-600 mb-4">The bestseller. Great for couples or single families.</p>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">640 SF 2-Bedroom</h3>
+            <p class="text-sm text-ink-600 mb-4">Great for couples or a small family.</p>
             <ul class="text-sm text-ink-700 space-y-2 mb-6">
-              <li>• 640 sq ft layout</li>
-              <li>• 1 bed + 1 bath</li>
-              <li>• Full kitchen & living area</li>
+              <li>• 2 bed + 1 bath</li>
+              <li>• Utility room</li>
+              <li>• Full kitchen &amp; living area</li>
             </ul>
             <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $105K</p>
             <button class="w-full btn-primary text-sm">Request Quote</button>
@@ -142,14 +143,49 @@ const faqItems = [
         <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
           <div class="bg-gradient-to-br from-ink-700 to-brand-primary h-48"></div>
           <div class="p-6">
-            <h3 class="text-xl font-bold text-ink-900 mb-2">960 SF 2-Bedroom</h3>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">960 SF 3-Bedroom</h3>
             <p class="text-sm text-ink-600 mb-4">Family-sized comfort with premium finishes.</p>
             <ul class="text-sm text-ink-700 space-y-2 mb-6">
-              <li>• 960 sq ft layout</li>
-              <li>• 2 bed + 1.5 bath</li>
-              <li>• Spacious kitchen & den</li>
+              <li>• 3 bed + 2 bath</li>
+              <li>• Spacious kitchen</li>
+              <li>• Living area</li>
+              <li>• Utility room</li>
             </ul>
             <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $155K</p>
+            <button class="w-full btn-primary text-sm">Request Quote</button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-primary to-ink-700 h-48"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-2">1,280 SF 3-Bedroom</h3>
+            <p class="text-sm text-ink-600 mb-4">Open-concept living with a rooftop deck.</p>
+            <ul class="text-sm text-ink-700 space-y-2 mb-6">
+              <li>• 3 bed + 2 bath</li>
+              <li>• Open concept</li>
+              <li>• Spacious kitchen &amp; living area</li>
+              <li>• Laundry</li>
+              <li>• Rooftop deck area</li>
+            </ul>
+            <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $204,800</p>
+            <button class="w-full btn-primary text-sm">Request Quote</button>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-soft hover:shadow-large transition overflow-hidden">
+          <div class="bg-gradient-to-br from-brand-secondary to-brand-primary h-48"></div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-ink-900 mb-2">1,920 SF 4-Bedroom</h3>
+            <p class="text-sm text-ink-600 mb-4">Our largest model — room for the whole family.</p>
+            <ul class="text-sm text-ink-700 space-y-2 mb-6">
+              <li>• 4 bed + 3 bath</li>
+              <li>• Open concept</li>
+              <li>• Spacious kitchen &amp; living area</li>
+              <li>• Utility room + flex space</li>
+              <li>• 2-car garage</li>
+            </ul>
+            <p class="text-2xl font-bold text-brand-primary mb-4">Starting at $307,200</p>
             <button class="w-full btn-primary text-sm">Request Quote</button>
           </div>
         </div>
@@ -169,17 +205,17 @@ const faqItems = [
           <div class="bg-gradient-to-br from-blue-400 to-blue-600 h-64"></div>
           <div class="p-6 bg-white">
             <h3 class="font-bold text-ink-900 mb-2">Atlanta, Georgia</h3>
-            <p class="text-sm text-ink-700 mb-4">960 SF luxury home. Ritz Carlton-inspired finishes. 9-month timeline.</p>
-            <p class="text-sm"><strong>Client:</strong> Young professional</p>
+            <p class="text-sm text-ink-700 mb-4">Custom modular home with premium finishes.</p>
+            <p class="text-sm"><strong>Client:</strong> Ali Mahbub</p>
           </div>
         </div>
 
         <div class="rounded-2xl overflow-hidden shadow-soft">
           <div class="bg-gradient-to-br from-green-400 to-green-600 h-64"></div>
           <div class="p-6 bg-white">
-            <h3 class="font-bold text-ink-900 mb-2">Wagner, Oklahoma</h3>
-            <p class="text-sm text-ink-700 mb-4">640 SF one-bedroom ADU. Family addition project. 8-month build.</p>
-            <p class="text-sm"><strong>Client:</strong> Homeowner expansion</p>
+            <h3 class="font-bold text-ink-900 mb-2">Wagoner, Oklahoma</h3>
+            <p class="text-sm text-ink-700 mb-4">1,280 SF 3-bedroom home with rooftop deck.</p>
+            <p class="text-sm"><strong>Client:</strong> Henry Bibelheimer</p>
           </div>
         </div>
 
@@ -187,8 +223,7 @@ const faqItems = [
           <div class="bg-gradient-to-br from-amber-400 to-amber-600 h-64"></div>
           <div class="p-6 bg-white">
             <h3 class="font-bold text-ink-900 mb-2">Alamosa, Colorado</h3>
-            <p class="text-sm text-ink-700 mb-4">320 SF studio rental property. Mountain location. 7-month timeline.</p>
-            <p class="text-sm"><strong>Client:</strong> Real estate investor</p>
+            <p class="text-sm text-ink-700 mb-4">640 SF 2-bedroom home. Metal roof, covered front &amp; back porch.</p>
           </div>
         </div>
       </div>
@@ -213,8 +248,8 @@ const faqItems = [
             <li class="flex gap-3">
               <span class="text-brand-primary font-bold text-lg">2.</span>
               <div>
-                <p class="font-bold text-ink-900">Cost</p>
-                <p class="text-sm text-ink-700">30-40% cheaper than traditional construction for the same square footage.</p>
+                <p class="font-bold text-ink-900">Transparent Pricing</p>
+                <p class="text-sm text-ink-700">All-in quotes with fabrication, delivery, and installation — no surprise change orders.</p>
               </div>
             </li>
             <li class="flex gap-3">

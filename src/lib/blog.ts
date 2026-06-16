@@ -155,9 +155,9 @@ export async function getBlogChrome(): Promise<BlogChrome | null> {
 }
 
 export function getAuthorName(author: BlogPost['author']): string {
-  if (!author) return 'Saltgrass Team';
+  if (!author) return 'SaltGrass Team';
   if (typeof author === 'string') return author;
-  return author.name || 'Saltgrass Team';
+  return author.name || 'SaltGrass Team';
 }
 
 export function getAuthorAvatar(author: BlogPost['author']): string | undefined {

@@ -8,21 +8,21 @@ const breadcrumbs = [
   { name: 'Contact', url: '/contact' },
 ];
 const faqs = [
-  { q: 'How quickly will I hear back?', a: 'Dylan and the team respond to quote requests within 24 hours. For urgent or government/military deployment needs, call (405) 659-1949 directly.' },
+  { q: 'How quickly will I hear back?', a: 'Dylan and the team follow up within one business day. For urgent or government/military deployment needs, call (405) 659-1949 directly.' },
   { q: 'Is a quote free and no-obligation?', a: 'Yes. Requesting a quote is completely free and carries no obligation. We give you transparent, all-in pricing so you can plan with confidence.' },
 ];
 ---
 
 <BaseLayout
-  title="Contact Saltgrass Modular"
-  description="Request a free, no-obligation quote from Saltgrass Modular. Transparent all-in pricing on custom container homes, modular pools, and rapid-deployment housing."
-  keywords={['contact Saltgrass Modular', 'modular home quote', 'container home quote Oklahoma']}
+  title="Contact SaltGrass Modular"
+  description="Request a free, no-obligation quote from SaltGrass Modular. Transparent all-in pricing on custom container homes, modular pools, and rapid-deployment housing."
+  keywords={['contact SaltGrass Modular', 'modular home quote', 'container home quote Oklahoma']}
   breadcrumbs={breadcrumbs}
   schemas={[faqSchema(faqs)]}
 >
   <!-- Hero: prompt (left) + quote form on a white card (right), over brand navy -->
-  <section id="contact-hero" class="relative overflow-hidden bg-ink-900 text-white">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/25 via-ink-900 to-ink-900" aria-hidden="true"></div>
+  <section id="contact-hero" class="relative overflow-hidden bg-brand-secondary text-white">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-primary/30 via-brand-secondary to-brand-secondary" aria-hidden="true"></div>
     <div class="container relative py-section-y-lg">
       <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <!-- Left: the pitch -->
@@ -34,7 +34,7 @@ const faqs = [
           <p class="text-lg md:text-xl text-ink-200 leading-relaxed mb-10">
             Tell us about your project — a custom container home, a modular pool, a development, or a
             rapid-deployment need. You'll get transparent, all-in pricing and a reply from Dylan within
-            24 hours.
+            one business day.
           </p>
 
           <!-- Contact methods -->
@@ -50,14 +50,14 @@ const faqs = [
               <span class="text-2xl" aria-hidden="true">✉️</span>
               <span>
                 <span class="block text-white font-semibold group-hover:text-[#fca5a5] transition-colors break-all">Dylan.Walker@saltgrassmodular.com</span>
-                <span class="block text-sm text-ink-300">Response within 24 hours</span>
+                <span class="block text-sm text-ink-300">Reply within one business day</span>
               </span>
             </a>
             <div class="flex items-start gap-4">
               <span class="text-2xl" aria-hidden="true">📍</span>
               <span>
-                <span class="block text-white font-semibold">Wagner, Oklahoma</span>
-                <span class="block text-sm text-ink-300">15,000 sq ft facility — tours by appointment</span>
+                <span class="block text-white font-semibold">Oklahoma City, Oklahoma</span>
+                <span class="block text-sm text-ink-300">40,000+ sq ft facility — tours by appointment</span>
               </span>
             </div>
           </div>
@@ -121,7 +121,7 @@ const faqs = [
           <p class="text-sm text-ink-600">Explore our services →</p>
         </a>
         <a href="/about" class="bg-white rounded-xl border border-ink-200 p-6 hover:shadow-large hover:border-brand-primary transition">
-          <h3 class="font-bold text-ink-900 mb-2">Tell me about Saltgrass</h3>
+          <h3 class="font-bold text-ink-900 mb-2">Tell me about SaltGrass</h3>
           <p class="text-sm text-ink-600">Meet Dylan and the team →</p>
         </a>
       </div>

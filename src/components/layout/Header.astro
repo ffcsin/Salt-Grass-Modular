@@ -37,7 +37,7 @@ const nav: NavItem[] = [
     label: 'Learn',
     href: '/saltgrass-101',
     children: [
-      { label: 'Saltgrass 101', href: '/saltgrass-101' },
+      { label: 'SaltGrass 101', href: '/saltgrass-101' },
       { label: 'Guides & Comparisons', href: '/compare' },
       { label: 'Glossary', href: '/glossary' },
       { label: 'Cost Breakdown', href: '/saltgrass-101/cost-breakdown' },
@@ -51,10 +51,10 @@ const nav: NavItem[] = [
 ];
 ---
 
-<header class="sticky top-0 z-40 bg-ink-900/95 backdrop-blur-md border-b border-ink-800 text-ink-200">
+<header class="sticky top-0 z-40 bg-brand-secondary/95 backdrop-blur-md border-b border-white/10 text-ink-200">
   <div class="container mx-auto flex items-center justify-between py-4">
-    <a href="/" class="flex items-center gap-2 font-display text-xl font-bold text-white shrink-0" aria-label="Saltgrass Modular home">
-      <span>Saltgrass Modular</span>
+    <a href="/" class="flex items-center gap-2 font-display text-xl font-bold text-white shrink-0" aria-label="SaltGrass Modular home">
+      <span>SaltGrass Modular</span>
     </a>
 
     <!-- Desktop nav -->
@@ -100,11 +100,11 @@ const nav: NavItem[] = [
   </div>
 
   <!-- Mobile nav panel (dark, matching the header) -->
-  <nav id="mobile-nav" class="hidden lg:hidden border-t border-ink-800 bg-ink-900 text-ink-200" aria-label="Mobile navigation">
+  <nav id="mobile-nav" class="hidden lg:hidden border-t border-white/10 bg-brand-secondary text-ink-200" aria-label="Mobile navigation">
     <div class="container py-4 space-y-1">
       {nav.map((item) => (
         item.children ? (
-          <details class="group border-b border-ink-800 last:border-0">
+          <details class="group border-b border-white/10 last:border-0">
             <summary class="flex items-center justify-between py-3 font-medium text-white cursor-pointer list-none">
               <a href={item.href} class="hover:text-brand-primary-100">{item.label}</a>
               <svg class="w-5 h-5 text-ink-400 transition-transform group-open:rotate-180" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>
@@ -116,7 +116,7 @@ const nav: NavItem[] = [
             </div>
           </details>
         ) : (
-          <a href={item.href} class="block py-3 font-medium text-white hover:text-brand-primary-100 border-b border-ink-800 last:border-0">{item.label}</a>
+          <a href={item.href} class="block py-3 font-medium text-white hover:text-brand-primary-100 border-b border-white/10 last:border-0">{item.label}</a>
         )
       ))}
       <div class="pt-4 flex flex-col gap-3">

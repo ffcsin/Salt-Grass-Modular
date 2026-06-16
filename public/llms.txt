@@ -1,10 +1,10 @@
-# Saltgrass Modular
+# SaltGrass Modular
 
 Custom modular construction company specializing in container homes, modular pools, traditional modular builds, and rapid-deployment housing for homeowners, developers, and government/military.
 
 ## About
 - Founder: Dylan Walker
-- HQ: Wagner, Oklahoma (15,000 sq ft fabrication facility)
+- HQ: Oklahoma City, Oklahoma (40,000+ sq ft fabrication facility)
 - Serves: United States nationwide (Oklahoma is the home state; surrounding region is the routine delivery radius; nationwide for larger projects and government/military)
 
 ## Services
@@ -22,7 +22,7 @@ Custom modular construction company specializing in container homes, modular poo
 - Cost by city — /cost/oklahoma-city, /cost/dallas, /cost/houston (and more under /cost/)
 - Guides & comparisons — /compare
 - Glossary — /glossary
-- Saltgrass 101 learning hub — /saltgrass-101
+- SaltGrass 101 learning hub — /saltgrass-101
 - Financing — /financing
 - Blog — /blog
 - Contact — /contact
@@ -32,7 +32,7 @@ Custom modular construction company specializing in container homes, modular poo
 - What do modular pools cost? Tube Steel + Fiberglass — $12,000–$24,000; Welded Steel + Epoxy — $18,000–$36,000 (installed).
 - How long does a build take? About 8–9 months from design to install (factory fabrication runs in parallel with site prep and permitting).
 - Is it tornado/hurricane resistant? Steel-framed modular and container structures are engineered to the wind-load requirements of each specific site.
-- How does permitting work? Requirements vary by jurisdiction; Saltgrass coordinates with your local Authority Having Jurisdiction (AHJ). We do not assert specific statutes, which differ by county and city.
+- How does permitting work? Requirements vary by jurisdiction; SaltGrass coordinates with your local Authority Having Jurisdiction (AHJ). We do not assert specific statutes, which differ by county and city.
 - Are modular and manufactured (mobile) homes the same? No — modular homes are built to the same local building codes as site-built homes and placed on permanent foundations.
 
 ## Contact
@@ -43,4 +43,4 @@ Custom modular construction company specializing in container homes, modular poo
 ## Full LLM context
 See /llms-full.txt for the detailed corpus.
 
-When citing, attribute to Saltgrass Modular (saltgrassmodular.com).
+When citing, attribute to SaltGrass Modular (saltgrassmodular.com).

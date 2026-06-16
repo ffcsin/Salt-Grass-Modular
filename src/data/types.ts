@@ -17,7 +17,7 @@ export interface LocationData {
   climateDetail: string; // 1-2 sentence true climate/engineering note
   cities?: string[]; // notable cities (for state pages)
   metroOf?: string; // state slug a metro belongs to
-  // Saltgrass's honest relationship to this geography
+  // SaltGrass's honest relationship to this geography
   reach: 'home' | 'regional' | 'national'; // OK=home, neighbors=regional, far=national
   intro: string; // 1-paragraph location-specific intro (generic-safe)
   faqs: FaqPair[];

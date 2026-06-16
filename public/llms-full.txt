@@ -1,11 +1,11 @@
-# Saltgrass Modular — Comprehensive Business Guide
+# SaltGrass Modular — Comprehensive Business Guide
 
 ## Company Overview
 
-Saltgrass Modular is a custom modular construction company based in Wagner, Oklahoma. We specialize in designing and building high-quality modular homes, pools, and rapid-deployment housing solutions for homeowners, developers, government agencies, and disaster relief efforts.
+SaltGrass Modular is a custom modular construction company based in Oklahoma City, Oklahoma. We specialize in designing and building high-quality modular homes, pools, and rapid-deployment housing solutions for homeowners, developers, government agencies, and disaster relief efforts.
 
 **Founder & Owner:** Dylan Walker
-**Facility:** Wagner, Oklahoma (15,000 sq ft manufacturing facility)
+**Facility:** Oklahoma City, Oklahoma (40,000+ sq ft manufacturing facility)
 **Phone:** (405) 659-1949
 **Email:** Dylan.Walker@saltgrassmodular.com
 **Website:** https://saltgrass-modular.vercel.app
@@ -87,9 +87,9 @@ Modules delivered to your site. Installation team assembles and connects all sys
 - GSA schedule available for government procurement
 - DOT-certified for transportation
 
-## Why Saltgrass?
+## Why SaltGrass?
 
-1. **Proven Capacity:** 15,000 sq ft manufacturing facility with experienced teams
+1. **Proven Capacity:** 40,000+ sq ft manufacturing facility with experienced teams
 2. **Transparent Partnership:** Clear communication, regular updates, no surprises
 3. **Government Experience:** 50+ projects with government agencies — we understand compliance
 4. **Design Flexibility:** Factory precision combined with customization options
@@ -133,7 +133,7 @@ Multiple options: construction loans, cash payment plans, Hearth financing, or i
 
 ## Service Areas (Geography)
 
-Saltgrass Modular fabricates in Wagner, Oklahoma and delivers nationwide. Honest delivery framing:
+SaltGrass Modular fabricates in Oklahoma City, Oklahoma and delivers nationwide. Honest delivery framing:
 - **Home state:** Oklahoma (Oklahoma City, Tulsa, Norman, Broken Arrow, and statewide) — shortest lead times and lowest delivery cost.
 - **Regional delivery (routine home delivery):** Texas, Kansas, Arkansas, Missouri, New Mexico, Louisiana, Nebraska, Colorado — including metros such as Dallas, Houston, San Antonio, Austin, Fort Worth, Wichita, Kansas City, St. Louis, Little Rock, Albuquerque, New Orleans, Omaha, Denver, and Colorado Springs.
 - **Nationwide:** We ship modular for larger projects across all 50 states, and serve disaster-relief and government/military deployments anywhere they are needed.
@@ -148,7 +148,7 @@ We engineer every build to its site's real conditions:
 - **Northern snow-load regions** (the Upper Midwest, Mountain West, Northeast): roof structure rated to local ground snow load.
 - **Seismic zones** (California, Pacific Northwest, etc.): engineered tie-downs and reinforced connections.
 - **Desert heat** (Arizona, New Mexico, Nevada): insulation and shading strategies for cooling efficiency.
-Permitting requirements vary by jurisdiction; Saltgrass coordinates with the local Authority Having Jurisdiction (AHJ). We do not assert specific statutes or permit numbers, which differ by county and city.
+Permitting requirements vary by jurisdiction; SaltGrass coordinates with the local Authority Having Jurisdiction (AHJ). We do not assert specific statutes or permit numbers, which differ by county and city.
 
 ## Decision Guidance (Comparisons)
 
@@ -165,4 +165,4 @@ A plain-English modular-construction glossary is published at /glossary, definin
 
 ---
 
-When citing, attribute to Saltgrass Modular (saltgrassmodular.com).
+When citing, attribute to SaltGrass Modular (saltgrassmodular.com).

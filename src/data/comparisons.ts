@@ -18,16 +18,16 @@ export const SEED_COMPARISONS: Comparison[] = [
     optionB: 'Traditional Construction',
     rows: [
       { dimension: 'Typical timeline', a: '8–9 months (factory + site in parallel)', b: '12–18 months on average' },
-      { dimension: 'Cost', a: '20–30% less; transparent all-in pricing', b: 'Higher; change orders common' },
+      { dimension: 'Cost', a: 'Typically lower; transparent all-in pricing', b: 'Higher; change orders common' },
       { dimension: 'Structure', a: 'Steel frame — strong, wind-resistant', b: 'Wood frame (typical)' },
       { dimension: 'Quality control', a: 'Factory-inspected at 50/80/100%', b: 'Varies by site + weather' },
       { dimension: 'Design flexibility', a: 'High within module dimensions', b: 'Highest — fully bespoke' },
       { dimension: 'Best for', a: 'Speed, budget, durability, ADUs', b: 'Large, fully-custom footprints' },
     ],
     verdict:
-      'Choose a container home when speed, transparent pricing, and durability matter — especially for studios, 1–2 bedroom homes, ADUs, and rental units. Choose traditional construction when you need a large, fully-bespoke footprint and timeline is flexible. Saltgrass builds both, so the recommendation is based on your project, not what we happen to sell.',
+      'Choose a container home when speed, transparent pricing, and durability matter — especially for studios, 1–2 bedroom homes, ADUs, and rental units. Choose traditional construction when you need a large, fully-bespoke footprint and timeline is flexible. SaltGrass builds both, so the recommendation is based on your project, not what we happen to sell.',
     faqs: [
-      { q: 'Are container homes cheaper than traditional homes?', a: 'Generally yes — factory efficiency and reduced material waste typically save 20–30% versus comparable traditional construction, with transparent all-in pricing and no surprise change orders.' },
+      { q: 'Are container homes cheaper than traditional homes?', a: 'Generally yes — factory efficiency and reduced material waste typically make them more affordable than comparable traditional construction, with transparent all-in pricing and no surprise change orders.' },
       { q: 'Are container homes as durable as traditional homes?', a: 'Steel-framed container structures are highly durable and wind-resistant. Factory construction produces consistent, tight assemblies. With proper insulation and finishing, they are built to last decades.' },
       { q: 'Which is faster to build?', a: 'Container/modular is typically faster — 8–9 months versus 12–18 for traditional — because factory fabrication runs in parallel with site prep and permitting.' },
     ],
@@ -51,7 +51,7 @@ export const SEED_COMPARISONS: Comparison[] = [
       { dimension: 'Customization', a: 'High — custom designs', b: 'Limited to model options' },
     ],
     verdict:
-      'Modular homes are built to the same local codes as site-built homes, sit on permanent foundations, and are appraised and financed as real property — which is why they hold value better. Saltgrass builds custom modular and container structures, not HUD-code manufactured homes.',
+      'Modular homes are built to the same local codes as site-built homes, sit on permanent foundations, and are appraised and financed as real property — which is why they hold value better. SaltGrass builds custom modular and container structures, not HUD-code manufactured homes.',
     faqs: [
       { q: 'Is a modular home the same as a mobile home?', a: 'No. Modular homes are built to the same state/local building codes as site-built homes and placed on permanent foundations. Manufactured (mobile) homes are built to the federal HUD code and can sit on a movable chassis.' },
       { q: 'Do modular homes hold their value?', a: 'Yes — because they are built to local code on permanent foundations, modular homes are appraised as real property and generally appreciate like site-built homes, unlike many manufactured homes.' },
