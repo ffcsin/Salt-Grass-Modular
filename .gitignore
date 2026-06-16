@@ -31,3 +31,6 @@ Thumbs.db
 .astro/
 .vercel
 .env*.local
+
+# raw source images (kept local for re-processing; optimized webp live in public/img/projects)
+source-images/

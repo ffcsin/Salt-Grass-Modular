@@ -16,7 +16,7 @@ const projects = [
     client: 'Young professional',
     description: 'Custom-designed luxury container home inspired by high-end hotel aesthetics. Premium finishes throughout, master suite with spa bath, gourmet kitchen.',
     testimonial: '"Dylan listened to every detail of my vision and delivered a home that exceeded my expectations. Beautiful, thoughtful, and on time."',
-    image: 'gradient-to-br from-blue-400 to-blue-600',
+    image: '/img/projects/traditional-modular-home-atlanta-georgia.webp',
     details: [
       { label: 'Beds', value: '1' },
       { label: 'Baths', value: '1' },
@@ -36,7 +36,7 @@ const projects = [
     client: 'Homeowner expansion',
     description: 'Accessory dwelling unit added to family property. Modern one-bedroom rental unit. Designed to blend with existing home architecture while maintaining independence.',
     testimonial: '"The new ADU is beautiful and rents immediately. SaltGrass made the whole process stress-free."',
-    image: 'gradient-to-br from-green-400 to-green-600',
+    image: '/img/projects/1280-sf-container-home-wagoner-oklahoma-construction-3.webp',
     details: [
       { label: 'Beds', value: '1' },
       { label: 'Baths', value: '1' },
@@ -56,7 +56,7 @@ const projects = [
     client: 'Real estate investor',
     description: 'Intimate studio rental in mountain setting. Perfect for weekend getaways and short-term rentals. Mountain views, modern design, private entrance.',
     testimonial: '"Our rental is booked solid. Guests love the authentic container home experience combined with luxury finishes."',
-    image: 'gradient-to-br from-amber-400 to-amber-600',
+    image: '/img/projects/640-sf-container-home-alamosa-colorado-exterior-2.webp',
     details: [
       { label: 'Beds', value: '1 (Studio)' },
       { label: 'Baths', value: '1' },
@@ -76,7 +76,7 @@ const projects = [
     client: 'Family homeowner',
     description: 'Tube steel + fiberglass family pool with heating system and automatic cover. Transforms backyard into entertainment space. Professional landscaping and deck surround.',
     testimonial: '"Our whole neighborhood envies this pool. Installation was fast and professional. Already planning next summer parties!"',
-    image: 'gradient-to-br from-cyan-400 to-cyan-600',
+    image: '/img/projects/tube-steel-modular-pool-fiberglass-fabrication.webp',
     details: [
       { label: 'Size', value: '20\' x 40\'' },
       { label: 'Capacity', value: '2,800 gal' },
@@ -96,7 +96,7 @@ const projects = [
     client: 'High-end homeowner',
     description: 'Welded steel + epoxy liner premium pool designed for entertaining. Swim lanes, deep end, integrated lighting, automation system, professional deck and landscaping.',
     testimonial: '"This pool looks like it belongs at a resort. The quality is incredible and maintenance is minimal. Worth every penny."',
-    image: 'gradient-to-br from-purple-400 to-purple-600',
+    image: '/img/projects/shipping-container-pool-epoxy-liner-two-20ft-containers-3.webp',
     details: [
       { label: 'Size', value: '30\' x 60\'' },
       { label: 'Capacity', value: '6,750+ gal' },
@@ -116,7 +116,7 @@ const projects = [
     client: 'Residential developer',
     description: 'Large-scale modular housing development. 12 identical units (640 SF each) with phased delivery and installation. All units rented within 30 days of completion.',
     testimonial: '"SaltGrass delivered exactly what we needed: predictable timeline, transparent pricing, and zero quality issues. Perfect partner for modular development."',
-    image: 'gradient-to-br from-indigo-400 to-indigo-600',
+    image: '/img/projects/3400-sf-container-home-broken-bow-oklahoma-construction.webp',
     details: [
       { label: 'Units', value: '12' },
       { label: 'Each Size', value: '640 SF' },
@@ -142,7 +142,7 @@ const categories = [
     eyebrow="Our Work"
     headline="Completed Projects"
     subhead="Real homes. Real clients. Real results. From single residences to multi-unit developments and luxury pools."
-    image="/img/projects-hero.jpg"
+    image="/img/projects/640-sf-container-home-alamosa-colorado-exterior-2.webp"
   />
 
   <!-- Project Gallery -->
@@ -172,7 +172,7 @@ const categories = [
         {projects.map(project => (
           <div class={`project-card bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition`} data-category={project.category}>
             {/* Image */}
-            <div class={`bg-gradient-to-br ${project.image} h-48`}></div>
+            <img src={project.image} alt={`${project.name} — ${project.subtitle}`} loading="lazy" class="h-48 w-full object-cover" />
 
             {/* Content */}
             <div class="p-6">
