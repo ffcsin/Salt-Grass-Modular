@@ -4,3 +4,5 @@
 .session-edits.json
 .session-reads.json
 .self-critique-blocks.json
+
+.deep/
