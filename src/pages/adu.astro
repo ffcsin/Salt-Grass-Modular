@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../components/layout/BaseLayout.astro';
+import Hero from '../components/sections/Hero.astro';
+import AduCalculator from '../components/sections/AduCalculator.astro';
+import CtaBanner from '../components/sections/CtaBanner.astro';
+import { faqSchema } from '../lib/seo';
+
+const faqItems = [
+  {
+    q: 'What is an ADU, and why build one?',
+    a: 'An ADU (Accessory Dwelling Unit) is a fully separate living space — its own kitchen, bathroom, and entrance — added to a property you already own. Families build them for two reasons: to house a family member (aging parent, adult child, or caregiver) close by but independent, or to generate rental / Airbnb income. Because the land and primary mortgage already exist, an ADU creates a second household for a fraction of what a second home or a separate rental would cost.',
+  },
+  {
+    q: 'How much does a SaltGrass ADU cost?',
+    a: 'Our modular ADUs start around $75,000 for a 320 SF studio, $105,000 for a 640 SF 1-bedroom, and $155,000 for a 960 SF 2-bedroom — all-in (fabrication, delivery, and installation). Final pricing depends on finishes, site conditions, and utility tie-ins. Factory construction keeps the cost and timeline predictable versus a stick-built addition.',
+  },
+  {
+    q: 'How does an ADU pay for itself through rent?',
+    a: 'A long-term rental ADU typically earns $900–$1,800/month depending on your market; short-term (Airbnb) can run higher with more management. Use the calculator on this page to model your exact numbers — rent minus the loan payment is your monthly cash flow, and applying the rent to principal can pay the build off years early. ADUs also add roughly 20–30% to property value (per FHFA research), so you build equity on top of the income.',
+  },
+  {
+    q: 'Is an ADU a good option for aging parents?',
+    a: 'It is one of the most-requested use cases we see. An ADU lets a parent live on the family property with full independence — their own kitchen, bath, and entrance — while family is steps away for daily check-ins and emergencies. Compared to assisted living (a national average of roughly $5,000–$6,000/month), a one-time ADU build pays for itself in just a few years, keeps the family together, and you still own the asset afterward. We design these units accessible from day one (single-level, no-step entry, wider doorways, walk-in shower).',
+  },
+  {
+    q: 'Can the ADU become a rental later if my family member moves out?',
+    a: 'Yes — every SaltGrass ADU is built as a fully code-compliant, rental-ready unit from day one (separate kitchen, bath, and entrance). When an aging parent transitions or an adult child buys their own place, the ADU converts to a long-term or short-term rental with no modifications, generating income that often covers the original build financing.',
+  },
+  {
+    q: 'Are ADUs allowed where I live?',
+    a: 'ADU rules vary by city and state, and many states have recently expanded ADU rights to address housing shortages. We build and deliver across the USA and help you understand your local requirements (size limits, setbacks, parking, utility connections) before you commit. The Feasibility step confirms what your specific lot and jurisdiction allow.',
+  },
+];
+
+const useCases = [
+  {
+    title: 'Aging Parents Moving In',
+    icon: '👵',
+    body: 'Keep Mom or Dad close without sending them to a facility. Full independence — their own kitchen, bath, and entrance — with family steps away. A modular ADU pays for itself in a few years versus assisted living, and you keep the asset.',
+    detail: 'We design these accessible from day one: single-level layout, no-step entry, 32"+ doorways, walk-in shower with grab bars, accessible counter heights. Retrofitting later costs 2–3×.',
+  },
+  {
+    title: 'Adult Children Building Independence',
+    icon: '🎓',
+    body: 'A working adult child who can\'t yet afford their own place gets a real address and full privacy without consuming half their paycheck — while they save for a down payment.',
+    detail: 'When they move out, the unit becomes a rental that covers its own financing and adds 20–30% to your property value — it pays for itself twice.',
+  },
+  {
+    title: 'Live-In Caregiver',
+    icon: '🤝',
+    body: 'House a live-in caregiver for an elderly or disabled family member in their own dignified space. Privacy dramatically improves caregiver retention and quality of care versus a spare bedroom.',
+    detail: 'Design priorities: a separate entrance, sound insulation, independent climate control, and a dedicated parking spot.',
+  },
+];
+---
+
+<BaseLayout
+  title="ADUs, Rental Income & Multi-Generational Living"
+  description="Build a modular ADU to house aging parents, adult children, or a caregiver — or to generate rental income. Use our ADU earnings calculator to see how rent pays off your SaltGrass build."
+  keywords="ADU, accessory dwelling unit, multi-generational living, in-law suite, ADU for aging parents, rental income ADU, ADU calculator, modular ADU, container home ADU"
+  schemas={[faqSchema(faqItems)]}
+  breadcrumbs={[{ name: 'Home', url: '/' }, { name: 'ADUs & Rental Income', url: '/adu' }]}
+>
+  <Hero
+    eyebrow="ADUs · Rental Income · Multi-Gen Living"
+    headline="One Property, Two Households"
+    subhead="A modular ADU lets you house aging parents, adult children, or a caregiver — close enough for family, separate enough for independence — or rent it out for income that pays off the build. Run your numbers below."
+    primaryCta={{ label: 'Calculate Your Earnings', href: '#calculator' }}
+    secondaryCta={{ label: 'Request a Quote', href: '/contact', dataAction: 'quote-modal' }}
+    image="/img/projects/640-sf-container-home-alamosa-colorado-exterior.webp"
+  />
+
+  <!-- Quick answer -->
+  <section class="py-section-y-sm bg-brand-primary-50">
+    <div class="container">
+      <div class="max-w-4xl mx-auto flex items-start gap-3">
+        <div class="text-brand-primary text-2xl flex-shrink-0 mt-1">⚡</div>
+        <div>
+          <p class="text-xs font-bold text-brand-primary mb-1 uppercase tracking-wider">Quick Answer</p>
+          <p class="text-lg text-ink-800 leading-relaxed">
+            An ADU is the most cost-effective way to house <strong>aging parents, adult children, or a live-in caregiver</strong> on property you already own — or to earn <strong>$900–$1,800/month</strong> in rent. A SaltGrass modular ADU runs <strong>$75K–$155K</strong> all-in versus roughly $5,000–$6,000/month for assisted living or $1,400–$2,000/month to rent separately. Built rental-ready from day one, every unit can convert to income later and adds ~20–30% to property value.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-gen framing -->
+  <section class="py-section-y">
+    <div class="container max-w-4xl">
+      <h2 class="text-4xl font-bold text-ink-900 mb-6">Housing Costs Made This a Family Problem</h2>
+      <p class="text-lg text-ink-700 mb-4 leading-relaxed">
+        Home prices and rents have climbed faster than wages across the country. Buying a second home isn't realistic for most families, assisted living runs thousands a month, and a separate rental can eat half of a young worker's paycheck. So aging parents stay alone in homes they can't maintain, and adult children move back into childhood bedrooms.
+      </p>
+      <p class="text-lg text-ink-700 mb-10 leading-relaxed">
+        An ADU on your existing property changes the math. The mortgage already exists. The land is paid for. Adding a fully separate 320–960 SF modular unit creates a second household for a fraction of what buying or renting separately would cost — and SaltGrass builds it in the factory, so the cost and timeline stay predictable.
+      </p>
+
+      <h2 class="text-3xl font-bold text-ink-900 mb-8">Three Ways Families Use a SaltGrass ADU</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {useCases.map((u) => (
+          <div class="bg-white border border-ink-200 rounded-2xl p-6 shadow-soft">
+            <div class="text-4xl mb-3">{u.icon}</div>
+            <h3 class="text-xl font-bold text-ink-900 mb-2">{u.title}</h3>
+            <p class="text-ink-700 mb-3">{u.body}</p>
+            <p class="text-sm text-ink-600">{u.detail}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section id="calculator" class="py-section-y bg-ink-50 scroll-mt-20">
+    <div class="container max-w-4xl">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-bold text-ink-900 mb-3">Run the Numbers on Your ADU</h2>
+        <p class="text-lg text-ink-700 max-w-2xl mx-auto">See how rental income offsets — or fully pays off — your build. Tap a model to start, then adjust to match your market.</p>
+      </div>
+      <AduCalculator />
+    </div>
+  </section>
+
+  <!-- Cost comparison -->
+  <section class="py-section-y">
+    <div class="container max-w-4xl">
+      <h2 class="text-3xl font-bold text-ink-900 mb-6">How an ADU Compares</h2>
+      <div class="overflow-x-auto mb-4">
+        <table class="w-full text-sm bg-white rounded-2xl overflow-hidden shadow-soft">
+          <thead class="bg-brand-primary text-white">
+            <tr>
+              <th class="p-3 text-left">Option</th>
+              <th class="p-3 text-right">Upfront</th>
+              <th class="p-3 text-right">Ongoing</th>
+              <th class="p-3 text-left">10-Year Picture</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-ink-200">
+            <tr><td class="p-3 font-medium text-ink-900">SaltGrass ADU for a family member</td><td class="p-3 text-right text-ink-700">$75K–$155K</td><td class="p-3 text-right text-ink-700">~$150–$250/mo utilities</td><td class="p-3 text-emerald-700 font-medium">Asset retained + ~20–30% value lift</td></tr>
+            <tr class="bg-ink-50"><td class="p-3 font-medium text-ink-900">Assisted living (national avg)</td><td class="p-3 text-right text-ink-700">$0</td><td class="p-3 text-right text-ink-700">~$5,000–$6,000/mo</td><td class="p-3 text-red-700 font-medium">$600K+ sunk cost</td></tr>
+            <tr><td class="p-3 font-medium text-ink-900">Family member rents separately</td><td class="p-3 text-right text-ink-700">deposit</td><td class="p-3 text-right text-ink-700">~$1,400–$2,000/mo</td><td class="p-3 text-red-700 font-medium">$170K–$240K sunk cost</td></tr>
+            <tr class="bg-ink-50"><td class="p-3 font-medium text-ink-900">SaltGrass ADU as a rental</td><td class="p-3 text-right text-ink-700">$75K–$155K</td><td class="p-3 text-right text-emerald-700">earns $900–$1,800/mo</td><td class="p-3 text-emerald-700 font-medium">Often pays off the build + adds value</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm text-ink-500 italic">National averages for comparison; assisted-living and rent figures vary by region. "Asset retained" means the ADU is still on your property at year 10, adding value and able to generate rental income. ADU rules vary by jurisdiction — we confirm what your lot allows during Feasibility.</p>
+    </div>
+  </section>
+
+  <!-- How we design multi-gen ADUs -->
+  <section class="py-section-y bg-ink-50">
+    <div class="container max-w-4xl">
+      <h2 class="text-3xl font-bold text-ink-900 mb-6">How We Design ADUs for Family</h2>
+      <p class="text-lg text-ink-700 mb-6">An ADU built for a loved one has different priorities than one built purely for rental. Our defaults for multi-generational projects:</p>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {[
+          ['Accessibility first', 'Single-level, no-step entry, 32"+ doorways, walk-in shower with grab bars, accessible counter heights — built in from day one.'],
+          ['A real, separate entrance', 'Your family member has their own door and mailing address — dignity matters, not a basement room.'],
+          ['Sound insulation & independent climate', 'Privacy between the homes and a mini-split so each household sets its own temperature.'],
+          ['Rental-ready from day one', 'Fully code-compliant as a separate unit, so it converts to income the day a family member moves on — no rework.'],
+        ].map(([t, d]) => (
+          <li class="bg-white border border-ink-200 rounded-xl p-5">
+            <p class="font-bold text-ink-900 mb-1">✓ {t}</p>
+            <p class="text-sm text-ink-700">{d}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-section-y">
+    <div class="container max-w-3xl">
+      <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">ADU & Multi-Gen FAQs</h2>
+      <div class="space-y-6">
+        {faqItems.map((item) => (
+          <div class="bg-white border border-ink-200 rounded-xl p-6">
+            <h3 class="font-bold text-ink-900 mb-3">{item.q}</h3>
+            <p class="text-ink-700">{item.a}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBanner
+    headline="Thinking About an ADU for Your Family?"
+    subhead="Tell us who'll live in it and where — we'll help you size it, price it, and run the rental numbers."
+  />
+</BaseLayout>

@@ -1,0 +1,261 @@
+---
+// ADU Earnings Calculator — models rental income against build + financing cost.
+// Ported from the Twin Falls ADU Guys ROICalculator (React) to an Astro
+// vanilla-JS island, rebranded to SaltGrass crimson/navy. Pure amortization
+// math + a rent-applied-to-principal payoff simulation. No deps, no framework.
+//
+// Quick-fill chips seed the build cost from SaltGrass's real model pricing so a
+// homeowner can go from "what does it cost" to "what does it earn" in one place.
+---
+
+<div id="adu-calc" class="rounded-2xl overflow-hidden shadow-xl border border-ink-200 bg-white">
+  <div class="bg-gradient-to-r from-brand-primary to-brand-secondary px-6 py-8 lg:px-10 text-center">
+    <h2 class="text-3xl lg:text-4xl font-bold text-white mb-2">ADU Earnings Calculator</h2>
+    <p class="text-white/85 text-lg max-w-2xl mx-auto">Plug in your numbers and see how rental income pays off a SaltGrass ADU.</p>
+  </div>
+
+  <div class="px-6 py-8 lg:px-10">
+    <!-- Model quick-fill -->
+    <div class="mb-6">
+      <p class="text-xs font-semibold text-ink-600 uppercase tracking-wide mb-2">Start from a SaltGrass model</p>
+      <div class="flex flex-wrap gap-2">
+        <button type="button" class="adu-fill rounded-full border border-ink-300 px-4 py-1.5 text-sm font-semibold text-ink-700 hover:border-brand-primary hover:text-brand-primary transition" data-cost="75000" data-rent="900">320 SF Studio · $75K</button>
+        <button type="button" class="adu-fill rounded-full border border-ink-300 px-4 py-1.5 text-sm font-semibold text-ink-700 hover:border-brand-primary hover:text-brand-primary transition" data-cost="105000" data-rent="1200">640 SF 1-Bed · $105K</button>
+        <button type="button" class="adu-fill rounded-full border border-ink-300 px-4 py-1.5 text-sm font-semibold text-ink-700 hover:border-brand-primary hover:text-brand-primary transition" data-cost="155000" data-rent="1500">960 SF 2-Bed · $155K</button>
+      </div>
+    </div>
+
+    <!-- Inputs -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+      <label class="block">
+        <span class="block text-sm font-semibold text-ink-700 mb-1">Your Home Value</span>
+        <div class="relative">
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-ink-400 font-semibold">$</span>
+          <input type="number" id="adu-home" inputmode="numeric" placeholder="400,000" class="w-full pl-8 pr-4 py-3 border-2 border-ink-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-lg font-semibold" />
+        </div>
+      </label>
+      <label class="block">
+        <span class="block text-sm font-semibold text-ink-700 mb-1">ADU Build Cost</span>
+        <div class="relative">
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-ink-400 font-semibold">$</span>
+          <input type="number" id="adu-cost" inputmode="numeric" placeholder="155,000" class="w-full pl-8 pr-4 py-3 border-2 border-ink-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-lg font-semibold" />
+        </div>
+      </label>
+      <label class="block">
+        <span class="block text-sm font-semibold text-ink-700 mb-1">Monthly Rent / Airbnb</span>
+        <div class="relative">
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-ink-400 font-semibold">$</span>
+          <input type="number" id="adu-rent" inputmode="numeric" placeholder="1,500" class="w-full pl-8 pr-4 py-3 border-2 border-ink-200 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-lg font-semibold" />
+        </div>
+      </label>
+    </div>
+
+    <!-- Rate + Term -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 bg-ink-50 rounded-xl p-5">
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-sm font-semibold text-ink-700">Interest Rate</span>
+          <span id="adu-rate-badge" class="bg-brand-primary text-white text-sm font-bold px-3 py-1 rounded-full">9%</span>
+        </div>
+        <input type="range" id="adu-rate" min="6" max="12" step="0.5" value="9" class="w-full h-2 bg-brand-primary-100 rounded-lg appearance-none cursor-pointer accent-brand-primary" />
+        <div class="flex justify-between mt-1 text-xs text-ink-400"><span>6%</span><span>8%</span><span>10%</span><span>12%</span></div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between mb-2">
+          <span class="text-sm font-semibold text-ink-700">Loan Term</span>
+          <span id="adu-term-badge" class="bg-brand-primary text-white text-sm font-bold px-3 py-1 rounded-full">25 yr</span>
+        </div>
+        <input type="range" id="adu-term" min="10" max="30" step="1" value="25" class="w-full h-2 bg-brand-primary-100 rounded-lg appearance-none cursor-pointer accent-brand-primary" />
+        <div class="flex justify-between mt-1 text-xs text-ink-400"><span>10</span><span>20</span><span>30 yr</span></div>
+      </div>
+    </div>
+
+    <!-- Empty state -->
+    <div id="adu-empty" class="bg-ink-50 rounded-xl p-10 text-center mb-6">
+      <div class="text-4xl mb-3">📈</div>
+      <p class="text-ink-600 text-lg font-medium mb-1">Ready to run the numbers?</p>
+      <p class="text-ink-400 text-sm">Enter your home value, ADU cost, and expected rent (or tap a model above).</p>
+    </div>
+
+    <!-- Results -->
+    <div id="adu-results" class="hidden">
+      <div class="bg-brand-primary-50 rounded-xl p-5 mb-6 text-center">
+        <p class="text-sm text-ink-600 mb-1">Your Required Monthly Payment</p>
+        <p class="text-4xl font-bold text-brand-primary"><span id="adu-payment">$0</span><span class="text-lg font-normal text-ink-500">/mo</span></p>
+        <p id="adu-payment-sub" class="text-sm text-ink-500 mt-1"></p>
+      </div>
+
+      <!-- Strategy toggle -->
+      <p class="text-center text-sm font-semibold text-ink-700 mb-3 uppercase tracking-wide">Choose your strategy</p>
+      <div class="grid grid-cols-2 gap-3 mb-6">
+        <button type="button" id="adu-tab-cash" class="adu-tab rounded-xl p-5 text-left border-2 border-emerald-500 bg-emerald-50">
+          <div class="text-2xl mb-2">💵</div>
+          <h3 class="font-bold text-lg mb-1 text-emerald-800">Pocket the Cash</h3>
+          <p class="text-sm text-emerald-700">Make the payment, keep the difference</p>
+          <p id="adu-cash-badge" class="text-xl font-bold mt-3 text-emerald-700">+$0/mo</p>
+        </button>
+        <button type="button" id="adu-tab-payoff" class="adu-tab rounded-xl p-5 text-left border-2 border-ink-200 bg-white">
+          <div class="text-2xl mb-2">⚡</div>
+          <h3 class="font-bold text-lg mb-1 text-ink-500">Pay Off Early</h3>
+          <p class="text-sm text-ink-400">Apply all rent to principal, own it faster</p>
+          <p id="adu-payoff-badge" class="text-xl font-bold mt-3 text-ink-400">—</p>
+        </button>
+      </div>
+
+      <!-- Cash-flow view -->
+      <div id="adu-view-cash" class="space-y-4 mb-6">
+        <div id="adu-cash-box" class="rounded-xl p-6 text-center bg-emerald-50 border-2 border-emerald-200">
+          <div class="flex items-center justify-center gap-3 flex-wrap mb-3">
+            <div class="text-center"><p class="text-xs text-ink-500 mb-1">Rent Income</p><p class="text-2xl font-bold text-brand-secondary" id="adu-rent-out">$0</p></div>
+            <span class="text-2xl text-ink-300 font-light">−</span>
+            <div class="text-center"><p class="text-xs text-ink-500 mb-1">Loan Payment</p><p class="text-2xl font-bold text-ink-600" id="adu-pay-out">$0</p></div>
+            <span class="text-2xl text-ink-300 font-light">=</span>
+            <div class="text-center"><p class="text-xs text-ink-500 mb-1" id="adu-cash-label">You Keep</p><p class="text-3xl font-bold text-emerald-700" id="adu-cash-out">$0<span class="text-lg">/mo</span></p></div>
+          </div>
+          <p class="text-sm text-ink-600" id="adu-cash-note"></p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div class="bg-ink-50 p-4 rounded-xl text-center"><p class="text-xs text-ink-500 mb-1">Annual Cash Flow</p><p class="text-xl font-bold text-emerald-700" id="adu-annual-cash">$0</p></div>
+          <div class="bg-ink-50 p-4 rounded-xl text-center"><p class="text-xs text-ink-500 mb-1">Annual Rent</p><p class="text-xl font-bold text-brand-secondary" id="adu-annual-rent">$0</p></div>
+          <div class="bg-ink-50 p-4 rounded-xl text-center"><p class="text-xs text-ink-500 mb-1">Property Value Boost</p><p class="text-xl font-bold text-brand-secondary" id="adu-pv-boost">$0</p><p class="text-xs text-ink-400">~25% (FHFA avg)</p></div>
+          <div class="bg-ink-50 p-4 rounded-xl text-center"><p class="text-xs text-ink-500 mb-1">New Property Value</p><p class="text-xl font-bold text-brand-secondary" id="adu-pv-new">$0</p></div>
+        </div>
+      </div>
+
+      <!-- Pay-off view -->
+      <div id="adu-view-payoff" class="hidden space-y-4 mb-6">
+        <div class="grid grid-cols-3 gap-3">
+          <div class="bg-brand-primary-50 rounded-xl p-4 text-center border-2 border-brand-primary-100"><p class="text-xs text-ink-500 mb-1">Paid Off In</p><p class="text-2xl font-bold text-brand-primary" id="adu-payoff-time">—</p></div>
+          <div class="bg-emerald-50 rounded-xl p-4 text-center border-2 border-emerald-200"><p class="text-xs text-ink-500 mb-1">Time Saved</p><p class="text-2xl font-bold text-emerald-700" id="adu-time-saved">—</p></div>
+          <div class="bg-emerald-50 rounded-xl p-4 text-center border-2 border-emerald-200"><p class="text-xs text-ink-500 mb-1">Interest Saved</p><p class="text-2xl font-bold text-emerald-700" id="adu-interest-saved">$0</p></div>
+        </div>
+        <div class="bg-brand-primary-50 rounded-xl p-5 text-center"><p class="text-sm text-ink-700" id="adu-payoff-note"></p></div>
+      </div>
+
+      <p class="text-xs text-ink-400 mb-5">* Principal &amp; interest at the selected rate and term. Property-value estimate uses the FHFA-cited 20–30% average lift for ADU properties. Excludes taxes, insurance, maintenance, and vacancy. Rents and ADU rules vary by market — we'll help you find the right numbers for your property.</p>
+
+      <div class="text-center">
+        <button type="button" data-action="quote-modal" class="btn-primary">Get a Custom ADU Quote for Your Property</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const root = document.getElementById('adu-calc');
+    if (!root) return;
+    const $ = (id) => document.getElementById(id);
+    const home = $('adu-home'), cost = $('adu-cost'), rent = $('adu-rent');
+    const rate = $('adu-rate'), term = $('adu-term');
+    let strategy = 'cashflow';
+
+    const fmt = (n) => '$' + Math.round(n).toLocaleString();
+    const fmtTime = (months) => {
+      const y = Math.floor(months / 12), m = months % 12;
+      if (y > 0 && m > 0) return `${y} yr ${m} mo`;
+      if (y > 0) return `${y} yr`;
+      return `${m} mo`;
+    };
+    const monthlyPayment = (p, annualRate, years) => {
+      const r = annualRate / 100 / 12, n = years * 12;
+      if (r === 0) return p / n;
+      return p * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+    };
+    const simulatePayoff = (p, annualRate, years, pay) => {
+      const r = annualRate / 100 / 12;
+      let bal = p, months = 0, interest = 0;
+      while (bal > 0.01 && months < years * 12 * 2) {
+        const i = bal * r; interest += i;
+        const principalPaid = Math.min(pay - i, bal);
+        if (principalPaid <= 0) break;
+        bal -= principalPaid; months++;
+      }
+      return { months, interest, paidOff: bal <= 0.01 };
+    };
+
+    function render() {
+      const hv = parseFloat(home.value) || 0;
+      const ac = parseFloat(cost.value) || 0;
+      const mr = parseFloat(rent.value) || 0;
+      const rt = parseFloat(rate.value), tm = parseInt(term.value, 10);
+      $('adu-rate-badge').textContent = rt + '%';
+      $('adu-term-badge').textContent = tm + ' yr';
+
+      if (!(hv > 0 && ac > 0 && mr > 0)) {
+        $('adu-empty').classList.remove('hidden');
+        $('adu-results').classList.add('hidden');
+        return;
+      }
+      $('adu-empty').classList.add('hidden');
+      $('adu-results').classList.remove('hidden');
+
+      const pay = monthlyPayment(ac, rt, tm);
+      const cashFlow = mr - pay;
+      const positive = cashFlow >= 0;
+      const pvBoost = hv * 0.25;
+
+      $('adu-payment').textContent = fmt(pay);
+      $('adu-payment-sub').textContent = `${tm} yr @ ${rt}% · ${fmt(ac)} loan`;
+
+      // cash-flow view
+      $('adu-rent-out').textContent = fmt(mr);
+      $('adu-pay-out').textContent = fmt(pay);
+      $('adu-cash-out').innerHTML = (positive ? '+' : '') + fmt(cashFlow) + '<span class="text-lg">/mo</span>';
+      $('adu-cash-label').textContent = positive ? 'You Keep' : 'Out of Pocket';
+      $('adu-cash-badge').textContent = (positive ? '+' : '') + fmt(cashFlow) + '/mo';
+      const cashBox = $('adu-cash-box');
+      cashBox.className = 'rounded-xl p-6 text-center ' + (positive ? 'bg-emerald-50 border-2 border-emerald-200' : 'bg-amber-50 border-2 border-amber-200');
+      $('adu-cash-out').className = 'text-3xl font-bold ' + (positive ? 'text-emerald-700' : 'text-amber-700');
+      $('adu-cash-note').textContent = positive
+        ? `Your tenant covers the full payment and you pocket ${fmt(cashFlow)} every month.`
+        : `Your tenant covers ${fmt(mr)} of your ${fmt(pay)} payment — only ${fmt(Math.abs(cashFlow))}/mo out of pocket.`;
+      $('adu-annual-cash').textContent = (cashFlow >= 0 ? '+' : '') + fmt(cashFlow * 12);
+      $('adu-annual-cash').className = 'text-xl font-bold ' + (cashFlow >= 0 ? 'text-emerald-700' : 'text-amber-700');
+      $('adu-annual-rent').textContent = fmt(mr * 12);
+      $('adu-pv-boost').textContent = '+' + fmt(pvBoost);
+      $('adu-pv-new').textContent = fmt(hv + pvBoost);
+
+      // pay-off-early view
+      const normal = simulatePayoff(ac, rt, tm, pay);
+      const accel = simulatePayoff(ac, rt, tm, mr);
+      const canAccel = mr > 0 && accel.paidOff && (normal.months - accel.months) > 0;
+      if (canAccel) {
+        const saved = normal.months - accel.months;
+        $('adu-payoff-badge').textContent = fmtTime(accel.months);
+        $('adu-payoff-time').textContent = fmtTime(accel.months);
+        $('adu-time-saved').textContent = fmtTime(saved);
+        $('adu-interest-saved').textContent = fmt(normal.interest - accel.interest);
+        $('adu-payoff-note').innerHTML = positive
+          ? `Apply all <strong>${fmt(mr)}/mo</strong> of rent to the loan and you own the ADU free and clear in <strong>${fmtTime(accel.months)}</strong> — then <strong>${fmt(mr)}/mo is pure income</strong>.`
+          : `Applying all <strong>${fmt(mr)}/mo</strong> of rent pays it off in <strong>${fmtTime(accel.months)}</strong> and saves <strong>${fmt(normal.interest - accel.interest)}</strong> in interest.`;
+      } else {
+        $('adu-payoff-badge').textContent = '—';
+        $('adu-payoff-time').textContent = '—';
+        $('adu-time-saved').textContent = '—';
+        $('adu-interest-saved').textContent = '—';
+        $('adu-payoff-note').textContent = `At ${fmt(mr)}/mo rent vs ${fmt(pay)}/mo payment there isn't extra to accelerate. Try a higher rent, lower rate, or shorter term.`;
+      }
+    }
+
+    function setStrategy(s) {
+      strategy = s;
+      const cash = s === 'cashflow';
+      $('adu-view-cash').classList.toggle('hidden', !cash);
+      $('adu-view-payoff').classList.toggle('hidden', cash);
+      $('adu-tab-cash').className = 'adu-tab rounded-xl p-5 text-left border-2 ' + (cash ? 'border-emerald-500 bg-emerald-50' : 'border-ink-200 bg-white');
+      $('adu-tab-payoff').className = 'adu-tab rounded-xl p-5 text-left border-2 ' + (!cash ? 'border-brand-primary bg-brand-primary-50' : 'border-ink-200 bg-white');
+    }
+
+    root.querySelectorAll('.adu-fill').forEach((b) => b.addEventListener('click', () => {
+      cost.value = b.getAttribute('data-cost');
+      if (!rent.value) rent.value = b.getAttribute('data-rent');
+      if (!home.value) home.value = '400000';
+      render();
+    }));
+    [home, cost, rent, rate, term].forEach((el) => el.addEventListener('input', render));
+    $('adu-tab-cash').addEventListener('click', () => setStrategy('cashflow'));
+    $('adu-tab-payoff').addEventListener('click', () => setStrategy('payoff'));
+    render();
+  })();
+</script>
