@@ -6,9 +6,10 @@ interface Props {
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string; dataAction?: string };
   image?: string;
+  showLogo?: boolean;
 }
 
-const { eyebrow, headline, subhead, primaryCta, secondaryCta, image = '/img/projects/640-sf-container-home-alamosa-colorado-exterior.webp' } = Astro.props;
+const { eyebrow, headline, subhead, primaryCta, secondaryCta, showLogo = false, image = '/img/projects/640-sf-container-home-alamosa-colorado-exterior.webp' } = Astro.props;
 ---
 
 <section class="py-section-y-lg relative overflow-hidden">
@@ -16,6 +17,9 @@ const { eyebrow, headline, subhead, primaryCta, secondaryCta, image = '/img/proj
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center">
       {/* Text content */}
       <div class="order-2 md:order-1">
+        {showLogo && (
+          <img src="/img/logo-saltgrass.webp" alt="SaltGrass Modular" width="200" height="200" class="h-20 w-auto mb-6" />
+        )}
         {eyebrow && (
           <span class="inline-block text-sm font-bold text-brand-primary uppercase tracking-wide mb-4">
             {eyebrow}

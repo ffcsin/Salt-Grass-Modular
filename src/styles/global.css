@@ -12,6 +12,18 @@
   h4 { @apply text-xl md:text-2xl font-semibold; }
   p  { @apply text-ink-700 leading-relaxed; }
   a  { @apply text-brand-primary hover:text-brand-primary-700 transition-colors; }
+  /* Crimson blocks (solid OR gradient) default headings and paragraphs to white.
+     The global dark heading-and-paragraph color above would otherwise render dark
+     text on crimson (low contrast). Specificity (0,1,1) beats the bare element rules
+     but stays below utilities, so explicit text-ink-100 / text-white still override. */
+  .bg-brand-primary h1, .bg-brand-primary h2, .bg-brand-primary h3,
+  .bg-brand-primary h4, .bg-brand-primary h5, .bg-brand-primary h6,
+  .bg-brand-primary p,
+  [class*="from-brand-primary"] h1, [class*="from-brand-primary"] h2, [class*="from-brand-primary"] h3,
+  [class*="from-brand-primary"] h4, [class*="from-brand-primary"] h5, [class*="from-brand-primary"] h6,
+  [class*="from-brand-primary"] p {
+    color: #fff;
+  }
   ::selection { @apply bg-brand-primary text-white; }
 
   :focus-visible { @apply outline-2 outline-offset-2 outline-brand-primary; }

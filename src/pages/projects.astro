@@ -170,12 +170,12 @@ const categories = [
       <!-- Projects Grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map(project => (
-          <div class={`project-card bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition`} data-category={project.category}>
+          <div class={`project-card bg-white rounded-2xl overflow-hidden shadow-soft hover:shadow-large transition flex flex-col`} data-category={project.category}>
             {/* Image */}
             <img src={project.image} alt={`${project.name} — ${project.subtitle}`} loading="lazy" class="h-48 w-full object-cover" />
 
             {/* Content */}
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-1">
               <p class="text-xs font-bold text-brand-primary uppercase tracking-wide mb-2">
                 {project.type}
               </p>
@@ -201,7 +201,7 @@ const categories = [
               </div>
 
               {/* CTA */}
-              <button class="w-full btn-secondary text-sm">See Details</button>
+              <button class="w-full btn-secondary text-sm mt-auto">See Details</button>
             </div>
           </div>
         ))}
