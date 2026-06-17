@@ -91,7 +91,7 @@ const nav: NavItem[] = [
 
     <div class="flex items-center gap-3">
       <a href={`tel:${phone}`} class="hidden xl:inline text-ink-200 hover:text-white font-medium transition-colors">{phone}</a>
-      <a href="/contact" class="hidden sm:inline-flex btn-primary !py-2.5">Get Quote</a>
+      <a href="/contact" data-action="quote-modal" class="hidden sm:inline-flex btn-primary !py-2.5">Get Quote</a>
       <button class="lg:hidden p-2 text-white" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav" data-mobile-menu-toggle>
         <svg class="menu-open w-6 h-6" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18" /></svg>
         <svg class="menu-close hidden w-6 h-6" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" /></svg>
@@ -121,7 +121,7 @@ const nav: NavItem[] = [
       ))}
       <div class="pt-4 flex flex-col gap-3">
         <a href={`tel:${phone}`} class="text-center text-ink-200 font-medium">{phone}</a>
-        <a href="/contact" class="btn-primary w-full">Get Quote</a>
+        <a href="/contact" data-action="quote-modal" class="btn-primary w-full">Get Quote</a>
       </div>
     </div>
   </nav>

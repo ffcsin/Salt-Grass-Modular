@@ -1,0 +1,48 @@
+---
+// Global "Request a Quote" modal — included once in BaseLayout so EVERY page
+// has it. Any element with data-action="quote-modal" opens it (event-delegated,
+// so dynamically-rendered triggers work too). Backdrop click / Escape / the ×
+// button close it.
+import QuoteRequestForm from '../forms/QuoteRequestForm.astro';
+---
+
+<div
+  id="quote-modal"
+  class="hidden fixed inset-0 z-[60] bg-black/60 flex items-start justify-center p-4 overflow-y-auto"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Request a quote"
+>
+  <div class="bg-white border border-ink-200 rounded-xl max-w-2xl w-full p-6 sm:p-8 my-8 shadow-xl">
+    <div class="flex justify-between items-center mb-6">
+      <h3 class="text-2xl font-bold text-ink-900">Get Your Free Quote</h3>
+      <button
+        type="button"
+        data-close-quote
+        class="text-ink-400 hover:text-ink-900 text-3xl leading-none"
+        aria-label="Close"
+      >×</button>
+    </div>
+    <QuoteRequestForm />
+  </div>
+</div>
+
+<script>
+  (function () {
+    const modal = document.getElementById('quote-modal');
+    if (!modal) return;
+    const open = () => { modal.classList.remove('hidden'); document.body.style.overflow = 'hidden'; };
+    const close = () => { modal.classList.add('hidden'); document.body.style.overflow = ''; };
+
+    document.addEventListener('click', (e) => {
+      const target = e.target as HTMLElement;
+      const trigger = target.closest('[data-action="quote-modal"]');
+      if (trigger) { e.preventDefault(); open(); return; }
+      if (target.closest('[data-close-quote]')) { e.preventDefault(); close(); return; }
+      if (target === modal) close(); // backdrop
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) close();
+    });
+  })();
+</script>

@@ -3,7 +3,7 @@ interface Props {
   eyebrow?: string;
   headline: string;
   subhead: string;
-  primaryCta?: { label: string; href: string };
+  primaryCta?: { label: string; href: string; dataAction?: string };
   secondaryCta?: { label: string; href: string; dataAction?: string };
   image?: string;
   showLogo?: boolean;
@@ -33,7 +33,7 @@ const { eyebrow, headline, subhead, primaryCta, secondaryCta, showLogo = false, 
         </p>
         <div class="flex flex-col sm:flex-row gap-4">
           {primaryCta && (
-            <a href={primaryCta.href} class="btn-primary text-center">
+            <a href={primaryCta.href} class="btn-primary text-center" data-action={primaryCta.dataAction}>
               {primaryCta.label}
             </a>
           )}

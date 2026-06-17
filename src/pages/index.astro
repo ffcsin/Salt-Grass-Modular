@@ -4,8 +4,6 @@ import Hero from '../components/sections/Hero.astro';
 import ServicesGrid from '../components/sections/ServicesGrid.astro';
 import StatsStrip from '../components/sections/StatsStrip.astro';
 import CtaBanner from '../components/sections/CtaBanner.astro';
-import QuoteRequestForm from '../components/forms/QuoteRequestForm.astro';
-import ConsultationForm from '../components/forms/ConsultationForm.astro';
 
 const heroImage = '/img/projects/640-sf-container-home-alamosa-colorado-exterior.webp';
 const heroHeadline = 'Custom Modular Homes Built Your Way';
@@ -42,62 +40,4 @@ const stats = [
     subhead="Get a free consultation and transparent quote."
   />
 
-  <!-- Quote Request Modal -->
-  <div id="quote-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-white border border-ink-200 rounded-xl max-w-2xl w-full p-8 my-8">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold text-ink-900">Get Your Free Quote</h3>
-        <button
-          type="button"
-          onclick="document.getElementById('quote-modal').classList.add('hidden')"
-          class="text-ink-400 hover:text-ink-900 text-2xl leading-none"
-          aria-label="Close"
-        >
-          ×
-        </button>
-      </div>
-
-      <QuoteRequestForm />
-    </div>
-  </div>
-
-  <!-- Consultation Modal -->
-  <div id="consultation-modal" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4 overflow-y-auto">
-    <div class="bg-white border border-ink-200 rounded-xl max-w-2xl w-full p-8 my-8">
-      <div class="flex justify-between items-center mb-6">
-        <h3 class="text-2xl font-bold text-ink-900">Book Your Consultation</h3>
-        <button
-          type="button"
-          onclick="document.getElementById('consultation-modal').classList.add('hidden')"
-          class="text-ink-400 hover:text-ink-900 text-2xl leading-none"
-          aria-label="Close"
-        >
-          ×
-        </button>
-      </div>
-
-      <ConsultationForm />
-    </div>
-  </div>
-
-  <script>
-    // Wire up modal triggers
-    const modals = ['quote-modal', 'consultation-modal'];
-
-    modals.forEach(modalId => {
-      document.querySelectorAll(`[data-action="${modalId}"]`).forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.preventDefault();
-          document.getElementById(modalId)?.classList.remove('hidden');
-        });
-      });
-
-      // Close modal on outside click
-      document.getElementById(modalId)?.addEventListener('click', (e) => {
-        if (e.target.id === modalId) {
-          e.target.classList.add('hidden');
-        }
-      });
-    });
-  </script>
 </BaseLayout>

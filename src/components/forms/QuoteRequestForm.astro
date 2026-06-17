@@ -1,219 +1,212 @@
 ---
+// SaltGrass Modular — Quote Request form.
+//
+// Submits to the LPAI v2 website-clients forms endpoint, which runs the full
+// 5-layer bot-protection envelope (ported from Phantom Retractable Screens):
+//   1. Cloudflare Turnstile  — opt-in; token forwarded as `turnstileToken`.
+//      Skipped when PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY is unset. The BE
+//      fails-OPEN when its secret is unset (turnstile.service.ts), so the form
+//      works without a key — the honeypot + time-trap + rate-limit +
+//      disposable-email legs still enforce.
+//   2. Honeypot `_hp_email` — hidden; the BE silent-drops if non-empty.
+//   3. Time-trap `_renderedAt` — set client-side on load; BE rejects submits
+//      under 2.5s from render (MIN_RENDER_TO_SUBMIT_MS).
+//   4. Redis rate-limit per (IP, formId, locationId)/hour — server-side.
+//   5. Disposable-email blocklist — server-side.
+//
+// Instance-safe: bound via querySelectorAll + per-form scoping (classes, not
+// ids) so it works both inside the global quote modal AND inline on /contact.
 const API_BASE = import.meta.env.PUBLIC_API_URL || 'https://lpai-monorepo-production.up.railway.app';
 const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID || 'plan_chNIQv7tfy09Ew_h1liV';
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY || '';
+
+const inputCls =
+  'w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary';
+const labelCls = 'block text-sm font-semibold text-ink-900 mb-2';
 ---
 
-<form id="quote-request-form" data-location-id={LOCATION_ID} class="space-y-4">
+<form data-location-id={LOCATION_ID} class="quote-request-form space-y-4">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div>
-      <label for="firstName" class="block text-sm font-semibold text-ink-900 mb-2">
-        First Name <span class="text-brand-primary">*</span>
-      </label>
-      <input
-        id="firstName"
-        name="firstName"
-        type="text"
-        placeholder="John"
-        required
-        class="btn-input w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-      />
-    </div>
-    <div>
-      <label for="lastName" class="block text-sm font-semibold text-ink-900 mb-2">
-        Last Name <span class="text-brand-primary">*</span>
-      </label>
-      <input
-        id="lastName"
-        name="lastName"
-        type="text"
-        placeholder="Smith"
-        required
-        class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-      />
-    </div>
+    <label class="block">
+      <span class={labelCls}>First Name <span class="text-brand-primary">*</span></span>
+      <input name="firstName" type="text" placeholder="John" required class={inputCls} />
+    </label>
+    <label class="block">
+      <span class={labelCls}>Last Name <span class="text-brand-primary">*</span></span>
+      <input name="lastName" type="text" placeholder="Smith" required class={inputCls} />
+    </label>
   </div>
 
-  <div>
-    <label for="email" class="block text-sm font-semibold text-ink-900 mb-2">
-      Email Address <span class="text-brand-primary">*</span>
-    </label>
-    <input
-      id="email"
-      name="email"
-      type="email"
-      placeholder="you@example.com"
-      required
-      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-    />
-  </div>
+  <label class="block">
+    <span class={labelCls}>Email Address <span class="text-brand-primary">*</span></span>
+    <input name="email" type="email" placeholder="you@example.com" required class={inputCls} />
+  </label>
 
-  <div>
-    <label for="phone" class="block text-sm font-semibold text-ink-900 mb-2">
-      Phone Number <span class="text-brand-primary">*</span>
-    </label>
-    <input
-      id="phone"
-      name="phone"
-      type="tel"
-      placeholder="(405) 555-0123"
-      required
-      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-    />
-  </div>
+  <label class="block">
+    <span class={labelCls}>Phone Number <span class="text-brand-primary">*</span></span>
+    <input name="phone" type="tel" placeholder="(405) 555-0123" required class={inputCls} />
+  </label>
 
-  <div>
-    <label for="projectType" class="block text-sm font-semibold text-ink-900 mb-2">
-      Project Type <span class="text-brand-primary">*</span>
-    </label>
-    <select
-      id="projectType"
-      name="projectType"
-      required
-      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-    >
+  <label class="block">
+    <span class={labelCls}>Project Type <span class="text-brand-primary">*</span></span>
+    <select name="projectType" required class={inputCls}>
       <option value="">Select a project type…</option>
       <option value="Container Home">Container Home</option>
       <option value="Traditional Build">Traditional Build</option>
       <option value="Modular Pool">Modular Pool</option>
+      <option value="Disaster Relief / Rapid Deployment">Disaster Relief / Rapid Deployment</option>
+      <option value="Developer / Government">Developer / Government</option>
       <option value="Other">Other</option>
     </select>
-  </div>
+  </label>
 
-  <div>
-    <label for="location" class="block text-sm font-semibold text-ink-900 mb-2">
-      Project Location <span class="text-brand-primary">*</span>
-    </label>
-    <input
-      id="location"
-      name="location"
-      type="text"
-      placeholder="Norman, OK"
-      required
-      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-    />
-  </div>
+  <label class="block">
+    <span class={labelCls}>Project Location <span class="text-brand-primary">*</span></span>
+    <input name="location" type="text" placeholder="Norman, OK" required class={inputCls} />
+  </label>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    <div>
-      <label for="budgetRange" class="block text-sm font-semibold text-ink-900 mb-2">
-        Budget Range <span class="text-brand-primary">*</span>
-      </label>
-      <select
-        id="budgetRange"
-        name="budgetRange"
-        required
-        class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-      >
+    <label class="block">
+      <span class={labelCls}>Budget Range</span>
+      <select name="budgetRange" class={inputCls}>
         <option value="">Select…</option>
+        <option value="Under $50K">Under $50K</option>
         <option value="$50K - $100K">$50K - $100K</option>
         <option value="$100K - $200K">$100K - $200K</option>
         <option value="$200K - $500K">$200K - $500K</option>
         <option value="$500K+">$500K+</option>
       </select>
-    </div>
-    <div>
-      <label for="timeline" class="block text-sm font-semibold text-ink-900 mb-2">
-        Timeline <span class="text-brand-primary">*</span>
-      </label>
-      <select
-        id="timeline"
-        name="timeline"
-        required
-        class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-      >
+    </label>
+    <label class="block">
+      <span class={labelCls}>Timeline</span>
+      <select name="timeline" class={inputCls}>
         <option value="">Select…</option>
         <option value="ASAP (1-3 months)">ASAP (1-3 months)</option>
         <option value="Next quarter">Next quarter</option>
         <option value="Next year">Next year</option>
         <option value="Just exploring">Just exploring</option>
       </select>
-    </div>
-  </div>
-
-  <div>
-    <label for="message" class="block text-sm font-semibold text-ink-900 mb-2">
-      Project Details
     </label>
-    <textarea
-      id="message"
-      name="message"
-      rows="4"
-      placeholder="Tell us about your vision..."
-      class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
-    ></textarea>
   </div>
 
-  <!-- Honeypot -->
+  <label class="block">
+    <span class={labelCls}>Project Details</span>
+    <textarea name="message" rows="4" placeholder="Tell us about your vision…" class={inputCls}></textarea>
+  </label>
+
+  {/* Bot-protection envelope (LPAI 5-layer). _renderedAt is set client-side on load. */}
+  <input type="hidden" name="_renderedAt" value="" />
   <input
-    name="website_url"
-    type="text"
+    type="email"
+    name="_hp_email"
     tabindex="-1"
     autocomplete="off"
-    style="position:absolute;left:-9999px;opacity:0;pointer-events:none"
     aria-hidden="true"
+    style="position:absolute;left:-9999px;opacity:0;pointer-events:none;height:0;width:0"
   />
+  {TURNSTILE_SITE_KEY && (
+    <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="light" data-size="flexible"></div>
+  )}
 
-  <div id="quote-request-error" class="hidden text-sm text-red-600 bg-red-50 p-3 rounded-lg"></div>
+  <div class="quote-error hidden text-sm text-red-600 bg-red-50 p-3 rounded-lg"></div>
 
-  <button
-    type="submit"
-    class="btn-primary w-full"
-  >
-    Get Free Quote
-  </button>
+  <button type="submit" class="btn-primary w-full">Get Free Quote</button>
 
-  <div id="quote-request-success" class="hidden text-center py-6">
+  <div class="quote-success hidden text-center py-6">
     <div class="text-4xl mb-3">✓</div>
     <h4 class="text-lg font-semibold text-ink-900 mb-2">Thanks!</h4>
-    <p class="text-ink-700">We received your quote request. Dylan will contact you within 24 hours.</p>
+    <p class="text-ink-700">We received your quote request. Dylan will contact you within one business day.</p>
   </div>
 </form>
 
+{TURNSTILE_SITE_KEY && (
+  <script is:inline async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+)}
+
 <script define:vars={{ API_BASE, LOCATION_ID }}>
-  const form = document.getElementById('quote-request-form');
-  const errEl = document.getElementById('quote-request-error');
-  const successEl = document.getElementById('quote-request-success');
+  document.querySelectorAll('form.quote-request-form').forEach((form) => {
+    const errEl = form.querySelector('.quote-error');
+    const successEl = form.querySelector('.quote-success');
+    const renderedAtEl = form.querySelector('input[name="_renderedAt"]');
+    // Time-trap baseline: stamp on page load so the BE measures load→submit.
+    if (renderedAtEl) renderedAtEl.value = new Date().toISOString();
 
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const fd = new FormData(e.target);
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const fd = new FormData(form);
 
-    // Honeypot check
-    if (fd.get('website_url')) {
-      form.classList.add('hidden');
-      successEl.classList.remove('hidden');
-      return;
-    }
-
-    const data = {};
-    for (const [k, v] of fd.entries()) {
-      if (k === 'website_url') continue;
-      data[k] = v;
-    }
-
-    errEl.classList.add('hidden');
-
-    try {
-      const res = await fetch(`${API_BASE}/api/portal/forms/quote-request/submit`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          locationId: LOCATION_ID,
-          data,
-          meta: { referrer: document.referrer },
-        }),
-      });
-
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.message || 'Could not submit quote request');
+      // Honeypot — bots fill it; short-circuit to a fake success.
+      if ((fd.get('_hp_email') || '').toString().trim()) {
+        form.classList.add('hidden');
+        successEl?.classList.remove('hidden');
+        return;
       }
 
-      form.classList.add('hidden');
-      successEl.classList.remove('hidden');
-    } catch (err) {
-      errEl.textContent = err.message;
-      errEl.classList.remove('hidden');
-    }
+      const get = (k) => (fd.get(k) || '').toString().trim();
+      const firstName = get('firstName');
+      const lastName = get('lastName');
+      const fullName = [firstName, lastName].filter(Boolean).join(' ');
+      const message = [
+        get('message') || 'Quote request from the website.',
+        '',
+        `Project Type: ${get('projectType') || '—'}`,
+        `Location: ${get('location') || '—'}`,
+        `Budget: ${get('budgetRange') || '—'}`,
+        `Timeline: ${get('timeline') || '—'}`,
+      ].join('\n').slice(0, 1990);
+
+      const turnstileToken =
+        (form.querySelector('input[name="cf-turnstile-response"]') || {}).value || '';
+
+      errEl?.classList.add('hidden');
+      const btn = form.querySelector('button[type="submit"]');
+      const origLabel = btn ? btn.textContent : '';
+      if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+      try {
+        const res = await fetch(`${API_BASE}/api/v2/website-clients/forms/submit`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            locationId: LOCATION_ID,
+            formId: 'quote-request',
+            locale: 'en',
+            fields: {
+              fullName: fullName || 'Website Lead',
+              email: get('email'),
+              phone: get('phone') || undefined,
+              subject: 'General inquiry',
+              message,
+            },
+            _hp_email: (fd.get('_hp_email') || '').toString(),
+            _renderedAt: (renderedAtEl && renderedAtEl.value) || new Date().toISOString(),
+            turnstileToken,
+          }),
+        });
+
+        let data = {};
+        try { data = await res.json(); } catch { /* non-JSON edge */ }
+
+        if (!res.ok) {
+          let msg = Array.isArray(data.message) ? data.message.join(', ') : (data.message || 'Could not submit your request.');
+          if (res.status === 429) {
+            msg = "You've sent a few requests in a short time. Please try again in a bit.";
+          } else if (typeof msg === 'string' && (msg.includes('time-trap') || msg.includes('too fast'))) {
+            msg = 'That was a little too fast — please try once more.';
+          } else if (typeof msg === 'string' && msg.toLowerCase().includes('turnstile')) {
+            msg = 'Verification failed. Please refresh the page and try again.';
+          } else if (typeof msg === 'string' && msg.toLowerCase().includes('disposable')) {
+            msg = 'Please use a non-disposable email address so Dylan can reply.';
+          }
+          throw new Error(msg);
+        }
+
+        form.classList.add('hidden');
+        successEl?.classList.remove('hidden');
+      } catch (err) {
+        if (errEl) { errEl.textContent = err.message; errEl.classList.remove('hidden'); }
+        if (btn) { btn.disabled = false; btn.textContent = origLabel; }
+      }
+    });
   });
 </script>
