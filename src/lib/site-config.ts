@@ -25,7 +25,7 @@ export const SITE = {
   geo: { lat: 35.4676, lng: -97.5164 },
   hours: 'Mo-Fr 08:00-17:00',
   priceRange: '$$',
-  ogImage: '/img/og-default.jpg',
+  ogImage: '/img/og-saltgrass-logo.jpg',
   logo: '/logo.png',
   sameAs: [] as string[], // social profiles — add when provided
   // Facility / capacity facts (true, partner-confirmed in spec)

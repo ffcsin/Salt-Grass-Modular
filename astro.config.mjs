@@ -4,9 +4,8 @@ import sitemap from '@astrojs/sitemap';
 import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  // NOTE: hyphenated host — the live Vercel project is salt-grass-modular
-  // (with hyphens). At domain cutover this becomes https://saltgrassmodular.com.
-  site: 'https://salt-grass-modular.vercel.app',
+  // Production domain (Wix-managed DNS pointed at Vercel). www is canonical.
+  site: 'https://www.saltgrassmodular.com',
   // Static-first: content pages prerender to the edge (fast, cached).
   // The Vercel adapter enables on-demand serverless rendering ONLY for routes
   // that opt out via `export const prerender = false` — i.e. the /api/* proxy

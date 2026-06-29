@@ -1,6 +1,17 @@
 ---
+// SaltGrass Modular — Developer / Government RFQ form.
+//
+// Submits to the SAME LPAI v2 website-clients forms endpoint as the quote form
+// (POST /api/v2/website-clients/forms/submit), which runs the full 5-layer
+// bot-protection envelope (honeypot + time-trap + Redis rate-limit +
+// disposable-email + optional Turnstile) AND upserts a CRM contact/lead +
+// notifies the partner. Subject is tagged "Developer / Government RFQ" so the
+// BE subject-triage routes it correctly. (Previously hit the older
+// /api/portal/forms/rfq/submit endpoint, which only created a contact if an
+// `rfq` website_forms doc was configured — this removes that dependency.)
 const API_BASE = import.meta.env.PUBLIC_API_URL || 'https://lpai-monorepo-production.up.railway.app';
 const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID || 'plan_chNIQv7tfy09Ew_h1liV';
+const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY || '';
 ---
 
 <form id="rfq-form" data-location-id={LOCATION_ID} class="space-y-4">
@@ -126,15 +137,19 @@ const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID || 'plan_chNIQv7tfy09Ew_h
     </select>
   </div>
 
-  <!-- Honeypot -->
+  {/* Bot-protection envelope (LPAI 5-layer). _renderedAt is stamped client-side on load. */}
+  <input type="hidden" name="_renderedAt" value="" />
   <input
-    name="website_url"
-    type="text"
+    type="email"
+    name="_hp_email"
     tabindex="-1"
     autocomplete="off"
-    style="position:absolute;left:-9999px;opacity:0;pointer-events:none"
     aria-hidden="true"
+    style="position:absolute;left:-9999px;opacity:0;pointer-events:none;height:0;width:0"
   />
+  {TURNSTILE_SITE_KEY && (
+    <div class="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-theme="light" data-size="flexible"></div>
+  )}
 
   <div id="rfq-error" class="hidden text-sm text-red-600 bg-red-50 p-3 rounded-lg"></div>
 
@@ -152,51 +167,92 @@ const LOCATION_ID = import.meta.env.PUBLIC_LOCATION_ID || 'plan_chNIQv7tfy09Ew_h
   </div>
 </form>
 
+{TURNSTILE_SITE_KEY && (
+  <script is:inline async defer src="https://challenges.cloudflare.com/turnstile/v0/api.js"></script>
+)}
+
 <script define:vars={{ API_BASE, LOCATION_ID }}>
   const form = document.getElementById('rfq-form');
   const errEl = document.getElementById('rfq-error');
   const successEl = document.getElementById('rfq-success');
+  const renderedAtEl = form?.querySelector('input[name="_renderedAt"]');
+  // Time-trap baseline: stamp on page load so the BE measures load→submit.
+  if (renderedAtEl) renderedAtEl.value = new Date().toISOString();
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const fd = new FormData(e.target);
+    const fd = new FormData(form);
 
-    // Honeypot check
-    if (fd.get('website_url')) {
+    // Honeypot — bots fill it; short-circuit to a fake success.
+    if ((fd.get('_hp_email') || '').toString().trim()) {
       form.classList.add('hidden');
-      successEl.classList.remove('hidden');
+      successEl?.classList.remove('hidden');
       return;
     }
 
-    const data = {};
-    for (const [k, v] of fd.entries()) {
-      if (k === 'website_url') continue;
-      data[k] = v;
-    }
+    const get = (k) => (fd.get(k) || '').toString().trim();
+    const company = get('companyName');
+    const fullName = get('contactPerson') || company || 'Developer Lead';
+    const message = [
+      get('projectScope') || 'Developer / Government RFQ from the website.',
+      '',
+      `Company: ${company || '—'}`,
+      `Units: ${get('unitQuantity') || '—'}`,
+      `Delivery timeline: ${get('timeline') || '—'}`,
+      `Heard via: ${get('referralSource') || '—'}`,
+    ].join('\n').slice(0, 1990);
 
-    errEl.classList.add('hidden');
+    const turnstileToken =
+      (form.querySelector('input[name="cf-turnstile-response"]') || {}).value || '';
+
+    errEl?.classList.add('hidden');
+    const btn = form.querySelector('button[type="submit"]');
+    const origLabel = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
     try {
-      const res = await fetch(`${API_BASE}/api/portal/forms/rfq/submit`, {
+      const res = await fetch(`${API_BASE}/api/v2/website-clients/forms/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           locationId: LOCATION_ID,
-          data,
-          meta: { referrer: document.referrer },
+          formId: 'rfq',
+          locale: 'en',
+          fields: {
+            fullName,
+            email: get('email'),
+            phone: get('phone') || undefined,
+            subject: 'Developer / Government RFQ',
+            message,
+          },
+          _hp_email: (fd.get('_hp_email') || '').toString(),
+          _renderedAt: (renderedAtEl && renderedAtEl.value) || new Date().toISOString(),
+          turnstileToken,
         }),
       });
 
+      let data = {};
+      try { data = await res.json(); } catch { /* non-JSON edge */ }
+
       if (!res.ok) {
-        const err = await res.json().catch(() => ({}));
-        throw new Error(err.message || 'Could not submit RFQ');
+        let msg = Array.isArray(data.message) ? data.message.join(', ') : (data.message || 'Could not submit RFQ.');
+        if (res.status === 429) {
+          msg = "You've sent a few requests in a short time. Please try again in a bit.";
+        } else if (typeof msg === 'string' && (msg.includes('time-trap') || msg.includes('too fast'))) {
+          msg = 'That was a little too fast — please try once more.';
+        } else if (typeof msg === 'string' && msg.toLowerCase().includes('turnstile')) {
+          msg = 'Verification failed. Please refresh the page and try again.';
+        } else if (typeof msg === 'string' && msg.toLowerCase().includes('disposable')) {
+          msg = 'Please use a non-disposable business email so our team can reply.';
+        }
+        throw new Error(msg);
       }
 
       form.classList.add('hidden');
-      successEl.classList.remove('hidden');
+      successEl?.classList.remove('hidden');
     } catch (err) {
-      errEl.textContent = err.message;
-      errEl.classList.remove('hidden');
+      if (errEl) { errEl.textContent = err.message; errEl.classList.remove('hidden'); }
+      if (btn) { btn.disabled = false; btn.textContent = origLabel; }
     }
   });
 </script>
