@@ -36,9 +36,12 @@ function runAutoReview(projectDir, cfg) {
     if (!diff.trim()) { try { diff = require('node:child_process').execFileSync('git', ['diff', '--no-color'], { cwd: projectDir, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }); } catch {} }
     const cap = cfg.reviewDiffCapBytes || 200000; // ~200KB; bigger diffs → skip (slow/expensive), use directive
     if (!diff.trim() || diff.length > cap) return { ran: false };
-    const r = runDiffReview(projectDir, diff, { model: cfg.reviewModel || undefined, timeoutMs: cfg.reviewTimeoutMs || 180000 });
-    if (!r.ok) return { ran: false };
-    return { ran: true, clean: r.clean, findings: r.findings, cost: r.cost };
+    // engine: cfg.reviewEngine pins it (e.g. 'grok'/'claude'); unset → agent-runner's contrarian default.
+    const r = runDiffReview(projectDir, diff, { engine: cfg.reviewEngine || undefined, model: cfg.reviewModel || undefined, timeoutMs: cfg.reviewTimeoutMs || 180000 });
+    // A reviewer that was PRESENT but FAILED (expired auth, timeout, CLI change) must not fail silently —
+    // that would quietly downgrade the #1 guardrail to a directive with nobody noticing. Carry the reason up.
+    if (!r.ok) return { ran: false, error: r.error, engine: r.engine };
+    return { ran: true, clean: r.clean, findings: r.findings, cost: r.cost, engine: r.engine };
   } catch { return { ran: false }; }
 }
 function main() {
@@ -72,17 +75,25 @@ function main() {
       // AUTO-REVIEW (the ask): instead of just DIRECTING the agent to review, SPIN UP a headless
       // reviewer agent on the diff right now. CLEAN → the gate is satisfied automatically (proceed, no
       // block consumed). Issues → block with the actual findings. Only runs when the gate fires (bounded).
+      let reviewNote = '';
       if (cfg.autoReview !== false) {
         const r = runAutoReview(projectDir, cfg);
-        if (r && r.ran && r.clean) { markAutoReview(projectDir); process.stdout.write(`[agentic-os] Auto-review agent inspected your diff — CLEAN (cost $${r.cost.toFixed(3)}). ✓`); return; }
+        const via = r && r.engine ? ` [${r.engine}]` : '';
+        if (r && r.ran && r.clean) { markAutoReview(projectDir); process.stdout.write(`[agentic-os] Contrarian reviewer${via} inspected your diff — CLEAN (cost $${r.cost.toFixed(3)}). ✓`); return; }
         if (r && r.ran && r.findings) {
-          if (hard && critiqueBlockAllowed(projectDir, input.session_id || '')) { write(buildStopBlock(`[agentic-os] An automatic reviewer agent inspected your changes and found issues — FIX these (or refute each) before finishing:\n\n${r.findings}\n\n(headless review, cost $${r.cost.toFixed(3)}; re-runs after you edit again)`)); return; }
-          process.stdout.write(`[agentic-os] Auto-review found issues (advisory):\n${r.findings}`); return;
+          if (hard && critiqueBlockAllowed(projectDir, input.session_id || '')) { write(buildStopBlock(`[agentic-os] An independent contrarian reviewer${via} inspected your changes and found issues — FIX these (or refute each) before finishing:\n\n${r.findings}\n\n(headless review, cost $${r.cost.toFixed(3)}; re-runs after you edit again)`)); return; }
+          process.stdout.write(`[agentic-os] Contrarian review${via} found issues (advisory):\n${r.findings}`); return;
         }
-        // reviewer unavailable / errored → fall through to the directive block (still enforced)
+        // Reviewer PRESENT but FAILED → say so loudly. Silent degradation is the dangerous case: the
+        // gate keeps "working" via the directive while the independent second opinion is actually gone.
+        // (A simply-absent CLI has no .error and stays quiet — nothing was expected to run.)
+        if (r && !r.ran && r.error) {
+          reviewNote = `\n\n[agentic-os] ⚠ The contrarian reviewer${via} was installed but FAILED to run — ${r.error}\n` +
+            `The independent second opinion did NOT happen; this is the fallback directive only. If auth lapsed, re-auth with \`grok login\`.`;
+        }
       }
-      if (hard && critiqueBlockAllowed(projectDir, input.session_id || '')) { write(buildStopBlock(g.reason)); return; }
-      process.stdout.write(g.reason); return; // warn mode OR breaker tripped → soft nudge, never trap
+      if (hard && critiqueBlockAllowed(projectDir, input.session_id || '')) { write(buildStopBlock(g.reason + reviewNote)); return; }
+      process.stdout.write(g.reason + reviewNote); return; // warn mode OR breaker tripped → soft nudge, never trap
     }
   }
 
