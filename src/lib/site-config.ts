@@ -13,7 +13,7 @@ export const SITE = {
   founder: 'Dylan Walker',
   phone: '405-659-1949',
   phoneE164: '+14056591949',
-  email: 'Dylan.Walker@saltgrassmodular.com',
+  email: 'dylan@saltgrassmodular.com',
   // NAP
   address: {
     locality: 'Oklahoma City',
