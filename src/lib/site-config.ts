@@ -7,7 +7,7 @@ export const SITE = {
   // Live host (hyphenated Vercel project). At domain cutover → https://saltgrassmodular.com
   url: import.meta.env.SITE || 'https://salt-grass-modular.vercel.app',
   domain: 'saltgrassmodular.com',
-  tagline: 'Custom Container Homes, Modular Pools & Rapid-Deployment Housing',
+  tagline: 'Container Homes & Modular Pools',
   description:
     'Custom modular construction company specializing in container homes, modular pools, traditional builds, and rapid-deployment housing for homeowners, developers, and government.',
   founder: 'Dylan Walker',

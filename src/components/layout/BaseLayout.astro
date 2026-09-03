@@ -23,9 +23,17 @@ const siteUrl = SITE.url;
 // Strip any brand suffix a page may have baked into its own title so the
 // template adds "| SaltGrass Modular" exactly once (no double-branding).
 const cleanTitle = (title || '').replace(/\s*[-|]\s*SaltGrass Modular\s*$/i, '').trim();
+// Google truncates a result title at roughly 60 characters. Appending
+// " | SaltGrass Modular" unconditionally cost 20 characters on every page and put
+// 114 of 153 pages past the cut, so the suffix is now conditional on fitting.
+// A title that is already long keeps its own words rather than a truncated brand.
+const TITLE_MAX = 60;
+const brandSuffix = ` | ${SITE.brand}`;
 const fullTitle = (title === 'Home' || !cleanTitle)
   ? `${SITE.brand} | ${SITE.tagline}`
-  : `${cleanTitle} | ${SITE.brand}`;
+  : cleanTitle.length + brandSuffix.length <= TITLE_MAX
+    ? `${cleanTitle}${brandSuffix}`
+    : cleanTitle;
 const metaDescription = description || SITE.description;
 const metaImage = ogImage || `${siteUrl}${SITE.ogImage}`;
 const canonicalUrl = new URL(Astro.url.pathname, siteUrl).href;

@@ -9,7 +9,7 @@ export const SEED_COMPARISONS: Comparison[] = [
   {
     slug: 'container-homes-vs-traditional',
     title: 'Container Homes vs. Traditional Construction',
-    metaTitle: 'Container Homes vs. Traditional Construction: Cost, Speed & Quality',
+    metaTitle: 'Container Homes vs. Traditional Construction',
     description:
       'A balanced comparison of container homes and traditional stick-built construction — cost, timeline, durability, and when each makes sense.',
     intro:
