@@ -13,15 +13,27 @@ import type { APIRoute } from 'astro';
  *   - the 204 carries a null body; `new Response('', { status: 204 })` throws in
  *     Node, which turned this "fail quietly" branch into a 500.
  *
- * body.domain is deliberately NOT pinned, and this site's analytics are
- * BROKEN AT THE DATA LAYER (checked in prod 2026-09-11). The backend resolves a
- * tenant by matching the beacon's `domain` against website_clients.domain, and
- * this business has NO website_clients row at all — only `locations` entries
- * (plan_chNIQv7tfy09Ew_h1liV / ikZkjzhWC5oRJhldSLOQ, "Saltgrass Modular"). So
- * every beacon is dropped, this site has never reported traffic, and it is also
- * invisible to the nightly analytics-freshness check, which discovers clients
- * from website_clients rows that carry a domain. A row with
- * domain `saltgrassmodular.com` has to be created first; then pin it here.
+ * body.domain is deliberately NOT pinned, because pinning would not fix what is
+ * wrong here. This site's analytics are BROKEN AT THE DATA LAYER (verified in
+ * prod 2026-09-11, correcting an earlier cut of this comment that overstated it).
+ *
+ * The beacons DO arrive — 1,746 page_views rows under www.saltgrassmodular.com
+ * and saltgrassmodular.com in the last 30 days. What fails is tenant
+ * attribution. trackPageView resolves a tenant two ways, and both miss:
+ *   1. website_clients.domain (exact or www-stripped) — this business has NO
+ *      website_clients row at all, only `locations` entries
+ *      (plan_chNIQv7tfy09Ew_h1liV, the id these forms post as, and
+ *      ikZkjzhWC5oRJhldSLOQ).
+ *   2. website_client_onboarding via healthConfig.websiteUrl / vercelConfig —
+ *      the onboarding row exists but carries neither field.
+ * So every view is stored with no locationId: the traffic is real, it is being
+ * paid for, and the client's dashboard reads zero. The tenant is also invisible
+ * to the nightly analytics-freshness check, which discovers clients from
+ * website_clients rows carrying a domain — so nothing would ever have alerted.
+ *
+ * Fix in DATA, not here: give the onboarding row healthConfig.websiteUrl =
+ * https://saltgrassmodular.com (the cheap fix, which is exactly how Zoomies
+ * resolves), or create a proper website_clients row. Then pin the domain here.
  */
 export const prerender = false;
 
