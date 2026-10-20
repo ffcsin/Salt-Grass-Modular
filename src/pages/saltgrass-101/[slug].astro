@@ -22,6 +22,7 @@ const guides: Record<string, any> = {
   'modular-vs-traditional': {
     title: 'Modular vs. Traditional Construction',
     description: 'A detailed comparison of modular and traditional building methods.',
+    metaDescription: 'A detailed comparison of modular and traditional building methods, covering timeline, quality and cost control.',
     icon: '🏗️',
     sections: [
       { title: 'Speed', content: 'Modular construction typically takes 8-9 months from design to move-in, while traditional construction averages 12-18 months. This is because factory work happens in parallel with site preparation and permitting.' },
@@ -33,6 +34,7 @@ const guides: Record<string, any> = {
   'cost-breakdown': {
     title: 'Cost Breakdown & Pricing',
     description: 'Understand the transparent pricing model for SaltGrass homes.',
+    metaDescription: 'Understand the transparent pricing model for SaltGrass container homes and pools, including what the all-in starting prices cover.',
     icon: '💰',
     sections: [
       { title: 'Container Homes', content: 'Studio (320 SF): $75K | 1-Bed (640 SF): $105K | 2-Bed (960 SF): $155K. Custom homes priced based on specifications.' },
@@ -44,6 +46,7 @@ const guides: Record<string, any> = {
   'permits-compliance': {
     title: 'Permits & Compliance',
     description: 'Navigate the permitting process with modular construction.',
+    metaDescription: 'Navigate the permitting process with modular construction, and see how SaltGrass coordinates with your local jurisdiction.',
     icon: '📋',
     sections: [
       { title: 'Building Codes', content: 'Modular homes meet or exceed International Building Code (IBC) standards. Factory inspection and testing ensure compliance before delivery.' },
@@ -55,6 +58,7 @@ const guides: Record<string, any> = {
   'financing-guide': {
     title: 'Financing Options',
     description: 'Explore flexible financing for your modular home project.',
+    metaDescription: 'Explore flexible financing for your modular home project: construction loans, cash payment plans and home equity options.',
     icon: '💳',
     sections: [
       { title: 'Construction Loans', content: 'Traditional construction loans available through major lenders. Factory-built quality qualifies for better rates in many cases.' },
@@ -66,6 +70,7 @@ const guides: Record<string, any> = {
   'build-process': {
     title: 'The Build Process',
     description: 'Step-by-step walkthrough of how your SaltGrass home is built.',
+    metaDescription: 'Step-by-step walkthrough of how your SaltGrass home is built, from discovery and design through fabrication, delivery and installation.',
     icon: '⚙️',
     sections: [
       { title: '1. Discovery & Design (Weeks 1-4)', content: 'Meet with Dylan to discuss your vision. Explore our models or start from scratch. We create 3D designs and finalize specifications.' },
@@ -77,6 +82,7 @@ const guides: Record<string, any> = {
   'disaster-relief-guide': {
     title: 'Disaster Relief & Rapid Deployment',
     description: 'How modular housing helps communities rebuild faster.',
+    metaDescription: 'How modular housing helps communities rebuild faster after a disaster, and how rapid-deployment housing from SaltGrass works.',
     icon: '🆘',
     sections: [
       { title: 'Speed Matters', content: 'Families displaced by disasters need housing fast. Modular units deploy in weeks, not months. Pre-built modules are ready to assemble on-site.' },
@@ -88,6 +94,7 @@ const guides: Record<string, any> = {
   'design-customization': {
     title: 'Design & Customization',
     description: 'Make your modular home truly yours.',
+    metaDescription: 'Make your modular home truly yours: floor plans, finishes and features are customized to your specifications.',
     icon: '🎨',
     sections: [
       { title: 'Start Anywhere', content: 'Pick one of our popular models or start with a blank canvas. Our design team works with you to create your perfect home.' },
@@ -99,6 +106,7 @@ const guides: Record<string, any> = {
   'sustainability': {
     title: 'Sustainability & Durability',
     description: 'Long-term value and environmental responsibility.',
+    metaDescription: 'Long-term value and environmental responsibility: how reusing shipping containers reduces waste and lowers the carbon footprint.',
     icon: '🌍',
     sections: [
       { title: 'Factory Efficiency', content: 'Precise fabrication minimizes material waste. Factory processes are optimized for sustainability. Lower carbon footprint than traditional construction.' },
@@ -120,7 +128,7 @@ const breadcrumb = slug
 
 <BaseLayout
   title={`${guide.title} - SaltGrass 101`}
-  description={guide.description}
+  description={guide.metaDescription ?? guide.description}
   keywords={slug}
 >
   <Hero
