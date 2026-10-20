@@ -89,6 +89,25 @@ const labelCls = 'block text-sm font-semibold text-ink-900 mb-2';
     </label>
   </div>
 
+  {/* Required referral question. The answer rides in the `message` body (see
+      the submit handler): the v2 forms contract (`fields`) is closed —
+      fullName/email/phone/subject/message — so a custom key would be dropped
+      by the BE's `whitelist: true` pipe, and a `meta` key is persisted but
+      rendered in no owner-facing surface. Deliberately NO `id`: this form
+      renders twice on /contact (inline + the global quote modal). */}
+  <label class="block">
+    <span class={labelCls}>How did you hear about us? <span class="text-brand-primary">*</span></span>
+    <select name="referralSource" required class={inputCls}>
+      <option value="">Select…</option>
+      <option value="Google search">Google search</option>
+      <option value="Facebook or Instagram">Facebook or Instagram</option>
+      <option value="Friend or family">Friend or family</option>
+      <option value="Saw one of our homes">Saw one of our homes</option>
+      <option value="Trade show or event">Trade show or event</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+
   <label class="block">
     <span class={labelCls}>Project Details</span>
     <textarea name="message" rows="4" placeholder="Tell us about your vision…" class={inputCls}></textarea>
@@ -153,6 +172,7 @@ const labelCls = 'block text-sm font-semibold text-ink-900 mb-2';
         `Location: ${get('location') || '—'}`,
         `Budget: ${get('budgetRange') || '—'}`,
         `Timeline: ${get('timeline') || '—'}`,
+        `Heard about us: ${get('referralSource') || '—'}`,
       ].join('\n').slice(0, 1990);
 
       const turnstileToken =
