@@ -43,8 +43,8 @@ GSA-certified housing for military bases, government agencies, and infrastructur
 
 ## Key Advantages
 
-1. **Speed to Market:** Modular construction delivers homes 30% faster than traditional building (8-9 months vs 12-18 months)
-2. **Cost Savings:** Factory efficiency reduces costs by 20-30% compared to traditional construction
+1. **Speed to Market:** Modular construction delivers homes faster than traditional building (8-9 months vs 12-18 months)
+2. **Cost Savings:** Factory efficiency makes modular construction more affordable than traditional construction
 3. **Quality Assurance:** Factory-built precision with 100% inspection at 50%, 80%, and 100% completion
 4. **Transparent Pricing:** No hidden costs, no change orders
 5. **Sustainability:** Precise fabrication minimizes waste, consistent insulation performance, lower carbon footprint
@@ -154,7 +154,7 @@ Permitting requirements vary by jurisdiction; SaltGrass coordinates with the loc
 ## Decision Guidance (Comparisons)
 
 Published at /compare. Honest, balanced summaries:
-- **Container homes vs. traditional construction:** container/modular is typically 20–30% less and faster (8–9 months vs 12–18); traditional wins for very large, fully-bespoke footprints.
+- **Container homes vs. traditional construction:** container/modular is typically more affordable and faster (8–9 months vs 12–18); traditional wins for very large, fully-bespoke footprints.
 - **Modular vs. manufactured (mobile) homes:** modular is built to the same local codes as site-built homes on a permanent foundation, financed/appraised as real property; manufactured homes are built to the federal HUD code.
 - **Modular vs. stick-built:** modular reduces weather risk and improves timeline predictability; stick-built wins for highly irregular lots or complex custom geometry.
 - **Tube steel vs. welded steel pools; modular pool vs. concrete:** see /compare for the side-by-side trade-offs.
