@@ -121,11 +121,12 @@ const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY 
 
   <div>
     <label for="referralSource" class="block text-sm font-semibold text-ink-900 mb-2">
-      How did you hear about us?
+      How did you hear about us? <span class="text-brand-primary">*</span>
     </label>
     <select
       id="referralSource"
       name="referralSource"
+      required
       class="w-full px-4 py-2 border border-ink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary"
     >
       <option value="">Select…</option>
@@ -193,13 +194,28 @@ const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY 
     const get = (k) => (fd.get(k) || '').toString().trim();
     const company = get('companyName');
     const fullName = get('contactPerson') || company || 'Developer Lead';
-    const message = [
-      get('projectScope') || 'Developer / Government RFQ from the website.',
+    // The RFQ label leads the body because `subject` can no longer carry it
+    // (see the fields block below) — the owner email renders this verbatim.
+    //
+    // Head and structured tail are composed FIRST and the free-text scope gets
+    // only the room left over: appending the answers and slicing the whole
+    // string would let a long scope truncate them away, including the
+    // now-REQUIRED referral answer. 1990 keeps us inside the BE's
+    // @MaxLength(2000) on `fields.message`.
+    const head = 'Developer / Government RFQ';
+    const tail = [
       '',
-      `Company: ${company || '—'}`,
+      `Company: ${company.slice(0, 200) || '—'}`,
       `Units: ${get('unitQuantity') || '—'}`,
       `Delivery timeline: ${get('timeline') || '—'}`,
-      `Heard via: ${get('referralSource') || '—'}`,
+      `Heard about us: ${get('referralSource') || '—'}`,
+    ].join('\n');
+    const scope = get('projectScope') || 'RFQ submitted from the website.';
+    const message = [
+      head,
+      '',
+      scope.slice(0, Math.max(0, 1987 - head.length - tail.length)),
+      tail,
     ].join('\n').slice(0, 1990);
 
     const turnstileToken =
@@ -222,7 +238,18 @@ const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY 
             fullName,
             email: get('email'),
             phone: get('phone') || undefined,
-            subject: 'Developer / Government RFQ',
+            // `subject` is a CLOSED enum on the BE (CONTACT_SUBJECTS in
+            // website-clients-forms/dto/contact-form.dto.ts). 'Developer /
+            // Government RFQ' is not in it, so a submit would be rejected
+            // twice — by @IsIn(SUBJECTS) and again by the service's own guard
+            // ('Invalid subject value'): 400, nothing stored, no owner email,
+            // no bell. LATENT, not a live outage: this component is currently
+            // imported by no page (/developers links to /contact instead), so
+            // nothing was being lost — fixed now so it is correct if it is
+            // ever wired in. 'Other' is in the enum; the human label leads the
+            // message body above, and `formId: 'rfq'` still tags the lead
+            // `form:rfq` so it stays distinguishable in Contacts.
+            subject: 'Other',
             message,
           },
           _hp_email: (fd.get('_hp_email') || '').toString(),

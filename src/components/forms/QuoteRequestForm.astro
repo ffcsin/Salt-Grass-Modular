@@ -89,6 +89,25 @@ const labelCls = 'block text-sm font-semibold text-ink-900 mb-2';
     </label>
   </div>
 
+  {/* Required referral question. The answer rides in the `message` body (see
+      the submit handler): the v2 forms contract (`fields`) is closed —
+      fullName/email/phone/subject/message — so a custom key would be dropped
+      by the BE's `whitelist: true` pipe, and a `meta` key is persisted but
+      rendered in no owner-facing surface. Deliberately NO `id`: this form
+      renders twice on /contact (inline + the global quote modal). */}
+  <label class="block">
+    <span class={labelCls}>How did you hear about us? <span class="text-brand-primary">*</span></span>
+    <select name="referralSource" required class={inputCls}>
+      <option value="">Select…</option>
+      <option value="Google search">Google search</option>
+      <option value="Facebook or Instagram">Facebook or Instagram</option>
+      <option value="Friend or family">Friend or family</option>
+      <option value="Saw one of our homes">Saw one of our homes</option>
+      <option value="Trade show or event">Trade show or event</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+
   <label class="block">
     <span class={labelCls}>Project Details</span>
     <textarea name="message" rows="4" placeholder="Tell us about your vision…" class={inputCls}></textarea>
@@ -146,13 +165,26 @@ const labelCls = 'block text-sm font-semibold text-ink-900 mb-2';
       const firstName = get('firstName');
       const lastName = get('lastName');
       const fullName = [firstName, lastName].filter(Boolean).join(' ');
-      const message = [
-        get('message') || 'Quote request from the website.',
+      // Compose the structured answers FIRST, then give the free-text Project
+      // Details only the room that is left. A plain
+      // `[details, ...answers].join('\n').slice(0, 1990)` puts the answers at
+      // the END of the string, so a visitor who writes a long description
+      // silently truncates them away — including the now-REQUIRED referral
+      // answer, which would defeat the point of asking. 1990 keeps us inside
+      // the BE's @MaxLength(2000) on `fields.message`. `location` is free text,
+      // so it is bounded too, which keeps the reserved tail predictable.
+      const tail = [
         '',
         `Project Type: ${get('projectType') || '—'}`,
-        `Location: ${get('location') || '—'}`,
+        `Location: ${get('location').slice(0, 200) || '—'}`,
         `Budget: ${get('budgetRange') || '—'}`,
         `Timeline: ${get('timeline') || '—'}`,
+        `Heard about us: ${get('referralSource') || '—'}`,
+      ].join('\n');
+      const details = get('message') || 'Quote request from the website.';
+      const message = [
+        details.slice(0, Math.max(0, 1989 - tail.length)),
+        tail,
       ].join('\n').slice(0, 1990);
 
       const turnstileToken =
