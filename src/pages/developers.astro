@@ -2,6 +2,7 @@
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Hero from '../components/sections/Hero.astro';
 import CtaBanner from '../components/sections/CtaBanner.astro';
+import RFQForm from '../components/forms/RFQForm.astro';
 ---
 
 <BaseLayout
@@ -164,7 +165,7 @@ import CtaBanner from '../components/sections/CtaBanner.astro';
         <div class="flex gap-6 items-start">
           <div class="w-12 h-12 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold flex-shrink-0">2</div>
           <div>
-            <h3 class="text-xl font-bold text-ink-900 mb-2">Detailed RFQ Submission</h3>
+            <h3 class="text-xl font-bold text-ink-900 mb-2"><a href="/developers#rfq" class="hover:text-brand-primary hover:underline underline-offset-4">Detailed RFQ Submission</a></h3>
             <p class="text-ink-700">
               You provide site plans, unit specs, delivery timeline, and compliance requirements. We respond with detailed cost estimate and production schedule.
             </p>
@@ -207,6 +208,18 @@ import CtaBanner from '../components/sections/CtaBanner.astro';
         <p class="text-lg opacity-90">
           From initial call to first module delivery: 6–12 weeks (depending on design complexity and fabrication volume)
         </p>
+      </div>
+
+      <div id="rfq" class="max-w-2xl mx-auto mt-16 scroll-mt-24">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-ink-900 mb-3">Submit Your RFQ</h2>
+          <p class="text-ink-700">
+            Tell us about the project and we'll follow up to schedule the scope call.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 md:p-8 border-2 border-ink-200 shadow-soft">
+          <RFQForm />
+        </div>
       </div>
     </div>
   </section>
@@ -385,7 +398,7 @@ import CtaBanner from '../components/sections/CtaBanner.astro';
 
         <div class="mt-12 text-center">
           <p class="text-ink-700 mb-6 font-semibold">Ready to discuss your project?</p>
-          <a href="/contact" class="btn-primary">Submit Your RFQ</a>
+          <a href="/developers#rfq" class="btn-primary">Submit Your RFQ</a>
         </div>
       </div>
     </div>
@@ -394,5 +407,6 @@ import CtaBanner from '../components/sections/CtaBanner.astro';
   <CtaBanner
     headline="Ready to Discuss Your Project?"
     subhead="Submit your RFQ or schedule a developer call with Dylan to explore volume modular solutions."
+    primaryCta={{ label: 'Submit Your RFQ', href: '/developers#rfq' }}
   />
 </BaseLayout>
