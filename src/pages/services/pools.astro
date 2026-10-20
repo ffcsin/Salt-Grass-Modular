@@ -2,11 +2,22 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import Hero from '../../components/sections/Hero.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { faqSchema, serviceSchema } from '../../lib/seo';
+import { SITE } from '../../lib/site-config';
+const faqItems = [
+  { q: 'How long does installation take?', a: '2–4 weeks from delivery to swim-ready. This includes site prep, foundation, frame assembly, and system testing. Welded steel pools may take longer if in-ground excavation is required.' },
+  { q: 'What\'s the lifespan of each pool type?', a: 'Tube steel + fiberglass: 20+ years. Welded steel + epoxy: 20+ years. Both can be refurbished or upgraded if needed.' },
+  { q: 'Can I customize the size?', a: 'Yes. Standard sizes are available, but we build custom pools too. Custom sizes may take longer and cost more. Ask during your quote.' },
+  { q: 'Do you offer financing?', a: 'Yes. Construction loans, cash payment plans, and financing partnerships available. See our Financing page or contact Dylan.' },
+];
+const pageDescription = "Factory-built modular pools with two design options: tube steel + fiberglass or welded steel + epoxy liner. Fast installation, durable, transparent pricing.";
+const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
 ---
 
 <BaseLayout
   title="Modular Pools - SaltGrass Modular"
-  description="Factory-built modular pools with two design options: tube steel + fiberglass or welded steel + epoxy liner. Fast installation, durable, transparent pricing."
+  description={pageDescription}
+  schemas={[faqSchema(faqItems), serviceSchema({ name: "Modular Pools", description: pageDescription, url: pageUrl })]}
 >
   <Hero
     eyebrow="Modular Pools"
@@ -177,33 +188,14 @@ import CtaBanner from '../../components/sections/CtaBanner.astro';
     <div class="container">
       <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Pool FAQs</h2>
       <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">How long does installation take?</h3>
-          <p class="text-ink-700">
-            2–4 weeks from delivery to swim-ready. This includes site prep, foundation, frame assembly, and system testing. Welded steel pools may take longer if in-ground excavation is required.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">What's the lifespan of each pool type?</h3>
-          <p class="text-ink-700">
-            Tube steel + fiberglass: 20+ years. Welded steel + epoxy: 20+ years. Both can be refurbished or upgraded if needed.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Can I customize the size?</h3>
-          <p class="text-ink-700">
-            Yes. Standard sizes are available, but we build custom pools too. Custom sizes may take longer and cost more. Ask during your quote.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Do you offer financing?</h3>
-          <p class="text-ink-700">
-            Yes. Construction loans, cash payment plans, and financing partnerships available. See our Financing page or contact Dylan.
-          </p>
-        </div>
+        {faqItems.map((item) => (
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-bold text-ink-900 mb-3">{item.q}</h3>
+            <p class="text-ink-700">
+              {item.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

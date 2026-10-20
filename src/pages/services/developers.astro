@@ -2,11 +2,16 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import Hero from '../../components/sections/Hero.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { serviceSchema } from '../../lib/seo';
+import { SITE } from '../../lib/site-config';
+const pageDescription = "B2B modular housing for developers, volume projects, and military contracts. Scalable, transparent RFQ process, government-ready.";
+const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
 ---
 
 <BaseLayout
   title="Developers & Military Solutions - SaltGrass Modular"
-  description="B2B modular housing for developers, volume projects, and military contracts. Scalable, transparent RFQ process, government-ready."
+  description={pageDescription}
+  schemas={[serviceSchema({ name: "Developers & Military Solutions", description: pageDescription, url: pageUrl })]}
 >
   <Hero
     eyebrow="B2B Solutions"

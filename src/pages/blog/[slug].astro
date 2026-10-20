@@ -59,7 +59,7 @@ const ctaSectionClass = ctaIsTailwindGradient
 <BaseLayout
   title={post.seo?.metaTitle || post.title}
   description={post.seo?.metaDescription || post.excerpt}
-  image={post.seo?.ogImage || post.coverImage}
+  ogImage={post.seo?.ogImage || post.coverImage}
   keywords={Array.isArray(post.seo?.keywords) ? post.seo.keywords.join(', ') : post.seo?.keywords}
   noindex={post.seo?.noIndex}
 >

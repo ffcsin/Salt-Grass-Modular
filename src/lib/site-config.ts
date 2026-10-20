@@ -4,8 +4,8 @@
 export const SITE = {
   brand: 'SaltGrass Modular',
   legalName: 'SaltGrass Modular, LLC',
-  // Live host (hyphenated Vercel project). At domain cutover → https://saltgrassmodular.com
-  url: import.meta.env.SITE || 'https://salt-grass-modular.vercel.app',
+  // Canonical host (www). import.meta.env.SITE comes from astro.config.mjs; this is the fallback.
+  url: import.meta.env.SITE || 'https://www.saltgrassmodular.com',
   domain: 'saltgrassmodular.com',
   tagline: 'Container Homes & Modular Pools',
   description:

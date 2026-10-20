@@ -2,11 +2,16 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import Hero from '../../components/sections/Hero.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { serviceSchema } from '../../lib/seo';
+import { SITE } from '../../lib/site-config';
+const pageDescription = "Modular housing solutions for disaster relief, rapid deployment, temporary facilities, and emergency response. FEMA-compatible, government-ready.";
+const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
 ---
 
 <BaseLayout
   title="Disaster Relief & Rapid Deployment - SaltGrass Modular"
-  description="Modular housing solutions for disaster relief, rapid deployment, temporary facilities, and emergency response. FEMA-compatible, government-ready."
+  description={pageDescription}
+  schemas={[serviceSchema({ name: "Disaster Relief & Rapid Deployment", description: pageDescription, url: pageUrl })]}
 >
   <Hero
     eyebrow="Disaster Relief"

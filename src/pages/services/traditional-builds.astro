@@ -2,11 +2,22 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import Hero from '../../components/sections/Hero.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { faqSchema, serviceSchema } from '../../lib/seo';
+import { SITE } from '../../lib/site-config';
+const faqItems = [
+  { q: 'How is this different from traditional construction?', a: 'Traditional construction builds on-site in all weather. Modular builds your home in a factory (controlled conditions), then delivers finished modules for on-site assembly. Result: faster, more consistent quality, better cost control.' },
+  { q: 'Will it look like a modular home?', a: 'No. Our homes look completely custom. The modular seams are sealed and finished to be invisible. Architectural style, roofline, exterior finishes—all are indistinguishable from traditional builds.' },
+  { q: 'Can I get financing?', a: 'Yes. Construction loans, cash payment plans, and home equity financing all work. See our Financing page for details.' },
+  { q: 'What if I want to add a deck or second story later?', a: 'Your modular home is built like a traditional home—you can add decks, porches, and future additions as needed. We design the foundation to support expansion.' },
+];
+const pageDescription = "Fully custom traditional-style modular homes. Designed to look and feel completely custom, built with modular efficiency.";
+const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
 ---
 
 <BaseLayout
   title="Custom Traditional Builds - SaltGrass Modular"
-  description="Fully custom traditional-style modular homes. Designed to look and feel completely custom, built with modular efficiency."
+  description={pageDescription}
+  schemas={[faqSchema(faqItems), serviceSchema({ name: "Custom Traditional Builds", description: pageDescription, url: pageUrl })]}
 >
   <Hero
     eyebrow="Traditional Custom Builds"
@@ -160,33 +171,14 @@ import CtaBanner from '../../components/sections/CtaBanner.astro';
     <div class="container">
       <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Common Questions</h2>
       <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">How is this different from traditional construction?</h3>
-          <p class="text-ink-700">
-            Traditional construction builds on-site in all weather. Modular builds your home in a factory (controlled conditions), then delivers finished modules for on-site assembly. Result: faster, more consistent quality, better cost control.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Will it look like a modular home?</h3>
-          <p class="text-ink-700">
-            No. Our homes look completely custom. The modular seams are sealed and finished to be invisible. Architectural style, roofline, exterior finishes—all are indistinguishable from traditional builds.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Can I get financing?</h3>
-          <p class="text-ink-700">
-            Yes. Construction loans, cash payment plans, and home equity financing all work. See our Financing page for details.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">What if I want to add a deck or second story later?</h3>
-          <p class="text-ink-700">
-            Your modular home is built like a traditional home—you can add decks, porches, and future additions as needed. We design the foundation to support expansion.
-          </p>
-        </div>
+        {faqItems.map((item) => (
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-bold text-ink-900 mb-3">{item.q}</h3>
+            <p class="text-ink-700">
+              {item.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

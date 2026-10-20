@@ -94,21 +94,35 @@ const allSchemas = [
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#C41E3A" />
 
-    <!-- Sentry error tracking (production monitoring) -->
-    <script
-      src="https://browser.sentry-cdn.com/7.99.0/bundle.min.js"
-      integrity="sha384-+a3D8QgjOKQvx8qd1//DUpwGaVusJEW3KqKFv4RbWHd8VE6VYQ3EUNBtjFh1aVZ9h"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script is:inline>
-      if (window.Sentry) {
-        window.Sentry.init({
-          dsn: import.meta.env.PUBLIC_SENTRY_DSN || '',
-          environment: 'production',
-          tracesSampleRate: 0.1,
-          replaysSessionSampleRate: 0.05,
-          replaysOnErrorSampleRate: 1.0,
+    {/* Sentry error tracking (production monitoring).
+        The previous block had two faults: `import.meta.env` sat inside an
+        is:inline classic script (a SyntaxError on every page, so it never ran
+        and logged a console error), and its init ran before the deferred CDN
+        bundle existed. Now the DSN is injected at build time, and the bundle is
+        fetched after the page has loaded and the browser is idle, so it never
+        sits on the path to first paint. With no DSN set it is not fetched at all
+        (init with an empty DSN is a no-op anyway). */}
+    <script is:inline define:vars={{ sentryDsn: import.meta.env.PUBLIC_SENTRY_DSN || '' }}>
+      if (sentryDsn) {
+        window.addEventListener('load', function () {
+          (window.requestIdleCallback || function (fn) { return setTimeout(fn, 2000); })(function () {
+            var s = document.createElement('script');
+            s.src = 'https://browser.sentry-cdn.com/7.99.0/bundle.min.js';
+            s.integrity = 'sha384-+a3D8QgjOKQvx8qd1//DUpwGaVusJEW3KqKFv4RbWHd8VE6VYQ3EUNBtjFh1aVZ9h';
+            s.crossOrigin = 'anonymous';
+            s.onload = function () {
+              if (window.Sentry) {
+                window.Sentry.init({
+                  dsn: sentryDsn,
+                  environment: 'production',
+                  tracesSampleRate: 0.1,
+                  replaysSessionSampleRate: 0.05,
+                  replaysOnErrorSampleRate: 1.0,
+                });
+              }
+            };
+            document.head.appendChild(s);
+          });
         });
       }
     </script>

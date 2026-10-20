@@ -50,4 +50,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://salt-grass-modular.vercel.app/sitemap-index.xml
+Sitemap: https://www.saltgrassmodular.com/sitemap-index.xml

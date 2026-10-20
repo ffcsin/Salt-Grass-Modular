@@ -2,6 +2,7 @@
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Hero from '../components/sections/Hero.astro';
 import CtaBanner from '../components/sections/CtaBanner.astro';
+import { faqSchema, howToSchema } from '../lib/seo';
 
 const stages = [
   {
@@ -95,11 +96,21 @@ const stages = [
     ],
   },
 ];
+const faqItems = [
+  { q: 'Can we compress the timeline?', a: 'Yes. Rush design (1–2 weeks) and expedited permitting are possible depending on your location and complexity. We\'ll discuss options during Discovery.' },
+  { q: 'What if permits take longer than expected?', a: 'We handle permitting, but some jurisdictions move slowly. We\'ll manage the coordination and keep you informed. Fabrication doesn\'t start until permits are in hand.' },
+  { q: 'Can I make changes during fabrication?', a: 'Yes, but only before fabrication begins. Once cutting and assembly start, changes become expensive. This is why we lock the design before moving to Stage 4.' },
+  { q: 'Who handles the site prep and foundation?', a: 'You coordinate with your local contractor or hire one we recommend. We provide detailed foundation specs and coordinate timing with delivery.' },
+  { q: 'What\'s included in the final walk-through?', a: 'Systems training (HVAC, water heater, electrical panels), warranty documentation, maintenance tips, and a direct contact for any future service needs.' },
+  { q: 'Do you offer financing?', a: 'Yes. We partner with Hearth for flexible construction loans and offer cash payment plans. See our Financing page or ask during Discovery.' },
+];
+const pageDescription = "Understand SaltGrass Modular's 8-stage process: from initial discovery to handoff of your custom-built modular home.";
 ---
 
 <BaseLayout
   title="Our Process - SaltGrass Modular"
-  description="Understand SaltGrass Modular's 8-stage process: from initial discovery to handoff of your custom-built modular home."
+  description={pageDescription}
+  schemas={[faqSchema(faqItems), howToSchema({ name: "How SaltGrass builds a modular home", description: "From initial discovery to handoff of your custom-built modular home.", steps: stages.map((s) => ({ name: s.name, text: s.description })) })]}
 >
   <Hero
     eyebrow="How We Build"
@@ -192,42 +203,14 @@ const stages = [
     <div class="container">
       <h2 class="text-4xl font-bold text-ink-900 mb-12 text-center">Frequently Asked Questions</h2>
       <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white border border-ink-200 rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Can we compress the timeline?</h3>
-          <p class="text-ink-700">
-            Yes. Rush design (1–2 weeks) and expedited permitting are possible depending on your location and complexity. We'll discuss options during Discovery.
-          </p>
-        </div>
-        <div class="bg-white border border-ink-200 rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">What if permits take longer than expected?</h3>
-          <p class="text-ink-700">
-            We handle permitting, but some jurisdictions move slowly. We'll manage the coordination and keep you informed. Fabrication doesn't start until permits are in hand.
-          </p>
-        </div>
-        <div class="bg-white border border-ink-200 rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Can I make changes during fabrication?</h3>
-          <p class="text-ink-700">
-            Yes, but only before fabrication begins. Once cutting and assembly start, changes become expensive. This is why we lock the design before moving to Stage 4.
-          </p>
-        </div>
-        <div class="bg-white border border-ink-200 rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Who handles the site prep and foundation?</h3>
-          <p class="text-ink-700">
-            You coordinate with your local contractor or hire one we recommend. We provide detailed foundation specs and coordinate timing with delivery.
-          </p>
-        </div>
-        <div class="bg-white border border-ink-200 rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">What's included in the final walk-through?</h3>
-          <p class="text-ink-700">
-            Systems training (HVAC, water heater, electrical panels), warranty documentation, maintenance tips, and a direct contact for any future service needs.
-          </p>
-        </div>
-        <div class="bg-white border border-ink-200 rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Do you offer financing?</h3>
-          <p class="text-ink-700">
-            Yes. We partner with Hearth for flexible construction loans and offer cash payment plans. See our Financing page or ask during Discovery.
-          </p>
-        </div>
+        {faqItems.map((item) => (
+          <div class="bg-white border border-ink-200 rounded-xl p-6">
+            <h3 class="font-bold text-ink-900 mb-3">{item.q}</h3>
+            <p class="text-ink-700">
+              {item.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

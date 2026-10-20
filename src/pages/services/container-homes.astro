@@ -2,6 +2,8 @@
 import BaseLayout from '../../components/layout/BaseLayout.astro';
 import Hero from '../../components/sections/Hero.astro';
 import CtaBanner from '../../components/sections/CtaBanner.astro';
+import { faqSchema, serviceSchema } from '../../lib/seo';
+import { SITE } from '../../lib/site-config';
 
 const specs = [
   { label: 'Tornado Resistance', value: 'F3-Rated' },
@@ -45,11 +47,14 @@ const faqItems = [
     a: 'Yes. We deliver and install across the USA. Shipping costs vary by distance—we\'ll provide an estimate during your quote.',
   },
 ];
+const pageDescription = "Custom-designed modular container homes with F3 tornado rating, transparent pricing, and fast 8-9 month timelines.";
+const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
 ---
 
 <BaseLayout
   title="Custom Container Homes - SaltGrass Modular"
-  description="Custom-designed modular container homes with F3 tornado rating, transparent pricing, and fast 8-9 month timelines."
+  description={pageDescription}
+  schemas={[faqSchema(faqItems), serviceSchema({ name: "Custom Container Homes", description: pageDescription, url: pageUrl })]}
 >
   <Hero
     eyebrow="Custom Container Homes"

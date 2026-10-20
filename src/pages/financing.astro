@@ -2,11 +2,21 @@
 import BaseLayout from '../components/layout/BaseLayout.astro';
 import Hero from '../components/sections/Hero.astro';
 import CtaBanner from '../components/sections/CtaBanner.astro';
+import { faqSchema } from '../lib/seo';
+const faqItems = [
+  { q: 'What credit score do I need?', a: 'Hearth typically requires a minimum 620 credit score, though 700+ qualifies for better rates. Traditional construction lenders may have similar requirements. Ask us about alternative programs if your score is below 620.' },
+  { q: 'Can I get 100% financing?', a: 'Yes, up to 100% of the project cost is available through some programs, especially if you have significant equity or strong credit. Most loans require 10-20% down. We\'ll help you understand your options during the Discovery phase.' },
+  { q: 'How long does approval take?', a: 'Hearth pre-qualification happens in days. Full approval depends on appraisal and underwriting—typically 2-4 weeks. We manage the coordination to keep your project on schedule.' },
+  { q: 'What if I\'m financing an investment property or ADU?', a: 'Investment financing has different terms, but Hearth and other lenders support ADU and rental projects. Tell us during Discovery and we\'ll connect you with the right programs.' },
+  { q: 'Do you offer discounts for cash deals?', a: 'Our pricing is transparent and not dependent on financing method. Cash deals don\'t receive a discount, but you do get the benefit of faster project completion with no lender contingencies.' },
+  { q: 'Can you recommend local lenders?', a: 'Absolutely. We work with several local Oklahoma lenders and can provide referrals. We can also facilitate conversations between you and your chosen lender to explain the modular process and timeline.' },
+];
 ---
 
 <BaseLayout
   title="Financing Your Modular Home - SaltGrass Modular"
   description="Flexible financing options including Hearth construction loans, cash payment plans, and ROI calculators for modular homes."
+  schemas={[faqSchema(faqItems)]}
 >
   <Hero
     eyebrow="Financing Solutions"
@@ -241,47 +251,14 @@ import CtaBanner from '../components/sections/CtaBanner.astro';
     <div class="container">
       <h2 class="text-3xl font-bold text-ink-900 mb-12 text-center">Financing FAQs</h2>
       <div class="max-w-3xl mx-auto space-y-6">
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">What credit score do I need?</h3>
-          <p class="text-ink-700">
-            Hearth typically requires a minimum 620 credit score, though 700+ qualifies for better rates. Traditional construction lenders may have similar requirements. Ask us about alternative programs if your score is below 620.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Can I get 100% financing?</h3>
-          <p class="text-ink-700">
-            Yes, up to 100% of the project cost is available through some programs, especially if you have significant equity or strong credit. Most loans require 10-20% down. We'll help you understand your options during the Discovery phase.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">How long does approval take?</h3>
-          <p class="text-ink-700">
-            Hearth pre-qualification happens in days. Full approval depends on appraisal and underwriting—typically 2-4 weeks. We manage the coordination to keep your project on schedule.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">What if I'm financing an investment property or ADU?</h3>
-          <p class="text-ink-700">
-            Investment financing has different terms, but Hearth and other lenders support ADU and rental projects. Tell us during Discovery and we'll connect you with the right programs.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Do you offer discounts for cash deals?</h3>
-          <p class="text-ink-700">
-            Our pricing is transparent and not dependent on financing method. Cash deals don't receive a discount, but you do get the benefit of faster project completion with no lender contingencies.
-          </p>
-        </div>
-
-        <div class="bg-white rounded-xl p-6">
-          <h3 class="font-bold text-ink-900 mb-3">Can you recommend local lenders?</h3>
-          <p class="text-ink-700">
-            Absolutely. We work with several local Oklahoma lenders and can provide referrals. We can also facilitate conversations between you and your chosen lender to explain the modular process and timeline.
-          </p>
-        </div>
+        {faqItems.map((item) => (
+          <div class="bg-white rounded-xl p-6">
+            <h3 class="font-bold text-ink-900 mb-3">{item.q}</h3>
+            <p class="text-ink-700">
+              {item.a}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
