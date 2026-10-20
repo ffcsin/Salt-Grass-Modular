@@ -16,7 +16,7 @@ const faqItems = [
   title="Modular Housing for Developers - SaltGrass Modular"
   description="Scale modular housing for residential developments, government contracts, and multi-unit projects. Volume pricing, proven timelines, government-ready."
   keywords="modular development, developer solutions, multi-unit housing, volume production"
-  schemas={[faqSchema(faqItems)]}
+  schemas={[faqSchema(faqItems.filter((f) => !/F3|FEMA|GSA|50\+|99%/.test(f.q + f.a)))]}
 >
   <Hero
     eyebrow="For Developers & Government"

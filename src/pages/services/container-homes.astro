@@ -82,7 +82,7 @@ const pageUrl = new URL(Astro.url.pathname, SITE.url).href;
 <BaseLayout
   title="Custom Container Homes - SaltGrass Modular"
   description={pageDescription}
-  schemas={[faqSchema(faqItems), serviceSchema({ name: "Custom Container Homes", description: pageDescription, url: pageUrl })]}
+  schemas={[faqSchema(faqItems.filter((f) => !/F3|FEMA|GSA|50\+|99%/.test(f.q + f.a))), serviceSchema({ name: "Custom Container Homes", description: "Custom-designed modular container homes with transparent all-in pricing and 8-9 month timelines.", url: pageUrl })]}
 >
   <Hero
     eyebrow="Custom Container Homes"
