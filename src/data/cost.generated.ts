@@ -6,7 +6,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "houston",
     "city": "Houston",
     "stateAbbr": "TX",
-    "quickAnswer": "A container home in Houston starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in pricing covering fabrication, delivery, and installation, with the delivery distance from our Oklahoma City, Oklahoma facility factored into every regional quote.",
+    "quickAnswer": "A container home in Houston starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in pricing covering fabrication, delivery, and installation, with the delivery distance from our Oklahoma City, Oklahoma facility factored into every regional quote.",
     "note": "Because units ship from Oklahoma, the Houston delivery leg is longer than for our local builds, and that distance is reflected transparently in your quote rather than hidden in fees.",
     "faqs": [
       {
@@ -23,7 +23,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "san-antonio",
     "city": "San Antonio",
     "stateAbbr": "TX",
-    "quickAnswer": "In San Antonio, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — each figure all-in for fabrication, delivery, and installation, with the trip from our Oklahoma City, Oklahoma facility already included.",
+    "quickAnswer": "In San Antonio, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — each figure all-in for fabrication, delivery, and installation, with the trip from our Oklahoma City, Oklahoma facility already included.",
     "note": "San Antonio is a regional delivery for us, so the haul from Oklahoma is longer than a local job and we quote that distance honestly up front.",
     "faqs": [
       {
@@ -40,7 +40,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "austin",
     "city": "Austin",
     "stateAbbr": "TX",
-    "quickAnswer": "A container home in Austin starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in prices covering fabrication, delivery, and installation, with the haul from our Oklahoma City, Oklahoma shop reflected in the quote.",
+    "quickAnswer": "A container home in Austin starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in prices covering fabrication, delivery, and installation, with the haul from our Oklahoma City, Oklahoma shop reflected in the quote.",
     "note": "Since we build in Oklahoma and deliver to Central Texas, Austin's transport leg is a longer one, and we state that distance plainly rather than burying it.",
     "faqs": [
       {
@@ -57,7 +57,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "fort-worth",
     "city": "Fort Worth",
     "stateAbbr": "TX",
-    "quickAnswer": "In Fort Worth, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all figures all-in across fabrication, delivery, and installation, with delivery from Oklahoma City, Oklahoma included.",
+    "quickAnswer": "In Fort Worth, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all figures all-in across fabrication, delivery, and installation, with delivery from Oklahoma City, Oklahoma included.",
     "note": "Fort Worth is one of our closer Texas routes from Oklahoma, but it's still a regional delivery, and that distance is reflected openly in your quote.",
     "faqs": [
       {
@@ -74,7 +74,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "wichita",
     "city": "Wichita",
     "stateAbbr": "KS",
-    "quickAnswer": "A container home in Wichita starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in pricing for fabrication, delivery, and installation, with the relatively short trip from our Oklahoma City, Oklahoma facility built in.",
+    "quickAnswer": "A container home in Wichita starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in pricing for fabrication, delivery, and installation, with the relatively short trip from our Oklahoma City, Oklahoma facility built in.",
     "note": "Wichita is one of our nearer regional routes from Oklahoma, and even so the delivery distance is stated clearly in every quote.",
     "faqs": [
       {
@@ -91,7 +91,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "kansas-city",
     "city": "Kansas City",
     "stateAbbr": "MO",
-    "quickAnswer": "In Kansas City, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in prices for fabrication, delivery, and installation, with the haul from our Oklahoma City, Oklahoma facility included.",
+    "quickAnswer": "In Kansas City, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in prices for fabrication, delivery, and installation, with the haul from our Oklahoma City, Oklahoma facility included.",
     "note": "Kansas City is a regional delivery from our Oklahoma shop, and that travel distance is shown plainly in your quote rather than hidden as an extra.",
     "faqs": [
       {
@@ -108,7 +108,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "st-louis",
     "city": "St. Louis",
     "stateAbbr": "MO",
-    "quickAnswer": "A container home in St. Louis start at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in pricing covering fabrication, delivery, and installation, with the distance from our Oklahoma City, Oklahoma facility factored in.",
+    "quickAnswer": "A container home in St. Louis start at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in pricing covering fabrication, delivery, and installation, with the distance from our Oklahoma City, Oklahoma facility factored in.",
     "note": "St. Louis is a regional delivery from Oklahoma, so the haul is longer than a local job, and we quote that distance honestly instead of folding it into vague fees.",
     "faqs": [
       {
@@ -125,7 +125,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "little-rock",
     "city": "Little Rock",
     "stateAbbr": "AR",
-    "quickAnswer": "In Little Rock, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — every price all-in for fabrication, delivery, and installation, with the short trip from our Oklahoma City, Oklahoma shop included.",
+    "quickAnswer": "In Little Rock, a SaltGrass container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — every price all-in for fabrication, delivery, and installation, with the short trip from our Oklahoma City, Oklahoma shop included.",
     "note": "Little Rock is one of our nearer regional routes from Oklahoma, and the delivery distance is still stated openly in each quote.",
     "faqs": [
       {
@@ -142,7 +142,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "albuquerque",
     "city": "Albuquerque",
     "stateAbbr": "NM",
-    "quickAnswer": "A container home in Albuquerque starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in pricing for fabrication, delivery, and installation, with the longer haul from our Oklahoma City, Oklahoma facility factored into the quote.",
+    "quickAnswer": "A container home in Albuquerque starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in pricing for fabrication, delivery, and installation, with the longer haul from our Oklahoma City, Oklahoma facility factored into the quote.",
     "note": "Albuquerque is one of our farther regional routes from Oklahoma, so the transport leg is longer than most, and we reflect that distance honestly in your quote.",
     "faqs": [
       {
@@ -159,7 +159,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "new-orleans",
     "city": "New Orleans",
     "stateAbbr": "LA",
-    "quickAnswer": "A SaltGrass container home in New Orleans starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in (fabrication, delivery, and installation), with delivery hauled from our Oklahoma City, Oklahoma facility within regional reach of Louisiana.",
+    "quickAnswer": "A SaltGrass container home in New Orleans starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in (fabrication, delivery, and installation), with delivery hauled from our Oklahoma City, Oklahoma facility within regional reach of Louisiana.",
     "note": "Because New Orleans is within our regional delivery zone, transport from Oklahoma is a manageable part of the all-in figure rather than a long-distance surcharge.",
     "faqs": [
       {
@@ -176,7 +176,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "omaha",
     "city": "Omaha",
     "stateAbbr": "NE",
-    "quickAnswer": "A SaltGrass container home in Omaha starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in covering fabrication, delivery, and installation, with the unit hauled from our Oklahoma City, Oklahoma facility within regional reach of Nebraska.",
+    "quickAnswer": "A SaltGrass container home in Omaha starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in covering fabrication, delivery, and installation, with the unit hauled from our Oklahoma City, Oklahoma facility within regional reach of Nebraska.",
     "note": "Omaha falls inside our regional delivery zone, so the trip from Oklahoma is folded into the all-in price rather than charged as a long-haul extra.",
     "faqs": [
       {
@@ -193,7 +193,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "denver",
     "city": "Denver",
     "stateAbbr": "CO",
-    "quickAnswer": "A SaltGrass container home in Denver starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in including fabrication, delivery, and installation, with delivery driven from our Oklahoma City, Oklahoma facility within regional reach of Colorado.",
+    "quickAnswer": "A SaltGrass container home in Denver starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in including fabrication, delivery, and installation, with delivery driven from our Oklahoma City, Oklahoma facility within regional reach of Colorado.",
     "note": "Denver is inside our regional delivery zone, so the run from Oklahoma is part of the all-in cost instead of a separate long-distance fee.",
     "faqs": [
       {
@@ -210,7 +210,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "colorado-springs",
     "city": "Colorado Springs",
     "stateAbbr": "CO",
-    "quickAnswer": "A SaltGrass container home in Colorado Springs starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in for fabrication, delivery, and installation, with the unit transported from our Oklahoma City, Oklahoma facility within regional reach of Colorado.",
+    "quickAnswer": "A SaltGrass container home in Colorado Springs starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in for fabrication, delivery, and installation, with the unit transported from our Oklahoma City, Oklahoma facility within regional reach of Colorado.",
     "note": "Since Colorado Springs is within our regional delivery zone, the trip from Oklahoma is part of the all-in number rather than a long-haul surcharge.",
     "faqs": [
       {
@@ -227,7 +227,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "phoenix",
     "city": "Phoenix",
     "stateAbbr": "AZ",
-    "quickAnswer": "A SaltGrass container home in Phoenix starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in covering fabrication, delivery, and installation, with the unit shipped nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
+    "quickAnswer": "A SaltGrass container home in Phoenix starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in covering fabrication, delivery, and installation, with the unit shipped nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
     "note": "Because Phoenix sits well beyond our regional zone, the longer delivery distance from Oklahoma is reflected honestly in project planning, though it remains part of the all-in figure.",
     "faqs": [
       {
@@ -244,7 +244,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "las-vegas",
     "city": "Las Vegas",
     "stateAbbr": "NV",
-    "quickAnswer": "A SaltGrass container home in Las Vegas starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in including fabrication, delivery, and installation, delivered nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
+    "quickAnswer": "A SaltGrass container home in Las Vegas starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in including fabrication, delivery, and installation, delivered nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
     "note": "Las Vegas lies beyond our regional reach, so the extended delivery distance from Oklahoma is planned into the project honestly while staying inside the all-in price.",
     "faqs": [
       {
@@ -261,7 +261,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "atlanta",
     "city": "Atlanta",
     "stateAbbr": "GA",
-    "quickAnswer": "A SaltGrass container home in Atlanta starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in for fabrication, delivery, and installation, shipped nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
+    "quickAnswer": "A SaltGrass container home in Atlanta starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in for fabrication, delivery, and installation, shipped nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
     "note": "Since Atlanta is outside our regional zone, the longer delivery distance from Oklahoma is reflected honestly in planning while remaining part of the all-in figure.",
     "faqs": [
       {
@@ -278,7 +278,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "tampa",
     "city": "Tampa",
     "stateAbbr": "FL",
-    "quickAnswer": "A SaltGrass container home in Tampa starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in covering fabrication, delivery, and installation, delivered nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
+    "quickAnswer": "A SaltGrass container home in Tampa starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in covering fabrication, delivery, and installation, delivered nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
     "note": "Tampa sits well beyond our regional reach, so the longer delivery distance from Oklahoma is accounted for honestly in planning while staying inside the all-in price.",
     "faqs": [
       {
@@ -295,7 +295,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "orlando",
     "city": "Orlando",
     "stateAbbr": "FL",
-    "quickAnswer": "A SaltGrass container home in Orlando starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in including fabrication, delivery, and installation, shipped nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
+    "quickAnswer": "A SaltGrass container home in Orlando starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in including fabrication, delivery, and installation, shipped nationally from our Oklahoma City, Oklahoma facility, a longer haul than our regional markets.",
     "note": "Because Orlando is outside our regional zone, the extended delivery distance from Oklahoma is reflected honestly during planning while remaining part of the all-in figure.",
     "faqs": [
       {
@@ -312,7 +312,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "nashville",
     "city": "Nashville",
     "stateAbbr": "TN",
-    "quickAnswer": "A container home in Nashville starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in (fabrication, delivery, and installation) — with delivery running east from our Oklahoma City, Oklahoma facility.",
+    "quickAnswer": "A container home in Nashville starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in (fabrication, delivery, and installation) — with delivery running east from our Oklahoma City, Oklahoma facility.",
     "note": "Because every unit ships from Oklahoma, the Nashville delivery leg adds distance, and we quote that leg honestly inside your all-in price.",
     "faqs": [
       {
@@ -329,7 +329,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "charlotte",
     "city": "Charlotte",
     "stateAbbr": "NC",
-    "quickAnswer": "In Charlotte, a container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in pricing covering fabrication, delivery, and installation, with the haul running east from Oklahoma City, Oklahoma.",
+    "quickAnswer": "In Charlotte, a container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in pricing covering fabrication, delivery, and installation, with the haul running east from Oklahoma City, Oklahoma.",
     "note": "Charlotte is a longer eastbound delivery from our Oklahoma facility, and we fold that distance transparently into the all-in number rather than tacking it on later.",
     "faqs": [
       {
@@ -346,7 +346,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "phoenix-mesa",
     "city": "Mesa",
     "stateAbbr": "AZ",
-    "quickAnswer": "A container home in Mesa starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in (fabrication, delivery, installation) — with delivery hauling west from our Oklahoma City, Oklahoma facility.",
+    "quickAnswer": "A container home in Mesa starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in (fabrication, delivery, installation) — with delivery hauling west from our Oklahoma City, Oklahoma facility.",
     "note": "Mesa is a westbound delivery from Oklahoma, and that distance is built honestly into the all-in price instead of appearing as a separate charge.",
     "faqs": [
       {
@@ -363,7 +363,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "salt-lake-city",
     "city": "Salt Lake City",
     "stateAbbr": "UT",
-    "quickAnswer": "In Salt Lake City, a container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in covering fabrication, delivery, and installation, with the haul running northwest from Oklahoma City, Oklahoma.",
+    "quickAnswer": "In Salt Lake City, a container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in covering fabrication, delivery, and installation, with the haul running northwest from Oklahoma City, Oklahoma.",
     "note": "Salt Lake City is a longer northwestern delivery from our Oklahoma shop, and we account for that distance openly within the all-in price.",
     "faqs": [
       {
@@ -380,7 +380,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "boise",
     "city": "Boise",
     "stateAbbr": "ID",
-    "quickAnswer": "A container home in Boise starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in (fabrication, delivery, and installation) — with delivery running northwest from our Oklahoma City, Oklahoma facility.",
+    "quickAnswer": "A container home in Boise starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in (fabrication, delivery, and installation) — with delivery running northwest from our Oklahoma City, Oklahoma facility.",
     "note": "Boise is one of the longer northwestern delivery legs from Oklahoma, and we reflect that distance honestly inside the all-in price.",
     "faqs": [
       {
@@ -397,7 +397,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "oklahoma-city-norman",
     "city": "Norman",
     "stateAbbr": "OK",
-    "quickAnswer": "In the Norman and Oklahoma City area, a container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom — all-in for fabrication, delivery, and installation, with one of the shortest delivery legs from our Oklahoma City, Oklahoma facility.",
+    "quickAnswer": "In the Norman and Oklahoma City area, a container home starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom — all-in for fabrication, delivery, and installation, with one of the shortest delivery legs from our Oklahoma City, Oklahoma facility.",
     "note": "Because Norman is in our home state, the delivery distance from Oklahoma City is short, and that's reflected in a straightforward all-in price.",
     "faqs": [
       {
@@ -414,7 +414,7 @@ export const GENERATED_COST_CITIES: CostCity[] = [
     "slug": "broken-arrow",
     "city": "Broken Arrow",
     "stateAbbr": "OK",
-    "quickAnswer": "A container home in Broken Arrow starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom, all-in (fabrication, delivery, and installation) — with one of the shortest delivery distances from our nearby Oklahoma City, Oklahoma facility.",
+    "quickAnswer": "A container home in Broken Arrow starts at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom, all-in (fabrication, delivery, and installation) — with one of the shortest delivery distances from our nearby Oklahoma City, Oklahoma facility.",
     "note": "Broken Arrow's short distance from Oklahoma City keeps the delivery leg minimal, and that's reflected plainly in the all-in price.",
     "faqs": [
       {

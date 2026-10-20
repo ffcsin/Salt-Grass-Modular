@@ -25,7 +25,7 @@ export const SEED_COMPARISONS: Comparison[] = [
       { dimension: 'Best for', a: 'Speed, budget, durability, ADUs', b: 'Large, fully-custom footprints' },
     ],
     verdict:
-      'Choose a container home when speed, transparent pricing, and durability matter — especially for studios, 1–2 bedroom homes, ADUs, and rental units. Choose traditional construction when you need a large, fully-bespoke footprint and timeline is flexible. SaltGrass builds both, so the recommendation is based on your project, not what we happen to sell.',
+      'Choose a container home when speed, transparent pricing, and durability matter — especially for studios, 2–3 bedroom homes, ADUs, and rental units. Choose traditional construction when you need a large, fully-bespoke footprint and timeline is flexible. SaltGrass builds both, so the recommendation is based on your project, not what we happen to sell.',
     faqs: [
       { q: 'Are container homes cheaper than traditional homes?', a: 'Generally yes — factory efficiency and reduced material waste typically make them more affordable than comparable traditional construction, with transparent all-in pricing and no surprise change orders.' },
       { q: 'Are container homes as durable as traditional homes?', a: 'Steel-framed container structures are highly durable and wind-resistant. Factory construction produces consistent, tight assemblies. With proper insulation and finishing, they are built to last decades.' },

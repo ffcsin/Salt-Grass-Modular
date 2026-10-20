@@ -73,7 +73,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
     "rows": [
       {
         "dimension": "Starting Cost",
-        "a": "Our studio container ADU start at $75,000 all-in (fabrication, delivery, install); a 1-bed 640 SF start at $105,000.",
+        "a": "Our studio container ADU start at $75,000 all-in (fabrication, delivery, install); a 2-bed 640 SF start at $105,000.",
         "b": "Pricing varies widely by region, finishes, and site conditions; on-site framing labor can run higher per square foot in some markets."
       },
       {
@@ -294,7 +294,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "What does a container home starts at?",
-        "a": "Our studio 320 SF container home starts at $75,000 all-in, including fabrication, delivery, and installation. Larger one- and two-bedroom layouts start higher."
+        "a": "Our studio 320 SF container home starts at $75,000 all-in, including fabrication, delivery, and installation. Larger one- and three-bedroom layouts start higher."
       },
       {
         "q": "Are container homes legal as primary residences?",
@@ -389,7 +389,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       {
         "dimension": "Cost Predictability",
         "a": "Purchase price is known, but post-move repairs and updates can add up unpredictably.",
-        "b": "Factory pricing gives clear starting figures; our 2-bed 960 SF start at $155,000 all-in."
+        "b": "Factory pricing gives clear starting figures; our 3-bed 960 SF start at $155,000 all-in."
       },
       {
         "dimension": "Land Requirement",
@@ -414,7 +414,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "How does modular pricing compare?",
-        "a": "Modular offers clear all-in starting prices — for example, a 2-bed 960 SF home starts at $155,000. Existing homes have a known purchase price but variable repair costs."
+        "a": "Modular offers clear all-in starting prices — for example, a 3-bed 960 SF home starts at $155,000. Existing homes have a known purchase price but variable repair costs."
       },
       {
         "q": "Will a new modular home have fewer maintenance issues?",
@@ -443,7 +443,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "dimension": "Starting Cost",
-        "a": "Clear all-in starting prices — studio from $75,000, up to a 2-bed 960 SF from $155,000.",
+        "a": "Clear all-in starting prices — studio from $75,000, up to a 3-bed 960 SF from $155,000.",
         "b": "Varies widely with size, finishes, and how much shop versus living space; large shells can run high."
       },
       {
@@ -508,7 +508,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "dimension": "Cost Predictability",
-        "a": "Clear all-in starting prices — for example a 1-bed 640 SF unit from $105,000.",
+        "a": "Clear all-in starting prices — for example a 2-bed 640 SF unit from $105,000.",
         "b": "Tie-ins to existing framing, roof, and systems can introduce variable, hard-to-quote costs."
       },
       {
@@ -534,7 +534,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "Is an ADU or addition more predictable on cost?",
-        "a": "Modular ADUs offer clear all-in starting prices, like $105,000 for a 1-bed 640 SF unit. Additions can carry variable costs from tying into existing framing and systems."
+        "a": "Modular ADUs offer clear all-in starting prices, like $105,000 for a 2-bed 640 SF unit. Additions can carry variable costs from tying into existing framing and systems."
       },
       {
         "q": "Do I need extra land for an ADU?",

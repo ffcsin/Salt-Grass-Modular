@@ -29,7 +29,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What does a container home cost delivered to Kansas?",
-        "a": "Our studio container home starts at $75,000, a one-bed 640 SF at $105,000, and a two-bed 960 SF at $155,000. Those figures are all-in: fabrication, delivery, and installation bundled together."
+        "a": "Our studio container home starts at $75,000, a two-bed 640 SF at $105,000, and a three-bed 960 SF at $155,000. Those figures are all-in: fabrication, delivery, and installation bundled together."
       }
     ]
   },
@@ -122,7 +122,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What's the entry price for a modular home in New Mexico?",
-        "a": "A 320 SF studio container home starts at $75,000 all-in. Larger layouts run $105,000 for a one-bed and $155,000 for a two-bed, each including fabrication, delivery, and installation."
+        "a": "A 320 SF studio container home starts at $75,000 all-in. Larger layouts run $105,000 for a two-bed and $155,000 for a three-bed, each including fabrication, delivery, and installation."
       }
     ]
   },
@@ -307,7 +307,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What's the starting price for a California modular build?",
-        "a": "A 320 SF studio container home starts at $75,000 all-in, with a one-bed at $105,000 and a two-bed at $155,000. Each price bundles fabrication, delivery, and installation."
+        "a": "A 320 SF studio container home starts at $75,000 all-in, with a two-bed at $105,000 and a three-bed at $155,000. Each price bundles fabrication, delivery, and installation."
       }
     ]
   },
@@ -364,7 +364,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What can I get for the starting prices?",
-        "a": "Our entry points are an all-in 320 SF studio container home at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000. Modular pools start at $12,000 for a tube-steel and fiberglass build. Every figure already covers fabrication, delivery, and installation."
+        "a": "Our entry points are an all-in 320 SF studio container home at $75,000, a 640 SF two-bedroom at $105,000, and a 960 SF three-bedroom at $155,000. Modular pools start at $12,000 for a tube-steel and fiberglass build. Every figure already covers fabrication, delivery, and installation."
       },
       {
         "q": "How are permits handled in a small state like Delaware?",
@@ -487,7 +487,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What's included in the starting price?",
-        "a": "Every quote is all-in. A 320 SF studio container home starts at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000 — each figure already covering fabrication, delivery to Idaho, and installation on your site."
+        "a": "Every quote is all-in. A 320 SF studio container home starts at $75,000, a 640 SF two-bedroom at $105,000, and a 960 SF three-bedroom at $155,000 — each figure already covering fabrication, delivery to Idaho, and installation on your site."
       },
       {
         "q": "How does permitting work in Idaho?",
@@ -609,7 +609,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What does the all-in price actually cover?",
-        "a": "It covers fabrication, delivery, and installation in one number. For example, a 320 SF studio container home starts at $75,000 and a 960 SF two-bedroom at $155,000 — there's no separate freight or setup charge layered on top of those figures."
+        "a": "It covers fabrication, delivery, and installation in one number. For example, a 320 SF studio container home starts at $75,000 and a 960 SF three-bedroom at $155,000 — there's no separate freight or setup charge layered on top of those figures."
       },
       {
         "q": "How is Kentucky permitting handled?",
@@ -674,7 +674,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What does a container home starts at?",
-        "a": "Our studio container home starts at $75,000 all-in, a one-bedroom at $105,000, and a two-bedroom at $155,000. Those figures cover fabrication, delivery, and installation."
+        "a": "Our studio container home starts at $75,000 all-in, a two-bedroom at $105,000, and a three-bedroom at $155,000. Those figures cover fabrication, delivery, and installation."
       }
     ]
   },
@@ -829,7 +829,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What's included in your starting prices?",
-        "a": "Every starting price is all-in, covering fabrication, delivery, and installation. A studio container home starts at $75,000, a one-bedroom at $105,000, and a two-bedroom at $155,000."
+        "a": "Every starting price is all-in, covering fabrication, delivery, and installation. A studio container home starts at $75,000, a two-bedroom at $105,000, and a three-bedroom at $155,000."
       }
     ]
   },
@@ -952,7 +952,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What does a SaltGrass project cost?",
-        "a": "Our container homes start at $75,000 for a 320 SF studio, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom. Modular pools start at $48,000–$52,000 depending on construction. Every figure is all-in: fabrication, delivery, and installation."
+        "a": "Our container homes start at $75,000 for a 320 SF studio, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom. Modular pools start at $48,000–$52,000 depending on construction. Every figure is all-in: fabrication, delivery, and installation."
       }
     ]
   },
@@ -1036,7 +1036,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "faqs": [
       {
         "q": "What's included in the SaltGrass price for an Ohio project?",
-        "a": "Every quoted figure is all-in: fabrication at our Oklahoma shop, delivery to your Ohio site, and installation. A 320 SF studio container home starts at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000."
+        "a": "Every quoted figure is all-in: fabrication at our Oklahoma shop, delivery to your Ohio site, and installation. A 320 SF studio container home starts at $75,000, a 640 SF two-bedroom at $105,000, and a 960 SF three-bedroom at $155,000."
       },
       {
         "q": "Who handles permitting for an Ohio build?",
@@ -1136,7 +1136,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What are the starting prices for a container home?",
-        "a": "A 320 SF studio start at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000. Each price is all-in, bundling fabrication, delivery to Rhode Island, and installation."
+        "a": "A 320 SF studio start at $75,000, a 640 SF two-bedroom at $105,000, and a 960 SF three-bedroom at $155,000. Each price is all-in, bundling fabrication, delivery to Rhode Island, and installation."
       }
     ]
   },
@@ -1224,7 +1224,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What does a Tennessee project cost up front?",
-        "a": "Our prices are all-in. A 320 SF studio container home starts at $75,000, a 640 SF one-bedroom at $105,000, and a 960 SF two-bedroom at $155,000, each covering fabrication, delivery to Tennessee, and installation."
+        "a": "Our prices are all-in. A 320 SF studio container home starts at $75,000, a 640 SF two-bedroom at $105,000, and a 960 SF three-bedroom at $155,000, each covering fabrication, delivery to Tennessee, and installation."
       },
       {
         "q": "Why does the timeline stay around eight to nine months even at a distance?",
@@ -1259,7 +1259,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
       },
       {
         "q": "What does a starter unit cost delivered to Utah?",
-        "a": "Pricing start at $75,000 for a 320 SF studio container home, $105,000 for a 640 SF one-bedroom, and $155,000 for a 960 SF two-bedroom. Those figures are all-in, covering fabrication, delivery, and installation."
+        "a": "Pricing start at $75,000 for a 320 SF studio container home, $105,000 for a 640 SF two-bedroom, and $155,000 for a 960 SF three-bedroom. Those figures are all-in, covering fabrication, delivery, and installation."
       }
     ]
   },
@@ -1319,8 +1319,8 @@ export const GENERATED_LOCATIONS: LocationData[] = [
         "a": "We engineer each structure to the wind and load requirements your jurisdiction sets. SaltGrass coordinates with your local Authority Having Jurisdiction, since coastal sites often carry different standards than inland ones."
       },
       {
-        "q": "What does a two-bedroom container home cost in Virginia?",
-        "a": "A 960 SF two-bedroom container home starts at $155,000, all-in. That figure covers fabrication at our Oklahoma facility plus delivery and installation at your Virginia site."
+        "q": "What does a three-bedroom container home cost in Virginia?",
+        "a": "A 960 SF three-bedroom container home starts at $155,000, all-in. That figure covers fabrication at our Oklahoma facility plus delivery and installation at your Virginia site."
       }
     ]
   },
@@ -1380,8 +1380,8 @@ export const GENERATED_LOCATIONS: LocationData[] = [
         "a": "The roof and structure are engineered to your jurisdiction's snow load. SaltGrass coordinates with your local Authority Having Jurisdiction and plans site access carefully, since steep terrain affects both placement and delivery."
       },
       {
-        "q": "What does a one-bedroom container home cost in West Virginia?",
-        "a": "A 640 SF one-bedroom container home starts at $105,000, all-in. That price includes fabrication at our Oklahoma facility plus delivery and installation at your site."
+        "q": "What does a two-bedroom container home cost in West Virginia?",
+        "a": "A 640 SF two-bedroom container home starts at $105,000, all-in. That price includes fabrication at our Oklahoma facility plus delivery and installation at your site."
       }
     ]
   },
@@ -1675,7 +1675,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Gulf hurricane wind zones + humidity",
     "climateDetail": "New Orleans sits in a Gulf Coast hurricane wind zone with high year-round humidity, so builds here are engineered for strong wind loads and detailed for moisture resistance.",
-    "intro": "SaltGrass Modular builds container homes, traditional modular structures, and modular pools for the New Orleans area from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma. Founder Dylan Walker leads a shop that fabricates your home in a controlled factory while site prep and permitting happen in parallel back in Louisiana. New Orleans sits within our regional delivery reach, so hauling a finished unit down is straightforward. From studios to two-bedroom layouts, every build is steel-framed and engineered with the Gulf Coast in mind.",
+    "intro": "SaltGrass Modular builds container homes, traditional modular structures, and modular pools for the New Orleans area from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma. Founder Dylan Walker leads a shop that fabricates your home in a controlled factory while site prep and permitting happen in parallel back in Louisiana. New Orleans sits within our regional delivery reach, so hauling a finished unit down is straightforward. From studios to three-bedroom layouts, every build is steel-framed and engineered with the Gulf Coast in mind.",
     "faqs": [
       {
         "q": "Can SaltGrass deliver a container home to the New Orleans area?",
@@ -1701,7 +1701,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "Plains storms + snow load",
     "climateDetail": "Omaha endures strong Plains thunderstorms and meaningful winter snow loads, so roofs and framing here are engineered to carry seasonal snow and withstand high straight-line winds.",
-    "intro": "For the Omaha area, SaltGrass Modular fabricates custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot shop in Oklahoma City, Oklahoma. Founder Dylan Walker's team assembles your structure indoors while your Nebraska site is prepped and permits move forward, so the two timelines overlap instead of stacking. Omaha is within our regional delivery range, which keeps the haul north efficient. Whether you want a compact studio or a two-bedroom, each unit is steel-framed and built to handle Plains weather.",
+    "intro": "For the Omaha area, SaltGrass Modular fabricates custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot shop in Oklahoma City, Oklahoma. Founder Dylan Walker's team assembles your structure indoors while your Nebraska site is prepped and permits move forward, so the two timelines overlap instead of stacking. Omaha is within our regional delivery range, which keeps the haul north efficient. Whether you want a compact studio or a three-bedroom, each unit is steel-framed and built to handle Plains weather.",
     "faqs": [
       {
         "q": "Does SaltGrass serve the Omaha, Nebraska market?",
@@ -1723,7 +1723,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "High-altitude snow load",
     "climateDetail": "Denver's high-altitude setting brings significant snow loads, so structures here are engineered with reinforced roof framing to carry heavy seasonal snow.",
-    "intro": "SaltGrass Modular brings custom container homes, traditional modular construction, and modular pools to the Denver area, all fabricated at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Founder Dylan Walker's crew builds your home under roof while your Colorado lot is prepared and permitting advances, so progress happens on both fronts at once. Denver sits within our regional delivery reach, making the haul west practical. Every build, from a 320-square-foot studio to a 960-square-foot two-bedroom, is steel-framed and engineered for high-altitude conditions.",
+    "intro": "SaltGrass Modular brings custom container homes, traditional modular construction, and modular pools to the Denver area, all fabricated at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Founder Dylan Walker's crew builds your home under roof while your Colorado lot is prepared and permitting advances, so progress happens on both fronts at once. Denver sits within our regional delivery reach, making the haul west practical. Every build, from a 320-square-foot studio to a 960-square-foot three-bedroom, is steel-framed and engineered for high-altitude conditions.",
     "faqs": [
       {
         "q": "Can SaltGrass deliver to Denver?",
@@ -1749,7 +1749,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "regional",
     "climate": "High-altitude snow load + wind",
     "climateDetail": "Colorado Springs combines high-altitude snow loads with strong wind exposure along the Front Range, so builds here are engineered for both heavy snow and elevated wind loads.",
-    "intro": "In the Colorado Springs area, SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Under founder Dylan Walker, the shop assembles your structure indoors while your site is graded and permits are pursued, letting both timelines overlap. Colorado Springs is within our regional delivery reach, so moving a finished unit there is a clean haul. From studios to two-bedrooms, each steel-framed build is engineered for the high-altitude, wind-prone Front Range.",
+    "intro": "In the Colorado Springs area, SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Under founder Dylan Walker, the shop assembles your structure indoors while your site is graded and permits are pursued, letting both timelines overlap. Colorado Springs is within our regional delivery reach, so moving a finished unit there is a clean haul. From studios to three-bedrooms, each steel-framed build is engineered for the high-altitude, wind-prone Front Range.",
     "faqs": [
       {
         "q": "Does SaltGrass build for Colorado Springs?",
@@ -1771,7 +1771,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Desert heat — cooling efficiency",
     "climateDetail": "Phoenix faces intense, sustained desert heat, so builds here prioritize insulation and cooling efficiency to keep interiors comfortable through long, hot summers.",
-    "intro": "SaltGrass Modular serves the Phoenix area nationally, fabricating custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Founder Dylan Walker's team completes your home indoors while your Arizona site is prepped and permits progress, so the factory and field tracks run side by side. Phoenix is a longer haul from Oklahoma than our regional markets, but as a national builder we plan that delivery into every project. Each steel-framed unit, studio through two-bedroom, is built with desert cooling in mind.",
+    "intro": "SaltGrass Modular serves the Phoenix area nationally, fabricating custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Founder Dylan Walker's team completes your home indoors while your Arizona site is prepped and permits progress, so the factory and field tracks run side by side. Phoenix is a longer haul from Oklahoma than our regional markets, but as a national builder we plan that delivery into every project. Each steel-framed unit, studio through three-bedroom, is built with desert cooling in mind.",
     "faqs": [
       {
         "q": "Does SaltGrass deliver to Phoenix?",
@@ -1797,7 +1797,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Desert heat + seismic",
     "climateDetail": "Las Vegas combines extreme desert heat with regional seismic activity, so builds here focus on cooling efficiency and a steel frame that handles seismic loads.",
-    "intro": "SaltGrass Modular builds for the Las Vegas area as a national provider, fabricating custom container homes, traditional modular structures, and modular pools at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Founder Dylan Walker leads a shop that assembles your home indoors while your Nevada site is readied and permitting moves forward in parallel. Las Vegas is a longer haul than our regional markets, but national delivery is part of how we work. Every steel-framed build, from a compact studio to a two-bedroom, is engineered for desert heat and seismic considerations.",
+    "intro": "SaltGrass Modular builds for the Las Vegas area as a national provider, fabricating custom container homes, traditional modular structures, and modular pools at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Founder Dylan Walker leads a shop that assembles your home indoors while your Nevada site is readied and permitting moves forward in parallel. Las Vegas is a longer haul than our regional markets, but national delivery is part of how we work. Every steel-framed build, from a compact studio to a three-bedroom, is engineered for desert heat and seismic considerations.",
     "faqs": [
       {
         "q": "Can SaltGrass deliver a modular home to Las Vegas?",
@@ -1819,7 +1819,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Humid summers + occasional hurricanes",
     "climateDetail": "Atlanta sees hot, humid summers and occasional remnants of hurricanes pushing inland, so builds here are detailed for moisture resistance and designed to handle elevated wind events.",
-    "intro": "SaltGrass Modular serves the Atlanta area as a national builder, producing custom container homes, traditional modular construction, and modular pools at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Under founder Dylan Walker, your home is fabricated indoors while your Georgia site is prepped and permitting advances, keeping both efforts moving together. Atlanta sits farther from Oklahoma than our regional markets, and we build that delivery into every plan. From studios to two-bedrooms, each steel-framed unit is engineered for humid summers and the occasional severe-weather event.",
+    "intro": "SaltGrass Modular serves the Atlanta area as a national builder, producing custom container homes, traditional modular construction, and modular pools at our 40,000+-square-foot facility in Oklahoma City, Oklahoma. Under founder Dylan Walker, your home is fabricated indoors while your Georgia site is prepped and permitting advances, keeping both efforts moving together. Atlanta sits farther from Oklahoma than our regional markets, and we build that delivery into every plan. From studios to three-bedrooms, each steel-framed unit is engineered for humid summers and the occasional severe-weather event.",
     "faqs": [
       {
         "q": "Does SaltGrass build homes for the Atlanta area?",
@@ -1841,7 +1841,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Hurricane wind zones — high wind-load",
     "climateDetail": "Tampa lies in a hurricane wind zone along Florida's Gulf coast, so builds here are engineered for high wind loads and detailed to stand up to severe coastal storms.",
-    "intro": "SaltGrass Modular builds for the Tampa area as a national provider, fabricating custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Founder Dylan Walker's team assembles your home indoors while your Florida site is prepped and permits are pursued in parallel. Tampa is a longer delivery than our regional markets, and national hauling is standard for how we operate. Each steel-framed unit, studio through two-bedroom, is engineered for the high wind loads of a hurricane-exposed coast.",
+    "intro": "SaltGrass Modular builds for the Tampa area as a national provider, fabricating custom container homes, traditional modular builds, and modular pools at our 40,000+-square-foot Oklahoma City, Oklahoma facility. Founder Dylan Walker's team assembles your home indoors while your Florida site is prepped and permits are pursued in parallel. Tampa is a longer delivery than our regional markets, and national hauling is standard for how we operate. Each steel-framed unit, studio through three-bedroom, is engineered for the high wind loads of a hurricane-exposed coast.",
     "faqs": [
       {
         "q": "Can SaltGrass deliver a container home to Tampa?",
@@ -1867,7 +1867,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Hurricane wind zones + heat",
     "climateDetail": "Orlando sits in a hurricane wind zone and contends with hot, humid weather much of the year, so builds here pair high wind-load engineering with insulation and cooling efficiency.",
-    "intro": "In the Orlando area, SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 40,000+-square-foot Oklahoma City, Oklahoma facility, serving Florida as a national builder. Founder Dylan Walker's shop completes your home indoors while your site is graded and permitting advances in parallel. Orlando is a longer haul than our regional markets, and we plan that national delivery into each project. From studios to two-bedrooms, every steel-framed build is engineered for hurricane wind exposure and Florida heat.",
+    "intro": "In the Orlando area, SaltGrass Modular delivers custom container homes, traditional modular builds, and modular pools fabricated at our 40,000+-square-foot Oklahoma City, Oklahoma facility, serving Florida as a national builder. Founder Dylan Walker's shop completes your home indoors while your site is graded and permitting advances in parallel. Orlando is a longer haul than our regional markets, and we plan that national delivery into each project. From studios to three-bedrooms, every steel-framed build is engineered for hurricane wind exposure and Florida heat.",
     "faqs": [
       {
         "q": "Does SaltGrass serve the Orlando market?",
@@ -1889,7 +1889,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Severe storms + mixed seasons",
     "climateDetail": "Middle Tennessee sees a mix of hot, humid summers, cool winters, and periodic severe storms, so units are engineered with the seasonal swings and storm exposure of the region in mind.",
-    "intro": "SaltGrass Modular brings custom container homes and traditional modular builds to the Nashville, Tennessee metro from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma. Founded by Dylan Walker, our shop fabricates your studio, one-bedroom, or two-bedroom unit under a controlled roof while your Nashville site is prepped and permitted in parallel. We also build modular pools and rapid-deployment housing. Most projects run roughly 8 to 9 months from design to install. Permitting varies by jurisdiction, and SaltGrass coordinates directly with your local AHJ throughout.",
+    "intro": "SaltGrass Modular brings custom container homes and traditional modular builds to the Nashville, Tennessee metro from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma. Founded by Dylan Walker, our shop fabricates your studio, two-bedroom, or three-bedroom unit under a controlled roof while your Nashville site is prepped and permitted in parallel. We also build modular pools and rapid-deployment housing. Most projects run roughly 8 to 9 months from design to install. Permitting varies by jurisdiction, and SaltGrass coordinates directly with your local AHJ throughout.",
     "faqs": [
       {
         "q": "Can SaltGrass deliver a container home to the Nashville area?",
@@ -1941,7 +1941,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "Desert heat — cooling efficiency",
     "climateDetail": "Mesa sits in the Sonoran Desert, where intense summer heat dominates the year, making cooling efficiency and sun-conscious building a central consideration in every unit.",
-    "intro": "SaltGrass Modular extends custom container homes and modular construction to the Mesa and greater Phoenix, Arizona metro from our Oklahoma City, Oklahoma fabrication facility — a 40,000+-square-foot shop led by founder Dylan Walker. Your studio, one-, or two-bedroom unit is fabricated indoors while your Mesa site is prepped and permitted alongside it. We also build modular pools, rapid-deployment disaster housing, and developer and military solutions. The full design-to-install path typically runs 8 to 9 months, with SaltGrass coordinating permitting through your local AHJ as requirements vary by jurisdiction.",
+    "intro": "SaltGrass Modular extends custom container homes and modular construction to the Mesa and greater Phoenix, Arizona metro from our Oklahoma City, Oklahoma fabrication facility — a 40,000+-square-foot shop led by founder Dylan Walker. Your studio, two-, or three-bedroom unit is fabricated indoors while your Mesa site is prepped and permitted alongside it. We also build modular pools, rapid-deployment disaster housing, and developer and military solutions. The full design-to-install path typically runs 8 to 9 months, with SaltGrass coordinating permitting through your local AHJ as requirements vary by jurisdiction.",
     "faqs": [
       {
         "q": "Can a container home handle Mesa's desert heat?",
@@ -1993,7 +1993,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "national",
     "climate": "High-desert + mountain snow load",
     "climateDetail": "Boise sits in a high-desert valley with dry summers, cold winters, and meaningful mountain snowfall nearby, so units account for both arid conditions and snow-load demands.",
-    "intro": "SaltGrass Modular delivers custom container homes and modular builds to the Boise, Idaho metro from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma, founded by Dylan Walker. Each studio, one-, or two-bedroom unit is fabricated under a controlled roof while your Boise site is graded and permitted in parallel. Beyond homes, we build modular pools, disaster-relief housing, and developer and military solutions. The typical path runs about 8 to 9 months from design to install, and SaltGrass coordinates permitting with your local AHJ, which varies from one jurisdiction to the next.",
+    "intro": "SaltGrass Modular delivers custom container homes and modular builds to the Boise, Idaho metro from our 40,000+-square-foot fabrication facility in Oklahoma City, Oklahoma, founded by Dylan Walker. Each studio, two-, or three-bedroom unit is fabricated under a controlled roof while your Boise site is graded and permitted in parallel. Beyond homes, we build modular pools, disaster-relief housing, and developer and military solutions. The typical path runs about 8 to 9 months from design to install, and SaltGrass coordinates permitting with your local AHJ, which varies from one jurisdiction to the next.",
     "faqs": [
       {
         "q": "Does SaltGrass build container homes for the Boise area?",
@@ -2019,7 +2019,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "home",
     "climate": "Tornado Alley — high wind-load engineering",
     "climateDetail": "Norman sits squarely in Tornado Alley, where high winds and severe spring storms are a regular reality, so high wind-load engineering is a core part of how each unit is built.",
-    "intro": "SaltGrass Modular is an Oklahoma company, and the Norman and Oklahoma City metro is close to home — our 40,000+-square-foot fabrication facility sits in Oklahoma City, Oklahoma, founded and run by Dylan Walker. Being in-state means shorter delivery and tight coordination on your studio, one-, or two-bedroom container home or traditional modular build. We also produce modular pools, rapid-deployment disaster housing, and developer and military solutions. Most projects take roughly 8 to 9 months from design to install, with permitting coordinated through your local AHJ as requirements vary by jurisdiction.",
+    "intro": "SaltGrass Modular is an Oklahoma company, and the Norman and Oklahoma City metro is close to home — our 40,000+-square-foot fabrication facility sits in Oklahoma City, Oklahoma, founded and run by Dylan Walker. Being in-state means shorter delivery and tight coordination on your studio, two-, or three-bedroom container home or traditional modular build. We also produce modular pools, rapid-deployment disaster housing, and developer and military solutions. Most projects take roughly 8 to 9 months from design to install, with permitting coordinated through your local AHJ as requirements vary by jurisdiction.",
     "faqs": [
       {
         "q": "Is SaltGrass local to the Norman and OKC area?",
@@ -2045,7 +2045,7 @@ export const GENERATED_LOCATIONS: LocationData[] = [
     "reach": "home",
     "climate": "Tornado Alley — high wind-load engineering",
     "climateDetail": "Broken Arrow sits within Tornado Alley, where strong winds and severe seasonal storms are common, making high wind-load engineering a built-in priority for every unit.",
-    "intro": "Broken Arrow is right in SaltGrass Modular's backyard — our 40,000+-square-foot fabrication facility is in Oklahoma City, Oklahoma, founded by Dylan Walker, just a short delivery from the Tulsa-area suburb. We build custom container homes, traditional modular structures, modular pools, disaster-relief housing, and developer and military solutions. Your studio, one-, or two-bedroom unit is fabricated under a controlled roof while your Broken Arrow lot is prepped and permitted in parallel. Expect about 8 to 9 months from design to install, with permitting coordinated through your local AHJ as it varies by jurisdiction.",
+    "intro": "Broken Arrow is right in SaltGrass Modular's backyard — our 40,000+-square-foot fabrication facility is in Oklahoma City, Oklahoma, founded by Dylan Walker, just a short delivery from the Tulsa-area suburb. We build custom container homes, traditional modular structures, modular pools, disaster-relief housing, and developer and military solutions. Your studio, two-, or three-bedroom unit is fabricated under a controlled roof while your Broken Arrow lot is prepped and permitted in parallel. Expect about 8 to 9 months from design to install, with permitting coordinated through your local AHJ as it varies by jurisdiction.",
     "faqs": [
       {
         "q": "How close is SaltGrass to Broken Arrow?",
