@@ -23,13 +23,13 @@ const models = [
   },
   {
     id: 'onebed-640',
-    name: '640 SF 1-Bedroom',
+    name: '640 SF 2-Bedroom',
     sqft: 640,
-    beds: '1',
+    beds: '2',
     baths: '1',
     price: 105000,
-    description: 'The bestseller. Great for couples or single families. Full kitchen and separate bedroom.',
-    features: ['Separate bedroom', 'Full kitchen', 'Living room', 'Full bathroom', 'Washer/dryer hookup'],
+    description: 'The bestseller. Great for couples or small families. Full kitchen and two bedrooms.',
+    features: ['Two bedrooms', 'Full kitchen', 'Living room', 'Full bathroom', 'Washer/dryer hookup'],
     specs: {
       dimensions: '40\' x 16\'',
       height: '13\' interior',
@@ -40,13 +40,13 @@ const models = [
   },
   {
     id: 'twobedroom-960',
-    name: '960 SF 2-Bedroom',
+    name: '960 SF 3-Bedroom',
     sqft: 960,
-    beds: '2',
+    beds: '3',
     baths: '1.5',
     price: 155000,
-    description: 'Family-sized comfort with premium finishes. Master suite plus guest bedroom.',
-    features: ['Master bedroom', 'Guest bedroom', 'Premium kitchen', 'Living room with dining', 'Laundry room', '1.5 baths'],
+    description: 'Family-sized comfort with premium finishes. Master suite plus two more bedrooms.',
+    features: ['Master bedroom', 'Two more bedrooms', 'Premium kitchen', 'Living room with dining', 'Laundry room', '1.5 baths'],
     specs: {
       dimensions: '40\' x 24\'',
       height: '13\' interior',
@@ -97,8 +97,8 @@ const models = [
               <div class="text-center text-white">
                 <div class="text-4xl mb-2">
                   {model.beds === 'Studio' && '🏠'}
-                  {model.beds === '1' && '🏡'}
-                  {model.beds === '2' && '🏘️'}
+                  {model.beds === '2' && '🏡'}
+                  {model.beds === '3' && '🏘️'}
                   {model.beds === 'Custom' && '🎨'}
                 </div>
                 <p class="text-sm font-semibold">{model.name}</p>

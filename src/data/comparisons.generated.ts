@@ -294,7 +294,7 @@ export const GENERATED_COMPARISONS: Comparison[] = [
       },
       {
         "q": "What does a container home starts at?",
-        "a": "Our studio 320 SF container home starts at $75,000 all-in, including fabrication, delivery, and installation. Larger one- and three-bedroom layouts start higher."
+        "a": "Our studio 320 SF container home starts at $75,000 all-in, including fabrication, delivery, and installation. Larger two- and three-bedroom layouts start higher."
       },
       {
         "q": "Are container homes legal as primary residences?",

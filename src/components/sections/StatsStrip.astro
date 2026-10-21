@@ -10,17 +10,16 @@ interface Props {
 
 const defaultStats: Stat[] = [
   { value: '3+', label: 'Years Building Modular' },
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '99%', label: 'Client Satisfaction' },
   { value: 'USA+', label: 'Service Area' },
 ];
 
 const { stats = defaultStats } = Astro.props;
+const desktopCols = stats.length >= 4 ? 'md:grid-cols-4' : stats.length === 3 ? 'md:grid-cols-3' : 'max-w-2xl mx-auto';
 ---
 
 <section class="py-section-y bg-brand-primary text-white">
   <div class="container">
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
+    <div class={`grid grid-cols-2 ${desktopCols} gap-8 md:gap-12`}>
       {stats.map(stat => (
         <div class="text-center">
           <div class="text-5xl md:text-6xl font-bold mb-2">{stat.value}</div>
