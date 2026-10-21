@@ -132,7 +132,7 @@ const pageDescription = "Understand SaltGrass Modular's 7-stage process: from in
               {stage.number}
             </div>
             <h3 class="text-center font-bold text-ink-900">{stage.name}</h3>
-            {idx < stages.length - 1 && (
+            {idx < stages.length - 1 && idx % 4 !== 3 && (
               <div class="hidden lg:block absolute top-6 left-[calc(50%+24px)] w-[calc(100%+8px)] h-1 bg-gradient-to-r from-brand-primary to-ink-200"></div>
             )}
           </div>
